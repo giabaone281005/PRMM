@@ -1,0 +1,18 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "prism-from-json",
+  "title": "Xếp từng lớp, tìm thể tích",
+  "grade": 8,
+  "problem": {
+    "type": "prism_volume",
+    "statement": "Tìm thể tích khối hộp có các kích thước 4, 3, 3.",
+    "given": {
+      "width": 4,
+      "depth": 3,
+      "height": 3
+    },
+    "answer": {
+      "volume": 36
+    }
+  }
+}

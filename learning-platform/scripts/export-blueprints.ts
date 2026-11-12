@@ -1,0 +1,16 @@
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {exampleBlueprints,buildFromBlueprint} from '../packages/lesson-authoring/blueprint';
+import {LessonSession,type Interaction} from '../packages/lesson-runtime';
+mkdirSync('contracts/problems',{recursive:true});
+for(const p of exampleBlueprints){writeFileSync(`contracts/problems/${p.id}.problem.json`,JSON.stringify(p,null,2));if(!['triangle_angles','prism_volume'].includes(p.problem.type))writeFileSync(`contracts/fixtures/${p.id}.lesson.json`,JSON.stringify(buildFromBlueprint(p).manifest,null,2));}
+const scenarios=exampleBlueprints.slice(0,4).map(p=>{const lesson=buildFromBlueprint(p).manifest,s=new LessonSession(lesson),events:({kind:'interaction';event:Interaction}|{kind:'advance'})[]=[];function change(name:string,value:number){const event:Interaction={type:'adjust_parameter',name,value};if(s.interact(event))events.push({kind:'interaction',event});}function next(){s.advance();events.push({kind:'advance'});}const model=lesson.scene.objects.find(o=>o.kind==='math_model');if(model?.kind!=='math_model')throw Error('missing');change(model.model==='fraction_bar'?'numerator':model.model==='quadratic_graph'?'a':'x',2);next();const g=p.problem.given;if(model.model==='number_line')change('x',g.target);if(model.model==='fraction_bar')change('numerator',g.numerator);if(model.model==='linear_balance')change('x',(g.c-g.b)/g.a);if(model.model==='quadratic_graph'){change('a',g.a);change('b',g.b);change('c',g.c);}next();const t=s.snapshot.state;if(model.model==='number_line')change('x',+t.targetX);if(model.model==='fraction_bar')change('numerator',+t.denominator*+t.targetRatio);if(model.model==='linear_balance')change('x',(+t.c-+t.b)/+t.a);if(model.model==='quadratic_graph')change('c',+t.targetC);next();return{lessonId:p.id,events,expected:{checkpoint:s.snapshot.checkpoint,completed:s.snapshot.completed,state:s.snapshot.state,metrics:s.snapshot.metrics}};});
+for(const p of exampleBlueprints.slice(6)){
+const lesson=buildFromBlueprint(p).manifest,s=new LessonSession(lesson),events:any[]=[];
+function change(name:string,value:number){const event={type:'adjust_parameter' as const,name,value};if(s.interact(event))events.push({kind:'interaction',event});}
+const model=(lesson.scene.objects[0] as any).model;
+change(model==='rectangle_area'||model==='pythagorean'?'width':model==='linear_graph'?'a':'x',2);s.advance();events.push({kind:'advance'});
+function solve(){const t=s.snapshot.state;if(model==='percentage_grid'||model==='ratio_table')change('x',+t.targetX);if(model==='coordinate_plane'){change('x',+t.targetX);change('y',+t.targetY);}if(model==='rectangle_area'||model==='pythagorean'){change('width',+t.targetWidth);change('height',+t.targetHeight);}if(model==='linear_graph'){change('a',+t.targetA);change('b',+t.targetB);}}
+solve();if(!s.success)throw Error('Unsolved '+p.id);s.advance();events.push({kind:'advance'});solve();if(!s.success)throw Error('Unsolved variation '+p.id);s.advance();events.push({kind:'advance'});
+scenarios.push({lessonId:p.id,events,expected:{checkpoint:s.snapshot.checkpoint,completed:s.snapshot.completed,state:s.snapshot.state,metrics:s.snapshot.metrics}});
+}
+writeFileSync('contracts/math-scenarios.json',JSON.stringify(scenarios,null,2));

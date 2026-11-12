@@ -1,0 +1,16 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "integer-minus-three",
+  "title": "Một bước qua số không",
+  "grade": 6,
+  "problem": {
+    "type": "number_line",
+    "statement": "Tìm vị trí số −3 trên trục số.",
+    "given": {
+      "target": -3
+    },
+    "answer": {
+      "value": -3
+    }
+  }
+}

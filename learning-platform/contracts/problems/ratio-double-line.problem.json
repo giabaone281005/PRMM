@@ -1,0 +1,19 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "ratio-double-line",
+  "title": "Gấp lên cùng nhau",
+  "grade": 7,
+  "problem": {
+    "type": "ratio_table",
+    "statement": "Tỉ lệ 2 : 3. Khi gấp 4 lần, hai lượng bằng bao nhiêu?",
+    "given": {
+      "first": 2,
+      "second": 3,
+      "multiplier": 4
+    },
+    "answer": {
+      "first": 8,
+      "second": 12
+    }
+  }
+}

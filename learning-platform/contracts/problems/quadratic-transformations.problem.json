@@ -1,0 +1,20 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "quadratic-transformations",
+  "title": "Khi đường cong chuyển động",
+  "grade": 9,
+  "problem": {
+    "type": "quadratic_graph",
+    "statement": "Dựng đồ thị y = 2x² − x + 1 bằng cách điều chỉnh hệ số.",
+    "given": {
+      "a": 2,
+      "b": -1,
+      "c": 1
+    },
+    "answer": {
+      "a": 2,
+      "b": -1,
+      "c": 1
+    }
+  }
+}

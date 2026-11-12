@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "ratio-double-line",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Gấp lên cùng nhau",
+  "grade": 7,
+  "subject": "math",
+  "topicIds": [
+    "ratio_table"
+  ],
+  "learningObjectives": [
+    "Tỉ lệ 2 : 3. Khi gấp 4 lần, hai lượng bằng bao nhiêu?"
+  ],
+  "engine": {
+    "type": "ratio_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter",
+      "ratio_table"
+    ]
+  },
+  "scene": {
+    "sceneId": "ratio-double-line-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "ratio_table",
+        "parameters": {
+          "x": 1,
+          "a": 2,
+          "b": 3,
+          "targetX": 4
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Kéo thử và quan sát.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "gte",
+        "path": "metrics.parameterChangeCountSinceCheckpoint",
+        "value": 1
+      },
+      "hints": [
+        "Kéo thử trên hình."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Gấp cả hai lượng 4 lần.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Giữ tỉ lệ, thử gấp 5 lần.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": 0,
+          "targetX": 5
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3"
+    ]
+  }
+}

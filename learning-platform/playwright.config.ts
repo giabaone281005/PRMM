@@ -1,0 +1,3 @@
+import {defineConfig,devices} from '@playwright/test';
+const port=Number(process.env.PLAYWRIGHT_PORT??5174),url=`http://127.0.0.1:${port}`;
+export default defineConfig({testDir:'tests/e2e',fullyParallel:false,workers:1,reporter:[['list'],['json',{outputFile:'../docs/qa/playwright-results.json'}]],use:{baseURL:url,headless:true,channel:'chrome',trace:'retain-on-failure'},webServer:{command:`npm run dev -- --port ${port} --strictPort`,url,reuseExistingServer:false,env:{MOHOC_TEST_MODE:'1'},timeout:30000},projects:[{name:'desktop',use:{viewport:{width:1440,height:1050}}}]});

@@ -1,0 +1,21 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "triangle-from-json",
+  "title": "Ba góc, một quy luật",
+  "grade": 7,
+  "problem": {
+    "type": "triangle_angles",
+    "statement": "Khám phá tổng ba góc của một tam giác.",
+    "given": {
+      "ax": 170,
+      "ay": 65,
+      "bx": 60,
+      "by": 240,
+      "cx": 300,
+      "cy": 240
+    },
+    "answer": {
+      "sum": 180
+    }
+  }
+}

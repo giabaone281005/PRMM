@@ -1,0 +1,29 @@
+# Dependencies and generated output
+node_modules/
+.dart_tool/
+.gradle/
+.cache/
+build/
+dist/
+coverage/
+__pycache__/
+*.pyc
+.venv/
+test-results/
+playwright-report/
+
+# Machine-local state and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+.local/
+local.properties
+key.properties
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.log
+.DS_Store
+Thumbs.db

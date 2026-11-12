@@ -1,0 +1,18 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "linear-graph-lab",
+  "title": "Một đường thẳng biết kể chuyện",
+  "grade": 8,
+  "problem": {
+    "type": "linear_graph",
+    "statement": "Dựng đồ thị y = 2x + 1.",
+    "given": {
+      "slope": 2,
+      "intercept": 1
+    },
+    "answer": {
+      "slope": 2,
+      "intercept": 1
+    }
+  }
+}

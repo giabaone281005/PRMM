@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "percent-of-a-whole",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Một phần trăm là bao nhiêu?",
+  "grade": 6,
+  "subject": "math",
+  "topicIds": [
+    "percentage_grid"
+  ],
+  "learningObjectives": [
+    "Tô 25% và tìm 25% của 80."
+  ],
+  "engine": {
+    "type": "percentage_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter",
+      "percentage_grid"
+    ]
+  },
+  "scene": {
+    "sceneId": "percent-of-a-whole-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "percentage_grid",
+        "parameters": {
+          "x": 0,
+          "b": 80,
+          "targetX": 25
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Kéo thử và quan sát.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "gte",
+        "path": "metrics.parameterChangeCountSinceCheckpoint",
+        "value": 1
+      },
+      "hints": [
+        "Kéo thử trên hình."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Tô 25% số ô.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Thử tô 50%.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": 0,
+          "targetX": 50
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3"
+    ]
+  }
+}

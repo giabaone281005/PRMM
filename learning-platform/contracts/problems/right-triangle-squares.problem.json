@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "right-triangle-squares",
+  "title": "Ba cạnh và những ô vuông",
+  "grade": 8,
+  "problem": {
+    "type": "pythagorean",
+    "statement": "Hai cạnh góc vuông dài 3 và 4. Tìm cạnh huyền.",
+    "given": {
+      "legA": 3,
+      "legB": 4
+    },
+    "answer": {
+      "hypotenuse": 5
+    }
+  }
+}

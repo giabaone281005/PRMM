@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "fraction-three-fourths",
+  "title": "Một phần của toàn thể",
+  "grade": 6,
+  "problem": {
+    "type": "fraction",
+    "statement": "Tô màu 3/4 thanh phân số. Tìm một phân số bằng nó.",
+    "given": {
+      "numerator": 3,
+      "denominator": 4
+    },
+    "answer": {
+      "value": 0.75
+    }
+  }
+}

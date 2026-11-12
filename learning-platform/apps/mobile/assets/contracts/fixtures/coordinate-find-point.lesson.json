@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "coordinate-find-point",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Đặt điểm vào đúng chỗ",
+  "grade": 7,
+  "subject": "math",
+  "topicIds": [
+    "coordinate_plane"
+  ],
+  "learningObjectives": [
+    "Đặt điểm M tại (3; −2)."
+  ],
+  "engine": {
+    "type": "coordinate_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter",
+      "coordinate_plane"
+    ]
+  },
+  "scene": {
+    "sceneId": "coordinate-find-point-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "coordinate_plane",
+        "parameters": {
+          "x": 0,
+          "y": 0,
+          "targetX": 3,
+          "targetY": -2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Kéo thử và quan sát.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "gte",
+        "path": "metrics.parameterChangeCountSinceCheckpoint",
+        "value": 1
+      },
+      "hints": [
+        "Kéo thử trên hình."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Kéo M đến (3; -2).",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Đặt M tại (-3; 2).",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": 0,
+          "y": 0,
+          "targetX": -3,
+          "targetY": 2
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3"
+    ]
+  }
+}

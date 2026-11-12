@@ -1,0 +1,18 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "balance-linear-equation",
+  "title": "Giữ hai vế cân bằng",
+  "grade": 8,
+  "problem": {
+    "type": "linear_equation",
+    "statement": "Tìm x để 2x + 3 = 11.",
+    "given": {
+      "a": 2,
+      "b": 3,
+      "c": 11
+    },
+    "answer": {
+      "x": 4
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "integer-minus-three",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Một bước qua số không",
+  "grade": 6,
+  "subject": "math",
+  "topicIds": [
+    "number_line"
+  ],
+  "learningObjectives": [
+    "Tìm vị trí số −3 trên trục số."
+  ],
+  "engine": {
+    "type": "number_line_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter",
+      "number_line_drag"
+    ]
+  },
+  "scene": {
+    "sceneId": "integer-minus-three-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": -3
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Kéo chấm trên trục số.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "gte",
+        "path": "metrics.parameterChangeCountSinceCheckpoint",
+        "value": 1
+      },
+      "hints": [
+        "Kéo thử trên hình."
+      ],
+      "feedback": {
+        "success": "Hình đã thay đổi!"
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Đặt chấm tại số -3.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "tolerance": 0.025,
+            "value": 0
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến đúng mục tiêu."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Thử thách tiếp: tìm số đối của -3.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": 0,
+          "targetX": 3
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "tolerance": 0.025,
+            "value": 0
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến đúng mục tiêu."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3"
+    ]
+  }
+}

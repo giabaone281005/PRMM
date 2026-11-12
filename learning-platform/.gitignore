@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.local
+.local/
+apps/mobile/.dart_tool/
+apps/mobile/build/
+apps/mobile/android/local.properties
+test-results/
+playwright-report/

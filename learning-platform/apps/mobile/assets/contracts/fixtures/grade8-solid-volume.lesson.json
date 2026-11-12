@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "subject": "math",
+  "topicIds": [
+    "geometry"
+  ],
+  "learningObjectives": [
+    "Khám phá quan hệ hình học bằng thao tác trực tiếp."
+  ],
+  "lessonId": "grade8-solid-volume",
+  "title": "Từng lớp tạo nên thể tích",
+  "grade": 8,
+  "engine": {
+    "type": "geometry_3d_web",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "orbit_solid",
+      "select_face",
+      "fill_layers",
+      "measure_volume"
+    ]
+  },
+  "scene": {
+    "sceneId": "prism-lab",
+    "coordinateSystem": "cartesian_3d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "solid",
+        "kind": "prism",
+        "dimensions": [
+          4,
+          3,
+          3
+        ]
+      }
+    ],
+    "initialState": {
+      "layers": 0
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Kéo để xoay khối hộp và khám phá các mặt.",
+      "allowedInteractions": [
+        "orbit_solid"
+      ],
+      "scenePatch": {},
+      "successCriteria": {
+        "op": "gte",
+        "path": "metrics.orbitRadians",
+        "value": 0.3
+      },
+      "hints": [
+        "Thử thao tác trực tiếp lên hình."
+      ],
+      "feedback": {
+        "success": "Chính xác! Bạn vừa khám phá thêm một điều mới."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Chạm vào một mặt của khối hộp.",
+      "allowedInteractions": [
+        "select_face"
+      ],
+      "scenePatch": {},
+      "successCriteria": {
+        "op": "gte",
+        "path": "metrics.selectedFaces",
+        "value": 1
+      },
+      "hints": [
+        "Thử thao tác trực tiếp lên hình."
+      ],
+      "feedback": {
+        "success": "Chính xác! Bạn vừa khám phá thêm một điều mới."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Kéo thanh lớp để lấp đầy 3 lớp hình lập phương đơn vị.",
+      "allowedInteractions": [
+        "fill_layers"
+      ],
+      "scenePatch": {},
+      "successCriteria": {
+        "op": "eq",
+        "path": "metrics.filledLayers",
+        "value": 3
+      },
+      "hints": [
+        "Thử thao tác trực tiếp lên hình."
+      ],
+      "feedback": {
+        "success": "Chính xác! Bạn vừa khám phá thêm một điều mới."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Thay đổi số lớp, rồi xếp đầy lại. Quan sát 4 × 3 × 3 = 36.",
+      "allowedInteractions": [
+        "fill_layers",
+        "measure_volume"
+      ],
+      "scenePatch": {},
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "eq",
+            "path": "metrics.volume",
+            "value": 36
+          },
+          {
+            "op": "eq",
+            "path": "metrics.filledLayers",
+            "value": 3
+          }
+        ]
+      },
+      "hints": [
+        "Thử thao tác trực tiếp lên hình."
+      ],
+      "feedback": {
+        "success": "Chính xác! Bạn vừa khám phá thêm một điều mới."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+name: Learning platform checks
+on: [push, pull_request]
+jobs:
+  contracts-web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: learning-platform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: learning-platform/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run bundle:mobile
+      - run: npm run bundle:edge
+  flutter:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: learning-platform/apps/mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.4'
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test

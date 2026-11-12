@@ -1,0 +1,792 @@
+[
+  {
+    "lessonId": "integer-minus-three",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": -3
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 3
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 3,
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 3,
+        "targetRatio": 0.5,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "targetY": 0,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 3,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 3
+      }
+    }
+  },
+  {
+    "lessonId": "fraction-three-fourths",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "numerator",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "numerator",
+          "value": 3
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "numerator",
+          "value": 6
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 0,
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "numerator": 6,
+        "denominator": 8,
+        "targetX": 2,
+        "targetRatio": 0.75,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "targetY": 0,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 3,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 0.75
+      }
+    }
+  },
+  {
+    "lessonId": "balance-linear-equation",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 4
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 5
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 5,
+        "a": 2,
+        "b": 3,
+        "c": 13,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 2,
+        "targetRatio": 0.5,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "targetY": 0,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 3,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 13
+      }
+    }
+  },
+  {
+    "lessonId": "quadratic-transformations",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "a",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "b",
+          "value": -1
+        }
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "c",
+          "value": 1
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "c",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 0,
+        "a": 2,
+        "b": -1,
+        "c": 2,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 2,
+        "targetRatio": 0.5,
+        "targetA": 2,
+        "targetB": -1,
+        "targetC": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "targetY": 0,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 4,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 2
+      }
+    }
+  },
+  {
+    "lessonId": "percent-of-a-whole",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 25
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 50
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 50,
+        "a": 1,
+        "b": 80,
+        "c": 0,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 50,
+        "targetRatio": 0.5,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "targetY": 0,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 3,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 40
+      }
+    }
+  },
+  {
+    "lessonId": "ratio-double-line",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 4
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 5
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 5,
+        "a": 2,
+        "b": 3,
+        "c": 0,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 5,
+        "targetRatio": 0.5,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "targetY": 0,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 3,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 15
+      }
+    }
+  },
+  {
+    "lessonId": "coordinate-find-point",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": 3
+        }
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "y",
+          "value": -2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "x",
+          "value": -3
+        }
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "y",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": -3,
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": -3,
+        "targetRatio": 0.5,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "targetY": 2,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 5,
+        "parameterChangeCountSinceCheckpoint": 2,
+        "modelError": 0,
+        "modelValue": 3.6055512754639896
+      }
+    }
+  },
+  {
+    "lessonId": "rectangle-area-lab",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "width",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "width",
+          "value": 5
+        }
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "height",
+          "value": 3
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "width",
+          "value": 6
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 0,
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 2,
+        "targetRatio": 0.5,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 0,
+        "width": 6,
+        "height": 3,
+        "targetY": 0,
+        "targetWidth": 6,
+        "targetHeight": 3
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 4,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 18
+      }
+    }
+  },
+  {
+    "lessonId": "right-triangle-squares",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "width",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "width",
+          "value": 3
+        }
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "height",
+          "value": 4
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "width",
+          "value": 4
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 0,
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 2,
+        "targetRatio": 0.5,
+        "targetA": 1,
+        "targetB": 0,
+        "targetC": 0,
+        "y": 0,
+        "width": 4,
+        "height": 4,
+        "targetY": 0,
+        "targetWidth": 4,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 4,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 5.656854249492381
+      }
+    }
+  },
+  {
+    "lessonId": "linear-graph-lab",
+    "events": [
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "a",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "b",
+          "value": 1
+        }
+      },
+      {
+        "kind": "advance"
+      },
+      {
+        "kind": "interaction",
+        "event": {
+          "type": "adjust_parameter",
+          "name": "b",
+          "value": 2
+        }
+      },
+      {
+        "kind": "advance"
+      }
+    ],
+    "expected": {
+      "checkpoint": 2,
+      "completed": true,
+      "state": {
+        "x": 0,
+        "a": 2,
+        "b": 2,
+        "c": 0,
+        "numerator": 1,
+        "denominator": 4,
+        "targetX": 2,
+        "targetRatio": 0.5,
+        "targetA": 2,
+        "targetB": 2,
+        "targetC": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "targetY": 0,
+        "targetWidth": 3,
+        "targetHeight": 4
+      },
+      "metrics": {
+        "validVertexDragCount": 0,
+        "validVertexDragCountSinceCheckpoint": 0,
+        "snappedAngleTokens": 0,
+        "assembledAngleDegrees": 0,
+        "orbitRadians": 0,
+        "selectedFaces": 0,
+        "filledLayers": 0,
+        "volume": 0,
+        "parameterChangeCount": 3,
+        "parameterChangeCountSinceCheckpoint": 1,
+        "modelError": 0,
+        "modelValue": 2
+      }
+    }
+  }
+]

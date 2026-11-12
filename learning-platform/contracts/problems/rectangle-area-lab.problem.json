@@ -1,0 +1,18 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "rectangle-area-lab",
+  "title": "Kéo cạnh, đếm ô",
+  "grade": 6,
+  "problem": {
+    "type": "rectangle_area",
+    "statement": "Dựng hình chữ nhật dài 5, rộng 3. Tìm diện tích.",
+    "given": {
+      "width": 5,
+      "height": 3
+    },
+    "answer": {
+      "area": 15,
+      "perimeter": 16
+    }
+  }
+}

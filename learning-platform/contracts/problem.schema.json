@@ -1,0 +1,655 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mohoc.local/problem.schema.json",
+  "type": "object",
+  "properties": {
+    "formatVersion": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "grade": {
+      "enum": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "problem": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "linear_equation"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "number"
+                },
+                "b": {
+                  "type": "number"
+                },
+                "c": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "coordinate_plane"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "fraction"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "numerator": {
+                  "type": "number"
+                },
+                "denominator": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "numerator",
+                "denominator"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "number_line"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "target": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "target"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "linear_graph"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "slope": {
+                  "type": "number"
+                },
+                "intercept": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "slope",
+                "intercept"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "slope": {
+                  "type": "number"
+                },
+                "intercept": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "slope",
+                "intercept"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "percentage_grid"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number"
+                },
+                "percent": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "total",
+                "percent"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "prism_volume"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number"
+                },
+                "depth": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "width",
+                "depth",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "volume": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "volume"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "quadratic_graph"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "number"
+                },
+                "b": {
+                  "type": "number"
+                },
+                "c": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "number"
+                },
+                "b": {
+                  "type": "number"
+                },
+                "c": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "ratio_table"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "first": {
+                  "type": "number"
+                },
+                "second": {
+                  "type": "number"
+                },
+                "multiplier": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "first",
+                "second",
+                "multiplier"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "first": {
+                  "type": "number"
+                },
+                "second": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "first",
+                "second"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "rectangle_area"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "area": {
+                  "type": "number"
+                },
+                "perimeter": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "area",
+                "perimeter"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "pythagorean"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "legA": {
+                  "type": "number"
+                },
+                "legB": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "legA",
+                "legB"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "hypotenuse": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "hypotenuse"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "triangle_angles"
+            },
+            "statement": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "given": {
+              "type": "object",
+              "properties": {
+                "ax": {
+                  "type": "number"
+                },
+                "ay": {
+                  "type": "number"
+                },
+                "bx": {
+                  "type": "number"
+                },
+                "by": {
+                  "type": "number"
+                },
+                "cx": {
+                  "type": "number"
+                },
+                "cy": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "ax",
+                "ay",
+                "bx",
+                "by",
+                "cx",
+                "cy"
+              ],
+              "additionalProperties": false
+            },
+            "answer": {
+              "type": "object",
+              "properties": {
+                "sum": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "sum"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "statement",
+            "given"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "required": [
+    "formatVersion",
+    "id",
+    "title",
+    "grade",
+    "problem"
+  ],
+  "additionalProperties": false
+}

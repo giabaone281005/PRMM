@@ -1,0 +1,36 @@
+{
+  "name": "mohoc-learning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc --noEmit && vite build",
+    "test:e2e": "playwright test",
+    "bundle:mobile": "vite build --config vite.mobile.config.ts && node scripts/bundle-mobile.mjs",
+    "contracts:generate": "node scripts/create-contract.mjs && tsx scripts/export-blueprints.ts && node scripts/create-problem-schema.mjs && node scripts/build-sql-contract.mjs",
+    "bundle:edge": "node scripts/bundle-edge.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0",
+    "ajv": "8.20.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.16",
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
+    "esbuild": "0.28.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  }
+}

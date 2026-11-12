@@ -1,0 +1,18 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "coordinate-find-point",
+  "title": "Đặt điểm vào đúng chỗ",
+  "grade": 7,
+  "problem": {
+    "type": "coordinate_plane",
+    "statement": "Đặt điểm M tại (3; −2).",
+    "given": {
+      "x": 3,
+      "y": -2
+    },
+    "answer": {
+      "x": 3,
+      "y": -2
+    }
+  }
+}

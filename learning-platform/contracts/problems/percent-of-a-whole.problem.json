@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1.0.0",
+  "id": "percent-of-a-whole",
+  "title": "Một phần trăm là bao nhiêu?",
+  "grade": 6,
+  "problem": {
+    "type": "percentage_grid",
+    "statement": "Tô 25% và tìm 25% của 80.",
+    "given": {
+      "total": 80,
+      "percent": 25
+    },
+    "answer": {
+      "value": 20
+    }
+  }
+}

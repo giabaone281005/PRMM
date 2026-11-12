@@ -1,0 +1,8 @@
+import {test,expect} from '@playwright/test';
+import {writeFileSync} from 'node:fs';
+test('browser console and local API network inspection',async({page})=>{
+  const consoleErrors:string[]=[],pageErrors:string[]=[],failedRequests:string[]=[],responses:{url:string;status:number}[]=[];
+  page.on('console',message=>{if(message.type()==='error')consoleErrors.push(message.location().url+': '+message.text());});page.on('pageerror',e=>pageErrors.push(e.message));page.on('requestfailed',r=>{if(r.url().includes('127.0.0.1'))failedRequests.push(r.url()+': '+r.failure()?.errorText);});page.on('response',r=>{if(r.url().includes('/api/')||r.status()>=400)responses.push({url:r.url(),status:r.status()});});
+  await page.goto('/admin/studio');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await page.getByRole('button',{name:/Preview điện thoại/}).click();await expect(page.locator('.phone-frame .math-canvas')).toBeVisible();await page.getByRole('button',{name:'Đóng ✕'}).click();await page.goto('/');await page.getByRole('button').filter({has:page.getByRole('heading',{name:'Từng lớp tạo nên thể tích',exact:true})}).click();await expect(page.locator('.webgl canvas')).toBeVisible();await page.screenshot({path:'../docs/qa/diagnostics-solid.png'});
+  writeFileSync('../docs/qa/browser-diagnostics.json',JSON.stringify({consoleErrors,pageErrors,failedRequests,responses},null,2));expect(consoleErrors).toEqual([]);expect(pageErrors).toEqual([]);expect(failedRequests).toEqual([]);expect(responses.some(r=>r.url.includes('/api/catalog')&&r.status===200)).toBe(true);expect(responses.every(r=>r.status<400)).toBe(true);
+});

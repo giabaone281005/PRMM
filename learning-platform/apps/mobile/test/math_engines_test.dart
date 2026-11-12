@@ -1,0 +1,7 @@
+import 'dart:convert';import 'dart:io';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mo_hoc/domain.dart';
+void main(){final schema=jsonDecode(File('../../contracts/lesson.schema.json').readAsStringSync()) as Json;
+  test('all six canonical fixtures validate in Dart',(){for(final file in Directory('../../contracts/fixtures').listSync().whereType<File>()){final l=jsonDecode(file.readAsStringSync()) as Json;expect(validateLesson(l,schema),isEmpty,reason:file.path);}});
+  test('Dart math engines replay the same gestures and outcomes as TypeScript',(){for(final scenario in jsonDecode(File('../../contracts/math-scenarios.json').readAsStringSync())){final l=jsonDecode(File('../../contracts/fixtures/${scenario['lessonId']}.lesson.json').readAsStringSync()) as Json,s=LessonSession(l),objects=s.objects;for(final event in scenario['events']){if(event['kind']=='advance'){expect(s.advance(),isTrue);}else{expect(s.interact(Map<String,dynamic>.from(event['event'])),isTrue);}}expect(identical(s.objects,objects),isTrue);expect(s.snapshot['completed'],scenario['expected']['completed']);expect(s.snapshot['checkpoint'],scenario['expected']['checkpoint']);expect(s.snapshot['state'],scenario['expected']['state']);for(final metric in (scenario['expected']['metrics'] as Map).keys){expect(s.metrics[metric]!.toDouble(),closeTo((scenario['expected']['metrics'][metric] as num).toDouble(),1e-8),reason:'${scenario['lessonId']} $metric');}final restored=LessonSession(l,saved:s.snapshot);expect(restored.snapshot['state'],s.snapshot['state']);}});
+}

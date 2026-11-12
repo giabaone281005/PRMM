@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "linear-graph-lab",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Một đường thẳng biết kể chuyện",
+  "grade": 8,
+  "subject": "math",
+  "topicIds": [
+    "linear_graph"
+  ],
+  "learningObjectives": [
+    "Dựng đồ thị y = 2x + 1."
+  ],
+  "engine": {
+    "type": "linear_plot_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter",
+      "linear_graph"
+    ]
+  },
+  "scene": {
+    "sceneId": "linear-graph-lab-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "linear_graph",
+        "parameters": {
+          "x": 0,
+          "a": 0,
+          "b": 0,
+          "targetA": 2,
+          "targetB": 1
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Kéo thử và quan sát.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "gte",
+        "path": "metrics.parameterChangeCountSinceCheckpoint",
+        "value": 1
+      },
+      "hints": [
+        "Kéo thử trên hình."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Khớp đường thẳng y = 2x + 1.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {}
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Dịch đường thẳng lên một đơn vị.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "targetB": 2
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.025
+          }
+        ]
+      },
+      "hints": [
+        "Đưa hình đến vị trí nét đứt."
+      ],
+      "feedback": {
+        "success": "Đúng rồi!"
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3"
+    ]
+  }
+}

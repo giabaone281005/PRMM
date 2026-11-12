@@ -1,0 +1,4 @@
+import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
+const obj=(properties,required=Object.keys(properties))=>({type:'object',properties,required,additionalProperties:false});
+const variants=readdirSync('contracts/problems').map(f=>JSON.parse(readFileSync('contracts/problems/'+f,'utf8'))).map(p=>obj({type:{const:p.problem.type},statement:{type:'string',minLength:1,maxLength:2000},given:obj(Object.fromEntries(Object.keys(p.problem.given).map(k=>[k,{type:'number'}]))),answer:obj(Object.fromEntries(Object.keys(p.problem.answer).map(k=>[k,{type:'number'}])))},['type','statement','given']));
+writeFileSync('contracts/problem.schema.json',JSON.stringify({$schema:'https://json-schema.org/draft/2020-12/schema',$id:'https://mohoc.local/problem.schema.json',...obj({formatVersion:{const:'1.0.0'},id:{type:'string',pattern:'^[a-zA-Z][a-zA-Z0-9_-]{0,99}$'},title:{type:'string',minLength:1,maxLength:200},grade:{enum:[6,7,8,9]},problem:{oneOf:variants}})},null,2));
