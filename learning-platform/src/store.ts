@@ -2,7 +2,7 @@ import {createClient} from '@supabase/supabase-js';
 import {validateLesson,type Lesson} from '../packages/lesson-contract';
 import type {Snapshot} from '../packages/lesson-runtime';
 const env=(import.meta as unknown as {env:Record<string,string>}).env;
-export const supabase=env.VITE_SUPABASE_URL&&env.VITE_SUPABASE_PUBLISHABLE_KEY?createClient(env.VITE_SUPABASE_URL,env.VITE_SUPABASE_PUBLISHABLE_KEY):null;
+export const supabase=env.VITE_ENABLE_LOCAL_DEMO!=='true'&&env.VITE_SUPABASE_URL&&env.VITE_SUPABASE_PUBLISHABLE_KEY?createClient(env.VITE_SUPABASE_URL,env.VITE_SUPABASE_PUBLISHABLE_KEY):null;
 let progressUser='local';
 export function setProgressUser(id:string){progressUser=id;}
 let localCheck:Promise<boolean>|undefined;

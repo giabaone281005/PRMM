@@ -1,0 +1,528 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-formula",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Ghép công thức nhiều ô",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-formula",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Ghép công thức nhiều ô"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-formula-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Ghép tổng hai nghiệm theo Viète.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Tổng bằng −b/a.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "FORMULA_SNAP_BUILDER",
+        "labels": [
+          "Tử",
+          "Mẫu"
+        ],
+        "tokens": [
+          "−b",
+          "a",
+          "c",
+          "b",
+          "−c"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Ghép tích hai nghiệm theo Viète.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Tích bằng c/a.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "FORMULA_SNAP_BUILDER",
+        "labels": [
+          "Tử",
+          "Mẫu"
+        ],
+        "tokens": [
+          "−b",
+          "a",
+          "c",
+          "b",
+          "−c"
+        ],
+        "answers": [
+          2,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Ghép cả hai công thức Viète.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Tổng bằng −b/a; tích bằng c/a. Một token có thể dùng lại.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "FORMULA_SNAP_BUILDER",
+        "labels": [
+          "Tử tổng",
+          "Mẫu tổng",
+          "Tử tích",
+          "Mẫu tích"
+        ],
+        "tokens": [
+          "−b",
+          "a",
+          "c",
+          "b",
+          "−c"
+        ],
+        "answers": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "x² − 5x + 6 = 0: ghép tổng và tích.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Tổng 5, tích 6.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "FORMULA_SNAP_BUILDER",
+        "labels": [
+          "Tổng",
+          "Tích"
+        ],
+        "tokens": [
+          "5",
+          "6",
+          "−5",
+          "−6"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "2x² − 6x + 4 = 0: ghép tổng và tích.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Chia các hệ số cho a = 2: tổng 3, tích 2.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "FORMULA_SNAP_BUILDER",
+        "labels": [
+          "Tổng",
+          "Tích"
+        ],
+        "tokens": [
+          "3",
+          "2",
+          "6",
+          "4"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tự kiểm tra x² + x − 6 = 0: ghép tổng và tích.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Tổng −1, tích −6; nghiệm 2 và −3.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "FORMULA_SNAP_BUILDER",
+        "labels": [
+          "Tổng",
+          "Tích"
+        ],
+        "tokens": [
+          "−1",
+          "−6",
+          "1",
+          "6"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Ghép tổng hai nghiệm theo Viète.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tổng bằng −b/a."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Ghép tích hai nghiệm theo Viète.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tích bằng c/a."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Ghép cả hai công thức Viète.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tổng bằng −b/a; tích bằng c/a. Một token có thể dùng lại."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "x² − 5x + 6 = 0: ghép tổng và tích.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tổng 5, tích 6."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "2x² − 6x + 4 = 0: ghép tổng và tích.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Chia các hệ số cho a = 2: tổng 3, tích 2."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra x² + x − 6 = 0: ghép tổng và tích.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tổng −1, tích −6; nghiệm 2 và −3."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

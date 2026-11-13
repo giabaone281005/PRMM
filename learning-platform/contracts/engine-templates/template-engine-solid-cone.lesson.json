@@ -1,0 +1,497 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-solid-cone",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Khám phá 3D: Hình nón",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-solid-cone",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Khám phá 3D: Hình nón"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-solid-cone-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Xoay mô hình rồi chạm bán kính r.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Bán kính nối tâm tới đường tròn đáy hoặc mặt cầu.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "3D_SOLID_INSPECTOR",
+        "labels": [],
+        "tokens": [
+          "r",
+          "h",
+          "l",
+          "Đáy"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Xoay rồi chạm chiều cao h.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "h là khoảng cách giữa đáy và đỉnh hoặc hai mặt phẳng đáy.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "3D_SOLID_INSPECTOR",
+        "labels": [],
+        "tokens": [
+          "r",
+          "h",
+          "l",
+          "Đáy"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tìm đường sinh l trên mặt bên.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Đường sinh nối đỉnh với đường tròn đáy.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "3D_SOLID_INSPECTOR",
+        "labels": [],
+        "tokens": [
+          "r",
+          "h",
+          "l",
+          "Đáy"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Phân biệt đáy với mặt bên: chạm đáy.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Đáy là miền hình tròn.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "3D_SOLID_INSPECTOR",
+        "labels": [],
+        "tokens": [
+          "r",
+          "h",
+          "l",
+          "Đáy"
+        ],
+        "answers": [
+          3
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Chọn h, không chọn đường sinh l.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Đổi hướng nhìn không thay đổi tên và vai trò của đoạn.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "3D_SOLID_INSPECTOR",
+        "labels": [],
+        "tokens": [
+          "r",
+          "h",
+          "l",
+          "Đáy"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tự kiểm tra: xoay khối, tìm lại bán kính r không dựa vào hướng nhìn.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Bán kính luôn xuất phát từ tâm đáy hoặc tâm cầu.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "3D_SOLID_INSPECTOR",
+        "labels": [],
+        "tokens": [
+          "r",
+          "h",
+          "l",
+          "Đáy"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Xoay mô hình rồi chạm bán kính r.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": 0,
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "width": 0,
+          "height": 0,
+          "numerator": 0
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Bán kính nối tâm tới đường tròn đáy hoặc mặt cầu."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Xoay rồi chạm chiều cao h.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": 0,
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "width": 0,
+          "height": 0,
+          "numerator": 0
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "h là khoảng cách giữa đáy và đỉnh hoặc hai mặt phẳng đáy."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Tìm đường sinh l trên mặt bên.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": 0,
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "width": 0,
+          "height": 0,
+          "numerator": 0
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Đường sinh nối đỉnh với đường tròn đáy."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Phân biệt đáy với mặt bên: chạm đáy.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": 0,
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "width": 0,
+          "height": 0,
+          "numerator": 0
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Đáy là miền hình tròn."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Chọn h, không chọn đường sinh l.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": 0,
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "width": 0,
+          "height": 0,
+          "numerator": 0
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Đổi hướng nhìn không thay đổi tên và vai trò của đoạn."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: xoay khối, tìm lại bán kính r không dựa vào hướng nhìn.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": 0,
+          "a": 0,
+          "b": 0,
+          "c": 0,
+          "width": 0,
+          "height": 0,
+          "numerator": 0
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Bán kính luôn xuất phát từ tâm đáy hoặc tâm cầu."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

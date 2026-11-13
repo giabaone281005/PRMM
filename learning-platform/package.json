@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "templates:generate": "tsx scripts/export-engine-templates.ts && tsx scripts/export-math9.ts",
+    "dev:local": "node scripts/dev-local.mjs",
     "dev": "vite --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

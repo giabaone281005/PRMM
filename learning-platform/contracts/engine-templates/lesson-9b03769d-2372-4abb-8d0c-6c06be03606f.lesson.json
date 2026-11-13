@@ -1,0 +1,479 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Khi đường cong chuyển động",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-parabola",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Parabol động"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Dựng y = x², quan sát hướng mở.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "a = 1: mở lên.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "PARABOLA_SLIDER",
+        "labels": [
+          "Hệ số a"
+        ],
+        "tokens": [],
+        "answers": [
+          1
+        ],
+        "min": -4,
+        "max": 4,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Dựng y = −x².",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "a = −1: mở xuống.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "PARABOLA_SLIDER",
+        "labels": [
+          "Hệ số a"
+        ],
+        "tokens": [],
+        "answers": [
+          -1
+        ],
+        "min": -4,
+        "max": 4,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Dựng y = 2x², so với y = x².",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Hệ số có trị tuyệt đối lớn hơn cho đồ thị hẹp hơn.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "PARABOLA_SLIDER",
+        "labels": [
+          "Hệ số a"
+        ],
+        "tokens": [],
+        "answers": [
+          2
+        ],
+        "min": -4,
+        "max": 4,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Dựng y = −3x².",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Mở xuống và hẹp hơn y = −x².",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "PARABOLA_SLIDER",
+        "labels": [
+          "Hệ số a"
+        ],
+        "tokens": [],
+        "answers": [
+          -3
+        ],
+        "min": -4,
+        "max": 4,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Đồ thị qua (2; 8): tìm a.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "8 = 4a nên a = 2.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "PARABOLA_SLIDER",
+        "labels": [
+          "Hệ số a"
+        ],
+        "tokens": [],
+        "answers": [
+          2
+        ],
+        "min": -4,
+        "max": 4,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tự kiểm tra: đồ thị qua (1; −2), dựng a.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "−2 = a × 1² nên a = −2.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "PARABOLA_SLIDER",
+        "labels": [
+          "Hệ số a"
+        ],
+        "tokens": [],
+        "answers": [
+          -2
+        ],
+        "min": -4,
+        "max": 4,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": []
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Dựng y = x², quan sát hướng mở.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -4,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "a = 1: mở lên."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Dựng y = −x².",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -4,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "a = −1: mở xuống."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Dựng y = 2x², so với y = x².",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -4,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Hệ số có trị tuyệt đối lớn hơn cho đồ thị hẹp hơn."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Dựng y = −3x².",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -4,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Mở xuống và hẹp hơn y = −x²."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Đồ thị qua (2; 8): tìm a.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -4,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "8 = 4a nên a = 2."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: đồ thị qua (1; −2), dựng a.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -4,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "−2 = a × 1² nên a = −2."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

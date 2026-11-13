@@ -1,0 +1,491 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-delta",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Biệt thức và số nghiệm",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-delta",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Biệt thức và số nghiệm"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-delta-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Chọn Δ > 0, quan sát đồ thị cắt Ox.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Có hai giao điểm, hai nghiệm phân biệt.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "DELTA_STATE_TOGGLE",
+        "labels": [],
+        "tokens": [
+          "Δ > 0",
+          "Δ = 0",
+          "Δ < 0"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Chọn Δ = 0.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Tiếp xúc Ox, một nghiệm kép.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "DELTA_STATE_TOGGLE",
+        "labels": [],
+        "tokens": [
+          "Δ > 0",
+          "Δ = 0",
+          "Δ < 0"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Chọn Δ < 0.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Không có nghiệm thực.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "DELTA_STATE_TOGGLE",
+        "labels": [],
+        "tokens": [
+          "Δ > 0",
+          "Δ = 0",
+          "Δ < 0"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "x² − 4 = 0 có Δ = 16. Chọn trạng thái.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Δ dương.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "DELTA_STATE_TOGGLE",
+        "labels": [],
+        "tokens": [
+          "Δ > 0",
+          "Δ = 0",
+          "Δ < 0"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "x² + 2x + 1 = 0 có Δ = 0.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Nghiệm kép −1.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "DELTA_STATE_TOGGLE",
+        "labels": [],
+        "tokens": [
+          "Δ > 0",
+          "Δ = 0",
+          "Δ < 0"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tự kiểm tra x² + 1 = 0: Δ = −4.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Vô nghiệm thực.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "DELTA_STATE_TOGGLE",
+        "labels": [],
+        "tokens": [
+          "Δ > 0",
+          "Δ = 0",
+          "Δ < 0"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Chọn Δ > 0, quan sát đồ thị cắt Ox.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Có hai giao điểm, hai nghiệm phân biệt."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Chọn Δ = 0.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tiếp xúc Ox, một nghiệm kép."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Chọn Δ < 0.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Không có nghiệm thực."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "x² − 4 = 0 có Δ = 16. Chọn trạng thái.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Δ dương."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "x² + 2x + 1 = 0 có Δ = 0.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Nghiệm kép −1."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra x² + 1 = 0: Δ = −4.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Vô nghiệm thực."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

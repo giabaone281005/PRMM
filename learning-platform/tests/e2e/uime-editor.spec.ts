@@ -1,8 +1,10 @@
 import {test,expect} from '@playwright/test';
-test('SVG upload is inert and mixed engines preserve the scene',async({page})=>{
- await page.goto('/admin/studio');await page.getByLabel('Chủ đề Toán 9').selectOption('engine-coefficient');await page.locator('summary').filter({hasText:'Chạm hệ số b'}).click();
+import {engineTopics} from '../../packages/lesson-authoring/uime-bank';
+test('SVG upload stays inert and six checkpoint editor preserves scene',async({page})=>{
+ await page.goto('/admin/engines');const topic=engineTopics.find(t=>t.id==='engine-coefficient')!;await page.locator('article').filter({has:page.getByRole('heading',{name:topic.title,exact:true})}).getByRole('button',{name:'Tạo bài từ mẫu'}).click();
  await page.getByLabel('Nạp hình SVG').setInputFiles({name:'drawing.svg',mimeType:'image/svg+xml',buffer:Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240"><script>alert(1)</script><rect x="10" y="10" width="300" height="200" fill="white" onclick="alert(1)"/><image href="https://example.invalid/tracker"/></svg>')});
- const config=page.getByLabel('Cấu hình engine JSON');await expect(config).toContainText('');const raw=await config.inputValue();expect(raw).not.toMatch(/script|onclick|tracker/);
- await page.getByLabel('Thêm engine vào bài').selectOption('engine-sign');await page.getByRole('button',{name:'Dựng bài Toán 9',exact:true}).click();await page.getByRole('button',{name:'Preview điện thoại',exact:true}).click();const dialog=page.getByRole('dialog');await dialog.locator('.scene-wrap').evaluate(el=>el.setAttribute('data-persistent','yes'));
- await dialog.locator('.uime-scene .recognition-choices button').filter({hasText:'−7'}).click();await dialog.getByRole('button',{name:/^Tiếp tục/}).click();await expect(dialog.locator('.scene-wrap')).toHaveAttribute('data-persistent','yes');await dialog.locator('.uime-scene .recognition-choices button').filter({hasText:'>'}).click();await dialog.getByRole('button',{name:/^Hoàn thành bài học/}).click();await expect(dialog.getByText('Bạn đã tự mình khám phá!',{exact:true})).toBeVisible();
+ expect(await page.getByLabel('Cấu hình engine JSON').inputValue()).not.toMatch(/script|onclick|tracker/);
+ await page.getByRole('button',{name:'▯ Xem trước',exact:true}).click();const dialog=page.getByRole('dialog');await dialog.locator('.scene-wrap').evaluate(el=>el.setAttribute('data-persistent','yes'));
+ for(let i=0;i<6;i++){const u=topic.tasks[i].uime!;await dialog.locator('.uime-scene').getByRole('button',{name:u.tokens[u.answers[0]],exact:true}).first().click();await dialog.getByRole('button',{name:i===5?/^Hoàn thành bài học/:/^Tiếp tục/}).click();await expect(dialog.locator('.scene-wrap')).toHaveAttribute('data-persistent','yes');}
+ await expect(dialog.getByText('Bạn đã tự mình khám phá!',{exact:true})).toBeVisible();
 });

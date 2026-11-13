@@ -1,5 +1,7 @@
 # Bàn giao dự án Mở Học
 
+> Bản cập nhật sau đợt bài mẫu 6 checkpoint, JSON cho AI và đồng bộ Supabase: đọc [PROJECT_HANDOVER_ENGINE_CHECKPOINTS.md](PROJECT_HANDOVER_ENGINE_CHECKPOINTS.md). Số liệu bên dưới phản ánh trạng thái trước đợt đó.
+
 > Cập nhật: 13/11/2026, múi giờ Asia/Saigon. Phạm vi: toàn bộ workspace, tập trung sản phẩm trong `learning-platform/`.
 > Đây là bản tổng hợp mã nguồn, cấu hình và bằng chứng hiện có; không phải tuyên bố hệ thống đã đủ điều kiện phát hành production.
 > Các kiểm tra chạy lại trong lượt lập tài liệu được tách khỏi kết quả lịch sử. Không kiểm kê lại database live hoặc triển khai thay đổi backend trong lượt này.

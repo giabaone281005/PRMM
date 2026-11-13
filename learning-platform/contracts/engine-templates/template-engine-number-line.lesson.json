@@ -1,0 +1,533 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-number-line",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Trục số bất phương trình",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-number-line",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Trục số bất phương trình"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-number-line-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Dựng x ≥ 3.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Tia phải, đầu kín tại 3.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "NUMBER_LINE_SELECTOR",
+        "labels": [
+          "Mốc",
+          "Chiều: trái / phải",
+          "Đầu mút: mở / kín"
+        ],
+        "tokens": [
+          "Trái",
+          "Phải",
+          "Mở",
+          "Kín"
+        ],
+        "answers": [
+          3,
+          1,
+          1
+        ],
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Dựng x > 3.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Dấu > không lấy mốc 3.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "NUMBER_LINE_SELECTOR",
+        "labels": [
+          "Mốc",
+          "Chiều: trái / phải",
+          "Đầu mút: mở / kín"
+        ],
+        "tokens": [
+          "Trái",
+          "Phải",
+          "Mở",
+          "Kín"
+        ],
+        "answers": [
+          3,
+          1,
+          0
+        ],
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Dựng x ≤ −2.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Tia trái, đầu kín tại −2.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "NUMBER_LINE_SELECTOR",
+        "labels": [
+          "Mốc",
+          "Chiều: trái / phải",
+          "Đầu mút: mở / kín"
+        ],
+        "tokens": [
+          "Trái",
+          "Phải",
+          "Mở",
+          "Kín"
+        ],
+        "answers": [
+          -2,
+          0,
+          1
+        ],
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Dựng x < 0.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Không lấy số 0.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "NUMBER_LINE_SELECTOR",
+        "labels": [
+          "Mốc",
+          "Chiều: trái / phải",
+          "Đầu mút: mở / kín"
+        ],
+        "tokens": [
+          "Trái",
+          "Phải",
+          "Mở",
+          "Kín"
+        ],
+        "answers": [
+          0,
+          0,
+          0
+        ],
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Điểm không nhỏ hơn 4: dựng miền được nhận.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Không nhỏ hơn nghĩa là ≥.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "NUMBER_LINE_SELECTOR",
+        "labels": [
+          "Mốc",
+          "Chiều: trái / phải",
+          "Đầu mút: mở / kín"
+        ],
+        "tokens": [
+          "Trái",
+          "Phải",
+          "Mở",
+          "Kín"
+        ],
+        "answers": [
+          4,
+          1,
+          1
+        ],
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tự kiểm tra: −2x > 4 có tập nghiệm nào?",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Chia cho −2 phải đổi chiều: x < −2.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "NUMBER_LINE_SELECTOR",
+        "labels": [
+          "Mốc",
+          "Chiều: trái / phải",
+          "Đầu mút: mở / kín"
+        ],
+        "tokens": [
+          "Trái",
+          "Phải",
+          "Mở",
+          "Kín"
+        ],
+        "answers": [
+          -2,
+          0,
+          0
+        ],
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Dựng x ≥ 3.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tia phải, đầu kín tại 3."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Dựng x > 3.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Dấu > không lấy mốc 3."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Dựng x ≤ −2.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tia trái, đầu kín tại −2."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Dựng x < 0.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Không lấy số 0."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Điểm không nhỏ hơn 4: dựng miền được nhận.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Không nhỏ hơn nghĩa là ≥."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: −2x > 4 có tập nghiệm nào?",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Chia cho −2 phải đổi chiều: x < −2."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

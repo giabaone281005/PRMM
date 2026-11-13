@@ -1,0 +1,511 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-token-classifier",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Phân loại phương trình",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-token-classifier",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Phân loại phương trình"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-token-classifier-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Phân loại: phương trình bậc nhất hai ẩn hay không?",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Số mũ của mỗi ẩn bằng 1; không có tích hai ẩn.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TOKEN_CLASSIFIER",
+        "labels": [
+          "Bậc nhất hai ẩn",
+          "Không phải"
+        ],
+        "tokens": [
+          "x + y = 2",
+          "x² + y = 3"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Xét hệ số bằng 0: kéo thẻ vào nhóm.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Cho phép một hệ số bằng 0, nhưng không đồng thời cả hai.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TOKEN_CLASSIFIER",
+        "labels": [
+          "Bậc nhất hai ẩn",
+          "Không phải"
+        ],
+        "tokens": [
+          "0x + 2y = 4",
+          "0x + 0y = 1"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Nhận diện phương trình có hệ số âm.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Hệ số âm vẫn hợp lệ; tích xy không phải bậc nhất.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TOKEN_CLASSIFIER",
+        "labels": [
+          "Bậc nhất hai ẩn",
+          "Không phải"
+        ],
+        "tokens": [
+          "−3x + y = 7",
+          "xy = 7"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Phân biệt phương trình với bất phương trình.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Phương trình dùng dấu bằng.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TOKEN_CLASSIFIER",
+        "labels": [
+          "Bậc nhất hai ẩn",
+          "Không phải"
+        ],
+        "tokens": [
+          "2x − y = 4",
+          "2x − y > 4"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tình huống vé: x vé người lớn, y vé trẻ em. Phân loại mô hình.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Tổng tiền là tổng các lượng hệ số nhân số vé.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TOKEN_CLASSIFIER",
+        "labels": [
+          "Bậc nhất hai ẩn",
+          "Không phải"
+        ],
+        "tokens": [
+          "3x + 2y = 20",
+          "x² + 2y = 20"
+        ],
+        "answers": [
+          0,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tự kiểm tra ba trường hợp.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "y = 3 viết được thành 0x + y = 3.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TOKEN_CLASSIFIER",
+        "labels": [
+          "Bậc nhất hai ẩn",
+          "Không phải"
+        ],
+        "tokens": [
+          "x − 4y = 0",
+          "0x + 0y = 0",
+          "y = 3"
+        ],
+        "answers": [
+          0,
+          1,
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Phân loại: phương trình bậc nhất hai ẩn hay không?",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Số mũ của mỗi ẩn bằng 1; không có tích hai ẩn."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Xét hệ số bằng 0: kéo thẻ vào nhóm.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Cho phép một hệ số bằng 0, nhưng không đồng thời cả hai."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Nhận diện phương trình có hệ số âm.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Hệ số âm vẫn hợp lệ; tích xy không phải bậc nhất."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Phân biệt phương trình với bất phương trình.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Phương trình dùng dấu bằng."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Tình huống vé: x vé người lớn, y vé trẻ em. Phân loại mô hình.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Tổng tiền là tổng các lượng hệ số nhân số vé."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra ba trường hợp.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "y = 3 viết được thành 0x + y = 3."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

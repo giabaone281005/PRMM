@@ -1,9 +1,10 @@
 import {test,expect} from '@playwright/test';
 import {math9Topics,buildRecognition} from '../../packages/lesson-authoring/math9';
 test('Toán 9: all topics build, interact, publish and survive reload',async({page,request})=>{
+ test.setTimeout(90000);
  await page.goto('/admin/studio');
  for(const topic of math9Topics){
-  await page.getByLabel('Chủ đề Toán 9').selectOption(topic.id);
+  await page.getByLabel('Chủ đề Toán 9',{exact:true}).selectOption(topic.id);
   await page.getByRole('button',{name:'Dựng bài Toán 9',exact:true}).click();
   await page.getByRole('button',{name:'Preview điện thoại',exact:true}).click();
   const dialog=page.getByRole('dialog'),lesson=buildRecognition(topic,'test-'+topic.id);

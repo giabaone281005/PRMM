@@ -1,8 +1,9 @@
 import type {RecognitionTask,RecognitionTopic} from './math9';
 import type {UimeConfig,UimeKind} from '../lesson-runtime/uime';
+import {sixCheckpoints} from './engine-checkpoints';
 const task=(kind:UimeKind,question:string,config:Partial<UimeConfig>,explanation:string):RecognitionTask=>({question,mode:'tap',choices:['Tương tác trực tiếp','Khám phá'],correct:1,explanation,hint:'Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.',diagram:'none',uime:{kind,labels:[],tokens:[],answers:[0],min:-5,max:5,step:1,solid:'cone',hotspots:[],...config}});
 const box=(label:string,x:number,y:number,width=70,height=48)=>({label,x,y,width,height});
-export const engineTopics:RecognitionTopic[]=[
+const seeds:RecognitionTopic[]=[
  {id:'engine-token-classifier',title:'Phân loại phương trình',tasks:[task('TOKEN_CLASSIFIER','Kéo từng phương trình vào nhóm phù hợp.',{labels:['Bậc nhất hai ẩn','Không phải'],tokens:['2x − 3y = 5','x² + y = 4','0x + 0y = 1','x + y = 3'],answers:[0,1,1,0]},'Hai hệ số của x và y không đồng thời bằng 0.')]},
  {id:'engine-coefficient',title:'Chạm hệ số',tasks:[task('TAP_COEFFICIENT','Chạm hệ số b trong 5x − 7y = 9.',{tokens:['5','−7','9'],answers:[1],hotspots:[box('5',40,80),box('−7',145,80),box('9',250,80)]},'Hệ số b = −7, bao gồm cả dấu âm.')]},
  {id:'engine-number-line',title:'Trục số bất phương trình',tasks:[task('NUMBER_LINE_SELECTOR','Dựng tập nghiệm x ≥ 3: kéo mốc, chọn chiều và kiểu đầu mút.',{labels:['Mốc','Chiều: trái / phải','Đầu mút: mở / kín'],tokens:['Trái','Phải','Mở','Kín'],answers:[3,1,1],min:-10,max:10},'x ≥ 3 lấy mốc 3, chấm kín và tia sang phải.')]},
@@ -17,3 +18,4 @@ export const engineTopics:RecognitionTopic[]=[
  {id:'engine-chart',title:'Đọc biểu đồ tần số',tasks:[task('CHART_BAR_TAP','Chạm cột biểu diễn tần số của điểm 10.',{tokens:['Điểm 8','Điểm 9','Điểm 10'],labels:['20','10','10'],answers:[2],hotspots:[box('Điểm 8',45,55,65,140),box('Điểm 9',145,125,65,70),box('Điểm 10',245,125,65,70)]},'Điểm 10 có tần số 10. Hai cột có thể có cùng tần số; cần đọc cả nhãn.')]},
  {id:'engine-events',title:'Phân loại biến cố',tasks:[task('EVENT_CARD_BUCKET','Gieo một xúc xắc. Kéo các biến cố vào ba thùng.',{labels:['Chắc chắn','Không thể','Ngẫu nhiên'],tokens:['Số chấm < 7','Số chấm = 0','Số chấm chẵn','Số chấm = 6'],answers:[0,1,2,2]},'Chắc chắn có P = 1; không thể có P = 0; còn lại là ngẫu nhiên.')]},
 ];
+export const engineTopics:RecognitionTopic[]=seeds.map(t=>({...t,tasks:sixCheckpoints(t.tasks[0])}));

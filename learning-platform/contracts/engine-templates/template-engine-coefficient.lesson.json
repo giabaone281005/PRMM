@@ -1,0 +1,623 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-coefficient",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Chạm hệ số",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-coefficient",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Chạm hệ số"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-coefficient-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "5x − 7y = 9: chạm hệ số a.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "a = 5.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TAP_COEFFICIENT",
+        "labels": [],
+        "tokens": [
+          "5",
+          "−7",
+          "9"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "5",
+            "x": 40,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "−7",
+            "x": 145,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "9",
+            "x": 250,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          }
+        ]
+      }
+    },
+    {
+      "question": "5x − 7y = 9: chạm hệ số b.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "b = −7, giữ dấu âm.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TAP_COEFFICIENT",
+        "labels": [],
+        "tokens": [
+          "5",
+          "−7",
+          "9"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "5",
+            "x": 40,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "−7",
+            "x": 145,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "9",
+            "x": 250,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          }
+        ]
+      }
+    },
+    {
+      "question": "5x − 7y = 9: chạm số c.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "c = 9 ở vế phải.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TAP_COEFFICIENT",
+        "labels": [],
+        "tokens": [
+          "5",
+          "−7",
+          "9"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "5",
+            "x": 40,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "−7",
+            "x": 145,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "9",
+            "x": 250,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          }
+        ]
+      }
+    },
+    {
+      "question": "−2x + 3y = 8: tìm a.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "a = −2.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TAP_COEFFICIENT",
+        "labels": [],
+        "tokens": [
+          "−2",
+          "3",
+          "8"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "−2",
+            "x": 40,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "3",
+            "x": 145,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "8",
+            "x": 250,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          }
+        ]
+      }
+    },
+    {
+      "question": "4x − y = 6: tìm b.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "−y có hệ số −1.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TAP_COEFFICIENT",
+        "labels": [],
+        "tokens": [
+          "4",
+          "−1",
+          "6"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "4",
+            "x": 40,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "−1",
+            "x": 145,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "6",
+            "x": 250,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          }
+        ]
+      }
+    },
+    {
+      "question": "Tự kiểm tra: 5x − 7y = 9 có c bằng bao nhiêu?",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "c = 9.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TAP_COEFFICIENT",
+        "labels": [],
+        "tokens": [
+          "5",
+          "−7",
+          "9"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "5",
+            "x": 40,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "−7",
+            "x": 145,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          },
+          {
+            "label": "9",
+            "x": 250,
+            "y": 80,
+            "width": 70,
+            "height": 48
+          }
+        ]
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "5x − 7y = 9: chạm hệ số a.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "a = 5."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "5x − 7y = 9: chạm hệ số b.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "b = −7, giữ dấu âm."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "5x − 7y = 9: chạm số c.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "c = 9 ở vế phải."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "−2x + 3y = 8: tìm a.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "a = −2."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "4x − y = 6: tìm b.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "−y có hệ số −1."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: 5x − 7y = 9 có c bằng bao nhiêu?",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "c = 9."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

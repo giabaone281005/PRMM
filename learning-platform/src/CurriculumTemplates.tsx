@@ -1,0 +1,7 @@
+import {useState} from 'react';
+import {curriculum,pilotLesson} from '../packages/lesson-authoring/curriculum-pilot';
+import type {Lesson} from '../packages/lesson-contract';
+export function CurriculumTemplates({onEdit}:{onEdit:(l:Lesson)=>void}){
+ const [query,setQuery]=useState(''),[engine,setEngine]=useState('');
+ return <section className="panel"><h2>Chương trình Toán 9</h2><p>24 dạng bài · 6 nhóm tương tác · 3 mẫu có đủ 6 checkpoint. Chọn mẫu để soạn trong Studio.</p><div className="library-toolbar"><input aria-label="Tìm chủ đề Toán 9" placeholder="Tìm chủ đề…" value={query} onChange={e=>setQuery(e.target.value)}/><select aria-label="Nhóm tương tác Toán 9" value={engine} onChange={e=>setEngine(e.target.value)}><option value="">Tất cả nhóm</option>{[...new Set(curriculum.map(r=>r.engine))].map(e=><option key={e}>{e}</option>)}</select></div><div className="engine-gallery">{curriculum.filter(r=>(!engine||r.engine===engine)&&`${r.id} ${r.title}`.toLocaleLowerCase('vi').includes(query.toLocaleLowerCase('vi'))).map(r=><article className="panel engine-card" key={r.id}><small>{r.id}</small><h3>{r.title}</h3><p>{r.objective}</p><span className="status">{pilotLesson(r.id)?'6 checkpoint':'Chưa có mẫu'}</span><button disabled={!pilotLesson(r.id)} onClick={()=>{const l=pilotLesson(r.id)!;l.lessonId='lesson-'+crypto.randomUUID();l.scene.sceneId=l.lessonId+'-scene';onEdit(l);}}>Dùng mẫu trong Studio</button><details><summary>Yêu cầu chương trình</summary><p>{r.example}</p><p>{r.interaction}</p></details></article>)}</div></section>;
+}

@@ -105,3 +105,29 @@ Quy ước: [x] có bằng chứng, [ ] chưa hoàn tất; không đánh đồng
 - [x] Rà lại tài liệu cũ và phân biệt kết quả lịch sử với kiểm tra hiện tại; ghi ANR bài chọn bi chưa giải quyết.
 - [x] Kiểm tra lại: 81 TS/SQL tests, web build, Flutter analyze và 48 Flutter tests PASS; links Markdown tồn tại.
 - [ ] Nhóm tiếp nhận tái hiện/sửa ANR và nghiệm thu hosted U-IME → Android → Edge progress xuyên suốt; xem PROJECT_HANDOVER.md.
+
+## Local startup 2026-11-13
+- [x] Pull first-version (already up to date), load Downloads/.env.local for web and derive ignored mobile defines, start Vite and Pixel_9 Flutter app.
+
+
+## Excel Toán 9 — local pilot
+- [x] Đọc 3 sheet, giữ 24 dạng / 6 nhóm engine.
+- [x] Ba mẫu 6 checkpoint; export AI bundle / import / preview / publish local; không dùng Supabase.
+- [x] 86 tests, build và E2E import/publish local PASS.
+- [ ] 21 dạng còn lại và tương tác đầy đủ theo Excel; nghiệm thu Flutter chưa làm trong bản thử.
+
+- [x] Theo phản hồi: tích hợp mẫu Toán 9 / JSON vào Công cụ tương tác và Studio có sẵn; bỏ màn biên soạn thử riêng.
+
+
+- [x] Bỏ Studio khỏi menu chính; chỉ mở qua Thêm bài mới/Sửa bài, thêm nút trở về danh sách và route /admin/lessons/new.
+
+- [x] Chỉ hiển thị lớp 9 trong dashboard/catalog; chuyển server 5180 từ local sang Supabase theo yêu cầu mới. Gỡ xuất bản bài lớp 7, giữ dữ liệu/lịch sử. Supabase xác nhận 3 bài lớp 9 đang xuất bản.
+
+## Bộ mẫu công cụ sáu checkpoint và bàn giao
+- [x] 15 mẫu / 13 kiểu tương tác, 90 checkpoint có cấu hình và đáp án; tăng độ rõ của hình 2D/3D.
+- [x] Xuất schema riêng, 15 file JSON mẫu, importer kiểm tra khả năng hoàn thành.
+- [x] Đồng bộ Supabase: 15 bài lớp 9 / 90 checkpoint; ba bài cũ nâng version, giữ lịch sử.
+- [x] File PROJECT_HANDOVER_ENGINE_CHECKPOINTS.md mô tả trước/sau, cách pull/chạy, giới hạn và lộ trình.
+- [ ] Phủ 21 dạng curriculum còn thiếu; hợp nhất 10 chủ đề legacy; nghiệm thu Android hosted và ANR bài bi.
+
+- [x] Chốt kiểm thử: build, 88 TS/SQL tests, 38 browser tests, 48 Flutter tests và analyze PASS; chuẩn bị branch first-version-v2 theo yêu cầu push.

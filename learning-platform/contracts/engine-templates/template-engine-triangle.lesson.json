@@ -1,0 +1,623 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-triangle",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Chạm cạnh tam giác vuông",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-triangle",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Chạm cạnh tam giác vuông"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-triangle-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "ABC vuông tại A. Chạm cạnh huyền.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "BC đối diện góc vuông.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TRIANGLE_HOTSPOT_TAP",
+        "labels": [],
+        "tokens": [
+          "AB",
+          "AC",
+          "BC"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "AB",
+            "x": 40,
+            "y": 85,
+            "width": 50,
+            "height": 75
+          },
+          {
+            "label": "AC",
+            "x": 110,
+            "y": 170,
+            "width": 180,
+            "height": 45
+          },
+          {
+            "label": "BC",
+            "x": 160,
+            "y": 80,
+            "width": 95,
+            "height": 60
+          }
+        ]
+      }
+    },
+    {
+      "question": "Xét góc B. Chạm cạnh đối.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "AC đối diện B.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TRIANGLE_HOTSPOT_TAP",
+        "labels": [],
+        "tokens": [
+          "AB",
+          "AC",
+          "BC"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "AB",
+            "x": 40,
+            "y": 85,
+            "width": 50,
+            "height": 75
+          },
+          {
+            "label": "AC",
+            "x": 110,
+            "y": 170,
+            "width": 180,
+            "height": 45
+          },
+          {
+            "label": "BC",
+            "x": 160,
+            "y": 80,
+            "width": 95,
+            "height": 60
+          }
+        ]
+      }
+    },
+    {
+      "question": "Xét góc B. Chạm cạnh kề.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "AB kề B và không là cạnh huyền.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TRIANGLE_HOTSPOT_TAP",
+        "labels": [],
+        "tokens": [
+          "AB",
+          "AC",
+          "BC"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "AB",
+            "x": 40,
+            "y": 85,
+            "width": 50,
+            "height": 75
+          },
+          {
+            "label": "AC",
+            "x": 110,
+            "y": 170,
+            "width": 180,
+            "height": 45
+          },
+          {
+            "label": "BC",
+            "x": 160,
+            "y": 80,
+            "width": 95,
+            "height": 60
+          }
+        ]
+      }
+    },
+    {
+      "question": "Xét góc C. Chạm cạnh đối.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "AB đối diện C.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TRIANGLE_HOTSPOT_TAP",
+        "labels": [],
+        "tokens": [
+          "AB",
+          "AC",
+          "BC"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "AB",
+            "x": 40,
+            "y": 85,
+            "width": 50,
+            "height": 75
+          },
+          {
+            "label": "AC",
+            "x": 110,
+            "y": 170,
+            "width": 180,
+            "height": 45
+          },
+          {
+            "label": "BC",
+            "x": 160,
+            "y": 80,
+            "width": 95,
+            "height": 60
+          }
+        ]
+      }
+    },
+    {
+      "question": "Xét góc C. Chạm cạnh kề.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "AC là cạnh kề C.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TRIANGLE_HOTSPOT_TAP",
+        "labels": [],
+        "tokens": [
+          "AB",
+          "AC",
+          "BC"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "AB",
+            "x": 40,
+            "y": 85,
+            "width": 50,
+            "height": 75
+          },
+          {
+            "label": "AC",
+            "x": 110,
+            "y": 170,
+            "width": 180,
+            "height": 45
+          },
+          {
+            "label": "BC",
+            "x": 160,
+            "y": 80,
+            "width": 95,
+            "height": 60
+          }
+        ]
+      }
+    },
+    {
+      "question": "Tự kiểm tra: mẫu số trong sin B là cạnh nào?",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "sin B = AC/BC.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "TRIANGLE_HOTSPOT_TAP",
+        "labels": [],
+        "tokens": [
+          "AB",
+          "AC",
+          "BC"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "AB",
+            "x": 40,
+            "y": 85,
+            "width": 50,
+            "height": 75
+          },
+          {
+            "label": "AC",
+            "x": 110,
+            "y": 170,
+            "width": 180,
+            "height": 45
+          },
+          {
+            "label": "BC",
+            "x": 160,
+            "y": 80,
+            "width": 95,
+            "height": 60
+          }
+        ]
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "ABC vuông tại A. Chạm cạnh huyền.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "BC đối diện góc vuông."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Xét góc B. Chạm cạnh đối.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "AC đối diện B."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Xét góc B. Chạm cạnh kề.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "AB kề B và không là cạnh huyền."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Xét góc C. Chạm cạnh đối.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "AB đối diện C."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Xét góc C. Chạm cạnh kề.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "AC là cạnh kề C."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: mẫu số trong sin B là cạnh nào?",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "sin B = AC/BC."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

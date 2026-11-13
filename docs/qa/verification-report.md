@@ -138,3 +138,39 @@ BLOCKED cuối lượt: emulator đã có cửa sổ Pixel_9_Pro nhưng ADB tr�
 ## Rà soát bàn giao — 2026-11-13
 PASS: npm test 81/81 (7 files), npm run build (TypeScript + Vite), flutter analyze No issues found, flutter test 48/48. Có cảnh báo Vite import resolution tương lai và chunk JS >500kB, đã ghi PROJECT_HANDOVER.md. PASS: kiểm tra đường dẫn Markdown trong tài liệu bàn giao và code fences.
 NOT RUN trong lượt tài liệu: browser/device E2E, build APK, live Supabase readback/deploy. Lỗi ANR quan sát ở lượt chạy app chọn bi trước chưa được xử lý; restart về Home không chứng minh tương tác đã PASS. PROJECT_HANDOVER.md tổng hợp 9 migration trên disk, khả năng hiện tại, khác biệt tài liệu lịch sử và roadmap ưu tiên.
+
+## Local startup 2026-11-13
+PASS: git pull --ff-only origin first-version; existing config loaded without printing values; admin /admin/studio HTTP 200; Pixel_9 emulator boot completed; Flutter debug APK built, installed and VM service connected; vn.mohoc.mo_hoc/.MainActivity RESUMED.
+NOT RUN: authenticated lesson interactions. Automatic approval review rejected browser launch commands without a specific reason; dashboard URL remains available.
+
+
+## Excel Toán 9 local pilot — 2026-11-13
+- PASS: 86 Vitest tests; TypeScript + Vite build; 1 Playwright E2E nhập JSON, preview, xuất bản API local, 0 Supabase requests.
+- PASS: 18 checkpoint trong 3 mẫu đạt qua LessonSession; AI schema validate và kiểm tra JSON lỗi.
+- NOT RUN: Flutter/native acceptance và đánh giá sư phạm; 21 dạng chưa có mẫu.
+- Screenshot: curriculum-local.png. Chi tiết: ../architecture/math9-local-pilot.md.
+
+## Tích hợp dashboard hiện có
+- PASS: build, 86 tests; Playwright template → Studio → xuất bundle → nhập biến thể → sửa câu hỏi → lưu/xuất bản → danh sách bài. Câu hỏi recognition khớp checkpoint, không request Supabase.
+- NOT RUN: xác minh UI qua tài khoản Supabase; không thay đổi remote trong lượt tích hợp.
+
+
+## Luồng quản lý bài học
+- PASS: build; E2E danh sách → Thêm bài mới → chọn mẫu → Studio → nhập JSON → lưu/xuất bản → quay lại danh sách → mở sửa bài.
+- Studio không còn trong sidebar; Bài học giữ active khi đang soạn. Không ghi Supabase.
+
+## Chỉ lớp 9 / đúng nguồn Supabase
+- PASS: Supabase 3 bài lớp 9 published, 1 bài lớp 7 unpublished. Dashboard 5180 khởi động với VITE_ENABLE_LOCAL_DEMO=false.
+- PASS: build; đọc kiểm tra RLS với role authenticated của khazim2810@gmail.com trả đủ 3 bài lớp 9.
+- NOT RUN: thao tác UI đăng nhập bằng mật khẩu người dùng; cần người dùng đăng nhập lại trên nguồn Supabase.
+
+## Chốt bàn giao engine / checkpoint — 2026-11-13
+- PASS: npm run build; npm test 88/88 (9 files), có test 90 checkpoint và import JSON không thể đạt.
+- PASS: npx playwright test 38/38 trong lượt cuối (3.1 phút). Các run bị dừng/sai selector trước đó không phải kết quả cuối.
+- PASS: npm run bundle:mobile; Flutter test 48/48; Flutter analyze không có issue.
+- PASS: Supabase read-back 15 bài lớp 9 published / 90 checkpoint / 0 sai số bước; kiểm tra dưới RLS admin thấy đủ 15, không có bài lớp khác published.
+- PASS: backup local trước sync; ba bài cũ giữ ID, tạo version mới (graph2, bi2, trụ3), thêm 12 bài mẫu version1.
+- Advisors: health sạch; security WARN leaked-password protection disabled; performance INFO 4 unused indexes. Chưa thay cấu hình hoặc xóa index.
+- NOT RUN: Android hosted xuyên suốt / ANR bài bi, iOS, thiết bị thật và hosting web production.
+- Giới hạn: 15 mẫu công cụ không đồng nghĩa đã phủ 24 dạng trong Excel. 21 dòng curriculum còn thiếu mẫu; bộ legacy 10 chủ đề/56 checkpoint cần hợp nhất.
+- Bàn giao: ../../PROJECT_HANDOVER_ENGINE_CHECKPOINTS.md. Branch bàn giao: first-version-v2.

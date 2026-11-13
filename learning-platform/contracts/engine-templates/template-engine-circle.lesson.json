@@ -1,0 +1,629 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-circle",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Tiếp tuyến và vị trí tương đối",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-circle",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Tiếp tuyến và vị trí tương đối"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-circle-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "R = 3: kéo d = 3 rồi chạm H.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "d = R: tiếp xúc tại H.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "GEOMETRIC_HOTSPOT_FINDER",
+        "labels": [],
+        "tokens": [
+          "O",
+          "H",
+          "Dây cung"
+        ],
+        "answers": [
+          3,
+          1
+        ],
+        "min": 0,
+        "max": 5,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "O",
+            "x": 150,
+            "y": 80,
+            "width": 45,
+            "height": 45
+          },
+          {
+            "label": "H",
+            "x": 150,
+            "y": 170,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "label": "Dây cung",
+            "x": 90,
+            "y": 115,
+            "width": 150,
+            "height": 45
+          }
+        ]
+      }
+    },
+    {
+      "question": "Dựng d = 2, chạm tâm O để quan sát đường cắt.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "d < R: hai giao điểm.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "GEOMETRIC_HOTSPOT_FINDER",
+        "labels": [],
+        "tokens": [
+          "O",
+          "H",
+          "Dây cung"
+        ],
+        "answers": [
+          2,
+          0
+        ],
+        "min": 0,
+        "max": 5,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "O",
+            "x": 150,
+            "y": 80,
+            "width": 45,
+            "height": 45
+          },
+          {
+            "label": "H",
+            "x": 150,
+            "y": 170,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "label": "Dây cung",
+            "x": 90,
+            "y": 115,
+            "width": 150,
+            "height": 45
+          }
+        ]
+      }
+    },
+    {
+      "question": "Dựng d = 4 rồi chạm O.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "d > R: không có giao điểm.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "GEOMETRIC_HOTSPOT_FINDER",
+        "labels": [],
+        "tokens": [
+          "O",
+          "H",
+          "Dây cung"
+        ],
+        "answers": [
+          4,
+          0
+        ],
+        "min": 0,
+        "max": 5,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "O",
+            "x": 150,
+            "y": 80,
+            "width": 45,
+            "height": 45
+          },
+          {
+            "label": "H",
+            "x": 150,
+            "y": 170,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "label": "Dây cung",
+            "x": 90,
+            "y": 115,
+            "width": 150,
+            "height": 45
+          }
+        ]
+      }
+    },
+    {
+      "question": "Tìm tiếp điểm H khi đường thẳng tiếp xúc.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "OH vuông góc tiếp tuyến.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "GEOMETRIC_HOTSPOT_FINDER",
+        "labels": [],
+        "tokens": [
+          "O",
+          "H",
+          "Dây cung"
+        ],
+        "answers": [
+          3,
+          1
+        ],
+        "min": 0,
+        "max": 5,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "O",
+            "x": 150,
+            "y": 80,
+            "width": 45,
+            "height": 45
+          },
+          {
+            "label": "H",
+            "x": 150,
+            "y": 170,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "label": "Dây cung",
+            "x": 90,
+            "y": 115,
+            "width": 150,
+            "height": 45
+          }
+        ]
+      }
+    },
+    {
+      "question": "Dựng đường thẳng đi qua tâm: d = 0, chạm O.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Đường thẳng qua tâm cắt đường tròn theo đường kính.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "GEOMETRIC_HOTSPOT_FINDER",
+        "labels": [],
+        "tokens": [
+          "O",
+          "H",
+          "Dây cung"
+        ],
+        "answers": [
+          0,
+          0
+        ],
+        "min": 0,
+        "max": 5,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "O",
+            "x": 150,
+            "y": 80,
+            "width": 45,
+            "height": 45
+          },
+          {
+            "label": "H",
+            "x": 150,
+            "y": 170,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "label": "Dây cung",
+            "x": 90,
+            "y": 115,
+            "width": 150,
+            "height": 45
+          }
+        ]
+      }
+    },
+    {
+      "question": "Tự kiểm tra: đặt đường thẳng chỉ có một điểm chung, chạm H.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Điều kiện tiếp xúc d = R = 3.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "GEOMETRIC_HOTSPOT_FINDER",
+        "labels": [],
+        "tokens": [
+          "O",
+          "H",
+          "Dây cung"
+        ],
+        "answers": [
+          3,
+          1
+        ],
+        "min": 0,
+        "max": 5,
+        "step": 0.5,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "O",
+            "x": 150,
+            "y": 80,
+            "width": 45,
+            "height": 45
+          },
+          {
+            "label": "H",
+            "x": 150,
+            "y": 170,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "label": "Dây cung",
+            "x": 90,
+            "y": 115,
+            "width": 150,
+            "height": 45
+          }
+        ]
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "R = 3: kéo d = 3 rồi chạm H.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "d = R: tiếp xúc tại H."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Dựng d = 2, chạm tâm O để quan sát đường cắt.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "d < R: hai giao điểm."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Dựng d = 4 rồi chạm O.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "d > R: không có giao điểm."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Tìm tiếp điểm H khi đường thẳng tiếp xúc.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "OH vuông góc tiếp tuyến."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Dựng đường thẳng đi qua tâm: d = 0, chạm O.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Đường thẳng qua tâm cắt đường tròn theo đường kính."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: đặt đường thẳng chỉ có một điểm chung, chạm H.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Điều kiện tiếp xúc d = R = 3."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

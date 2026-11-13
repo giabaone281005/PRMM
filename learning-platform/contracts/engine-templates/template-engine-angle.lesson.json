@@ -1,0 +1,623 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "template-engine-angle",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Chạm cung và góc nội tiếp",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-angle",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Chạm cung và góc nội tiếp"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "template-engine-angle-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Chạm cung AB không chứa C.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Đây là cung bị chắn bởi góc ACB.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "ANGLE_MEASURE_TAP",
+        "labels": [],
+        "tokens": [
+          "Cung AB",
+          "Cung BC",
+          "Cung CA"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "Cung AB",
+            "x": 130,
+            "y": 15,
+            "width": 100,
+            "height": 55
+          },
+          {
+            "label": "Cung BC",
+            "x": 245,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          },
+          {
+            "label": "Cung CA",
+            "x": 45,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          }
+        ]
+      }
+    },
+    {
+      "question": "Chạm cung BC.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Cung nối B với C.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "ANGLE_MEASURE_TAP",
+        "labels": [],
+        "tokens": [
+          "Cung AB",
+          "Cung BC",
+          "Cung CA"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "Cung AB",
+            "x": 130,
+            "y": 15,
+            "width": 100,
+            "height": 55
+          },
+          {
+            "label": "Cung BC",
+            "x": 245,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          },
+          {
+            "label": "Cung CA",
+            "x": 45,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          }
+        ]
+      }
+    },
+    {
+      "question": "Chạm cung CA.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Cung nối C với A.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "ANGLE_MEASURE_TAP",
+        "labels": [],
+        "tokens": [
+          "Cung AB",
+          "Cung BC",
+          "Cung CA"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "Cung AB",
+            "x": 130,
+            "y": 15,
+            "width": 100,
+            "height": 55
+          },
+          {
+            "label": "Cung BC",
+            "x": 245,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          },
+          {
+            "label": "Cung CA",
+            "x": 45,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          }
+        ]
+      }
+    },
+    {
+      "question": "Góc ACB chắn cung nào?",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Cung AB không chứa đỉnh C.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "ANGLE_MEASURE_TAP",
+        "labels": [],
+        "tokens": [
+          "Cung AB",
+          "Cung BC",
+          "Cung CA"
+        ],
+        "answers": [
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "Cung AB",
+            "x": 130,
+            "y": 15,
+            "width": 100,
+            "height": 55
+          },
+          {
+            "label": "Cung BC",
+            "x": 245,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          },
+          {
+            "label": "Cung CA",
+            "x": 45,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          }
+        ]
+      }
+    },
+    {
+      "question": "Góc BAC chắn cung nào?",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Cung BC không chứa A.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "ANGLE_MEASURE_TAP",
+        "labels": [],
+        "tokens": [
+          "Cung AB",
+          "Cung BC",
+          "Cung CA"
+        ],
+        "answers": [
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "Cung AB",
+            "x": 130,
+            "y": 15,
+            "width": 100,
+            "height": 55
+          },
+          {
+            "label": "Cung BC",
+            "x": 245,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          },
+          {
+            "label": "Cung CA",
+            "x": 45,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          }
+        ]
+      }
+    },
+    {
+      "question": "Tự kiểm tra: góc ABC chắn cung nào?",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Cung CA không chứa B.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "ANGLE_MEASURE_TAP",
+        "labels": [],
+        "tokens": [
+          "Cung AB",
+          "Cung BC",
+          "Cung CA"
+        ],
+        "answers": [
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": [
+          {
+            "label": "Cung AB",
+            "x": 130,
+            "y": 15,
+            "width": 100,
+            "height": 55
+          },
+          {
+            "label": "Cung BC",
+            "x": 245,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          },
+          {
+            "label": "Cung CA",
+            "x": 45,
+            "y": 90,
+            "width": 65,
+            "height": 90
+          }
+        ]
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Chạm cung AB không chứa C.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Đây là cung bị chắn bởi góc ACB."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Chạm cung BC.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Cung nối B với C."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Chạm cung CA.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Cung nối C với A."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Góc ACB chắn cung nào?",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Cung AB không chứa đỉnh C."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Góc BAC chắn cung nào?",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Cung BC không chứa A."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: góc ABC chắn cung nào?",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Cung CA không chứa B."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}

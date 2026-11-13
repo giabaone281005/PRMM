@@ -1,0 +1,20 @@
+import {test,expect} from '@playwright/test';
+test('existing dashboard: template to Studio, AI round trip, publish and library',async({page})=>{
+ const remote:string[]=[];page.on('request',r=>{if(r.url().includes('supabase.co'))remote.push(r.url());});
+ await page.goto('/admin/lessons');
+ await expect(page.locator('.sidebar nav').getByRole('button',{name:'Studio',exact:false})).toHaveCount(0);
+ await page.getByRole('button',{name:'Thêm bài mới',exact:false}).click();
+ await expect(page).toHaveURL(/\/admin\/lessons\/new$/);
+ await page.getByText('Chọn mẫu theo chương trình Toán 9',{exact:true}).click();
+ const card=page.locator('article').filter({hasText:'M9-ALG-09'});await card.getByRole('button',{name:'Dùng mẫu trong Studio'}).click();
+ await expect(page.getByRole('textbox',{name:'Tên bài học',exact:true})).toBeVisible();
+ const dl=page.waitForEvent('download');await page.getByRole('button',{name:'Tải bộ JSON cho AI'}).click();const download=await dl;const stream=await download.createReadStream();const chunks:Buffer[]=[];for await(const c of stream!)chunks.push(Buffer.from(c));const bundle=JSON.parse(Buffer.concat(chunks).toString());expect(bundle.lesson.checkpoints).toHaveLength(6);
+ bundle.lesson.title='Parabol qua Studio hiện có';await page.getByLabel('Nạp JSON bài học').setInputFiles({name:'variant.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(bundle.lesson))});
+ await expect(page.getByRole('textbox',{name:'Tên bài học',exact:true})).toHaveValue(bundle.lesson.title);
+ await page.getByRole('textbox',{name:'Hướng dẫn',exact:true}).fill('Kéo hệ số a đến 1 để quan sát đồ thị.');
+ await page.getByRole('button',{name:'Lưu bản nháp',exact:true}).click();await expect(page.getByRole('status')).toContainText('Đã lưu');
+ await page.getByRole('button',{name:'Xuất bản ↗',exact:true}).click();await expect(page.getByRole('status')).toContainText('Đã xuất bản');
+ const catalog=await(await page.request.get('/api/catalog')).json();const lesson=catalog.find((l:any)=>l.title===bundle.lesson.title);expect(lesson.recognition[0].question).toBe(lesson.checkpoints[0].instruction);
+ await page.getByRole('button',{name:'← Danh sách bài học',exact:true}).click();await expect(page.getByRole('button',{name:bundle.lesson.title,exact:true})).toBeVisible();
+ await page.getByRole('button',{name:bundle.lesson.title,exact:true}).click();await expect(page.getByRole('textbox',{name:'Tên bài học',exact:true})).toHaveValue(bundle.lesson.title);expect(remote).toEqual([]);
+});

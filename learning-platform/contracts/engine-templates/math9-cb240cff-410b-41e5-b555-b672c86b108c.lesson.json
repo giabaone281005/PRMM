@@ -1,0 +1,529 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+  "version": 1,
+  "status": "draft",
+  "locale": "vi-VN",
+  "title": "Chọn bi ba màu — Phân loại biến cố",
+  "grade": 9,
+  "subject": "math",
+  "topicIds": [
+    "math9-recognition",
+    "engine-events",
+    "engine-template-six-v1"
+  ],
+  "learningObjectives": [
+    "Nhận biết kiến thức: Phân loại biến cố"
+  ],
+  "engine": {
+    "type": "math_explorer_2d",
+    "minRuntimeVersion": "1.0.0",
+    "requiredCapabilities": [
+      "adjust_parameter"
+    ]
+  },
+  "scene": {
+    "sceneId": "math9-cb240cff-410b-41e5-b555-b672c86b108c-scene",
+    "coordinateSystem": "cartesian_2d",
+    "viewport": {
+      "width": 360,
+      "height": 360
+    },
+    "objects": [
+      {
+        "id": "model",
+        "kind": "math_model",
+        "model": "number_line",
+        "parameters": {
+          "x": 0,
+          "targetX": 2
+        }
+      }
+    ],
+    "initialState": {}
+  },
+  "recognition": [
+    {
+      "question": "Túi có 5 bi đỏ, 3 bi xanh, 2 bi vàng. Phân loại các biến cố.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "EVENT_CARD_BUCKET",
+        "labels": [
+          "Chắc chắn",
+          "Không thể",
+          "Ngẫu nhiên"
+        ],
+        "tokens": [
+          "Bi đỏ, xanh hoặc vàng",
+          "Bi tím",
+          "Bi đỏ"
+        ],
+        "answers": [
+          0,
+          1,
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Túi vẫn có 10 bi ba màu. Phân loại theo màu.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "EVENT_CARD_BUCKET",
+        "labels": [
+          "Chắc chắn",
+          "Không thể",
+          "Ngẫu nhiên"
+        ],
+        "tokens": [
+          "Bi xanh",
+          "Bi vàng",
+          "Bi không thuộc ba màu"
+        ],
+        "answers": [
+          2,
+          2,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Phân biệt chắc chắn với ngẫu nhiên trong túi bi.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "EVENT_CARD_BUCKET",
+        "labels": [
+          "Chắc chắn",
+          "Không thể",
+          "Ngẫu nhiên"
+        ],
+        "tokens": [
+          "Bi thuộc ba màu",
+          "Bi đỏ hoặc xanh",
+          "Bi vàng"
+        ],
+        "answers": [
+          0,
+          2,
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Túi không có bi tím. Phân loại biến cố phủ định.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "EVENT_CARD_BUCKET",
+        "labels": [
+          "Chắc chắn",
+          "Không thể",
+          "Ngẫu nhiên"
+        ],
+        "tokens": [
+          "Bi không phải tím",
+          "Bi không phải đỏ",
+          "Bi tím"
+        ],
+        "answers": [
+          0,
+          2,
+          1
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Đổi túi: 2 đỏ, 4 xanh, 4 vàng. Phân loại biến cố.",
+      "mode": "tap",
+      "choices": [
+        "Tương tác trực tiếp",
+        "Khám phá"
+      ],
+      "correct": 1,
+      "explanation": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "EVENT_CARD_BUCKET",
+        "labels": [
+          "Chắc chắn",
+          "Không thể",
+          "Ngẫu nhiên"
+        ],
+        "tokens": [
+          "Bi xanh",
+          "Bi tím",
+          "Bi đỏ, xanh hoặc vàng"
+        ],
+        "answers": [
+          2,
+          1,
+          0
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    },
+    {
+      "question": "Tự kiểm tra: trở lại 5 đỏ, 3 xanh, 2 vàng.",
+      "mode": "tap",
+      "choices": [
+        "Khám phá",
+        "Tương tác trực tiếp"
+      ],
+      "correct": 2,
+      "explanation": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên.",
+      "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+      "diagram": "none",
+      "uime": {
+        "kind": "EVENT_CARD_BUCKET",
+        "labels": [
+          "Chắc chắn",
+          "Không thể",
+          "Ngẫu nhiên"
+        ],
+        "tokens": [
+          "Bi không phải đỏ",
+          "Bi màu tím",
+          "Bi thuộc ba màu",
+          "Bi vàng"
+        ],
+        "answers": [
+          2,
+          1,
+          0,
+          2
+        ],
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "solid": "cone",
+        "hotspots": []
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "cp-1",
+      "order": 1,
+      "instruction": "Túi có 5 bi đỏ, 3 bi xanh, 2 bi vàng. Phân loại các biến cố.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên."
+      }
+    },
+    {
+      "id": "cp-2",
+      "order": 2,
+      "instruction": "Túi vẫn có 10 bi ba màu. Phân loại theo màu.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên."
+      }
+    },
+    {
+      "id": "cp-3",
+      "order": 3,
+      "instruction": "Phân biệt chắc chắn với ngẫu nhiên trong túi bi.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên."
+      }
+    },
+    {
+      "id": "cp-4",
+      "order": 4,
+      "instruction": "Túi không có bi tím. Phân loại biến cố phủ định.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên."
+      }
+    },
+    {
+      "id": "cp-5",
+      "order": 5,
+      "instruction": "Đổi túi: 2 đỏ, 4 xanh, 4 vàng. Phân loại biến cố.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 1,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên."
+      }
+    },
+    {
+      "id": "cp-6",
+      "order": 6,
+      "instruction": "Tự kiểm tra: trở lại 5 đỏ, 3 xanh, 2 vàng.",
+      "allowedInteractions": [
+        "adjust_parameter"
+      ],
+      "scenePatch": {
+        "setState": {
+          "x": -1,
+          "targetX": 2,
+          "y": -1,
+          "a": -1,
+          "b": -1,
+          "c": -1,
+          "width": -1,
+          "height": -1,
+          "numerator": -1
+        }
+      },
+      "successCriteria": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "gte",
+            "path": "metrics.parameterChangeCountSinceCheckpoint",
+            "value": 1
+          },
+          {
+            "op": "approx",
+            "path": "metrics.modelError",
+            "value": 0,
+            "tolerance": 0.000001
+          }
+        ]
+      },
+      "hints": [
+        "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+      ],
+      "feedback": {
+        "success": "Túi chỉ chứa đỏ, xanh, vàng: thuộc ba màu là chắc chắn; tím là không thể; từng màu riêng lẻ là ngẫu nhiên."
+      }
+    }
+  ],
+  "completion": {
+    "requiredCheckpointIds": [
+      "cp-1",
+      "cp-2",
+      "cp-3",
+      "cp-4",
+      "cp-5",
+      "cp-6"
+    ]
+  }
+}
