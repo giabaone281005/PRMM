@@ -2,8 +2,10 @@ import {useRef,useState} from 'react';
 import type {LessonSession} from '../packages/lesson-runtime';
 import {isExtraModel} from '../packages/lesson-runtime/extra-models';
 import {ExtraMathExplorer} from './ExtraMathExplorer';
+import {RecognitionScene} from './RecognitionScene';
 export function MathExplorer({session}:{session:LessonSession}){
   const model=session.objects.find(o=>o.kind==='math_model'),svg=useRef<SVGSVGElement>(null),[drag,setDrag]=useState(false);if(model?.kind!=='math_model')return <p>Thiếu mô hình toán.</p>;
+  if(session.lesson.recognition)return <RecognitionScene session={session}/>;
   if(isExtraModel(model.model))return <ExtraMathExplorer session={session} model={model.model}/>;
   const s=session.snapshot.state as Record<string,number>,m=session.snapshot.metrics,colors=['#9dd368','#c8b0ef','#8dbfe8'];
   function adjust(name:string,value:number){session.interact({type:'adjust_parameter',name,value});}

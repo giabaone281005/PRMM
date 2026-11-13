@@ -2,11 +2,12 @@ import {createRoot} from 'react-dom/client';
 import {useEffect,useReducer} from 'react';
 import {LessonSession} from '../packages/lesson-runtime';
 import {Scene3D} from './Scene3D';
+import {RecognitionScene} from './RecognitionScene';
 import {validateLesson} from '../packages/lesson-contract';
 declare global { interface Window {LessonChannel?:{postMessage:(s:string)=>void};lessonBridge:(s:string)=>void;} }
 const root=createRoot(document.getElementById('root')!);let session:LessonSession|undefined,sessionId='',seen=new Set<string>(),paused=false;
 function emit(type:string,payload:unknown,requestId=crypto.randomUUID()){window.LessonChannel?.postMessage(JSON.stringify({protocolVersion:'1.0.0',sessionId,requestId,type,payload}));}
-function View({session}:{session:LessonSession}){const[,render]=useReducer(n=>n+1,0);useEffect(()=>session.subscribe(render),[session]);return <Scene3D session={session}/>;}
+function View({session}:{session:LessonSession}){const[,render]=useReducer(n=>n+1,0);useEffect(()=>session.subscribe(render),[session]);return session.lesson.recognition?<RecognitionScene session={session}/>:<Scene3D session={session}/>;}
 window.lessonBridge=(raw:string)=>{
   if(raw.length>131072)return;let m:any;try{m=JSON.parse(raw);}catch{return;}
   if(m.protocolVersion!=='1.0.0'||typeof m.requestId!=='string'||typeof m.sessionId!=='string'||!m.payload)return;

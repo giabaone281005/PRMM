@@ -1,14 +1,13 @@
 import type {Plugin} from 'vite';
 import {mkdirSync,readFileSync,writeFileSync,renameSync,existsSync} from 'node:fs';
-import {fixtures} from '../lesson-authoring';
 import {validateLesson,type Lesson} from '../lesson-contract';
 import {replay} from '../lesson-runtime/replay';
 type Row={id:string;draft:Lesson;versions:Lesson[];publishedVersion:number|null;assignedTo:string[];updatedAt:string};
 type Workspace={lessons:Row[];progress:Record<string,unknown>;audit:{at:string;action:string;lessonId:string}[]};
 export function localApi():Plugin {
   const testing=process.env.MOHOC_TEST_MODE==='1',file='.local/workspace.json';let memory:Workspace;
-  function seed():Workspace{return{lessons:fixtures.map(l=>({id:l.lessonId,draft:structuredClone(l),versions:[{...structuredClone(l),status:'published'}],publishedVersion:1,assignedTo:[],updatedAt:new Date().toISOString()})),progress:{},audit:[]};}
-  function read(){if(testing)return memory??=seed();if(!existsSync(file)){const state=seed();write(state);return state;}const state=JSON.parse(readFileSync(file,'utf8')) as Workspace;const missing=seed().lessons.filter(l=>!state.lessons.some(r=>r.id===l.id));if(missing.length){state.lessons.push(...missing);write(state);}return state;}
+  function emptyWorkspace():Workspace{return{lessons:[],progress:{},audit:[]};}
+  function read(){if(testing)return memory??=emptyWorkspace();if(!existsSync(file)){const state=emptyWorkspace();write(state);return state;}return JSON.parse(readFileSync(file,'utf8')) as Workspace;}
   function write(state:Workspace){if(testing){memory=state;return;}mkdirSync('.local',{recursive:true});writeFileSync(file+'.tmp',JSON.stringify(state,null,2));renameSync(file+'.tmp',file);}
   function save(state:Workspace,manifest:Lesson){const errors=validateLesson(manifest);if(errors.length)throw Error(errors.join('; '));if(manifest.status!=='draft')throw Error('Draft required');let r=state.lessons.find(r=>r.id===manifest.lessonId);if(r){r.draft=structuredClone(manifest);r.updatedAt=new Date().toISOString();}else{r={id:manifest.lessonId,draft:structuredClone(manifest),versions:[],publishedVersion:null,assignedTo:[],updatedAt:new Date().toISOString()};state.lessons.unshift(r);}return r;}
   return{name:'mohoc-local-api',configureServer(server){server.middlewares.use(async(req,res,next)=>{

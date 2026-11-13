@@ -1,0 +1,22 @@
+begin;
+create index lessons_published_version_idx on public.lessons(id,published_version);
+create index bootstrap_claimed_by_idx on lesson_private.admin_bootstrap(claimed_by);
+-- Keep one SELECT policy per table; write policies do not implicitly add reads.
+drop policy assignments_admin on public.lesson_assignments;
+drop policy assignments_own on public.lesson_assignments;
+create policy assignments_read on public.lesson_assignments for select to authenticated using(user_id=(select auth.uid()) or (select lesson_private.role())='admin');
+create policy assignments_insert on public.lesson_assignments for insert to authenticated with check((select lesson_private.role())='admin' and assigned_by=(select auth.uid()));
+create policy assignments_delete on public.lesson_assignments for delete to authenticated using((select lesson_private.role())='admin');
+drop policy enrollment_admin on public.enrollments;
+create policy enrollment_insert on public.enrollments for insert to authenticated with check((select lesson_private.role())='admin');
+create policy enrollment_update on public.enrollments for update to authenticated using((select lesson_private.role())='admin') with check((select lesson_private.role())='admin');
+create policy enrollment_delete on public.enrollments for delete to authenticated using((select lesson_private.role())='admin');
+drop policy modules_write on public.modules;
+create policy modules_insert on public.modules for insert to authenticated with check(exists(select 1 from public.courses c where c.id=course_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author'))));
+create policy modules_update on public.modules for update to authenticated using(exists(select 1 from public.courses c where c.id=course_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author')))) with check(exists(select 1 from public.courses c where c.id=course_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author'))));
+create policy modules_delete on public.modules for delete to authenticated using(exists(select 1 from public.courses c where c.id=course_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author'))));
+drop policy module_lessons_write on public.module_lessons;
+create policy module_lessons_insert on public.module_lessons for insert to authenticated with check(exists(select 1 from public.modules m join public.courses c on c.id=m.course_id where m.id=module_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author'))));
+create policy module_lessons_update on public.module_lessons for update to authenticated using(exists(select 1 from public.modules m join public.courses c on c.id=m.course_id where m.id=module_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author')))) with check(exists(select 1 from public.modules m join public.courses c on c.id=m.course_id where m.id=module_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author'))));
+create policy module_lessons_delete on public.module_lessons for delete to authenticated using(exists(select 1 from public.modules m join public.courses c on c.id=m.course_id where m.id=module_id and ((select lesson_private.role())='admin' or (c.owner_id=(select auth.uid()) and (select lesson_private.role())='author'))));
+commit;

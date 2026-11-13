@@ -1,0 +1,50 @@
+{
+  "project": "https://sbzpmrgsqznaydllqmbm.supabase.co",
+  "results": [
+    {
+      "name": "Auth password login for five isolated roles",
+      "status": "PASS"
+    },
+    {
+      "name": "Catalog empty; anon rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Draft isolation; author cannot publish; student cannot elevate",
+      "status": "PASS"
+    },
+    {
+      "name": "Admin publishes immutable version; student reads manifest",
+      "status": "PASS"
+    },
+    {
+      "name": "Edge progress replay, retry idempotency, forgery rejection and isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "Hosted activity aggregation, midnight split, milestones and isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "Profiles and engine requests use real Data API with RLS",
+      "status": "PASS"
+    },
+    {
+      "name": "Generation function: author review workflow; student forbidden; no AI provider assumed",
+      "status": "PASS"
+    },
+    {
+      "name": "Unpublished version remains resumable by existing learner",
+      "status": "PASS"
+    }
+  ],
+  "cleanup": {
+    "status": "PASS",
+    "users": 0,
+    "lessons": 0,
+    "versions": 0,
+    "sessions": 0,
+    "requests": 0,
+    "jobs": 0
+  }
+}

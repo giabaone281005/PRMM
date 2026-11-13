@@ -1,6 +1,6 @@
-﻿import 'dart:convert';
+import 'fixtures.dart';
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,7 +12,7 @@ void main(){
   final binding=IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   Future<void> screenshot(String name)async{await binding.takeScreenshot(name);}
   testWidgets('Android native triangle: gestures, persistent scene, completion and restore',(tester)async{
-    final prefs=await SharedPreferences.getInstance();await prefs.clear();app.main();await tester.pumpAndSettle();await binding.convertFlutterSurfaceToImage();await tester.pumpAndSettle();await screenshot('android-home');
+    final prefs=await SharedPreferences.getInstance();await prefs.clear();await tester.pumpWidget(app.MoHocApp(catalogLoader:()async=>[for(final name in ['grade7-triangle-angle-sum.lesson.json','grade8-solid-volume.lesson.json']) {...jsonDecode(integrationFixtureJson[name]!) as Json,'status':'published'}]));await tester.pumpAndSettle();await binding.convertFlutterSurfaceToImage();await tester.pumpAndSettle();await screenshot('android-home');
     await tester.tap(find.byKey(const ValueKey('lesson-grade7-triangle-angle-sum')));await tester.pumpAndSettle();final scene=find.byKey(const Key('native-scene'));await tester.ensureVisible(scene);await tester.pumpAndSettle();
     Offset point(double x,double y){final r=tester.getRect(scene);return r.topLeft+Offset(x/360*r.width,y/360*r.width);}
     expect(tester.widget<FilledButton>(find.byKey(const Key('continue'))).onPressed,isNull);await screenshot('android-triangle-cp1');
@@ -24,7 +24,7 @@ void main(){
     await tester.tap(find.byKey(const Key('continue')));await tester.pumpAndSettle();await tester.tap(find.byKey(const ValueKey('lesson-grade7-triangle-angle-sum')));await tester.pumpAndSettle();expect(find.text('Bạn đã tự mình khám phá!'),findsOneWidget);await screenshot('android-triangle-restored');
   });
   testWidgets('Android Three.js WebView: READY, gesture orbit, face selection, layers and ACK',(tester)async{
-    final l=jsonDecode(await rootBundle.loadString('assets/contracts/fixtures/grade8-solid-volume.lesson.json')) as Json;l['status']='published';await tester.pumpWidget(MaterialApp(debugShowCheckedModeBanner:false,theme:ThemeData(colorScheme:ColorScheme.fromSeed(seedColor:const Color(0xff263323),surface:const Color(0xfffafbf7)),filledButtonTheme:FilledButtonThemeData(style:FilledButton.styleFrom(backgroundColor:const Color(0xff263323)))),home:LessonPage(lesson:l)));await tester.pumpAndSettle();
+    final l=jsonDecode(integrationFixtureJson['grade8-solid-volume.lesson.json']!) as Json;l['status']='published';await tester.pumpWidget(MaterialApp(debugShowCheckedModeBanner:false,theme:ThemeData(colorScheme:ColorScheme.fromSeed(seedColor:const Color(0xff263323),surface:const Color(0xfffafbf7)),filledButtonTheme:FilledButtonThemeData(style:FilledButton.styleFrom(backgroundColor:const Color(0xff263323)))),home:LessonPage(lesson:l)));await tester.pumpAndSettle();
     await binding.convertFlutterSurfaceToImage();await tester.pumpAndSettle();final view=find.byType(SolidView);for(var i=0;i<30;i++){await tester.pump(const Duration(milliseconds:500));final state=tester.state<SolidViewState>(view);if(state.ready)break;}
     final state=tester.state<SolidViewState>(view);expect(state.ready,isTrue,reason:'Bundled 3D runtime must emit READY');expect(state.error,isEmpty);await tester.ensureVisible(view);await screenshot('android-solid-ready');
     final rect=tester.getRect(view);await tester.dragFrom(rect.center,const Offset(100,0));await tester.pump(const Duration(seconds:1));final s=tester.widget<SolidView>(view).session;

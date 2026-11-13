@@ -1,4 +1,5 @@
 import 'extra_models.dart';
+import 'recognition_scene.dart';
 import 'extra_math_scene.dart';
 
 import 'dart:math' as math;
@@ -18,6 +19,7 @@ class NativeMathScene extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    if(session.lesson['recognition'] is List){return RecognitionScene(session:session,onInteraction:onInteraction);}
     if (session.objects.any(
       (o) => o['kind'] == 'math_model' && extraModels.contains(o['model']),
     )) {

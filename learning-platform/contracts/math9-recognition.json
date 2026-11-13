@@ -1,0 +1,3335 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-linear-system",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Phương trình và hệ hai ẩn",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "linear-system"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Phương trình và hệ hai ẩn"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-linear-system-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Ghép phương trình bậc nhất hai ẩn vào ô nhận diện.",
+        "choices": [
+          "x² + y = 4",
+          "2x − 3y = 5",
+          "0x + 0y = 1",
+          "xy = 3"
+        ],
+        "correct": 2,
+        "explanation": "Dạng ax + by = c, trong đó a và b không đồng thời bằng 0.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Ghép phương trình nhận (2; 1) là nghiệm.",
+        "choices": [
+          "x + y = 3",
+          "x − y = 3",
+          "3x − y = 2",
+          "2x + y = 4"
+        ],
+        "correct": 1,
+        "explanation": "Thay x = 2 và y = 1: 2 + 1 = 3.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền bộ hệ số (a; b; c) của 5x − 7y = 9.",
+        "choices": [
+          "(−7; 5; 9)",
+          "(5; 7; 9)",
+          "(5; −7; 9)"
+        ],
+        "correct": 3,
+        "explanation": "Giữ nguyên dấu của hệ số b = −7.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Nhận diện hệ hai phương trình bậc nhất hai ẩn.",
+        "choices": [
+          "x² + y = 3; x − y = 0",
+          "x + y = 3; 2x − y = 0",
+          "xy = 3; x + y = 0"
+        ],
+        "correct": 2,
+        "explanation": "Mỗi phương trình đều có dạng ax + by = c với (a; b) khác (0; 0).",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Ghép phương trình bậc nhất hai ẩn vào ô nhận diện.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Dạng ax + by = c, trong đó a và b không đồng thời bằng 0."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Ghép phương trình nhận (2; 1) là nghiệm.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Thay x = 2 và y = 1: 2 + 1 = 3."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Điền bộ hệ số (a; b; c) của 5x − 7y = 9.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Giữ nguyên dấu của hệ số b = −7."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Nhận diện hệ hai phương trình bậc nhất hai ẩn.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Mỗi phương trình đều có dạng ax + by = c với (a; b) khác (0; 0)."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-inequality",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Phương trình và bất phương trình",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "inequality"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Phương trình và bất phương trình"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-inequality-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Nhận diện bất phương trình bậc nhất một ẩn.",
+        "choices": [
+          "x² − 1 ≤ 0",
+          "4x − 7 > 0",
+          "2/x + 3 < 0",
+          "0x + 5 ≥ 0"
+        ],
+        "correct": 2,
+        "explanation": "Dạng ax + b > 0 (hoặc <, ≤, ≥) với a khác 0.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền dấu: x < y ⇒ −2x … −2y.",
+        "choices": [
+          ">",
+          "=",
+          "≤",
+          "<"
+        ],
+        "correct": 1,
+        "explanation": "Nhân hai vế với số âm phải đổi chiều bất đẳng thức.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Ghép cách biểu diễn tập nghiệm x ≥ 3.",
+        "choices": [
+          "Chấm kín tại 3, tia sang trái",
+          "Chấm rỗng tại 3, tia sang phải",
+          "Chấm kín tại 3, tia sang phải"
+        ],
+        "correct": 3,
+        "explanation": "Dấu ≥ lấy cả mốc 3 và các số lớn hơn 3.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Nhận diện phương trình bậc nhất một ẩn.",
+        "choices": [
+          "x² = 4",
+          "3x − 2 = 0",
+          "0x + 2 = 0"
+        ],
+        "correct": 2,
+        "explanation": "Dạng ax + b = 0 với a khác 0.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Nhận diện bất phương trình bậc nhất một ẩn.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Dạng ax + b > 0 (hoặc <, ≤, ≥) với a khác 0."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Điền dấu: x < y ⇒ −2x … −2y.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Nhân hai vế với số âm phải đổi chiều bất đẳng thức."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Ghép cách biểu diễn tập nghiệm x ≥ 3.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Dấu ≥ lấy cả mốc 3 và các số lớn hơn 3."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Nhận diện phương trình bậc nhất một ẩn.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Dạng ax + b = 0 với a khác 0."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-radicals",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Căn bậc hai và căn bậc ba",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "radicals"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Căn bậc hai và căn bậc ba"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-radicals-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Ghép căn bậc hai số học của 64.",
+        "choices": [
+          "−8",
+          "8",
+          "±8",
+          "16"
+        ],
+        "correct": 2,
+        "explanation": "Căn bậc hai số học luôn không âm; 8² = 64.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền điều kiện để √(2x − 6) có nghĩa.",
+        "choices": [
+          "x ≥ 3",
+          "x ≤ 3",
+          "x ≥ 0",
+          "x > 3"
+        ],
+        "correct": 1,
+        "explanation": "2x − 6 ≥ 0 tương đương x ≥ 3.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Hoàn thành: √(m²) = … với mọi m.",
+        "choices": [
+          "−m",
+          "m²",
+          "m",
+          "|m|"
+        ],
+        "correct": 4,
+        "explanation": "Giá trị tuyệt đối bảo đảm kết quả không âm.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Ghép giá trị ∛(−125).",
+        "choices": [
+          "±5",
+          "5",
+          "−5",
+          "Không xác định"
+        ],
+        "correct": 3,
+        "explanation": "(−5)³ = −125. Căn bậc ba tồn tại với mọi số thực.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền định nghĩa √a = x.",
+        "choices": [
+          "x ≥ 0 và x² = a",
+          "x ≤ 0 và x² = a",
+          "x² = a là đủ"
+        ],
+        "correct": 1,
+        "explanation": "Căn bậc hai số học là nghiệm không âm.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Ghép căn bậc hai số học của 64.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Căn bậc hai số học luôn không âm; 8² = 64."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Điền điều kiện để √(2x − 6) có nghĩa.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "2x − 6 ≥ 0 tương đương x ≥ 3."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Hoàn thành: √(m²) = … với mọi m.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 4
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Giá trị tuyệt đối bảo đảm kết quả không âm."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Ghép giá trị ∛(−125).",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "(−5)³ = −125. Căn bậc ba tồn tại với mọi số thực."
+        }
+      },
+      {
+        "id": "cp-5",
+        "order": 5,
+        "instruction": "Điền định nghĩa √a = x.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Căn bậc hai số học là nghiệm không âm."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4",
+        "cp-5"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-quadratic",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Parabol, phương trình bậc hai và Viète",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "quadratic"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Parabol, phương trình bậc hai và Viète"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-quadratic-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Ghép bộ hệ số của 2x² − 4x + 1 = 0.",
+        "choices": [
+          "(2; 4; 1)",
+          "(2; −4; 1)",
+          "(−4; 2; 1)"
+        ],
+        "correct": 2,
+        "explanation": "Dạng ax² + bx + c = 0 với a khác 0.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền công thức biệt thức Δ.",
+        "choices": [
+          "b² − 4ac",
+          "a² − 4bc",
+          "b² + 4ac"
+        ],
+        "correct": 1,
+        "explanation": "Biệt thức của phương trình bậc hai là Δ = b² − 4ac.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Ghép điều kiện phương trình bậc hai vô nghiệm thực.",
+        "choices": [
+          "Δ > 0",
+          "Δ = 0",
+          "Δ < 0"
+        ],
+        "correct": 3,
+        "explanation": "Δ < 0: vô nghiệm thực; Δ = 0: nghiệm kép; Δ > 0: hai nghiệm phân biệt.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền tổng hai nghiệm của x² − 6x + 8 = 0.",
+        "choices": [
+          "−8",
+          "−6",
+          "6",
+          "8"
+        ],
+        "correct": 3,
+        "explanation": "Theo Viète: x₁ + x₂ = −b/a = 6.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền tích hai nghiệm theo Viète.",
+        "choices": [
+          "c/a",
+          "−c/a",
+          "−b/a"
+        ],
+        "correct": 1,
+        "explanation": "Nếu có hai nghiệm thực (kể cả nghiệm kép), x₁x₂ = c/a.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Ghép mô tả đồ thị y = ax² khi a < 0.",
+        "choices": [
+          "Đỉnh (0; a)",
+          "Đỉnh O, bề lõm quay lên",
+          "Đỉnh O, bề lõm quay xuống"
+        ],
+        "correct": 3,
+        "explanation": "Đỉnh luôn ở O; dấu a quyết định hướng bề lõm.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Ghép bộ hệ số của 2x² − 4x + 1 = 0.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Dạng ax² + bx + c = 0 với a khác 0."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Điền công thức biệt thức Δ.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Biệt thức của phương trình bậc hai là Δ = b² − 4ac."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Ghép điều kiện phương trình bậc hai vô nghiệm thực.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Δ < 0: vô nghiệm thực; Δ = 0: nghiệm kép; Δ > 0: hai nghiệm phân biệt."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Điền tổng hai nghiệm của x² − 6x + 8 = 0.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Theo Viète: x₁ + x₂ = −b/a = 6."
+        }
+      },
+      {
+        "id": "cp-5",
+        "order": 5,
+        "instruction": "Điền tích hai nghiệm theo Viète.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Nếu có hai nghiệm thực (kể cả nghiệm kép), x₁x₂ = c/a."
+        }
+      },
+      {
+        "id": "cp-6",
+        "order": 6,
+        "instruction": "Ghép mô tả đồ thị y = ax² khi a < 0.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Đỉnh luôn ở O; dấu a quyết định hướng bề lõm."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4",
+        "cp-5",
+        "cp-6"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-triangle",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Tam giác vuông và lượng giác",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "triangle"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Tam giác vuông và lượng giác"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-triangle-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Tam giác ABC vuông tại A. Chạm nhãn cạnh huyền.",
+        "choices": [
+          "AB",
+          "BC",
+          "AC"
+        ],
+        "correct": 2,
+        "explanation": "Cạnh đối diện góc vuông A là BC.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "tap"
+      },
+      {
+        "question": "Xét góc B. Chạm nhãn cạnh đối.",
+        "choices": [
+          "AC",
+          "BC",
+          "AB"
+        ],
+        "correct": 1,
+        "explanation": "AC đối diện góc B; AB là cạnh kề.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "tap"
+      },
+      {
+        "question": "Điền cos B trong tam giác ABC vuông tại A.",
+        "choices": [
+          "AC/AB",
+          "AB/AC",
+          "AC/BC",
+          "AB/BC"
+        ],
+        "correct": 4,
+        "explanation": "cos = cạnh kề / cạnh huyền.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền sin B.",
+        "choices": [
+          "AB/BC",
+          "AC/BC",
+          "AB/AC"
+        ],
+        "correct": 2,
+        "explanation": "sin = đối / huyền.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền tan B.",
+        "choices": [
+          "AC/AB",
+          "AC/BC",
+          "AB/AC"
+        ],
+        "correct": 1,
+        "explanation": "tan = đối / kề; cot = kề / đối.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "formula"
+      },
+      {
+        "question": "AH là đường cao xuống BC. Ghép hệ thức đúng.",
+        "choices": [
+          "BC² = AB² − AC²",
+          "AH² = AB × AC",
+          "AH² = BH × CH"
+        ],
+        "correct": 3,
+        "explanation": "Bình phương đường cao bằng tích hai hình chiếu.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "drag"
+      },
+      {
+        "question": "Ghép hệ thức hình chiếu của cạnh AB.",
+        "choices": [
+          "AB² = CH × BC",
+          "AB² = BH × BC",
+          "AB² = BH × CH"
+        ],
+        "correct": 2,
+        "explanation": "Bình phương cạnh góc vuông bằng cạnh huyền nhân hình chiếu tương ứng.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "drag"
+      },
+      {
+        "question": "Ghép hệ thức diện tích của tam giác vuông.",
+        "choices": [
+          "BC × AH = AB × AC",
+          "AH = AB + AC",
+          "BC × AB = AH × AC"
+        ],
+        "correct": 1,
+        "explanation": "Hai cách tính hai lần diện tích: BC × AH = AB × AC.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "triangle",
+        "mode": "drag"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Tam giác ABC vuông tại A. Chạm nhãn cạnh huyền.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Cạnh đối diện góc vuông A là BC."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Xét góc B. Chạm nhãn cạnh đối.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "AC đối diện góc B; AB là cạnh kề."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Điền cos B trong tam giác ABC vuông tại A.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 4
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "cos = cạnh kề / cạnh huyền."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Điền sin B.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "sin = đối / huyền."
+        }
+      },
+      {
+        "id": "cp-5",
+        "order": 5,
+        "instruction": "Điền tan B.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "tan = đối / kề; cot = kề / đối."
+        }
+      },
+      {
+        "id": "cp-6",
+        "order": 6,
+        "instruction": "AH là đường cao xuống BC. Ghép hệ thức đúng.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Bình phương đường cao bằng tích hai hình chiếu."
+        }
+      },
+      {
+        "id": "cp-7",
+        "order": 7,
+        "instruction": "Ghép hệ thức hình chiếu của cạnh AB.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Bình phương cạnh góc vuông bằng cạnh huyền nhân hình chiếu tương ứng."
+        }
+      },
+      {
+        "id": "cp-8",
+        "order": 8,
+        "instruction": "Ghép hệ thức diện tích của tam giác vuông.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Hai cách tính hai lần diện tích: BC × AH = AB × AC."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4",
+        "cp-5",
+        "cp-6",
+        "cp-7",
+        "cp-8"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-circle",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Đường tròn, dây cung và tiếp tuyến",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "circle"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Đường tròn, dây cung và tiếp tuyến"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-circle-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Chạm nhãn tâm đối xứng của đường tròn.",
+        "choices": [
+          "H",
+          "O",
+          "A"
+        ],
+        "correct": 2,
+        "explanation": "Tâm O là tâm đối xứng; mọi đường kính là trục đối xứng.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "tap"
+      },
+      {
+        "question": "Bán kính 5 cm. Ghép độ dài dây cung lớn nhất.",
+        "choices": [
+          "10 cm",
+          "25 cm",
+          "5π cm",
+          "5 cm"
+        ],
+        "correct": 1,
+        "explanation": "Đường kính là dây lớn nhất, dài 2R = 10 cm.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền điều kiện đường thẳng tiếp xúc đường tròn.",
+        "choices": [
+          "d > R",
+          "d < R",
+          "d = R"
+        ],
+        "correct": 3,
+        "explanation": "Tiếp xúc: một điểm chung, bán kính vuông góc tiếp tuyến.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "formula"
+      },
+      {
+        "question": "Ghép số điểm chung khi d < R.",
+        "choices": [
+          "1",
+          "2",
+          "0"
+        ],
+        "correct": 2,
+        "explanation": "Đường thẳng cắt đường tròn tại hai điểm.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      },
+      {
+        "question": "Ghép số điểm chung khi d > R.",
+        "choices": [
+          "0",
+          "2",
+          "1"
+        ],
+        "correct": 1,
+        "explanation": "Khoảng cách lớn hơn bán kính: không giao nhau.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      },
+      {
+        "question": "Đường kính vuông góc với một dây. Ghép tính chất.",
+        "choices": [
+          "Song song với dây",
+          "Đi qua đầu mút dây",
+          "Đi qua trung điểm dây"
+        ],
+        "correct": 3,
+        "explanation": "Đường kính vuông góc với dây thì chia đôi dây.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Chạm nhãn tâm đối xứng của đường tròn.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Tâm O là tâm đối xứng; mọi đường kính là trục đối xứng."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Bán kính 5 cm. Ghép độ dài dây cung lớn nhất.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Đường kính là dây lớn nhất, dài 2R = 10 cm."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Điền điều kiện đường thẳng tiếp xúc đường tròn.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Tiếp xúc: một điểm chung, bán kính vuông góc tiếp tuyến."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Ghép số điểm chung khi d < R.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Đường thẳng cắt đường tròn tại hai điểm."
+        }
+      },
+      {
+        "id": "cp-5",
+        "order": 5,
+        "instruction": "Ghép số điểm chung khi d > R.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Khoảng cách lớn hơn bán kính: không giao nhau."
+        }
+      },
+      {
+        "id": "cp-6",
+        "order": 6,
+        "instruction": "Đường kính vuông góc với một dây. Ghép tính chất.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Đường kính vuông góc với dây thì chia đôi dây."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4",
+        "cp-5",
+        "cp-6"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-angles",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Góc và tứ giác nội tiếp",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "angles"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Góc và tứ giác nội tiếp"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-angles-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Ghép tên góc có đỉnh trên đường tròn, hai cạnh chứa hai dây.",
+        "choices": [
+          "Góc ở tâm",
+          "Góc nội tiếp",
+          "Góc ngoài đường tròn"
+        ],
+        "correct": 2,
+        "explanation": "Đỉnh góc nội tiếp thuộc đường tròn.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      },
+      {
+        "question": "Ghép tên góc có đỉnh trùng tâm O.",
+        "choices": [
+          "Góc ở tâm",
+          "Góc bẹt",
+          "Góc nội tiếp"
+        ],
+        "correct": 1,
+        "explanation": "Đỉnh góc ở tâm là tâm đường tròn.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền góc nội tiếp cùng chắn cung với góc ở tâm 80°.",
+        "choices": [
+          "160°",
+          "80°",
+          "40°"
+        ],
+        "correct": 3,
+        "explanation": "Góc nội tiếp bằng nửa góc ở tâm cùng chắn một cung.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "formula"
+      },
+      {
+        "question": "Góc nội tiếp chắn nửa đường tròn bằng bao nhiêu?",
+        "choices": [
+          "45°",
+          "90°",
+          "180°"
+        ],
+        "correct": 2,
+        "explanation": "Góc nội tiếp chắn đường kính là góc vuông.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      },
+      {
+        "question": "Tứ giác MNPQ nội tiếp, góc M = 80°. Điền góc P.",
+        "choices": [
+          "80°",
+          "100°",
+          "90°",
+          "120°"
+        ],
+        "correct": 2,
+        "explanation": "Hai góc đối của tứ giác nội tiếp có tổng 180°.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "formula"
+      },
+      {
+        "question": "Ghép định nghĩa tứ giác nội tiếp.",
+        "choices": [
+          "Hai cạnh song song",
+          "Bốn cạnh bằng nhau",
+          "Bốn đỉnh cùng thuộc một đường tròn"
+        ],
+        "correct": 3,
+        "explanation": "Điều kiện là cả bốn đỉnh cùng nằm trên một đường tròn.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "circle",
+        "mode": "drag"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Ghép tên góc có đỉnh trên đường tròn, hai cạnh chứa hai dây.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Đỉnh góc nội tiếp thuộc đường tròn."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Ghép tên góc có đỉnh trùng tâm O.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Đỉnh góc ở tâm là tâm đường tròn."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Điền góc nội tiếp cùng chắn cung với góc ở tâm 80°.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Góc nội tiếp bằng nửa góc ở tâm cùng chắn một cung."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Góc nội tiếp chắn nửa đường tròn bằng bao nhiêu?",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Góc nội tiếp chắn đường kính là góc vuông."
+        }
+      },
+      {
+        "id": "cp-5",
+        "order": 5,
+        "instruction": "Tứ giác MNPQ nội tiếp, góc M = 80°. Điền góc P.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Hai góc đối của tứ giác nội tiếp có tổng 180°."
+        }
+      },
+      {
+        "id": "cp-6",
+        "order": 6,
+        "instruction": "Ghép định nghĩa tứ giác nội tiếp.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Điều kiện là cả bốn đỉnh cùng nằm trên một đường tròn."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4",
+        "cp-5",
+        "cp-6"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-solids",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Hình trụ, hình nón và hình cầu",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "solids"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Hình trụ, hình nón và hình cầu"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-solids-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Chạm nhãn đường sinh của hình nón.",
+        "choices": [
+          "h",
+          "l",
+          "r"
+        ],
+        "correct": 2,
+        "explanation": "l nối đỉnh với một điểm trên đường tròn đáy.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "cone",
+        "mode": "tap"
+      },
+      {
+        "question": "Điền thể tích hình nón.",
+        "choices": [
+          "V = πr²h/3",
+          "V = 4πr³/3",
+          "V = πr²h"
+        ],
+        "correct": 1,
+        "explanation": "Hình nón có thể tích bằng một phần ba hình trụ cùng đáy và chiều cao.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "cone",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền hệ thức của hình nón.",
+        "choices": [
+          "h² = l² + r²",
+          "l = r + h",
+          "l² = r² + h²"
+        ],
+        "correct": 3,
+        "explanation": "Áp dụng Pythagore trong mặt cắt qua trục.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "cone",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền diện tích xung quanh hình nón.",
+        "choices": [
+          "S = 2πrh",
+          "S = πrl",
+          "S = πr²"
+        ],
+        "correct": 2,
+        "explanation": "Diện tích xung quanh hình nón là πrl.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "cone",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền thể tích hình trụ.",
+        "choices": [
+          "V = πr²h",
+          "V = 4πr³/3",
+          "V = πr²h/3"
+        ],
+        "correct": 1,
+        "explanation": "Diện tích đáy πr² nhân chiều cao h.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền diện tích xung quanh hình trụ.",
+        "choices": [
+          "S = 4πr²",
+          "S = πrl",
+          "S = 2πrh"
+        ],
+        "correct": 3,
+        "explanation": "Chu vi đáy 2πr nhân chiều cao h.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền diện tích mặt cầu.",
+        "choices": [
+          "S = πR²",
+          "S = 4πR²",
+          "S = 2πRh"
+        ],
+        "correct": 2,
+        "explanation": "Diện tích mặt cầu là 4πR².",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền thể tích hình cầu.",
+        "choices": [
+          "V = 4πR³/3",
+          "V = 4πR²",
+          "V = πR²h"
+        ],
+        "correct": 1,
+        "explanation": "Thể tích hình cầu là 4πR³/3.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Chạm nhãn đường sinh của hình nón.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "l nối đỉnh với một điểm trên đường tròn đáy."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Điền thể tích hình nón.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Hình nón có thể tích bằng một phần ba hình trụ cùng đáy và chiều cao."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Điền hệ thức của hình nón.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Áp dụng Pythagore trong mặt cắt qua trục."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Điền diện tích xung quanh hình nón.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Diện tích xung quanh hình nón là πrl."
+        }
+      },
+      {
+        "id": "cp-5",
+        "order": 5,
+        "instruction": "Điền thể tích hình trụ.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Diện tích đáy πr² nhân chiều cao h."
+        }
+      },
+      {
+        "id": "cp-6",
+        "order": 6,
+        "instruction": "Điền diện tích xung quanh hình trụ.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Chu vi đáy 2πr nhân chiều cao h."
+        }
+      },
+      {
+        "id": "cp-7",
+        "order": 7,
+        "instruction": "Điền diện tích mặt cầu.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Diện tích mặt cầu là 4πR²."
+        }
+      },
+      {
+        "id": "cp-8",
+        "order": 8,
+        "instruction": "Điền thể tích hình cầu.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Thể tích hình cầu là 4πR³/3."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4",
+        "cp-5",
+        "cp-6",
+        "cp-7",
+        "cp-8"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-statistics",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Tần số và tần số tương đối",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "statistics"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Tần số và tần số tương đối"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-statistics-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Chạm cột có tần số 10 trong biểu đồ điểm.",
+        "choices": [
+          "Điểm 8",
+          "Điểm 10",
+          "Điểm 9"
+        ],
+        "correct": 2,
+        "explanation": "Tần số là số lần xuất hiện của giá trị.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "chart",
+        "mode": "tap"
+      },
+      {
+        "question": "40 học sinh, 10 bạn điểm 10. Điền tần số tương đối.",
+        "choices": [
+          "25%",
+          "40%",
+          "50%",
+          "10%"
+        ],
+        "correct": 1,
+        "explanation": "10/40 × 100% = 25%.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "chart",
+        "mode": "formula"
+      },
+      {
+        "question": "Điền công thức tần số tương đối.",
+        "choices": [
+          "f = m × N",
+          "f = N/m × 100%",
+          "f = m/N × 100%"
+        ],
+        "correct": 3,
+        "explanation": "m là tần số; N là cỡ mẫu.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      },
+      {
+        "question": "Ghép biểu đồ thích hợp để biểu diễn tỉ lệ phần trăm.",
+        "choices": [
+          "Trục số",
+          "Biểu đồ quạt tròn",
+          "Sơ đồ tam giác"
+        ],
+        "correct": 2,
+        "explanation": "Các hình quạt biểu diễn từng phần của toàn thể.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Chạm cột có tần số 10 trong biểu đồ điểm.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Tần số là số lần xuất hiện của giá trị."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "40 học sinh, 10 bạn điểm 10. Điền tần số tương đối.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "10/40 × 100% = 25%."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Điền công thức tần số tương đối.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "m là tần số; N là cỡ mẫu."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Ghép biểu đồ thích hợp để biểu diễn tỉ lệ phần trăm.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Các hình quạt biểu diễn từng phần của toàn thể."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "math9-probability",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Phép thử và biến cố",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "probability"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Phép thử và biến cố"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "math9-probability-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Gieo xúc xắc: ghép biến cố chắc chắn.",
+        "choices": [
+          "Số chấm bằng 6",
+          "Số chấm nhỏ hơn 7",
+          "Số chấm bằng 0"
+        ],
+        "correct": 2,
+        "explanation": "Mọi kết quả 1–6 đều nhỏ hơn 7.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Gieo xúc xắc: ghép biến cố không thể.",
+        "choices": [
+          "Số chấm bằng 0",
+          "Số chấm nhỏ hơn 7",
+          "Số chấm chẵn"
+        ],
+        "correct": 1,
+        "explanation": "Không có mặt 0 chấm.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Gieo xúc xắc: ghép biến cố ngẫu nhiên.",
+        "choices": [
+          "Số chấm nhỏ hơn 7",
+          "Số chấm lớn hơn 6",
+          "Số chấm chẵn"
+        ],
+        "correct": 3,
+        "explanation": "Có thể xảy ra (2, 4, 6) nhưng không luôn xảy ra.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Ghép không gian mẫu của một lần gieo xúc xắc.",
+        "choices": [
+          "{0; 1; 2; 3; 4; 5}",
+          "{1; 2; 3; 4; 5; 6}",
+          "{2; 4; 6}"
+        ],
+        "correct": 2,
+        "explanation": "Không gian mẫu chứa tất cả kết quả có thể xảy ra.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "drag"
+      },
+      {
+        "question": "Điền công thức xác suất khi các kết quả đồng khả năng.",
+        "choices": [
+          "P(A) = n(A)/n(Ω)",
+          "P(A) = n(A) × n(Ω)",
+          "P(A) = n(Ω)/n(A)"
+        ],
+        "correct": 1,
+        "explanation": "Lấy số kết quả thuận lợi chia tổng số kết quả đồng khả năng.",
+        "hint": "Đối chiếu định nghĩa và các yếu tố đã cho.",
+        "diagram": "none",
+        "mode": "formula"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Gieo xúc xắc: ghép biến cố chắc chắn.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Mọi kết quả 1–6 đều nhỏ hơn 7."
+        }
+      },
+      {
+        "id": "cp-2",
+        "order": 2,
+        "instruction": "Gieo xúc xắc: ghép biến cố không thể.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Không có mặt 0 chấm."
+        }
+      },
+      {
+        "id": "cp-3",
+        "order": 3,
+        "instruction": "Gieo xúc xắc: ghép biến cố ngẫu nhiên.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 3
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Có thể xảy ra (2, 4, 6) nhưng không luôn xảy ra."
+        }
+      },
+      {
+        "id": "cp-4",
+        "order": 4,
+        "instruction": "Ghép không gian mẫu của một lần gieo xúc xắc.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 2
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Không gian mẫu chứa tất cả kết quả có thể xảy ra."
+        }
+      },
+      {
+        "id": "cp-5",
+        "order": 5,
+        "instruction": "Điền công thức xác suất khi các kết quả đồng khả năng.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": 0,
+            "targetX": 1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Đối chiếu định nghĩa và các yếu tố đã cho."
+        ],
+        "feedback": {
+          "success": "Lấy số kết quả thuận lợi chia tổng số kết quả đồng khả năng."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1",
+        "cp-2",
+        "cp-3",
+        "cp-4",
+        "cp-5"
+      ]
+    }
+  }
+]

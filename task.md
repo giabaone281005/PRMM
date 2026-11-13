@@ -43,3 +43,65 @@ Quy ước: [x] có bằng chứng, [ ] chưa hoàn tất; không đánh đồng
 - [x] Lưu đề chưa có engine; không xuất bản dạng chưa hỗ trợ, không tự nhận hiểu mọi đề.
 - [x] Kiểm thử 47 TS/PostgreSQL, 19 browser, 12 Flutter; Android hoàn thành sáu engine mới bằng gestures.
 - [x] Local catalog có 12 bài mẫu; giữ nguyên các bản nháp/phiên bản người dùng đã có.
+
+## Supabase data integration � 2026-11-12
+- Removed automatic browser lesson fixture seeding and Flutter bundled catalog fallback.
+- Web requires Supabase configuration by default. Local development API requires explicit VITE_ENABLE_LOCAL_DEMO=true.
+- Existing four SQL migrations remain the schema source; no remote project was returned by the connector.
+- Remaining: select/connect target project, inspect remote schema, apply reviewed migrations, deploy progress/generate functions, verify RLS with separate users.
+
+
+## Thiết kế database và bỏ dữ liệu mẫu — 2026-11-13
+- [x] Đọc React/Flutter, API local, Auth, activity và bốn migration Supabase.
+- [x] Lập docs/architecture/supabase-database-plan.md: ERD, 14 bảng hiện có, bảng bổ sung, RLS, indexes và rollout.
+- [x] Bỏ seed/reconciliation 12 bài mẫu; API local mới bắt đầu rỗng.
+- [x] Bỏ nguồn catalog/draft/audit localStorage cũ; giữ cache tiến độ thật.
+- [x] Xóa JSON mẫu khỏi Flutter assets; đầu vào kiểm thử nằm riêng trong integration_test.
+- [x] Featured/card web lấy từ manifest; bỏ lịch ngày minh họa suy từ số bài.
+- [x] Build web/mobile runtime; 48 TS/SQL tests, Flutter analyze và 12 tests; browser checks.
+- [ ] Chọn project, kiểm kê/backup và rollout remote theo database plan.
+- [ ] Triển khai đồng bộ profile/requests/study activity và kiểm chứng Auth/Edge/RLS thật.
+
+
+## Supabase thật — 2026-11-13
+- [x] Xác nhận project scoped sbzpmrgsqznaydllqmbm; preflight database rỗng và snapshot cấu hình/schema.
+- [x] Apply 6 migrations; local/remote versions khớp; 17/17 bảng public bật RLS.
+- [x] Hồ sơ/settings/timezone, engine requests, study sessions/outbox/aggregation, verified milestones, bootstrap admin email đã xác minh.
+- [x] Thu hồi quyền mặc định quá rộng; sửa idempotency attempt/assignment, tách policies và thêm FK indexes.
+- [x] Deploy progress/generate ACTIVE; kiểm tra Auth/PostgREST/Edge thật bằng 5 user tạm, dọn toàn bộ dữ liệu test.
+- [x] Cấu hình web/Flutter project thật, Auth URLs; 52 TS/SQL, 20 browser, 14 Flutter, analyze và APK debug PASS.
+- [x] Security/health advisors sạch; performance chỉ còn INFO unused indexes. Báo cáo docs/architecture/supabase-deployment.md.
+- [ ] Chủ tài khoản đăng ký/xác minh prmfa26@gmail.com để nhận quyền admin; allowlist private đã cấu hình.
+- [ ] AI provider thật, production web domain/hosting, Android user acceptance và iOS; assets/taxonomy nâng cao khi có nhu cầu.
+
+
+## Mobile Auth và cài emulator — 2026-11-13
+- [x] Đăng nhập/đăng ký/xác minh email/gửi lại, kiểm tra mật khẩu nhập lại và lỗi tiếng Việt.
+- [x] Logout theo scope local; lưu/khôi phục phiên bằng flutter_secure_storage 11.2.0, tự refresh token và tách dữ liệu theo user.
+- [x] 21 Flutter tests; flutter analyze sạch; build APK debug với cấu hình Supabase thật.
+- [x] adb install -r Success trên emulator-5554; mở và xác nhận giao diện đăng nhập mới có nút Đăng ký.
+- [ ] Native integration test auth_flow_test.dart và người dùng xác minh email thật; chưa tính các ca này là PASS.
+
+
+## Admin tạo bài → mobile tự cập nhật — 2026-11-13
+- [x] Sửa PGRST201 ở loadLessons bằng FK hint rõ ràng; lưu/xuất bản refresh ngay thư viện và số liệu admin.
+- [x] Tạo & xuất bản lên app tách Lưu nháp; cập nhật thông báo thao tác.
+- [x] Migration live_published_catalog trên Supabase thật, 7 lịch sử local/remote khớp; chỉ catalog_state được đưa vào Realtime.
+- [x] Mobile Realtime + reconnect/resume + revision fallback; giữ danh sách khi lỗi và không remount player.
+- [x] Mobile hiện tên bài thực trong icon grid và thẻ tiếp tục.
+- [x] 53 TS/SQL, 23 Flutter, 20 browser tests; hosted admin UI → Android publication/open/unpublish PASS.
+- [x] Dọn đúng hai tài khoản/bài/markers thử; bài gốc người dùng vẫn còn, published-version protection vẫn bật.
+
+- [x] Build/cài lại APK thông thường trên emulator sau test; khôi phục session trước test, không đóng gói test account, đã mở app và xác nhận giao diện.
+
+## Bài chọn bi ba màu — 2026-11-13
+- [x] Tạo bài qua Studio bằng phiên admin có sẵn: 5 bi đỏ, 3 bi xanh, 2 bi vàng; phân loại 6 thẻ biến cố và giải thích xác suất.
+- [x] Preview web: phân loại đúng cả 6 thẻ, nút hoàn thành được mở.
+- [x] Xuất bản lên app; thư viện CMS đọc lại trạng thái Đã xuất bản.
+- [ ] Mở bài và xác minh thao tác trên emulator; đang xử lý khởi động Android/ADB.
+
+## Bàn giao nhóm — 2026-11-13
+- [x] Tạo PROJECT_HANDOVER.md tại root: kiến trúc, nguồn, contract/engines, Supabase, môi trường/chạy/build/test, lỗi/giới hạn, roadmap/phân công/acceptance.
+- [x] Rà lại tài liệu cũ và phân biệt kết quả lịch sử với kiểm tra hiện tại; ghi ANR bài chọn bi chưa giải quyết.
+- [x] Kiểm tra lại: 81 TS/SQL tests, web build, Flutter analyze và 48 Flutter tests PASS; links Markdown tồn tại.
+- [ ] Nhóm tiếp nhận tái hiện/sửa ANR và nghiệm thu hosted U-IME → Android → Edge progress xuyên suốt; xem PROJECT_HANDOVER.md.

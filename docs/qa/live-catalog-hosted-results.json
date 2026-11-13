@@ -1,0 +1,19 @@
+{
+  "project": "https://sbzpmrgsqznaydllqmbm.supabase.co",
+  "lessonId": "live-7e56de26-4d5b-4516-a23d-3a0ce21a0878",
+  "results": [
+    {
+      "check": "admin draft stays private",
+      "status": "PASS"
+    },
+    {
+      "check": "published from admin UI appears and opens on native mobile without refresh",
+      "status": "PASS",
+      "observedWithinMs": 5358
+    },
+    {
+      "check": "unpublish removes native card via Realtime without refresh",
+      "status": "PASS"
+    }
+  ]
+}

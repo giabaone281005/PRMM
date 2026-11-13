@@ -1,4 +1,5 @@
 import 'extra_models.dart';
+import 'uime.dart';
 
 import 'dart:convert';
 import 'dart:math' as math;
@@ -178,7 +179,8 @@ List<String> validateSchema(
         value.length > (schema['maxLength'] ?? 10000000)) {
       errors.add('$path: string length');
     }
-    if (schema['pattern'] != null && !RegExp(schema['pattern']).hasMatch(value)) {
+    if (schema['pattern'] != null &&
+        !RegExp(schema['pattern']).hasMatch(value)) {
       errors.add('$path: pattern');
     }
   }
@@ -188,6 +190,9 @@ List<String> validateSchema(
 List<String> validateLesson(Json l, Json schema) {
   final errors = validateSchema(l, schema);
   if (errors.isNotEmpty) return errors;
+  for (final t in l['recognition'] ?? []) {
+    if (t['uime'] is Map) errors.addAll(validateUime(t['uime']));
+  }
   if (l['scene']['viewport']['width'] != 360 ||
       l['scene']['viewport']['height'] != 360) {
     errors.add('Unsupported viewport');
@@ -214,6 +219,23 @@ List<String> validateLesson(Json l, Json schema) {
     errors.add('Coordinate mismatch');
   }
   final objects = <String, Json>{}, cps = <String>{};
+  if (l['recognition'] is List) {
+    final tasks = l['recognition'] as List;
+    if (tasks.length != (l['checkpoints'] as List).length ||
+        type != 'math_explorer_2d') {
+      errors.add('Recognition checkpoint/engine mismatch');
+    } else {
+      for (var i = 0; i < tasks.length; i++) {
+        final t = tasks[i], choices = t['choices'] as List;
+        if (t['correct'] > choices.length ||
+            choices.toSet().length != choices.length ||
+            l['checkpoints'][i]['scenePatch']['setState']['targetX'] !=
+                t['correct']) {
+          errors.add('Invalid recognition target');
+        }
+      }
+    }
+  }
   void add(dynamic item) {
     final o = Map<String, dynamic>.from(item);
     if (objects.containsKey(o['id'])) errors.add('Duplicate object');
@@ -430,6 +452,12 @@ class LessonSession {
     final model = objects.where((o) => o['kind'] == 'math_model').firstOrNull;
     if (model == null) return;
     final s = snapshot['state'] as Map, m = snapshot['metrics'] as Map;
+    final task = (lesson['recognition'] as List?)?[snapshot['checkpoint']];
+    if (task?['uime'] is Map) {
+      m['modelError'] = uimeError(task['uime'], s);
+      m['modelValue'] = s['x'];
+      return;
+    }
     if (extraModels.contains(model['model'])) {
       m.addAll(extraMetrics(model['model'], s));
       return;
@@ -459,6 +487,22 @@ class LessonSession {
       return false;
     }
     final m = snapshot['metrics'] as Map;
+    final task = (lesson['recognition'] as List?)?[snapshot['checkpoint']];
+    if (task?['uime'] is Map && e['type'] == 'adjust_parameter') {
+      final s = snapshot['state'] as Map, value = e['value'], name = e['name'];
+      if (value is! num ||
+          name is! String ||
+          !uimeAccept(task['uime'], name, value) ||
+          s[name] == value) {
+        return false;
+      }
+      s[name] = value;
+      m['parameterChangeCount']++;
+      m['parameterChangeCountSinceCheckpoint']++;
+      updateModel();
+      snapshot['revision']++;
+      return true;
+    }
     switch (e['type']) {
       case 'drag_vertex':
         final o = objects.where((o) => o['id'] == e['id']).firstOrNull,

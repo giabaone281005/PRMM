@@ -71,3 +71,70 @@ Evidence: cms-class-sort.png, cms-friendly-form.png, cms-new-*.png, studio-deskt
 Resolved during verification: browser selectors updated for revised UI; native numeric field updates on change, sliders snap to available precision. Android acceptance uses actual slider taps; separate Flutter widget test checks numeric input across checkpoint advance.
 NOT RUN: remote Supabase deployment/auth production; user deferred setup. Prepared, unapplied SQL source and bundles now contain all 12 engines. Existing migration sources are bootstrap artifacts, not a rollout against an existing database.
 NOT CLAIMED: every possible grade 6–9 question. Arbitrary proofs/constructions require new tested interactions; free-text engine suggestions use keywords, not an AI provider. Requests remain local to the browser.
+
+## Supabase integration � 2026-11-12
+- PASS: removed automatic fixture catalogs from web store and Flutter repository.
+- NOT RUN: build/test; npm.cmd runs but tsc and vitest are missing (dependencies not installed).
+- BLOCKED: remote database validation; Supabase connector returned projects: []. No remote mutation performed.
+- NOT RUN: Flutter analysis/device verification.
+
+
+## Bỏ dữ liệu mẫu và kế hoạch database — 2026-11-13
+
+- PASS: npm ci (0 vulnerabilities), npm run build, npm run bundle:mobile.
+- PASS: npm test: 48 tests / 5 files, gồm SQL/RLS PGlite và regression API local rỗng → draft → publish → unpublish, không tự thêm fixture.
+- PASS: flutter analyze (no issues); flutter test (12 tests). Fixture thiết bị chỉ import trong integration_test, không còn JSON mẫu trong app assets.
+- PASS: Browser lượt đầu 18/19; ca triangle dùng CTA featured lỗi vì featured nay chọn bài thực từ catalog. Đã sửa test chọn chính bài triangle; chạy lại ca này và ca catalog rỗng mới: 2/2 PASS. Chưa chạy cả 20 ca trong một lượt.
+- PASS: Catalog rỗng không đọc catalog mẫu cũ trong localStorage, không có featured giả; reload admin không seed lại. Đã xem ảnh empty-catalog.png.
+- PASS: git diff --check. Không thay đổi migration hoặc database remote.
+- NOT RUN: Android device integration/APK sau thay đổi asset packaging; integration entrypoints đã qua analyzer.
+- NOT RUN: Auth/PostgREST/Edge/Storage/advisors remote. Connector thấy một project, repo chưa xác định đích nên không mutate.
+- Phạm vi: bỏ dữ liệu mẫu khỏi catalog và gói app; giữ canonical fixtures/templates phục vụ test/builder. Không có .local/workspace.json trong checkout này; không xóa dữ liệu người dùng trên thiết bị hoặc database.
+- Thiết kế và công việc còn lại: ../architecture/supabase-database-plan.md.
+
+
+## Supabase hosted rollout — 2026-11-13 (mới nhất)
+
+- PASS: project sbzpmrgsqznaydllqmbm scoped; 6 migrations local/remote khớp, 17 public tables / 17 RLS; progress và generate ACTIVE.
+- PASS: preflight 0 users/tables/buckets; snapshot .local/deployment/before.json, Auth config snapshot trước thay đổi.
+- PASS: 52 TS/SQL tests (bao gồm verified admin bootstrap, overlap/midnight, isolation và attempt identity); 20 browser tests trong một lượt; web build và Edge bundles.
+- PASS: Flutter analyze, 14 tests, debug APK với cấu hình Supabase thật; ZIP APK không có các JSON mẫu/fixtures/evaluation/scenarios.
+- PASS: 9 nhóm hosted smoke với 5 user Auth tạm: actual password login, role/draft isolation, publish immutability, Edge replay/idempotency, activity timezone, profile/request RLS, author generation review và unpublish/resume. Evidence: supabase-hosted-smoke.json.
+- PASS: cleanup chỉ dữ liệu của smoke run; readback 0 users/lessons/versions/sessions/requests/jobs; immutable_version trigger vẫn enabled.
+- PASS: security và health advisors không có findings; performance không còn WARN, chỉ INFO unused indexes trên DB mới.
+- PASS: Auth site/redirect URLs cổng 5173; config diff không còn drift. Form signup web thực đã mở và chụp supabase-signup.png; chưa submit email người dùng.
+- NOT RUN: xác minh email prmfa26@gmail.com bởi chủ tài khoản; production frontend hosting, Android tương tác bằng user thật, iOS, provider AI thật. generate smoke dùng template mode.
+- LIMITATION: mobile refresh token hiện chỉ ở RAM; cần đăng nhập lại khi restart. Outbox hoạt động học lưu theo user; thời gian thiết bị chỉ là telemetry, milestone dùng thời gian server xác nhận.
+- Tài liệu và trạng thái hiện hành: ../architecture/supabase-deployment.md. Các ghi chú BLOCKED/NOT RUN remote ở các mục cũ đã được thay thế bởi kết quả trên.
+
+
+## Cập nhật quyền quản trị — 2026-11-13
+PASS: pvhldd.1@gmail.com đã xác minh, role=admin được readback từ database; audit owner_requested_admin_grant đã ghi. Gỡ email cấu hình nhầm khỏi bootstrap chưa sử dụng, giữ nguyên các tài khoản.
+
+
+## Mobile Auth mới — 2026-11-13
+PASS: 21 Flutter unit/widget tests; flutter analyze No issues found; debug APK build với cấu hình Supabase thật. PASS: cài APK qua adb install -r Success trên Pixel_9_Pro emulator-5554, mở MainActivity và kiểm tra hình ảnh giao diện đăng nhập mới với nút Đăng ký. Có xác minh email, gửi lại có cooldown, password confirmation, lỗi tiếng Việt, secure session storage, refresh và logout scope=local. PASS: probe Supabase Auth thật trả invalid_credentials cho tài khoản thử không tồn tại, không tạo account. NOT RUN: native auth_flow_test.dart (lần thử trước bị chặn ADB authorization), gửi/xác nhận email thật và iOS. Bản cài cuối được xác nhận khởi động qua bước đọc secure storage và hiển thị login, không tuyên bố đã đăng nhập thay người dùng.
+
+
+## Luồng tạo bài admin → Android Realtime — 2026-11-13
+
+PASS: 53 TS/SQL, 23 Flutter tests, 20 browser E2E. Sửa lỗi PGRST201 thực ở truy vấn lessons/lesson_versions bằng FK hint; không còn lỗi refresh thư viện sau lưu.
+PASS: migration 20261112182103_live_published_catalog đã apply, local/remote khớp; catalog_state RLS chỉ authenticated đọc, client không ghi; chỉ bảng revision này được replicate, không phát draft hoặc nội dung tác giả.
+PASS: kiểm thử thật qua giao diện admin tại port 5173 và Flutter native trên emulator-5554. Dùng hai user tạm, driver đăng nhập student, chờ Realtime subscribed rồi mới cho browser tạo draft/publish. Poll fallback được đặt một ngày trong test để chứng minh cập nhật đến từ WebSocket. Card tự xuất hiện, mở được NativeMathScene; gỡ xuất bản từ giao diện admin làm card tự biến mất, không pull-to-refresh.
+Evidence: live-catalog-hosted-results.json, admin-live-published.png, android-live-published.png, android-live-unpublished.png. Khoảng 5358 ms trong report bao gồm quan sát card, screenshot, mở và đóng bài, không phải phép đo latency WebSocket riêng.
+PASS: dọn đúng run live-7e56de26-4d5b-4516-a23d-3a0ce21a0878; readback remaining_test_users=0, remaining_test_lessons=0, original_lesson_present=true; immutable_version trigger vẫn bật. Phiên secure storage có sẵn trên emulator được test lưu trong RAM và phục hồi; không xuất token/mật khẩu người dùng ra host.
+Mobile thực: foreground subscribe, đổi tài khoản hủy subscription cũ, resume bắt kịp thay đổi, kiểm tra revision 30 giây dự phòng và giữ catalog khi network lỗi. Card hiện title thật thay vì chỉ nhãn engine.
+Resolved in verification: callback setState trả Future gây lỗi debug đã sửa thành callback synchronous; driver lượt đầu chờ hết hạn do admin PGRST201, đã sửa và chạy lại thành công từ đầu.
+Security advisor: không có finding mới trên bảng/policy; còn WARN Auth leaked-password protection disabled, nằm ngoài thay đổi catalog. Tham khảo https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection .
+NOT RUN: iOS, performance thiết bị vật lý yếu, stress nhiều publish đồng thời hoặc SLA latency production.
+
+PASS cuối: flutter analyze sạch; web production build PASS; APK thông thường build/cài lại Success và MainActivity đã mở trên emulator. Kiểm tra kernel APK không chứa tài khoản/entrypoint live-test; đã xóa hai file credential/defines thử trên host. CUA xác nhận giao diện login của bản thường hoạt động.
+
+## Bài chọn bi ba màu — 2026-11-13
+PASS: tạo qua UI Studio với phiên admin hiện có; thùng 5 bi đỏ, 3 bi xanh, 2 bi vàng, 6 thẻ EVENT_CARD_BUCKET, hình SVG và giải thích xác suất. Preview chấm đúng 6 thẻ và mở nút hoàn thành. Xuất bản qua UI thành công; chuyển trang thư viện đọc lại tên bài và trạng thái Đã xuất bản. Evidence: three-color-web-preview.png, three-color-published.png.
+NOT RUN: tương tác trên Android. Emulator Pixel_9_Pro cần cold boot; thử đồ họa phần mềm sau khi ADB shell không đáp ứng. CUA native capture báo window crop is outside captured monitor. Chưa tuyên bố Android PASS.
+BLOCKED cuối lượt: emulator đã có cửa sổ Pixel_9_Pro nhưng ADB trả device unauthorized. Đã yêu cầu người dùng tự chấp nhận Allow USB debugging nếu xuất hiện; chưa có xác nhận. Bài đã xuất bản, chưa kiểm chứng mở bài trên mobile.
+
+## Rà soát bàn giao — 2026-11-13
+PASS: npm test 81/81 (7 files), npm run build (TypeScript + Vite), flutter analyze No issues found, flutter test 48/48. Có cảnh báo Vite import resolution tương lai và chunk JS >500kB, đã ghi PROJECT_HANDOVER.md. PASS: kiểm tra đường dẫn Markdown trong tài liệu bàn giao và code fences.
+NOT RUN trong lượt tài liệu: browser/device E2E, build APK, live Supabase readback/deploy. Lỗi ANR quan sát ở lượt chạy app chọn bi trước chưa được xử lý; restart về Home không chứng minh tương tác đã PASS. PROJECT_HANDOVER.md tổng hợp 9 migration trên disk, khả năng hiện tại, khác biệt tài liệu lịch sử và roadmap ưu tiên.

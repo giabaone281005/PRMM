@@ -7511,6 +7511,37 @@ var require__ = __commonJS({
 // packages/lesson-contract/index.ts
 var import__ = __toESM(require__(), 1);
 
+// packages/lesson-runtime/uime.ts
+var uimeKeys = ["x", "y", "a", "b", "c", "width", "height", "numerator"];
+function uimeAccept(u, name, value) {
+  const i = uimeKeys.indexOf(name);
+  if (i < 0 || !Number.isFinite(value)) return false;
+  if (u.kind === "3D_SOLID_INSPECTOR" && ["a", "b"].includes(name)) return Math.abs(value) <= Math.PI * 2;
+  if (i >= u.answers.length) return false;
+  if (u.kind === "NUMBER_LINE_SELECTOR" && i > 0) return value === 0 || value === 1;
+  if (["PARABOLA_SLIDER", "NUMBER_LINE_SELECTOR", "GEOMETRIC_HOTSPOT_FINDER"].includes(u.kind) && i === 0) return value >= u.min && value <= u.max && Math.abs((value - u.min) / u.step - Math.round((value - u.min) / u.step)) < 1e-6;
+  const max = ["TOKEN_CLASSIFIER", "EVENT_CARD_BUCKET"].includes(u.kind) ? u.labels.length : u.tokens.length;
+  return Number.isInteger(value) && value >= 0 && value < max;
+}
+function uimeError(u, state) {
+  let error = u.answers.reduce((sum, v, i) => sum + Math.abs(Number(state[uimeKeys[i]]) - v), 0);
+  if (u.kind === "3D_SOLID_INSPECTOR" && Math.abs(Number(state.a)) + Math.abs(Number(state.b)) < 0.3) error += 1;
+  return error;
+}
+function validateUime(u) {
+  const e = [];
+  if (u.answers.length < 1 || u.answers.length > 8 || u.min >= u.max || u.step <= 0) e.push("Invalid U-IME dimensions/bounds");
+  if (["TOKEN_CLASSIFIER", "EVENT_CARD_BUCKET"].includes(u.kind) && u.tokens.length !== u.answers.length) e.push("Every card needs a target bucket");
+  if (u.kind === "FORMULA_SNAP_BUILDER" && u.labels.length !== u.answers.length) e.push("Every formula slot needs a label");
+  if (u.kind === "NUMBER_LINE_SELECTOR" && (u.answers.length !== 3 || u.min < -10 || u.max > 10)) e.push("Number line requires endpoint, direction and closure within -10..10");
+  if (u.kind === "GEOMETRIC_HOTSPOT_FINDER" && u.answers.length !== 2) e.push("Circle requires distance and selected part");
+  if (u.hotspots.some((h) => h.x + h.width > 360 || h.y + h.height > 240)) e.push("Hotspot outside viewport");
+  u.answers.forEach((v, i) => {
+    if (!uimeAccept(u, uimeKeys[i], v)) e.push("Unreachable U-IME answer");
+  });
+  return e;
+}
+
 // contracts/lesson.schema.json
 var lesson_schema_default = {
   $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -8480,6 +8511,198 @@ var lesson_schema_default = {
         "requiredCheckpointIds"
       ],
       additionalProperties: false
+    },
+    recognition: {
+      type: "array",
+      minItems: 1,
+      maxItems: 100,
+      items: {
+        type: "object",
+        properties: {
+          question: {
+            type: "string",
+            minLength: 1,
+            maxLength: 2e3
+          },
+          mode: {
+            enum: [
+              "tap",
+              "drag",
+              "formula"
+            ]
+          },
+          choices: {
+            type: "array",
+            minItems: 2,
+            maxItems: 8,
+            items: {
+              type: "string",
+              minLength: 1,
+              maxLength: 2e3
+            }
+          },
+          correct: {
+            type: "integer",
+            minimum: 1,
+            maximum: 8
+          },
+          explanation: {
+            type: "string",
+            minLength: 1,
+            maxLength: 2e3
+          },
+          hint: {
+            type: "string",
+            minLength: 1,
+            maxLength: 2e3
+          },
+          diagram: {
+            enum: [
+              "none",
+              "triangle",
+              "circle",
+              "cone",
+              "chart"
+            ]
+          },
+          uime: {
+            type: "object",
+            properties: {
+              kind: {
+                enum: [
+                  "TOKEN_CLASSIFIER",
+                  "TAP_COEFFICIENT",
+                  "NUMBER_LINE_SELECTOR",
+                  "INEQUALITY_SIGN_SWITCH",
+                  "FORMULA_SNAP_BUILDER",
+                  "PARABOLA_SLIDER",
+                  "DELTA_STATE_TOGGLE",
+                  "TRIANGLE_HOTSPOT_TAP",
+                  "GEOMETRIC_HOTSPOT_FINDER",
+                  "ANGLE_MEASURE_TAP",
+                  "3D_SOLID_INSPECTOR",
+                  "CHART_BAR_TAP",
+                  "EVENT_CARD_BUCKET"
+                ]
+              },
+              labels: {
+                type: "array",
+                items: {
+                  type: "string",
+                  minLength: 1,
+                  maxLength: 2e3
+                },
+                minItems: 0,
+                maxItems: 100
+              },
+              tokens: {
+                type: "array",
+                items: {
+                  type: "string",
+                  minLength: 1,
+                  maxLength: 2e3
+                },
+                minItems: 0,
+                maxItems: 100
+              },
+              answers: {
+                type: "array",
+                minItems: 1,
+                maxItems: 8,
+                items: {
+                  type: "number"
+                }
+              },
+              min: {
+                type: "number"
+              },
+              max: {
+                type: "number"
+              },
+              step: {
+                type: "number",
+                exclusiveMinimum: 0
+              },
+              solid: {
+                enum: [
+                  "cone",
+                  "cylinder",
+                  "sphere"
+                ]
+              },
+              hotspots: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    label: {
+                      type: "string",
+                      minLength: 1,
+                      maxLength: 2e3
+                    },
+                    x: {
+                      type: "number",
+                      minimum: 0,
+                      maximum: 360
+                    },
+                    y: {
+                      type: "number",
+                      minimum: 0,
+                      maximum: 240
+                    },
+                    width: {
+                      type: "number",
+                      minimum: 1,
+                      maximum: 360
+                    },
+                    height: {
+                      type: "number",
+                      minimum: 1,
+                      maximum: 240
+                    }
+                  },
+                  required: [
+                    "label",
+                    "x",
+                    "y",
+                    "width",
+                    "height"
+                  ],
+                  additionalProperties: false
+                },
+                minItems: 0,
+                maxItems: 100
+              },
+              svg: {
+                type: "string",
+                maxLength: 65536
+              }
+            },
+            required: [
+              "kind",
+              "labels",
+              "tokens",
+              "answers",
+              "min",
+              "max",
+              "step",
+              "solid",
+              "hotspots"
+            ],
+            additionalProperties: false
+          }
+        },
+        required: [
+          "question",
+          "mode",
+          "choices",
+          "correct",
+          "explanation",
+          "hint",
+          "diagram"
+        ],
+        additionalProperties: false
+      }
     }
   },
   required: [
@@ -8661,6 +8884,15 @@ function isMathEngine(type) {
 function validateLesson(input) {
   if (!check(input)) return (check.errors ?? []).map((e) => `${e.instancePath}: ${e.message}`);
   const l = input, errors = [];
+  l.recognition?.forEach((t) => {
+    if (t.uime) errors.push(...validateUime(t.uime));
+  });
+  if (l.recognition) {
+    if (l.recognition.length !== l.checkpoints.length || l.engine.type !== "math_explorer_2d") errors.push("Recognition checkpoint/engine mismatch");
+    l.recognition.forEach((t, i) => {
+      if (t.correct > t.choices.length || new Set(t.choices).size !== t.choices.length || l.checkpoints[i]?.scenePatch.setState?.targetX !== t.correct) errors.push("Invalid recognition target");
+    });
+  }
   const ids = /* @__PURE__ */ new Set();
   const objects = /* @__PURE__ */ new Map();
   function add(o) {
@@ -8820,6 +9052,12 @@ var LessonSession = class _LessonSession {
     const model = this.objects.find((o) => o.kind === "math_model");
     if (model?.kind !== "math_model") return;
     const s = this.snapshot.state, m = this.snapshot.metrics;
+    const u = this.lesson.recognition?.[this.snapshot.checkpoint]?.uime;
+    if (u) {
+      m.modelError = uimeError(u, s);
+      m.modelValue = s.x;
+      return;
+    }
     if (isExtraModel(model.model)) {
       Object.assign(m, extraMetrics(model.model, s));
       return;
@@ -8845,6 +9083,18 @@ var LessonSession = class _LessonSession {
   interact(e) {
     if (this.snapshot.completed || !this.checkpoint.allowedInteractions.includes(e.type)) return false;
     const s = this.snapshot, m = s.metrics;
+    const u = this.lesson.recognition?.[s.checkpoint]?.uime;
+    if (u && e.type === "adjust_parameter") {
+      if (!uimeAccept(u, e.name, e.value) || s.state[e.name] === e.value) return false;
+      s.state[e.name] = e.value;
+      m.parameterChangeCount++;
+      m.parameterChangeCountSinceCheckpoint++;
+      m.modelError = uimeError(u, s.state);
+      m.modelValue = Number(s.state.x);
+      this.emit();
+      this.eventListeners.forEach((f) => f(e));
+      return true;
+    }
     if (e.type === "drag_vertex") {
       const obj = this.objects.find((o) => o.id === e.id), old = s.points[e.id];
       if (obj?.kind !== "point" || !obj.draggable || !old || !e.position.every(Number.isFinite) || Math.hypot(old[0] - e.position[0], old[1] - e.position[1]) < 3) return false;
@@ -8953,7 +9203,7 @@ function replay(lesson, events) {
 }
 
 // supabase/functions/progress/main.ts
-var cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization,apikey,content-type", "Access-Control-Allow-Methods": "POST,OPTIONS" };
+var cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization,x-client-info,apikey,content-type", "Access-Control-Allow-Methods": "POST,OPTIONS" };
 function response(body, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 }

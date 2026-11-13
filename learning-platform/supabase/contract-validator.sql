@@ -33,13 +33,33 @@ exception when others then return false;
 end$$;
 
 create or replace function lesson_private.valid_manifest(m jsonb) returns boolean language plpgsql stable set search_path='' as $$
-declare cp jsonb;o jsonb;cap jsonb;objects jsonb;ids text[]='{}';cps text[]='{}';i integer=0;registry jsonb;ref text;refs text[];
+declare cp jsonb;o jsonb;cap jsonb;objects jsonb;ids text[]='{}';cps text[]='{}';i integer=0;registry jsonb;ref text;refs text[];t jsonb;u jsonb;a jsonb;j integer;target numeric;
 begin
  if octet_length(m::text)>131072 or not lesson_private.schema_valid(m,lesson_private.contract_schema(),lesson_private.contract_schema()) then return false;end if;
  select capabilities into registry from public.engine_registry where engine_type=m#>>'{engine,type}' and is_enabled;
  if registry is null or not registry @> (m#>'{engine,requiredCapabilities}') then return false;end if;
  if ((m#>>'{engine,type}')<>'geometry_3d_web')<>((m#>>'{scene,coordinateSystem}')='cartesian_2d') then return false;end if;
  objects=m#>'{scene,objects}';
+ if m ? 'recognition' then
+  if jsonb_array_length(m->'recognition')<>jsonb_array_length(m->'checkpoints') or m#>>'{engine,type}'<>'math_explorer_2d' then return false;end if;
+  for t in select value from jsonb_array_elements(m->'recognition') loop
+   if not(t ? 'uime') then continue;end if;u=t->'uime';a=u->'answers';
+   if (u->>'min')::numeric >= (u->>'max')::numeric then return false;end if;
+   if u->>'kind' in ('TOKEN_CLASSIFIER','EVENT_CARD_BUCKET') and jsonb_array_length(u->'tokens')<>jsonb_array_length(a) then return false;end if;
+   if u->>'kind'='FORMULA_SNAP_BUILDER' and jsonb_array_length(u->'labels')<>jsonb_array_length(a) then return false;end if;
+   if u->>'kind'='NUMBER_LINE_SELECTOR' and (jsonb_array_length(a)<>3 or (u->>'min')::numeric < -10 or (u->>'max')::numeric > 10) then return false;end if;
+   if u->>'kind'='GEOMETRIC_HOTSPOT_FINDER' and jsonb_array_length(a)<>2 then return false;end if;
+   for j in 0..jsonb_array_length(a)-1 loop
+    target=(a->>j)::numeric;
+    if j=0 and u->>'kind' in ('PARABOLA_SLIDER','NUMBER_LINE_SELECTOR','GEOMETRIC_HOTSPOT_FINDER') then
+     if target<(u->>'min')::numeric or target>(u->>'max')::numeric or abs((target-(u->>'min')::numeric)/(u->>'step')::numeric-round((target-(u->>'min')::numeric)/(u->>'step')::numeric))>0.000001 then return false;end if;
+    elsif u->>'kind'='NUMBER_LINE_SELECTOR' then if target not in (0,1) then return false;end if;
+    else if target<>trunc(target) or target<0 or target>=jsonb_array_length(case when u->>'kind' in ('TOKEN_CLASSIFIER','EVENT_CARD_BUCKET') then u->'labels' else u->'tokens' end) then return false;end if;
+    end if;
+   end loop;
+   for o in select value from jsonb_array_elements(u->'hotspots') loop if (o->>'x')::numeric+(o->>'width')::numeric>360 or (o->>'y')::numeric+(o->>'height')::numeric>240 then return false;end if;end loop;
+  end loop;
+ end if;
  for cp in select value from jsonb_array_elements(m->'checkpoints') loop
   i=i+1;if (cp->>'order')::integer<>i or cp->>'id'=any(cps) then return false;end if;cps=array_append(cps,cp->>'id');
   if not registry @> (cp->'allowedInteractions') or not (m#>'{engine,requiredCapabilities}') @> (cp->'allowedInteractions') then return false;end if;

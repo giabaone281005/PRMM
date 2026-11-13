@@ -1,5 +1,10 @@
 # Kế hoạch dữ liệu và rollout
 
+> Cập nhật triển khai 2026-11-13: backend thật đã lên Supabase. Trạng thái hiện hành và bằng chứng trong [supabase-deployment.md](supabase-deployment.md); nội dung dưới đây ghi lại kế hoạch ban đầu.
+
+
+Cập nhật 2026-11-13: xem [thiết kế database chi tiết](supabase-database-plan.md). API local chỉ bật với `VITE_ENABLE_LOCAL_DEMO=true`, workspace mới rỗng và không tự bổ sung fixture. Flutter dùng catalog Supabase; không có fallback bài mẫu.
+
 Theo chỉ dẫn mới nhất, người dùng sẽ thiết lập Supabase sau. Phiên này không thay đổi database remote, không lấy secret/service-role key và không liên kết project chỉ từ tên.
 
 ## Bản local đang dùng

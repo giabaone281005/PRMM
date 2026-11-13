@@ -1,22 +1,28 @@
 import 'dart:convert';
+import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'activity.dart';
+import 'activity_sync.dart';
+import 'auth_panel.dart';
+import 'catalog_sync.dart';
 import 'domain.dart';
 import 'scenes.dart';
 import 'repository.dart';
 import 'player.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await repository.restoreSession();
   runApp(const MoHocApp());
 }
 
 class MoHocApp extends StatelessWidget {
   final Future<List<Json>> Function()? catalogLoader;
-  const MoHocApp({super.key, this.catalogLoader});
+  final Stream<void>? catalogEvents;
+  const MoHocApp({super.key, this.catalogLoader, this.catalogEvents});
   @override
   Widget build(BuildContext context) => MaterialApp(
     title: 'Mở Học',
@@ -56,7 +62,7 @@ class MoHocApp extends StatelessWidget {
         ),
       ),
     ),
-    home: HomePage(catalogLoader: catalogLoader),
+    home: HomePage(catalogLoader: catalogLoader, catalogEvents: catalogEvents),
   );
 }
 
@@ -160,21 +166,103 @@ class LearnerSummary {
 
 class HomePage extends StatefulWidget {
   final Future<List<Json>> Function()? catalogLoader;
-  const HomePage({super.key, this.catalogLoader});
+  final Stream<void>? catalogEvents;
+  const HomePage({super.key, this.catalogLoader, this.catalogEvents});
   @override
   State<HomePage> createState() => _HomeState();
 }
 
-class _HomeState extends State<HomePage> {
+class _HomeState extends State<HomePage> with WidgetsBindingObserver {
   late Future<LearnerSummary> summary;
   int tab = 0, grade = 0;
   String? picked;
+  String? _lastUser;
+  StreamSubscription<void>? _catalogSubscription;
+  bool _catalogLoading = false, _catalogDirty = false;
+  int _loadSerial = 0;
+  void watchCatalog() {
+    final previous = _catalogSubscription;
+    _catalogSubscription = null;
+    unawaited(previous?.cancel());
+    if (widget.catalogEvents != null) {
+      _catalogSubscription = widget.catalogEvents!.listen(
+        (_) => unawaited(refreshCatalog()),
+      );
+    } else if (repository.remote && repository.token != null) {
+      _catalogSubscription = catalogChanges(repository)
+          .listen((_) => unawaited(refreshCatalog()));
+    }
+  }
+
+  Future<void> refreshCatalog() async {
+    _catalogDirty = true;
+    if (_catalogLoading) return;
+    _catalogLoading = true;
+    try {
+      do {
+        _catalogDirty = false;
+        final user = repository.userId, serial = ++_loadSerial;
+        try {
+          final data = await load();
+          if (mounted && serial == _loadSerial && user == repository.userId) {
+            setState(() {summary = Future.value(data);});
+          }
+        } catch (_) {
+          /* Preserve the last successful catalog on transient failures. */
+        }
+      } while (_catalogDirty && mounted);
+    } finally {
+      _catalogLoading = false;
+    }
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      watchCatalog();
+      if (widget.catalogLoader != null || repository.token != null) {
+        unawaited(refreshCatalog());
+      }
+    } else {
+      final previous = _catalogSubscription;
+      _catalogSubscription = null;
+      unawaited(previous?.cancel());
+    }
+  }
+
   @override
   void initState() {
     super.initState();
+    _lastUser = repository.userId;
+    repository.addListener(authChanged);
+    WidgetsBinding.instance.addObserver(this);
     summary = repository.remote && repository.token == null
         ? Future.value(LearnerSummary([], {}, StudyActivity(), 'Bạn học'))
         : load();
+    watchCatalog();
+  }
+
+  void authChanged() {
+    if (!mounted || _lastUser == repository.userId) return;
+    _lastUser = repository.userId;
+    _loadSerial++;
+    watchCatalog();
+    setState(() {
+      tab = 0;
+      picked = null;
+      summary = repository.token == null
+          ? Future.value(LearnerSummary([], {}, StudyActivity(), 'Bạn học'))
+          : load();
+    });
+  }
+
+  @override
+  void dispose() {
+    repository.removeListener(authChanged);
+    WidgetsBinding.instance.removeObserver(this);
+    unawaited(_catalogSubscription?.cancel());
+    _loadSerial++;
+    super.dispose();
   }
 
   Future<LearnerSummary> load() async {
@@ -194,15 +282,43 @@ class _HomeState extends State<HomePage> {
       }
     }
     final user = repository.userId ?? 'local';
-    return LearnerSummary(
-      lessons,
-      progress,
-      await ActivityStore.load(user),
-      prefs.getString('mohoc-profile-name-$user') ?? 'Bạn học',
-    );
+    var activity = await ActivityStore.load(user);
+    var name = prefs.getString('mohoc-profile-name-$user') ?? 'Bạn học';
+    if (repository.remote && repository.token != null) {
+      await ActivitySync.flush(user);
+      final profile = await repository.profile();
+      name = profile['display_name'];
+      await prefs.setString('mohoc-profile-name-$user', name);
+      activity = StudyActivity.fromJson(
+        Map<String, dynamic>.from(
+          await repository.request('rest/v1/rpc/my_study_activity', {}),
+        ),
+      );
+      final rows = await repository.get(
+        'rest/v1/lesson_progress?user_id=eq.$user&select=lesson_id,version,snapshot',
+      ) as List;
+      for (final row in rows) {
+        final lesson = lessons
+            .where(
+              (l) =>
+                  l['lessonId'] == row['lesson_id'] &&
+                  l['version'] == row['version'],
+            )
+            .firstOrNull;
+        if (lesson == null) continue;
+        final server = Map<String, dynamic>.from(row['snapshot']);
+        if ((server['revision'] as int) >=
+            (progress[row['lesson_id']]?['revision'] ?? -1)) {
+          progress[row['lesson_id']] = server;
+          await prefs.setString(progressKey(lesson), jsonEncode(server));
+        }
+      }
+    }
+    return LearnerSummary(lessons, progress, activity, name);
   }
 
   Future<void> reload() async {
+    _loadSerial++;
     final future = load();
     if (mounted) {
       setState(() {
@@ -248,6 +364,20 @@ class _HomeState extends State<HomePage> {
       ),
     );
     if (value != null) {
+      if (repository.remote && repository.token != null) {
+        try {
+          await repository.rename(value);
+        } catch (_) {
+          if (mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Chưa lưu được tên. Vui lòng thử lại.'),
+              ),
+            );
+          }
+          return;
+        }
+      }
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString(
         'mohoc-profile-name-${repository.userId ?? 'local'}',
@@ -258,100 +388,108 @@ class _HomeState extends State<HomePage> {
   }
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      title: const Text(
-        '✳ mở học.',
-        style: TextStyle(
-          fontWeight: FontWeight.w800,
-          letterSpacing: -1,
-          fontSize: 27,
+  Widget build(BuildContext context) {
+    if (repository.remote && repository.token == null) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('✳ mở học.')),
+        body: SafeArea(
+          child: MobileAuthPanel(auth: repository, onSuccess: () async {}),
         ),
-      ),
-      actions: [
-        IconButton(
-          tooltip: 'Hồ sơ',
-          onPressed: () => setState(() => tab = 2),
-          icon: const CircleAvatar(
-            radius: 19,
-            backgroundColor: Color(0xffe5edda),
-            child: Icon(Icons.person_outline_rounded, color: ink, size: 23),
+      );
+    }
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          '✳ mở học.',
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            letterSpacing: -1,
+            fontSize: 27,
           ),
         ),
-        const SizedBox(width: 12),
-      ],
-    ),
-    bottomNavigationBar: NavigationBar(
-      selectedIndex: tab,
-      onDestinationSelected: (i) => setState(() => tab = i),
-      destinations: const [
-        NavigationDestination(
-          icon: Icon(Icons.home_outlined),
-          selectedIcon: Icon(Icons.home_rounded),
-          label: 'Home',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.grid_view_outlined),
-          selectedIcon: Icon(Icons.grid_view_rounded),
-          label: 'Bài học',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.person_outline_rounded),
-          selectedIcon: Icon(Icons.person_rounded),
-          label: 'Hồ sơ',
-        ),
-      ],
-    ),
-    body: SafeArea(
-      child: repository.remote && repository.token == null
-          ? LoginPanel(onSuccess: reload)
-          : FutureBuilder<LearnerSummary>(
-              future: summary,
-              builder: (context, s) {
-                if (s.connectionState != ConnectionState.done) {
-                  return const Center(child: CircularProgressIndicator());
-                }
-                if (s.hasError) {
-                  return Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(
-                            Icons.cloud_off_rounded,
-                            size: 42,
-                            color: muted,
-                          ),
-                          const SizedBox(height: 12),
-                          Text('${s.error}', textAlign: TextAlign.center),
-                          TextButton(
-                            onPressed: reload,
-                            child: const Text('Thử lại'),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                }
-                final data = s.data!;
-                return RefreshIndicator(
-                  onRefresh: reload,
-                  child: ListView(
-                    key: ValueKey('tab-$tab'),
-                    physics: const AlwaysScrollableScrollPhysics(),
-                    padding: const EdgeInsets.fromLTRB(22, 16, 22, 30),
-                    children: tab == 0
-                        ? home(data)
-                        : tab == 1
-                        ? catalog(data)
-                        : profile(data),
-                  ),
-                );
-              },
+        actions: [
+          IconButton(
+            tooltip: 'Hồ sơ',
+            onPressed: () => setState(() => tab = 2),
+            icon: const CircleAvatar(
+              radius: 19,
+              backgroundColor: Color(0xffe5edda),
+              child: Icon(Icons.person_outline_rounded, color: ink, size: 23),
             ),
-    ),
-  );
+          ),
+          const SizedBox(width: 12),
+        ],
+      ),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: tab,
+        onDestinationSelected: (i) => setState(() => tab = i),
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home_rounded),
+            label: 'Home',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.grid_view_outlined),
+            selectedIcon: Icon(Icons.grid_view_rounded),
+            label: 'Bài học',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.person_outline_rounded),
+            selectedIcon: Icon(Icons.person_rounded),
+            label: 'Hồ sơ',
+          ),
+        ],
+      ),
+      body: SafeArea(
+        child: FutureBuilder<LearnerSummary>(
+          future: summary,
+          builder: (context, s) {
+            if (s.connectionState != ConnectionState.done && !s.hasData) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (s.hasError) {
+              return Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(
+                        Icons.cloud_off_rounded,
+                        size: 42,
+                        color: muted,
+                      ),
+                      const SizedBox(height: 12),
+                      Text('${s.error}', textAlign: TextAlign.center),
+                      TextButton(
+                        onPressed: reload,
+                        child: const Text('Thử lại'),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }
+            final data = s.data!;
+            return RefreshIndicator(
+              onRefresh: reload,
+              child: ListView(
+                key: ValueKey('tab-$tab'),
+                physics: const AlwaysScrollableScrollPhysics(),
+                padding: const EdgeInsets.fromLTRB(22, 16, 22, 30),
+                children: tab == 0
+                    ? home(data)
+                    : tab == 1
+                    ? catalog(data)
+                    : profile(data),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
 
   List<Widget> home(LearnerSummary data) {
     final streak = data.activity.streak(DateTime.now());
@@ -503,7 +641,7 @@ class _HomeState extends State<HomePage> {
           mainAxisSpacing: 15,
           crossAxisSpacing: 12,
           mainAxisExtent:
-              132 +
+              152 +
               (MediaQuery.textScalerOf(context).scale(14) - 14).clamp(0, 30) *
                   4,
         ),
@@ -667,12 +805,17 @@ class _HomeState extends State<HomePage> {
       if (repository.token != null) ...[
         const SizedBox(height: 22),
         OutlinedButton.icon(
-          onPressed: () {
-            repository.token = null;
-            repository.userId = null;
-            repository.email = null;
+          onPressed: () async {
+            try {
+              await repository.signOut();
+            } catch (_) {
+              /* Identity is cleared even if the network is unavailable. */
+            }
+            if (!mounted) return;
             setState(() {
-              summary = load();
+              summary = Future.value(
+                LearnerSummary([], {}, StudyActivity(), 'Bạn học'),
+              );
             });
           },
           icon: const Icon(Icons.logout_rounded),
@@ -769,8 +912,8 @@ class LessonIconTile extends StatelessWidget {
                 ),
                 const SizedBox(height: 9),
                 Text(
-                  visual.label,
-                  maxLines: 1,
+                  lesson['title'] as String,
+                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 14,
@@ -827,7 +970,9 @@ class _ContinueTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      v.label,
+                      lesson['title'] as String,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
@@ -1145,68 +1290,4 @@ class _TimelineItem extends StatelessWidget {
       ),
     );
   }
-}
-
-class LoginPanel extends StatefulWidget {
-  final Future<void> Function() onSuccess;
-  const LoginPanel({super.key, required this.onSuccess});
-  @override
-  State<LoginPanel> createState() => _LoginPanelState();
-}
-
-class _LoginPanelState extends State<LoginPanel> {
-  final email = TextEditingController(), password = TextEditingController();
-  String error = '';
-  bool busy = false;
-  @override
-  void dispose() {
-    email.dispose();
-    password.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => ListView(
-    padding: const EdgeInsets.all(24),
-    children: [
-      const Text(
-        'Chào mừng trở lại',
-        style: TextStyle(fontSize: 27, fontWeight: FontWeight.w700),
-      ),
-      const SizedBox(height: 25),
-      TextField(
-        controller: email,
-        keyboardType: TextInputType.emailAddress,
-        decoration: const InputDecoration(labelText: 'Email'),
-      ),
-      const SizedBox(height: 15),
-      TextField(
-        controller: password,
-        obscureText: true,
-        decoration: const InputDecoration(labelText: 'Mật khẩu'),
-      ),
-      const SizedBox(height: 24),
-      FilledButton(
-        onPressed: busy
-            ? null
-            : () async {
-                setState(() {
-                  busy = true;
-                  error = '';
-                });
-                try {
-                  await repository.signIn(email.text.trim(), password.text);
-                  await widget.onSuccess();
-                } catch (e) {
-                  if (mounted) setState(() => error = '$e');
-                } finally {
-                  if (mounted) setState(() => busy = false);
-                }
-              },
-        child: const Text('Đăng nhập'),
-      ),
-      if (error.isNotEmpty)
-        Text(error, style: const TextStyle(color: Colors.red)),
-    ],
-  );
 }

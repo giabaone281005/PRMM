@@ -1,0 +1,8 @@
+import {test,expect} from '@playwright/test';
+test('SVG upload is inert and mixed engines preserve the scene',async({page})=>{
+ await page.goto('/admin/studio');await page.getByLabel('Chủ đề Toán 9').selectOption('engine-coefficient');await page.locator('summary').filter({hasText:'Chạm hệ số b'}).click();
+ await page.getByLabel('Nạp hình SVG').setInputFiles({name:'drawing.svg',mimeType:'image/svg+xml',buffer:Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240"><script>alert(1)</script><rect x="10" y="10" width="300" height="200" fill="white" onclick="alert(1)"/><image href="https://example.invalid/tracker"/></svg>')});
+ const config=page.getByLabel('Cấu hình engine JSON');await expect(config).toContainText('');const raw=await config.inputValue();expect(raw).not.toMatch(/script|onclick|tracker/);
+ await page.getByLabel('Thêm engine vào bài').selectOption('engine-sign');await page.getByRole('button',{name:'Dựng bài Toán 9',exact:true}).click();await page.getByRole('button',{name:'Preview điện thoại',exact:true}).click();const dialog=page.getByRole('dialog');await dialog.locator('.scene-wrap').evaluate(el=>el.setAttribute('data-persistent','yes'));
+ await dialog.locator('.uime-scene .recognition-choices button').filter({hasText:'−7'}).click();await dialog.getByRole('button',{name:/^Tiếp tục/}).click();await expect(dialog.locator('.scene-wrap')).toHaveAttribute('data-persistent','yes');await dialog.locator('.uime-scene .recognition-choices button').filter({hasText:'>'}).click();await dialog.getByRole('button',{name:/^Hoàn thành bài học/}).click();await expect(dialog.getByText('Bạn đã tự mình khám phá!',{exact:true})).toBeVisible();
+});

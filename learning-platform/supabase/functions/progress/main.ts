@@ -2,7 +2,7 @@
 import {replay} from '../../../packages/lesson-runtime/replay';
 import type {Lesson} from '../../../packages/lesson-contract';
 declare const Deno:{env:{get:(key:string)=>string|undefined};serve:(f:(r:Request)=>Promise<Response>)=>void};
-const cors={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'authorization,apikey,content-type','Access-Control-Allow-Methods':'POST,OPTIONS'};
+const cors={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'authorization,x-client-info,apikey,content-type','Access-Control-Allow-Methods':'POST,OPTIONS'};
 function response(body:unknown,status=200){return new Response(JSON.stringify(body),{status,headers:{...cors,'Content-Type':'application/json'}});}
 Deno.serve(async(req)=>{
   if(req.method==='OPTIONS')return new Response('',{headers:cors});if(req.method!=='POST')return response({error:'Method not allowed'},405);

@@ -1,7 +1,7 @@
+import 'fixtures.dart';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:mo_hoc/domain.dart';
@@ -14,13 +14,11 @@ void main() {
     tester,
   ) async {
     final scenarios = jsonDecode(
-      await rootBundle.loadString('assets/contracts/math-scenarios.json'),
+      integrationFixtureJson['math-scenarios.json']!,
     ) as List;
     for (final scenario in scenarios.skip(4)) {
       final l = jsonDecode(
-        await rootBundle.loadString(
-          'assets/contracts/fixtures/${scenario['lessonId']}.lesson.json',
-        ),
+        integrationFixtureJson["${scenario['lessonId']}.lesson.json"]!,
       ) as Json;
       await tester.pumpWidget(
         MaterialApp(

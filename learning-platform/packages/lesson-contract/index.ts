@@ -1,4 +1,5 @@
 import Ajv2020 from 'ajv/dist/2020.js';
+import {validateUime} from '../lesson-runtime/uime';
 import schema from '../../contracts/lesson.schema.json' with {type:'json'};
 import {extraEngineMap,extraModels,isExtraModel} from '../lesson-runtime/extra-models';
 
@@ -17,6 +18,7 @@ export type Criterion = {op:'all'|'any';conditions:Criterion[]} | {op:'not';cond
 export type Patch = {setState?:Record<string,number|boolean>;addObjects?:SceneObject[]};
 export type Checkpoint = {id:string;order:number;instruction:string;allowedInteractions:Capability[];scenePatch:Patch;successCriteria:Criterion;hints:string[];feedback:{success:string}};
 export interface Lesson {
+  recognition?:import('../lesson-authoring/math9').RecognitionTask[];
   schemaVersion:'1.0.0';lessonId:string;version:number;status:'draft'|'published';locale:'vi-VN';title:string;grade:6|7|8|9;subject:'math';topicIds:string[];learningObjectives:string[];
   engine:{type:'geometry_2d'|'geometry_3d_web'|'math_explorer_2d'|'number_line_2d'|'fraction_bar_2d'|'algebra_balance_2d'|'function_plot_2d'|typeof extraEngineMap[keyof typeof extraEngineMap];minRuntimeVersion:'1.0.0';requiredCapabilities:Capability[]};
   scene:{sceneId:string;coordinateSystem:'cartesian_2d'|'cartesian_3d';viewport:{width:number;height:number};objects:SceneObject[];initialState:Record<string,number|boolean>};
@@ -31,6 +33,8 @@ export function isMathEngine(type:Lesson['engine']['type']){return !['geometry_2
 export function validateLesson(input:unknown):string[] {
   if(!check(input)) return (check.errors??[]).map(e=>`${e.instancePath}: ${e.message}`);
   const l = input as unknown as Lesson, errors:string[]=[];
+  l.recognition?.forEach(t=>{if(t.uime)errors.push(...validateUime(t.uime));});
+  if(l.recognition){if(l.recognition.length!==l.checkpoints.length||l.engine.type!=='math_explorer_2d')errors.push('Recognition checkpoint/engine mismatch');l.recognition.forEach((t,i)=>{if(t.correct>t.choices.length||new Set(t.choices).size!==t.choices.length||l.checkpoints[i]?.scenePatch.setState?.targetX!==t.correct)errors.push('Invalid recognition target');});}
   const ids=new Set<string>();
   const objects=new Map<string,SceneObject>();
   function add(o:SceneObject){if(ids.has(o.id)) errors.push(`Duplicate object ${o.id}`);ids.add(o.id);objects.set(o.id,o);}

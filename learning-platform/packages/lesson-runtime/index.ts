@@ -1,4 +1,5 @@
 import {evaluate,validateLesson,type Lesson,type Point,type SceneObject} from '../lesson-contract';
+import {uimeAccept,uimeError} from './uime';
 import {isExtraModel,extraDefaults,extraMetrics,extraControls} from './extra-models';
 export type Interaction = {type:'drag_vertex';id:string;position:Point}|{type:'drag_angle_token';id:string;position:Point}|{type:'orbit_solid';radians:number}|{type:'select_face';face:number}|{type:'fill_layers';layers:number}|{type:'adjust_parameter';name:string;value:number};
 export interface Snapshot {identity:string;checkpoint:number;completed:boolean;points:Record<string,Point>;state:Record<string,number|boolean>;metrics:Record<string,number>;tokens:string[];faces:number[];revision:number;}
@@ -26,10 +27,12 @@ export class LessonSession {
   private emit(){this.snapshot.revision++;this.listeners.forEach(f=>f());}
   private patch(p:Lesson['checkpoints'][number]['scenePatch']){Object.assign(this.snapshot.state,p.setState);for(const o of p.addObjects??[])if(!this.objects.some(x=>x.id===o.id))this.objects.push(structuredClone(o));}
   triangle(){const poly=this.objects.find(o=>o.kind==='polygon');return poly?.kind==='polygon'?poly.vertexIds.map(id=>this.snapshot.points[id]):[];}
-  private updateModel(){const model=this.objects.find(o=>o.kind==='math_model');if(model?.kind!=='math_model')return;const s=this.snapshot.state as Record<string,number>,m=this.snapshot.metrics;if(isExtraModel(model.model)){Object.assign(m,extraMetrics(model.model,s));return;}switch(model.model){case'number_line':m.modelValue=s.x;m.modelError=Math.abs(s.x-s.targetX);break;case'fraction_bar':m.modelValue=s.numerator/s.denominator;m.modelError=Math.abs(m.modelValue-s.targetRatio);break;case'linear_balance':m.modelValue=s.a*s.x+s.b;m.modelError=Math.abs(m.modelValue-s.c);break;case'quadratic_graph':m.modelValue=s.a*s.x*s.x+s.b*s.x+s.c;m.modelError=Math.abs(s.a-s.targetA)+Math.abs(s.b-s.targetB)+Math.abs(s.c-s.targetC);}}
+  private updateModel(){const model=this.objects.find(o=>o.kind==='math_model');if(model?.kind!=='math_model')return;const s=this.snapshot.state as Record<string,number>,m=this.snapshot.metrics;const u=this.lesson.recognition?.[this.snapshot.checkpoint]?.uime;if(u){m.modelError=uimeError(u,s);m.modelValue=s.x;return;}if(isExtraModel(model.model)){Object.assign(m,extraMetrics(model.model,s));return;}switch(model.model){case'number_line':m.modelValue=s.x;m.modelError=Math.abs(s.x-s.targetX);break;case'fraction_bar':m.modelValue=s.numerator/s.denominator;m.modelError=Math.abs(m.modelValue-s.targetRatio);break;case'linear_balance':m.modelValue=s.a*s.x+s.b;m.modelError=Math.abs(m.modelValue-s.c);break;case'quadratic_graph':m.modelValue=s.a*s.x*s.x+s.b*s.x+s.c;m.modelError=Math.abs(s.a-s.targetA)+Math.abs(s.b-s.targetB)+Math.abs(s.c-s.targetC);}}
   interact(e:Interaction):boolean {
     if(this.snapshot.completed||!this.checkpoint.allowedInteractions.includes(e.type))return false;
     const s=this.snapshot,m=s.metrics;
+    const u=this.lesson.recognition?.[s.checkpoint]?.uime;
+    if(u&&e.type==='adjust_parameter'){if(!uimeAccept(u,e.name,e.value)||s.state[e.name]===e.value)return false;s.state[e.name]=e.value;m.parameterChangeCount++;m.parameterChangeCountSinceCheckpoint++;m.modelError=uimeError(u,s.state);m.modelValue=Number(s.state.x);this.emit();this.eventListeners.forEach(f=>f(e));return true;}
     if(e.type==='drag_vertex'){
       const obj=this.objects.find(o=>o.id===e.id),old=s.points[e.id];if(obj?.kind!=='point'||!obj.draggable||!old||!e.position.every(Number.isFinite)||Math.hypot(old[0]-e.position[0],old[1]-e.position[1])<3)return false;
       const [x,y]=e.position;if(x<24||x>336||y<24||y>265)return false;

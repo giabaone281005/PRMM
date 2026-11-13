@@ -1,0 +1,2024 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-token-classifier",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Phân loại phương trình",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-token-classifier"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Phân loại phương trình"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-token-classifier-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Kéo từng phương trình vào nhóm phù hợp.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Hai hệ số của x và y không đồng thời bằng 0.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "TOKEN_CLASSIFIER",
+          "labels": [
+            "Bậc nhất hai ẩn",
+            "Không phải"
+          ],
+          "tokens": [
+            "2x − 3y = 5",
+            "x² + y = 4",
+            "0x + 0y = 1",
+            "x + y = 3"
+          ],
+          "answers": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Kéo từng phương trình vào nhóm phù hợp.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Hai hệ số của x và y không đồng thời bằng 0."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-coefficient",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Chạm hệ số",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-coefficient"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Chạm hệ số"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-coefficient-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Chạm hệ số b trong 5x − 7y = 9.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Hệ số b = −7, bao gồm cả dấu âm.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "TAP_COEFFICIENT",
+          "labels": [],
+          "tokens": [
+            "5",
+            "−7",
+            "9"
+          ],
+          "answers": [
+            1
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": [
+            {
+              "label": "5",
+              "x": 40,
+              "y": 80,
+              "width": 70,
+              "height": 48
+            },
+            {
+              "label": "−7",
+              "x": 145,
+              "y": 80,
+              "width": 70,
+              "height": 48
+            },
+            {
+              "label": "9",
+              "x": 250,
+              "y": 80,
+              "width": 70,
+              "height": 48
+            }
+          ]
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Chạm hệ số b trong 5x − 7y = 9.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Hệ số b = −7, bao gồm cả dấu âm."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-number-line",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Trục số bất phương trình",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-number-line"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Trục số bất phương trình"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-number-line-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Dựng tập nghiệm x ≥ 3: kéo mốc, chọn chiều và kiểu đầu mút.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "x ≥ 3 lấy mốc 3, chấm kín và tia sang phải.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "NUMBER_LINE_SELECTOR",
+          "labels": [
+            "Mốc",
+            "Chiều: trái / phải",
+            "Đầu mút: mở / kín"
+          ],
+          "tokens": [
+            "Trái",
+            "Phải",
+            "Mở",
+            "Kín"
+          ],
+          "answers": [
+            3,
+            1,
+            1
+          ],
+          "min": -10,
+          "max": 10,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Dựng tập nghiệm x ≥ 3: kéo mốc, chọn chiều và kiểu đầu mút.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "x ≥ 3 lấy mốc 3, chấm kín và tia sang phải."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-sign",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Đổi chiều bất đẳng thức",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-sign"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Đổi chiều bất đẳng thức"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-sign-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Cho x < y. Chạm dấu để hoàn thành −2x … −2y.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Nhân với số âm phải đổi chiều bất đẳng thức.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "INEQUALITY_SIGN_SWITCH",
+          "labels": [],
+          "tokens": [
+            "<",
+            ">",
+            "≤",
+            "≥"
+          ],
+          "answers": [
+            1
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Cho x < y. Chạm dấu để hoàn thành −2x … −2y.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Nhân với số âm phải đổi chiều bất đẳng thức."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-formula",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Ghép công thức nhiều ô",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-formula"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Ghép công thức nhiều ô"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-formula-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Ghép hai công thức Viète: x₁ + x₂ = ▢ / ▢ ; x₁x₂ = ▢ / ▢.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Tổng bằng −b/a; tích bằng c/a. Một token có thể dùng lại.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "FORMULA_SNAP_BUILDER",
+          "labels": [
+            "Tử tổng",
+            "Mẫu tổng",
+            "Tử tích",
+            "Mẫu tích"
+          ],
+          "tokens": [
+            "−b",
+            "a",
+            "c",
+            "b",
+            "−c"
+          ],
+          "answers": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Ghép hai công thức Viète: x₁ + x₂ = ▢ / ▢ ; x₁x₂ = ▢ / ▢.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Tổng bằng −b/a; tích bằng c/a. Một token có thể dùng lại."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-parabola",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Parabol động",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-parabola"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Parabol động"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-parabola-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Kéo hệ số a để dựng y = −2x².",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "a âm: bề lõm quay xuống; |a| càng lớn, parabol càng hẹp.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "PARABOLA_SLIDER",
+          "labels": [
+            "Hệ số a"
+          ],
+          "tokens": [],
+          "answers": [
+            -2
+          ],
+          "min": -4,
+          "max": 4,
+          "step": 0.5,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Kéo hệ số a để dựng y = −2x².",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "a âm: bề lõm quay xuống; |a| càng lớn, parabol càng hẹp."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-delta",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Biệt thức và số nghiệm",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-delta"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Biệt thức và số nghiệm"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-delta-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Chạm trạng thái Δ < 0 và quan sát số giao điểm với Ox.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Δ < 0: không có nghiệm thực; đồ thị không cắt Ox.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "DELTA_STATE_TOGGLE",
+          "labels": [],
+          "tokens": [
+            "Δ > 0",
+            "Δ = 0",
+            "Δ < 0"
+          ],
+          "answers": [
+            2
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Chạm trạng thái Δ < 0 và quan sát số giao điểm với Ox.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Δ < 0: không có nghiệm thực; đồ thị không cắt Ox."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-triangle",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Chạm cạnh tam giác vuông",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-triangle"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Chạm cạnh tam giác vuông"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-triangle-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Tam giác ABC vuông tại A. Chạm cạnh đối của góc B.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "AC là cạnh đối, AB là cạnh kề, BC là cạnh huyền.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "TRIANGLE_HOTSPOT_TAP",
+          "labels": [],
+          "tokens": [
+            "AB",
+            "AC",
+            "BC"
+          ],
+          "answers": [
+            1
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": [
+            {
+              "label": "AB",
+              "x": 40,
+              "y": 85,
+              "width": 50,
+              "height": 75
+            },
+            {
+              "label": "AC",
+              "x": 110,
+              "y": 170,
+              "width": 180,
+              "height": 45
+            },
+            {
+              "label": "BC",
+              "x": 160,
+              "y": 80,
+              "width": 95,
+              "height": 60
+            }
+          ]
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Tam giác ABC vuông tại A. Chạm cạnh đối của góc B.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "AC là cạnh đối, AB là cạnh kề, BC là cạnh huyền."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-circle",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Tiếp tuyến và vị trí tương đối",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-circle"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Tiếp tuyến và vị trí tương đối"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-circle-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Kéo khoảng cách d đến khi đường thẳng tiếp xúc đường tròn; chạm tiếp điểm H.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Tiếp xúc khi d = R = 3, chỉ có một điểm chung H.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "GEOMETRIC_HOTSPOT_FINDER",
+          "labels": [],
+          "tokens": [
+            "O",
+            "H",
+            "Dây cung"
+          ],
+          "answers": [
+            3,
+            1
+          ],
+          "min": 0,
+          "max": 5,
+          "step": 0.5,
+          "solid": "cone",
+          "hotspots": [
+            {
+              "label": "O",
+              "x": 150,
+              "y": 80,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "label": "H",
+              "x": 150,
+              "y": 170,
+              "width": 48,
+              "height": 48
+            },
+            {
+              "label": "Dây cung",
+              "x": 90,
+              "y": 115,
+              "width": 150,
+              "height": 45
+            }
+          ]
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Kéo khoảng cách d đến khi đường thẳng tiếp xúc đường tròn; chạm tiếp điểm H.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Tiếp xúc khi d = R = 3, chỉ có một điểm chung H."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-angle",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Chạm cung và góc nội tiếp",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-angle"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Chạm cung và góc nội tiếp"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-angle-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Chạm cung AB bị chắn bởi góc nội tiếp ACB.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Góc nội tiếp ACB chắn cung AB không chứa C; bằng nửa góc ở tâm cùng chắn cung.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "ANGLE_MEASURE_TAP",
+          "labels": [],
+          "tokens": [
+            "Cung AB",
+            "Cung BC",
+            "Cung CA"
+          ],
+          "answers": [
+            0
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": [
+            {
+              "label": "Cung AB",
+              "x": 130,
+              "y": 15,
+              "width": 100,
+              "height": 55
+            },
+            {
+              "label": "Cung BC",
+              "x": 245,
+              "y": 90,
+              "width": 65,
+              "height": 90
+            },
+            {
+              "label": "Cung CA",
+              "x": 45,
+              "y": 90,
+              "width": 65,
+              "height": 90
+            }
+          ]
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Chạm cung AB bị chắn bởi góc nội tiếp ACB.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Góc nội tiếp ACB chắn cung AB không chứa C; bằng nửa góc ở tâm cùng chắn cung."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-solid-cone",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Khám phá 3D: Hình nón",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-solid-cone"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Khám phá 3D: Hình nón"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-solid-cone-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Vuốt xoay khối, rồi chạm bán kính r trên mô hình.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Bán kính nối tâm đáy (hoặc tâm cầu) với một điểm trên đường tròn (hoặc mặt cầu).",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "3D_SOLID_INSPECTOR",
+          "labels": [],
+          "tokens": [
+            "r",
+            "h",
+            "l",
+            "Đáy"
+          ],
+          "answers": [
+            0
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Vuốt xoay khối, rồi chạm bán kính r trên mô hình.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": 0,
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "width": 0,
+            "height": 0,
+            "numerator": 0
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Bán kính nối tâm đáy (hoặc tâm cầu) với một điểm trên đường tròn (hoặc mặt cầu)."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-solid-cylinder",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Khám phá 3D: Hình trụ",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-solid-cylinder"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Khám phá 3D: Hình trụ"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-solid-cylinder-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Vuốt xoay khối, rồi chạm bán kính r trên mô hình.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Bán kính nối tâm đáy (hoặc tâm cầu) với một điểm trên đường tròn (hoặc mặt cầu).",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "3D_SOLID_INSPECTOR",
+          "labels": [],
+          "tokens": [
+            "r",
+            "h",
+            "l",
+            "Đáy"
+          ],
+          "answers": [
+            0
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cylinder",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Vuốt xoay khối, rồi chạm bán kính r trên mô hình.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": 0,
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "width": 0,
+            "height": 0,
+            "numerator": 0
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Bán kính nối tâm đáy (hoặc tâm cầu) với một điểm trên đường tròn (hoặc mặt cầu)."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-solid-sphere",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Khám phá 3D: Hình cầu",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-solid-sphere"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Khám phá 3D: Hình cầu"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-solid-sphere-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Vuốt xoay khối, rồi chạm bán kính r trên mô hình.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Bán kính nối tâm đáy (hoặc tâm cầu) với một điểm trên đường tròn (hoặc mặt cầu).",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "3D_SOLID_INSPECTOR",
+          "labels": [],
+          "tokens": [
+            "r",
+            "O"
+          ],
+          "answers": [
+            0
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "sphere",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Vuốt xoay khối, rồi chạm bán kính r trên mô hình.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": 0,
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "width": 0,
+            "height": 0,
+            "numerator": 0
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Bán kính nối tâm đáy (hoặc tâm cầu) với một điểm trên đường tròn (hoặc mặt cầu)."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-chart",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Đọc biểu đồ tần số",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-chart"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Đọc biểu đồ tần số"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-chart-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Chạm cột biểu diễn tần số của điểm 10.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Điểm 10 có tần số 10. Hai cột có thể có cùng tần số; cần đọc cả nhãn.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "CHART_BAR_TAP",
+          "labels": [
+            "20",
+            "10",
+            "10"
+          ],
+          "tokens": [
+            "Điểm 8",
+            "Điểm 9",
+            "Điểm 10"
+          ],
+          "answers": [
+            2
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": [
+            {
+              "label": "Điểm 8",
+              "x": 45,
+              "y": 55,
+              "width": 65,
+              "height": 140
+            },
+            {
+              "label": "Điểm 9",
+              "x": 145,
+              "y": 125,
+              "width": 65,
+              "height": 70
+            },
+            {
+              "label": "Điểm 10",
+              "x": 245,
+              "y": 125,
+              "width": 65,
+              "height": 70
+            }
+          ]
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Chạm cột biểu diễn tần số của điểm 10.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Điểm 10 có tần số 10. Hai cột có thể có cùng tần số; cần đọc cả nhãn."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "lessonId": "engine-events",
+    "version": 1,
+    "status": "draft",
+    "locale": "vi-VN",
+    "title": "Phân loại biến cố",
+    "grade": 9,
+    "subject": "math",
+    "topicIds": [
+      "math9-recognition",
+      "engine-events"
+    ],
+    "learningObjectives": [
+      "Nhận biết kiến thức: Phân loại biến cố"
+    ],
+    "engine": {
+      "type": "math_explorer_2d",
+      "minRuntimeVersion": "1.0.0",
+      "requiredCapabilities": [
+        "adjust_parameter"
+      ]
+    },
+    "scene": {
+      "sceneId": "engine-events-scene",
+      "coordinateSystem": "cartesian_2d",
+      "viewport": {
+        "width": 360,
+        "height": 360
+      },
+      "objects": [
+        {
+          "id": "model",
+          "kind": "math_model",
+          "model": "number_line",
+          "parameters": {
+            "x": 0,
+            "targetX": 2
+          }
+        }
+      ],
+      "initialState": {}
+    },
+    "recognition": [
+      {
+        "question": "Gieo một xúc xắc. Kéo các biến cố vào ba thùng.",
+        "mode": "tap",
+        "choices": [
+          "Tương tác trực tiếp",
+          "Khám phá"
+        ],
+        "correct": 1,
+        "explanation": "Chắc chắn có P = 1; không thể có P = 0; còn lại là ngẫu nhiên.",
+        "hint": "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích.",
+        "diagram": "none",
+        "uime": {
+          "kind": "EVENT_CARD_BUCKET",
+          "labels": [
+            "Chắc chắn",
+            "Không thể",
+            "Ngẫu nhiên"
+          ],
+          "tokens": [
+            "Số chấm < 7",
+            "Số chấm = 0",
+            "Số chấm chẵn",
+            "Số chấm = 6"
+          ],
+          "answers": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "min": -5,
+          "max": 5,
+          "step": 1,
+          "solid": "cone",
+          "hotspots": []
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "cp-1",
+        "order": 1,
+        "instruction": "Gieo một xúc xắc. Kéo các biến cố vào ba thùng.",
+        "allowedInteractions": [
+          "adjust_parameter"
+        ],
+        "scenePatch": {
+          "setState": {
+            "x": -1,
+            "targetX": 1,
+            "y": -1,
+            "a": -1,
+            "b": -1,
+            "c": -1,
+            "width": -1,
+            "height": -1,
+            "numerator": -1
+          }
+        },
+        "successCriteria": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "gte",
+              "path": "metrics.parameterChangeCountSinceCheckpoint",
+              "value": 1
+            },
+            {
+              "op": "approx",
+              "path": "metrics.modelError",
+              "value": 0,
+              "tolerance": 0.000001
+            }
+          ]
+        },
+        "hints": [
+          "Thao tác trực tiếp trên hình hoặc kéo các mảnh ghép. Có thể chạm thẻ rồi chạm ô đích."
+        ],
+        "feedback": {
+          "success": "Chắc chắn có P = 1; không thể có P = 0; còn lại là ngẫu nhiên."
+        }
+      }
+    ],
+    "completion": {
+      "requiredCheckpointIds": [
+        "cp-1"
+      ]
+    }
+  }
+]

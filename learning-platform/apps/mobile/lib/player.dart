@@ -9,6 +9,7 @@ import 'domain.dart';
 import 'scenes.dart';
 import 'repository.dart';
 import 'activity.dart';
+import 'activity_sync.dart';
 
 class LessonPage extends StatefulWidget {
   final Json lesson;
@@ -34,6 +35,12 @@ class _LessonState extends State<LessonPage> with WidgetsBindingObserver {
     tracker = StudyTracker(
       onTime: (from, to) {
         ActivityStore.change(activityUser, (a) => a.addTime(from, to));
+        ActivitySync.record(
+          activityUser,
+          widget.lesson,
+          from,
+          to,
+        ).catchError((Object _) {});
       },
     );
     activityTimer = Timer.periodic(
@@ -57,19 +64,13 @@ class _LessonState extends State<LessonPage> with WidgetsBindingObserver {
     }
     if (repository.remote && repository.token != null) {
       try {
-        final response = await repository.client.get(
-          Uri.parse(
-            '$apiUrl/rest/v1/lesson_progress?lesson_id=eq.${widget.lesson['lessonId']}&version=eq.${widget.lesson['version']}&select=snapshot',
-          ),
-          headers: repository.headers,
-        );
-        if (response.statusCode == 200) {
-          final rows = jsonDecode(response.body) as List;
-          if (rows.isNotEmpty &&
-              (rows[0]['snapshot']['revision'] as int) >
-                  (saved?['revision'] ?? -1)) {
-            saved = Map<String, dynamic>.from(rows[0]['snapshot']);
-          }
+        final rows = await repository.get(
+          'rest/v1/lesson_progress?user_id=eq.${repository.userId}&lesson_id=eq.${widget.lesson['lessonId']}&version=eq.${widget.lesson['version']}&select=snapshot',
+        ) as List;
+        if (rows.isNotEmpty &&
+            (rows[0]['snapshot']['revision'] as int) >
+                (saved?['revision'] ?? -1)) {
+          saved = Map<String, dynamic>.from(rows[0]['snapshot']);
         }
       } catch (_) {
         syncError =
@@ -185,6 +186,7 @@ class _LessonState extends State<LessonPage> with WidgetsBindingObserver {
     solidKey.currentState?.lifecycle(state == AppLifecycleState.resumed);
     if (state == AppLifecycleState.resumed) {
       tracker.resume();
+      ActivitySync.flush(activityUser);
       sync();
     } else {
       tracker.pause();
@@ -283,10 +285,16 @@ class _LessonState extends State<LessonPage> with WidgetsBindingObserver {
                   borderRadius: BorderRadius.circular(18),
                   child: widget.lesson['engine']['type'] == 'geometry_2d'
                       ? NativeScene(session: s, onInteraction: interact)
-                      : widget.lesson['engine']['type'] != 'geometry_3d_web'
+                      : widget.lesson['engine']['type'] != 'geometry_3d_web' &&
+                            !((widget.lesson['recognition'] as List?)?.any(
+                                  (t) => t['uime'] != null,
+                                ) ??
+                                false)
                       ? NativeMathScene(session: s, onInteraction: interact)
                       : SizedBox(
-                          height: 360,
+                          height: widget.lesson['recognition'] is List
+                              ? 640
+                              : 360,
                           child: SolidView(
                             key: solidKey,
                             session: s,

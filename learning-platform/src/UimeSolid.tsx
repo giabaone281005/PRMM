@@ -1,0 +1,29 @@
+import {useEffect,useRef,useState} from 'react';
+import * as THREE from 'three';
+import type {LessonSession} from '../packages/lesson-runtime';
+import type {UimeConfig} from '../packages/lesson-runtime/uime';
+export function UimeSolid({session,u}:{session:LessonSession;u:UimeConfig}){
+ const host=useRef<HTMLDivElement>(null),[error,setError]=useState('');
+ useEffect(()=>{
+  const el=host.current!;let renderer:THREE.WebGLRenderer;
+  try{renderer=new THREE.WebGLRenderer({antialias:true});}catch{setError('WebGL không khả dụng. Dùng sơ đồ và điều khiển góc xoay bên dưới.');return;}
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0xeef4e8);el.appendChild(renderer.domElement);
+  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(42,1,.1,100);camera.position.set(4,3,6);camera.lookAt(0,0,0);scene.add(new THREE.AmbientLight(0xffffff,2));const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(4,6,5);scene.add(light);
+  const group=new THREE.Group();scene.add(group);const body=new THREE.Mesh(u.solid==='cone'?new THREE.ConeGeometry(1.4,3,48):u.solid==='cylinder'?new THREE.CylinderGeometry(1.4,1.4,3,48):new THREE.SphereGeometry(1.5,40,24),new THREE.MeshStandardMaterial({color:0xb4d99c,transparent:true,opacity:.4,side:THREE.DoubleSide,depthWrite:false}));group.add(body);
+  const parts:THREE.Mesh[]=[];
+  function segment(name:string,from:THREE.Vector3,to:THREE.Vector3){const delta=to.clone().sub(from),mesh=new THREE.Mesh(new THREE.CylinderGeometry(.075,.075,delta.length(),12),new THREE.MeshStandardMaterial({color:0x6854a0}));mesh.position.copy(from.clone().add(to).multiplyScalar(.5));mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),delta.normalize());mesh.userData.part=name;group.add(mesh);parts.push(mesh);}
+  const base=u.solid==='sphere'?0:-1.5;
+  segment('r',new THREE.Vector3(0,base,0),new THREE.Vector3(u.solid==='sphere'?1.5:1.4,base,0));
+  if(u.solid!=='sphere'){segment('h',new THREE.Vector3(0,-1.5,0),new THREE.Vector3(0,1.5,0));if(u.solid==='cone')segment('l',new THREE.Vector3(0,1.5,0),new THREE.Vector3(1.4,-1.5,0));const disk=new THREE.Mesh(new THREE.CircleGeometry(1.4,48),new THREE.MeshStandardMaterial({color:0x8cb762,side:THREE.DoubleSide}));disk.rotation.x=-Math.PI/2;disk.position.y=-1.51;disk.userData.part='Đáy';group.add(disk);parts.push(disk);}else{const center=new THREE.Mesh(new THREE.SphereGeometry(.12),new THREE.MeshStandardMaterial({color:0x6854a0}));center.userData.part='O';group.add(center);parts.push(center);}
+  const ray=new THREE.Raycaster();let down:{x:number;y:number;sx:number;sy:number}|undefined,frame=0;
+  const adjust=(name:string,value:number)=>session.interact({type:'adjust_parameter',name,value});
+  function onDown(e:PointerEvent){down={x:e.clientX,y:e.clientY,sx:e.clientX,sy:e.clientY};renderer.domElement.setPointerCapture(e.pointerId);}
+  function onMove(e:PointerEvent){if(!down)return;adjust('a',Math.max(-6,Math.min(6,Number(session.snapshot.state.a)+(e.clientX-down.x)*.015)));adjust('b',Math.max(-1.3,Math.min(1.3,Number(session.snapshot.state.b)+(e.clientY-down.y)*.01)));down.x=e.clientX;down.y=e.clientY;}
+  function onUp(e:PointerEvent){if(down&&Math.hypot(e.clientX-down.sx,e.clientY-down.sy)<8){const r=renderer.domElement.getBoundingClientRect();ray.setFromCamera(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1),camera);const hit=ray.intersectObjects(parts)[0];if(hit){const index=u.tokens.indexOf(hit.object.userData.part);if(index>=0)adjust('x',index);}}down=undefined;}
+  function resize(){renderer.setSize(el.clientWidth,300);camera.aspect=el.clientWidth/300;camera.updateProjectionMatrix();}resize();const observer=new ResizeObserver(resize);observer.observe(el);
+  renderer.domElement.addEventListener('pointerdown',onDown);renderer.domElement.addEventListener('pointermove',onMove);renderer.domElement.addEventListener('pointerup',onUp);renderer.domElement.addEventListener('pointercancel',()=>{down=undefined;});
+  function render(){group.rotation.y=Number(session.snapshot.state.a)||0;group.rotation.x=Number(session.snapshot.state.b)||0;parts.forEach(mesh=>(mesh.material as THREE.MeshStandardMaterial).color.set(u.tokens[Number(session.snapshot.state.x)]===mesh.userData.part?0xe69c31:0x6854a0));renderer.render(scene,camera);frame=requestAnimationFrame(render);}render();
+  return()=>{cancelAnimationFrame(frame);observer.disconnect();scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();(o.material as THREE.Material).dispose();}});renderer.dispose();el.replaceChildren();};
+ },[session,u.solid]);
+ return <div><div className="uime-solid" ref={host} aria-label={'Mô hình 3D '+u.solid}/>{error&&<p role="alert">{error}</p>}<p>Vuốt để xoay; chạm đoạn màu tím để đọc tên. Đang chọn: {u.tokens[Number(session.snapshot.state.x)]??'—'}</p><label>Góc xoay<input aria-label="Góc xoay 3D" type="range" min="-3" max="3" step=".1" value={Number(session.snapshot.state.a)} onInput={e=>session.interact({type:'adjust_parameter',name:'a',value:+e.currentTarget.value})}/></label>{u.tokens.map((t,i)=><button key={t} onClick={()=>session.interact({type:'adjust_parameter',name:'x',value:i})}>{t}</button>)}</div>;
+}

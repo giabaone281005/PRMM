@@ -1,6 +1,6 @@
 import {parsePlanInput,planLesson} from '../../../packages/lesson-authoring/planner';
 declare const Deno:{env:{get:(key:string)=>string|undefined};serve:(f:(r:Request)=>Promise<Response>)=>void};
-const cors={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'authorization,apikey,content-type','Access-Control-Allow-Methods':'POST,OPTIONS'};
+const cors={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'authorization,x-client-info,apikey,content-type','Access-Control-Allow-Methods':'POST,OPTIONS'};
 const json=(v:unknown,status=200)=>new Response(JSON.stringify(v),{status,headers:{...cors,'Content-Type':'application/json'}});
 Deno.serve(async(req)=>{
   if(req.method==='OPTIONS')return new Response('',{headers:cors});if(req.method!=='POST')return json({error:'Method not allowed'},405);
