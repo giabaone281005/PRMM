@@ -1,5 +1,7 @@
 # Bàn giao Mở Học — bài mẫu 6 checkpoint và JSON cho AI
 
+> Yêu cầu thiết kế mới cho phiên tiếp theo: [flow 6 checkpoint cố định và hình dựng theo JSON](SPEC_TOAN9_CMS_ENGINE_FLOW6.md). Tài liệu đó bổ sung quy định form admin dùng ký hiệu alphabet, tên tiếng Việt và chú thích, không hiển thị LaTeX/key kỹ thuật; đây là thiết kế cần triển khai, không phải tính năng đã hoàn thành.
+
 Cập nhật 13/11/2026. Đọc file này trước khi sửa tiếp. `PROJECT_HANDOVER.md` giữ bối cảnh dự án trước đợt thay đổi; các số liệu trong đó là lịch sử. File này mô tả trạng thái sau các yêu cầu mới trong hội thoại. Không có mật khẩu hoặc secret key trong tài liệu.
 
 ## 1. Mục tiêu sản phẩm đã thống nhất

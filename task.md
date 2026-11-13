@@ -44,7 +44,7 @@ Quy ước: [x] có bằng chứng, [ ] chưa hoàn tất; không đánh đồng
 - [x] Kiểm thử 47 TS/PostgreSQL, 19 browser, 12 Flutter; Android hoàn thành sáu engine mới bằng gestures.
 - [x] Local catalog có 12 bài mẫu; giữ nguyên các bản nháp/phiên bản người dùng đã có.
 
-## Supabase data integration � 2026-11-12
+## Supabase data integration � 2026-11-12
 - Removed automatic browser lesson fixture seeding and Flutter bundled catalog fallback.
 - Web requires Supabase configuration by default. Local development API requires explicit VITE_ENABLE_LOCAL_DEMO=true.
 - Existing four SQL migrations remain the schema source; no remote project was returned by the connector.
@@ -131,3 +131,7 @@ Quy ước: [x] có bằng chứng, [ ] chưa hoàn tất; không đánh đồng
 - [ ] Phủ 21 dạng curriculum còn thiếu; hợp nhất 10 chủ đề legacy; nghiệm thu Android hosted và ANR bài bi.
 
 - [x] Chốt kiểm thử: build, 88 TS/SQL tests, 38 browser tests, 48 Flutter tests và analyze PASS; chuẩn bị branch first-version-v2 theo yêu cầu push.
+
+- [x] Tạo SPEC_TOAN9_CMS_ENGINE_FLOW6.md cho phiên sau: flow 6 checkpoint bất biến, hình theo dữ kiện, ma trận 15 công cụ/24 dạng, form admin alphabet + chú thích tiếng Việt, không lộ LaTeX.
+
+- [x] Hợp nhất hai bản thiết kế thành SPEC_TOAN9_CMS_ENGINE_FLOW6.md; bổ sung đối chiếu mã Excel/Markdown, ví dụ đề và gợi ý 2 tầng; bản nguồn backup local.

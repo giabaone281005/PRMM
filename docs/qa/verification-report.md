@@ -72,7 +72,7 @@ Resolved during verification: browser selectors updated for revised UI; native n
 NOT RUN: remote Supabase deployment/auth production; user deferred setup. Prepared, unapplied SQL source and bundles now contain all 12 engines. Existing migration sources are bootstrap artifacts, not a rollout against an existing database.
 NOT CLAIMED: every possible grade 6–9 question. Arbitrary proofs/constructions require new tested interactions; free-text engine suggestions use keywords, not an AI provider. Requests remain local to the browser.
 
-## Supabase integration � 2026-11-12
+## Supabase integration � 2026-11-12
 - PASS: removed automatic fixture catalogs from web store and Flutter repository.
 - NOT RUN: build/test; npm.cmd runs but tsc and vitest are missing (dependencies not installed).
 - BLOCKED: remote database validation; Supabase connector returned projects: []. No remote mutation performed.
@@ -174,3 +174,13 @@ NOT RUN: authenticated lesson interactions. Automatic approval review rejected b
 - NOT RUN: Android hosted xuyên suốt / ANR bài bi, iOS, thiết bị thật và hosting web production.
 - Giới hạn: 15 mẫu công cụ không đồng nghĩa đã phủ 24 dạng trong Excel. 21 dòng curriculum còn thiếu mẫu; bộ legacy 10 chủ đề/56 checkpoint cần hợp nhất.
 - Bàn giao: ../../PROJECT_HANDOVER_ENGINE_CHECKPOINTS.md. Branch bàn giao: first-version-v2.
+
+## Đặc tả phiên kế tiếp — tài liệu
+- PASS: file SPEC_TOAN9_CMS_ENGINE_FLOW6.md có đủ 24 mã chương trình duy nhất, ví dụ JSON parse được, liên kết bàn giao tồn tại.
+- Chỉ thay tài liệu; không sửa runtime hoặc Supabase; không chạy lại test ứng dụng cho thay đổi tài liệu.
+- Nội dung là yêu cầu triển khai tiếp, không đánh dấu tính năng fixed-flow/dynamic scene đã hoàn thành.
+
+## Hợp nhất đặc tả Toán 9
+- PASS: một file chuẩn SPEC_TOAN9_CMS_ENGINE_FLOW6.md; đủ 24 mã canonical, 4 JSON ví dụ parse được, có bảng alias giữa mã Excel hiện có và Markdown bổ sung.
+- Đã xử lý xung đột ALG-09/căn bậc ba-parabol, STA/STP, 4 bước admin/6 checkpoint học sinh và payload/schema. Bảo toàn yêu cầu admin alphabet + nhãn/chú thích tiếng Việt, không LaTeX trong form.
+- Tài liệu nguồn backup trong .local/spec-source-backups, không commit. Chỉ sửa tài liệu, không thay runtime hay remote database.
