@@ -1,0 +1,26 @@
+{
+  "before": [
+    {
+      "versions": 23,
+      "version_digest": "bd18dcd5e165f1b087a40b2e2560c5d2",
+      "progress": 7,
+      "progress_digest": "a73f97ecf31362b2c576d97229774413"
+    }
+  ],
+  "after": [
+    {
+      "versions": 23,
+      "version_digest": "bd18dcd5e165f1b087a40b2e2560c5d2",
+      "progress": 7,
+      "progress_digest": "a73f97ecf31362b2c576d97229774413",
+      "valid_triangle": true,
+      "invalid_triangle": false
+    }
+  ],
+  "vectors": [
+    {
+      "total": 46,
+      "matched": 46
+    }
+  ]
+}

@@ -1,0 +1,1143 @@
+{
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "expected": [
+    {
+      "id": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "title": "CP02 — Chọn bi sáu bước",
+      "checkpoints": 6,
+      "sha256": "68be242e875675cfd3ed31f545101fdae6c4decf31dd618cced58b5cada77958"
+    },
+    {
+      "id": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "title": "Khám phá chiếc hộp hình trụ",
+      "checkpoints": 6,
+      "sha256": "0e60aedcb0747553c1c05760f92e8d92201355bb0b30adb38d65e98b4a37cb35"
+    },
+    {
+      "id": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "title": "Khám phá hệ số parabol",
+      "checkpoints": 6,
+      "sha256": "f4910dda4a6e60f033fe8f0d801efd18fba74462a88fb89f6419750ca98b993f"
+    },
+    {
+      "id": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "title": "Siêu Trí Tuệ",
+      "checkpoints": 6,
+      "sha256": "5288df12d8374c76d879f82cdc4d563b643ea5771f21b576e0cf6b4922522569"
+    },
+    {
+      "id": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "title": "Khi đường cong chuyển động",
+      "checkpoints": 6,
+      "sha256": "1fbf51de8f852fffacdac9894c9c47a12d678975d32f2cbca32b53ae83e62e9d"
+    },
+    {
+      "id": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "title": "Chọn bi ba màu — Phân loại biến cố",
+      "checkpoints": 6,
+      "sha256": "17ee45210737468261ba3b8d818a50b2c7b38197427f92e15e574d72fb59ff48"
+    },
+    {
+      "id": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "title": "Đổi chiều bất đẳng thức",
+      "checkpoints": 6,
+      "sha256": "ec44129b7c332568c4b56185d728457d481bcaf045414a11299f31b3c67bb171"
+    },
+    {
+      "id": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "title": "Khám phá 3D: Hình trụ",
+      "checkpoints": 6,
+      "sha256": "c8fe3e9d69328cd03ba8639962ca7c907f4ad118ea14e297ed0b2e7c0db35d3c"
+    },
+    {
+      "id": "template-engine-angle",
+      "version": 1,
+      "title": "Chạm cung và góc nội tiếp",
+      "checkpoints": 6,
+      "sha256": "d3445fd71e5fe2517d3338ea8ce16375a8aba003ffca6307f16850ca5a2d13f2"
+    },
+    {
+      "id": "template-engine-chart",
+      "version": 1,
+      "title": "Đọc biểu đồ tần số",
+      "checkpoints": 6,
+      "sha256": "57191d096d26bd4e62ef70479cffef2f86802875523b089be01bd032d8894576"
+    },
+    {
+      "id": "template-engine-circle",
+      "version": 1,
+      "title": "Tiếp tuyến và vị trí tương đối",
+      "checkpoints": 6,
+      "sha256": "eeff1196859a6f9e6ac500562c154bc692230e87fd2ee4e8f30df9e58418a594"
+    },
+    {
+      "id": "template-engine-coefficient",
+      "version": 1,
+      "title": "Chạm hệ số",
+      "checkpoints": 6,
+      "sha256": "d172b64d8d4ed4b8a0074a270e3163c7a033c76bc4626bacded64ccfc7d5c8db"
+    },
+    {
+      "id": "template-engine-formula",
+      "version": 1,
+      "title": "Ghép công thức nhiều ô",
+      "checkpoints": 6,
+      "sha256": "512384c54d53d8df9ceba43ecea65252973a03d71c524051a070cd2449f28e77"
+    },
+    {
+      "id": "template-engine-number-line",
+      "version": 1,
+      "title": "Trục số bất phương trình",
+      "checkpoints": 6,
+      "sha256": "f658f033b09165e1d9dc5a979f22c53b5f943161914d05d87b7984623dee3b35"
+    },
+    {
+      "id": "template-engine-sign",
+      "version": 1,
+      "title": "Đổi chiều bất đẳng thức",
+      "checkpoints": 6,
+      "sha256": "ff6f19650a03292930d05e78c00f2a9c6375853ee42d41715951fefff2f56ae7"
+    },
+    {
+      "id": "template-engine-solid-cone",
+      "version": 1,
+      "title": "Khám phá 3D: Hình nón",
+      "checkpoints": 6,
+      "sha256": "215d0621b05e78fa05b517757fba4df48a21a4e64e56217b6b66c4681443eecd"
+    },
+    {
+      "id": "template-engine-solid-sphere",
+      "version": 1,
+      "title": "Khám phá 3D: Hình cầu",
+      "checkpoints": 6,
+      "sha256": "4daf48bf70c1d0adc7ddf3a12f4c0abacea1563bad6924f30dbab9d473646ff9"
+    },
+    {
+      "id": "template-engine-token-classifier",
+      "version": 1,
+      "title": "Phân loại phương trình",
+      "checkpoints": 6,
+      "sha256": "d60d6ba8a98948f80f11aa4f9c38ce3f3276c8d293e36d6849f793156e35377f"
+    },
+    {
+      "id": "template-engine-triangle",
+      "version": 1,
+      "title": "Chạm cạnh tam giác vuông",
+      "checkpoints": 6,
+      "sha256": "21ee070d01f1c317c67803e875ae0a211a7cf41c4858ec8717172605e4b533a8"
+    }
+  ],
+  "events": [
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-13T23:58:08.083Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-13T23:58:19.073Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-13T23:58:28.376Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-13T23:58:34.018Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-13T23:58:39.861Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-13T23:58:45.591Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-13T23:58:53.258Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-13T23:58:57.819Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-13T23:58:58.330Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-13T23:59:03.378Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-13T23:59:07.724Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-13T23:59:12.095Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-13T23:59:13.906Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-13T23:59:15.906Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-13T23:59:17.756Z"
+    },
+    {
+      "lessonId": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-13T23:59:21.992Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-13T23:59:22.394Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-13T23:59:28.609Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-13T23:59:33.979Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-13T23:59:37.245Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-13T23:59:40.742Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-13T23:59:44.122Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-13T23:59:47.634Z"
+    },
+    {
+      "lessonId": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-13T23:59:52.285Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-13T23:59:52.659Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-13T23:59:57.526Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:00:05.161Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "FAIL",
+      "message": "Expected: true\n  Actual: <false>\nUI interaction did not solve checkpoint 3; state={y: 1, width: 1, height: 0, targetY: 0, targetWidth: 3, targetHeight: 4, x: 0, a: 240, b: -1, c: 0, numerator: 8, denominator: 4, targetX: 1, targetRatio: 0.5, targetA: 1, targetB: 0, targetC: 0}\n",
+      "at": "2026-11-14T00:00:14.746Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "START",
+      "at": "2026-11-14T00:00:15.864Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:00:20.677Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:00:26.004Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:00:28.646Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:00:31.192Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:00:33.779Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:00:36.466Z"
+    },
+    {
+      "lessonId": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "version": 2,
+      "status": "PASS",
+      "at": "2026-11-14T00:00:41.032Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "START",
+      "at": "2026-11-14T00:00:41.419Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:00:49.481Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:00:58.171Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:01:03.986Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:01:09.530Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:01:15.351Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:01:22.698Z"
+    },
+    {
+      "lessonId": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "version": 2,
+      "status": "PASS",
+      "at": "2026-11-14T00:01:27.190Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:01:27.621Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:01:31.539Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:01:35.954Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:01:37.779Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:01:39.503Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:01:41.417Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:01:43.144Z"
+    },
+    {
+      "lessonId": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:01:47.648Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "START",
+      "at": "2026-11-14T00:01:48.043Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:01:53.580Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:01:59.551Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:02:03.047Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:02:06.478Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:02:10.030Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:02:13.445Z"
+    },
+    {
+      "lessonId": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "version": 3,
+      "status": "PASS",
+      "at": "2026-11-14T00:02:17.771Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:02:18.157Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:02:22.031Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:02:26.496Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:02:28.155Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:02:30.063Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:02:31.773Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:02:33.678Z"
+    },
+    {
+      "lessonId": "template-engine-angle",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:02:38.264Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:02:38.634Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:02:42.348Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:02:46.828Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:02:48.726Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:02:50.687Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:02:52.509Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:02:54.288Z"
+    },
+    {
+      "lessonId": "template-engine-chart",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:02:58.622Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:02:58.980Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:03:04.342Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:03:10.418Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:03:13.786Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:03:17.009Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:03:21.499Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:03:24.888Z"
+    },
+    {
+      "lessonId": "template-engine-circle",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:03:29.393Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:03:29.799Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:03:33.628Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:03:38.173Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:03:40.016Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:03:41.827Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:03:43.627Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:03:45.452Z"
+    },
+    {
+      "lessonId": "template-engine-coefficient",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:03:49.899Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:03:50.257Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:03:56.431Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:04:03.376Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:04:10.675Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:04:14.989Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:04:19.287Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:04:23.480Z"
+    },
+    {
+      "lessonId": "template-engine-formula",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:04:28.068Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:04:28.435Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:04:34.734Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:04:41.505Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:04:45.728Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:04:49.929Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:04:54.082Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:04:58.388Z"
+    },
+    {
+      "lessonId": "template-engine-number-line",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:05:02.978Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:05:03.349Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:05:06.899Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:05:11.378Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:05:13.145Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:05:15.057Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:05:16.812Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:05:18.778Z"
+    },
+    {
+      "lessonId": "template-engine-sign",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:05:23.148Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:05:23.531Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:05:28.936Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:05:34.942Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:05:38.450Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:05:41.912Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:05:45.442Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:05:48.837Z"
+    },
+    {
+      "lessonId": "template-engine-solid-cone",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:05:53.103Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:05:53.485Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:05:58.655Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:06:04.720Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:06:08.220Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:06:11.811Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:06:15.317Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:06:18.769Z"
+    },
+    {
+      "lessonId": "template-engine-solid-sphere",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:06:23.095Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:06:23.451Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:06:29.702Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:06:36.451Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:06:40.557Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:06:44.740Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:06:48.976Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:06:54.709Z"
+    },
+    {
+      "lessonId": "template-engine-token-classifier",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:06:59.216Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:06:59.577Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:07:03.275Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:07:07.900Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:07:09.816Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:07:11.524Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:07:13.400Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:07:15.201Z"
+    },
+    {
+      "lessonId": "template-engine-triangle",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:07:19.668Z"
+    }
+  ]
+}

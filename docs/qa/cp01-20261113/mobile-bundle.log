@@ -1,0 +1,13 @@
+
+> mohoc-learning@0.1.0 bundle:mobile
+> vite build --config vite.mobile.config.ts && node scripts/bundle-mobile.mjs
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 112 modules transformed.
+rendering chunks...
+computing gzip size...
+apps/mobile/assets/runtime/runtime.css    2.24 kB │ gzip:   0.74 kB
+apps/mobile/assets/runtime/runtime.js   953.62 kB │ gzip: 257.00 kB
+
+✓ built in 1.14s

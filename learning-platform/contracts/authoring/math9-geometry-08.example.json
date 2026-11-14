@@ -1,0 +1,32 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-08",
+  "curriculumCode": "M9-GEO-08",
+  "mode": "arc_sector_annulus",
+  "title": "Cung, quạt tròn và vành khuyên",
+  "parameters": {
+    "radius": 4,
+    "innerRadius": 2,
+    "sweep": 60,
+    "measure": "arc",
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "radius": 3,
+      "innerRadius": 1,
+      "sweep": 90,
+      "measure": "sector",
+      "unit": "cm"
+    },
+    "assessment": {
+      "radius": 5,
+      "innerRadius": 3,
+      "sweep": 120,
+      "measure": "annulus",
+      "unit": "cm"
+    }
+  }
+}

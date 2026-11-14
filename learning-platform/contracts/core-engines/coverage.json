@@ -1,0 +1,267 @@
+{
+  "coverageVersion": "1.0.0",
+  "rows": [
+    {
+      "curriculumCode": "M9-ALG-01",
+      "title": "Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn",
+      "engineId": "cartesian_graph_engine",
+      "requiredModes": [
+        "linear_relation"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-ALG-02",
+      "title": "Giải hệ hai phương trình bậc nhất hai ẩn",
+      "engineId": "cartesian_graph_engine",
+      "requiredModes": [
+        "linear_system"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-ALG-03",
+      "title": "Phương trình quy về phương trình bậc nhất một ẩn (Phương trình tích & chứa ẩn ở mẫu)",
+      "engineId": "balance_scale_engine",
+      "requiredModes": [
+        "product_equation",
+        "rational_equation"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-ALG-04",
+      "title": "Bất đẳng thức và tính chất liên hệ giữa thứ tự và phép cộng/phép nhân",
+      "engineId": "number_line_engine",
+      "requiredModes": [
+        "order_transform"
+      ],
+      "status": "missing",
+      "missingModes": [
+        "order_transform"
+      ]
+    },
+    {
+      "curriculumCode": "M9-ALG-05",
+      "title": "Bất phương trình bậc nhất một ẩn",
+      "engineId": "number_line_engine",
+      "requiredModes": [
+        "linear_inequality"
+      ],
+      "status": "missing",
+      "missingModes": [
+        "linear_inequality"
+      ]
+    },
+    {
+      "curriculumCode": "M9-ALG-06",
+      "title": "Căn bậc hai và căn thức bậc hai",
+      "engineId": "area_fraction_grid",
+      "requiredModes": [
+        "square_root"
+      ],
+      "status": "missing",
+      "missingModes": [
+        "square_root"
+      ]
+    },
+    {
+      "curriculumCode": "M9-ALG-07",
+      "title": "Khai căn bậc hai với phép nhân và phép chia (Hằng đẳng thức √A² = |A|)",
+      "engineId": "area_fraction_grid",
+      "requiredModes": [
+        "radical_operations"
+      ],
+      "status": "missing",
+      "missingModes": [
+        "radical_operations"
+      ]
+    },
+    {
+      "curriculumCode": "M9-ALG-08",
+      "title": "Căn bậc ba",
+      "engineId": "area_fraction_grid",
+      "requiredModes": [
+        "cube_root"
+      ],
+      "status": "missing",
+      "missingModes": [
+        "cube_root"
+      ]
+    },
+    {
+      "curriculumCode": "M9-ALG-09",
+      "title": "Hàm số y = ax² (a ≠ 0) và đồ thị Parabol",
+      "engineId": "cartesian_graph_engine",
+      "requiredModes": [
+        "parabola_coefficient"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-ALG-10",
+      "title": "Phương trình bậc hai một ẩn và Công thức nghiệm (Biệt thức Δ)",
+      "engineId": "balance_scale_engine",
+      "requiredModes": [
+        "quadratic_equation"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-ALG-11",
+      "title": "Định lí Viète và ứng dụng nhẩm nghiệm",
+      "engineId": "balance_scale_engine",
+      "requiredModes": [
+        "viete"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-01",
+      "title": "Tỉ số lượng giác của góc nhọn (sin, cos, tan, cot)",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "right_triangle"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-02",
+      "title": "Giá trị lượng giác của các góc đặc biệt (30°, 45°, 60°) và hai góc phụ nhau",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "right_triangle"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-03",
+      "title": "Một số hệ thức về cạnh và góc trong tam giác vuông",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "right_triangle"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-04",
+      "title": "Mở đầu về đường tròn & Tính đối xứng của đường tròn",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "circle_symmetry"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-05",
+      "title": "Vị trí tương đối của đường thẳng và đường tròn (Tiếp tuyến)",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "line_circle"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-06",
+      "title": "Vị trí tương đối của hai đường tròn",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "two_circles"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-07",
+      "title": "Góc ở tâm, Góc nội tiếp & Số đo cung",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "circle_angles"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-08",
+      "title": "Độ dài cung tròn, Diện tích hình quạt tròn và hình vành khuyên",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "arc_sector_annulus"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-09",
+      "title": "Đường tròn ngoại tiếp và nội tiếp tam giác",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "triangle_circles"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-10",
+      "title": "Tứ giác nội tiếp & Đa giác đều",
+      "engineId": "geometry_2d_canvas",
+      "requiredModes": [
+        "cyclic_polygon"
+      ],
+      "status": "implemented_pending_acceptance",
+      "missingModes": []
+    },
+    {
+      "curriculumCode": "M9-GEO-11",
+      "title": "Hình trụ, Hình nón và Hình cầu",
+      "engineId": "area_fraction_grid",
+      "requiredModes": [
+        "cylinder_recognition",
+        "solid_measurement",
+        "solid_net"
+      ],
+      "status": "partial",
+      "missingModes": [
+        "solid_measurement",
+        "solid_net"
+      ]
+    },
+    {
+      "curriculumCode": "M9-STP-01",
+      "title": "Bảng tần số, tần số tương đối & Biểu đồ tần số tương đối ghép nhóm",
+      "engineId": "data_probability_sim",
+      "requiredModes": [
+        "frequency_linked_charts"
+      ],
+      "status": "missing",
+      "missingModes": [
+        "frequency_linked_charts"
+      ]
+    },
+    {
+      "curriculumCode": "M9-STP-02",
+      "title": "Phép thử ngẫu nhiên, Không gian mẫu và Xác suất của biến cố",
+      "engineId": "data_probability_sim",
+      "requiredModes": [
+        "finite_probability",
+        "experiment_simulation"
+      ],
+      "status": "missing",
+      "missingModes": [
+        "finite_probability",
+        "experiment_simulation"
+      ]
+    }
+  ]
+}

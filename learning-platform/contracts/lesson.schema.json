@@ -1128,6 +1128,1098 @@
                 "minItems": 0,
                 "maxItems": 100
               },
+              "geometry": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "right_triangle"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-01",
+                          "M9-GEO-02",
+                          "M9-GEO-03"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "legA": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "legB": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "angleAt": {
+                            "enum": [
+                              "B",
+                              "C"
+                            ]
+                          },
+                          "target": {
+                            "enum": [
+                              "opposite",
+                              "adjacent",
+                              "hypotenuse"
+                            ]
+                          },
+                          "ratio": {
+                            "enum": [
+                              "sin",
+                              "cos",
+                              "tan"
+                            ]
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "legA",
+                          "legB",
+                          "angleAt",
+                          "target",
+                          "ratio",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "circle_symmetry"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-04"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "radius": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "pointDistance": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 30
+                          },
+                          "pointAngle": {
+                            "type": "number",
+                            "minimum": 10,
+                            "maximum": 80
+                          },
+                          "axis": {
+                            "enum": [
+                              "x",
+                              "y"
+                            ]
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "radius",
+                          "pointDistance",
+                          "pointAngle",
+                          "axis",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "line_circle"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-05"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "radius": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "distance": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 40
+                          },
+                          "normalAngle": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 359
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "radius",
+                          "distance",
+                          "normalAngle",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "two_circles"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-06"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "radius": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "radius2": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "distance": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 40
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "radius",
+                          "radius2",
+                          "distance",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "circle_angles"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-07"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "radius": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "sweep": {
+                            "type": "number",
+                            "minimum": 20,
+                            "maximum": 160
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "radius",
+                          "sweep",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "arc_sector_annulus"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-08"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "radius": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "innerRadius": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "sweep": {
+                            "type": "number",
+                            "minimum": 20,
+                            "maximum": 160
+                          },
+                          "measure": {
+                            "enum": [
+                              "arc",
+                              "sector",
+                              "annulus"
+                            ]
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "radius",
+                          "innerRadius",
+                          "sweep",
+                          "measure",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "triangle_circles"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-09"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "sideA": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "sideB": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "sideC": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "construction": {
+                            "enum": [
+                              "incircle",
+                              "circumcircle"
+                            ]
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "sideA",
+                          "sideB",
+                          "sideC",
+                          "construction",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "cyclic_polygon"
+                      },
+                      "curriculumCode": {
+                        "enum": [
+                          "M9-GEO-10"
+                        ]
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "radius": {
+                            "type": "number",
+                            "minimum": 0.5,
+                            "maximum": 20
+                          },
+                          "shape": {
+                            "enum": [
+                              "regular_polygon",
+                              "cyclic_quadrilateral"
+                            ]
+                          },
+                          "vertices": {
+                            "type": "integer",
+                            "minimum": 3,
+                            "maximum": 12
+                          },
+                          "angleB": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 359
+                          },
+                          "angleC": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 359
+                          },
+                          "angleD": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 359
+                          },
+                          "unit": {
+                            "enum": [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "radius",
+                          "shape",
+                          "vertices",
+                          "angleB",
+                          "angleC",
+                          "angleD",
+                          "unit"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "algebra": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "product_equation"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "p": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "q": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "r": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "s": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          }
+                        },
+                        "required": [
+                          "p",
+                          "q",
+                          "r",
+                          "s"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "rational_equation"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "p": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "q": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "r": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "s": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "d": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "e": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "f": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "g": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "k": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          }
+                        },
+                        "required": [
+                          "p",
+                          "q",
+                          "r",
+                          "s",
+                          "d",
+                          "e",
+                          "f",
+                          "g",
+                          "k"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "quadratic_equation"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "a": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "b": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "c": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "degreePolicy": {
+                            "enum": [
+                              "quadratic_only",
+                              "allow_linear"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "a",
+                          "b",
+                          "c",
+                          "degreePolicy"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "viete"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "a": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "b": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          },
+                          "c": {
+                            "type": "integer",
+                            "minimum": -9,
+                            "maximum": 9
+                          }
+                        },
+                        "required": [
+                          "a",
+                          "b",
+                          "c"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "graph": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "a": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "b": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "c": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "snap": {
+                        "enum": [
+                          0,
+                          0.5,
+                          1
+                        ]
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      },
+                      "mode": {
+                        "const": "linear_relation"
+                      }
+                    },
+                    "required": [
+                      "a",
+                      "b",
+                      "c",
+                      "snap",
+                      "task",
+                      "mode"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "a": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "b": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "c": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "snap": {
+                        "enum": [
+                          0,
+                          0.5,
+                          1
+                        ]
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      },
+                      "mode": {
+                        "const": "linear_system"
+                      },
+                      "d": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "e": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "f": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      }
+                    },
+                    "required": [
+                      "a",
+                      "b",
+                      "c",
+                      "snap",
+                      "task",
+                      "mode",
+                      "d",
+                      "e",
+                      "f"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "a": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "b": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "c": {
+                        "type": "integer",
+                        "minimum": -12,
+                        "maximum": 12
+                      },
+                      "snap": {
+                        "enum": [
+                          0,
+                          0.5,
+                          1
+                        ]
+                      },
+                      "task": {
+                        "enum": [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      },
+                      "mode": {
+                        "const": "line_parabola_intersection"
+                      },
+                      "q": {
+                        "enum": [
+                          -12,
+                          -11,
+                          -10,
+                          -9,
+                          -8,
+                          -7,
+                          -6,
+                          -5,
+                          -4,
+                          -3,
+                          -2,
+                          -1,
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6,
+                          7,
+                          8,
+                          9,
+                          10,
+                          11,
+                          12
+                        ]
+                      }
+                    },
+                    "required": [
+                      "a",
+                      "b",
+                      "c",
+                      "snap",
+                      "task",
+                      "mode",
+                      "q"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "parabola": {
+                "type": "object",
+                "properties": {
+                  "a": {
+                    "enum": [
+                      -5,
+                      -4,
+                      -3,
+                      -2,
+                      -1,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ]
+                  },
+                  "pointX": {
+                    "enum": [
+                      1,
+                      2,
+                      -2
+                    ]
+                  },
+                  "task": {
+                    "enum": [
+                      "explore",
+                      "identify",
+                      "compare",
+                      "guided",
+                      "practice",
+                      "assessment"
+                    ]
+                  }
+                },
+                "required": [
+                  "a",
+                  "pointX",
+                  "task"
+                ],
+                "additionalProperties": false
+              },
+              "cylinder": {
+                "type": "object",
+                "properties": {
+                  "radius": {
+                    "type": "number",
+                    "minimum": 0.1,
+                    "maximum": 100
+                  },
+                  "height": {
+                    "type": "number",
+                    "minimum": 0.1,
+                    "maximum": 100
+                  },
+                  "unit": {
+                    "enum": [
+                      "cm",
+                      "m"
+                    ]
+                  },
+                  "task": {
+                    "enum": [
+                      "orbit",
+                      "radius",
+                      "equal-bases",
+                      "height",
+                      "side"
+                    ]
+                  }
+                },
+                "required": [
+                  "radius",
+                  "height",
+                  "unit",
+                  "task"
+                ],
+                "additionalProperties": false
+              },
               "svg": {
                 "type": "string",
                 "maxLength": 65536

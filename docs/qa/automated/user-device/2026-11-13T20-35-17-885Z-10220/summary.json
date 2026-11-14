@@ -1,0 +1,11 @@
+{
+  "mode": "list",
+  "status": "PASS",
+  "testPackage": "vn.mohoc.mo_hoc.uitest",
+  "steps": [],
+  "limitations": [
+    "Fixture catalog/local test backend; no hosted login/RLS acceptance",
+    "Native Flutter gestures; extended WebView DOM-driven suites are not included"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user-device\\2026-11-13T20-35-17-885Z-10220"
+}

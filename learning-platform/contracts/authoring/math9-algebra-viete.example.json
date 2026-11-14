@@ -1,0 +1,26 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-algebra-viete",
+  "curriculumCode": "M9-ALG-11",
+  "mode": "viete",
+  "title": "Viète · Ghép tổng, tích và cặp nghiệm thực",
+  "parameters": {
+    "a": 1,
+    "b": -3,
+    "c": 2
+  },
+  "variants": {
+    "practice": {
+      "a": 2,
+      "b": 4,
+      "c": 2
+    },
+    "assessment": {
+      "a": -1,
+      "b": 2,
+      "c": 3
+    }
+  }
+}

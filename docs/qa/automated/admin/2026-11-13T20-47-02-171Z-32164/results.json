@@ -1,0 +1,219 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.admin-ui.config.ts"
+    ],
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.admin-ui.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/3.FPT/PRM/final project/docs/qa/automated/admin/2026-11-13T20-47-02-171Z-32164/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "admin-ui",
+        "name": "admin-ui",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/admin-ui.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-47-02-171Z-32164\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "admin-ui",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/admin-ui.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5181",
+          "headless": false,
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "launchOptions": {
+            "slowMo": 300
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "admin-ui"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-47-02-171Z-32164/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-47-02-171Z-32164/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5181 --strictPort",
+      "url": "http://127.0.0.1:5181",
+      "reuseExistingServer": false,
+      "env": {
+        "MOHOC_TEST_MODE": "1",
+        "VITE_ENABLE_LOCAL_DEMO": "true",
+        "VITE_SUPABASE_URL": "",
+        "VITE_SUPABASE_PUBLISHABLE_KEY": ""
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "admin-ui.spec.ts",
+      "file": "admin-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Admin creates, reopens, edits, publishes and unpublishes a lesson through the visible UI",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19032,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN UI] 1/6 Create and save a new lesson\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 2/6 Reopen and edit the saved lesson\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 3/6 Publish the lesson\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 4/6 Verify learner catalog\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 5/6 Unpublish from the lesson menu\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 6/6 Verify catalog removal and retained draft\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Tạo bài mới và lưu nháp qua biểu mẫu",
+                      "duration": 6317
+                    },
+                    {
+                      "title": "Mở bài đã lưu, sửa nội dung và kiểm tra sau reload",
+                      "duration": 3813
+                    },
+                    {
+                      "title": "Xuất bản và kiểm tra thư viện",
+                      "duration": 921
+                    },
+                    {
+                      "title": "Kiểm tra bài đã xuất hiện ở trang học",
+                      "duration": 1010
+                    },
+                    {
+                      "title": "Gỡ xuất bản qua menu bài học và kiểm tra sau reload",
+                      "duration": 4114
+                    },
+                    {
+                      "title": "Kiểm tra catalog đã ẩn bài và bản nháp vẫn sửa được",
+                      "duration": 2403
+                    }
+                  ],
+                  "startTime": "2026-11-13T20:47:08.321Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ae1974e46a8834939ce0-4294ee2ea36135d75c42",
+          "file": "admin-ui.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T20:47:04.130Z",
+    "duration": 24327.192,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

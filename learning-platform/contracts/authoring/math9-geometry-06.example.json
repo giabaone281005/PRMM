@@ -1,0 +1,29 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-06",
+  "curriculumCode": "M9-GEO-06",
+  "mode": "two_circles",
+  "title": "Vị trí hai đường tròn",
+  "parameters": {
+    "radius": 4,
+    "radius2": 3,
+    "distance": 5,
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "radius": 3,
+      "radius2": 2,
+      "distance": 5,
+      "unit": "cm"
+    },
+    "assessment": {
+      "radius": 2,
+      "radius2": 1,
+      "distance": 5,
+      "unit": "cm"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "role": "admin",
+  "mode": "admin-ui",
+  "status": "FAIL",
+  "steps": [
+    {
+      "label": "Discover all admin topics",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Playwright install chromium",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Playwright test --config=playwright.admin-ui.config.ts",
+      "status": "FAIL",
+      "exitCode": 1
+    }
+  ],
+  "limitations": [
+    "Local test backend; no hosted authentication/RLS acceptance",
+    "No physical device integration or native gesture acceptance"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-57-47-805Z-37312"
+}

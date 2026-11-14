@@ -1,0 +1,306 @@
+{
+  "templates": [
+    {
+      "id": "math9-algebra-product-equation",
+      "code": "M9-ALG-03"
+    },
+    {
+      "id": "math9-algebra-rational-equation",
+      "code": "M9-ALG-03"
+    },
+    {
+      "id": "math9-algebra-quadratic-equation",
+      "code": "M9-ALG-10"
+    },
+    {
+      "id": "math9-algebra-viete",
+      "code": "M9-ALG-11"
+    },
+    {
+      "id": "math9-geometry-01",
+      "code": "M9-GEO-01"
+    },
+    {
+      "id": "math9-geometry-02",
+      "code": "M9-GEO-02"
+    },
+    {
+      "id": "math9-geometry-03",
+      "code": "M9-GEO-03"
+    },
+    {
+      "id": "math9-geometry-04",
+      "code": "M9-GEO-04"
+    },
+    {
+      "id": "math9-geometry-05",
+      "code": "M9-GEO-05"
+    },
+    {
+      "id": "math9-geometry-06",
+      "code": "M9-GEO-06"
+    },
+    {
+      "id": "math9-geometry-07",
+      "code": "M9-GEO-07"
+    },
+    {
+      "id": "math9-geometry-08",
+      "code": "M9-GEO-08"
+    },
+    {
+      "id": "math9-geometry-09",
+      "code": "M9-GEO-09"
+    },
+    {
+      "id": "math9-geometry-10",
+      "code": "M9-GEO-10"
+    },
+    {
+      "id": "math9-linear-relation",
+      "code": "M9-ALG-01"
+    },
+    {
+      "id": "math9-linear-system",
+      "code": "M9-ALG-02"
+    },
+    {
+      "id": "math9-line-parabola",
+      "code": "M9-ALG-09"
+    },
+    {
+      "id": "math9-cylinder-recognition",
+      "code": "M9-GEO-11"
+    },
+    {
+      "id": "math9-parabola-coefficient",
+      "code": "M9-ALG-09"
+    }
+  ],
+  "math9": [
+    {
+      "id": "linear-system",
+      "title": "Phương trình và hệ hai ẩn"
+    },
+    {
+      "id": "inequality",
+      "title": "Phương trình và bất phương trình"
+    },
+    {
+      "id": "radicals",
+      "title": "Căn bậc hai và căn bậc ba"
+    },
+    {
+      "id": "quadratic",
+      "title": "Parabol, phương trình bậc hai và Viète"
+    },
+    {
+      "id": "triangle",
+      "title": "Tam giác vuông và lượng giác"
+    },
+    {
+      "id": "circle",
+      "title": "Đường tròn, dây cung và tiếp tuyến"
+    },
+    {
+      "id": "angles",
+      "title": "Góc và tứ giác nội tiếp"
+    },
+    {
+      "id": "solids",
+      "title": "Hình trụ, hình nón và hình cầu"
+    },
+    {
+      "id": "statistics",
+      "title": "Tần số và tần số tương đối"
+    },
+    {
+      "id": "probability",
+      "title": "Phép thử và biến cố"
+    }
+  ],
+  "engines": [
+    {
+      "id": "engine-token-classifier",
+      "title": "Phân loại phương trình"
+    },
+    {
+      "id": "engine-coefficient",
+      "title": "Chạm hệ số"
+    },
+    {
+      "id": "engine-number-line",
+      "title": "Trục số bất phương trình"
+    },
+    {
+      "id": "engine-sign",
+      "title": "Đổi chiều bất đẳng thức"
+    },
+    {
+      "id": "engine-formula",
+      "title": "Ghép công thức nhiều ô"
+    },
+    {
+      "id": "engine-parabola",
+      "title": "Parabol động"
+    },
+    {
+      "id": "engine-delta",
+      "title": "Biệt thức và số nghiệm"
+    },
+    {
+      "id": "engine-triangle",
+      "title": "Chạm cạnh tam giác vuông"
+    },
+    {
+      "id": "engine-circle",
+      "title": "Tiếp tuyến và vị trí tương đối"
+    },
+    {
+      "id": "engine-angle",
+      "title": "Chạm cung và góc nội tiếp"
+    },
+    {
+      "id": "engine-solid-cone",
+      "title": "Khám phá 3D: Hình nón"
+    },
+    {
+      "id": "engine-solid-cylinder",
+      "title": "Khám phá 3D: Hình trụ"
+    },
+    {
+      "id": "engine-solid-sphere",
+      "title": "Khám phá 3D: Hình cầu"
+    },
+    {
+      "id": "engine-chart",
+      "title": "Đọc biểu đồ tần số"
+    },
+    {
+      "id": "engine-events",
+      "title": "Phân loại biến cố"
+    }
+  ],
+  "curriculum": [
+    {
+      "id": "M9-ALG-01",
+      "title": "Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-02",
+      "title": "Giải hệ hai phương trình bậc nhất hai ẩn",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-03",
+      "title": "Phương trình quy về phương trình bậc nhất một ẩn (Phương trình tích & chứa ẩn ở mẫu)",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-04",
+      "title": "Bất đẳng thức và tính chất liên hệ giữa thứ tự và phép cộng/phép nhân",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-05",
+      "title": "Bất phương trình bậc nhất một ẩn",
+      "pilot": true
+    },
+    {
+      "id": "M9-ALG-06",
+      "title": "Căn bậc hai và căn thức bậc hai",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-07",
+      "title": "Khai căn bậc hai với phép nhân và phép chia (Hằng đẳng thức √A² = |A|)",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-08",
+      "title": "Căn bậc ba",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-09",
+      "title": "Hàm số y = ax² (a ≠ 0) và đồ thị Parabol",
+      "pilot": true
+    },
+    {
+      "id": "M9-ALG-10",
+      "title": "Phương trình bậc hai một ẩn và Công thức nghiệm (Biệt thức Δ)",
+      "pilot": false
+    },
+    {
+      "id": "M9-ALG-11",
+      "title": "Định lí Viète và ứng dụng nhẩm nghiệm",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-01",
+      "title": "Tỉ số lượng giác của góc nhọn (sin, cos, tan, cot)",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-02",
+      "title": "Giá trị lượng giác của các góc đặc biệt (30°, 45°, 60°) và hai góc phụ nhau",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-03",
+      "title": "Một số hệ thức về cạnh và góc trong tam giác vuông",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-04",
+      "title": "Mở đầu về đường tròn & Tính đối xứng của đường tròn",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-05",
+      "title": "Vị trí tương đối của đường thẳng và đường tròn (Tiếp tuyến)",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-06",
+      "title": "Vị trí tương đối của hai đường tròn",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-07",
+      "title": "Góc ở tâm, Góc nội tiếp & Số đo cung",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-08",
+      "title": "Độ dài cung tròn, Diện tích hình quạt tròn và hình vành khuyên",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-09",
+      "title": "Đường tròn ngoại tiếp và nội tiếp tam giác",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-10",
+      "title": "Tứ giác nội tiếp & Đa giác đều",
+      "pilot": false
+    },
+    {
+      "id": "M9-GEO-11",
+      "title": "Hình trụ, Hình nón và Hình cầu",
+      "pilot": false
+    },
+    {
+      "id": "M9-STP-01",
+      "title": "Bảng tần số, tần số tương đối & Biểu đồ tần số tương đối ghép nhóm",
+      "pilot": false
+    },
+    {
+      "id": "M9-STP-02",
+      "title": "Phép thử ngẫu nhiên, Không gian mẫu và Xác suất của biến cố",
+      "pilot": true
+    }
+  ]
+}

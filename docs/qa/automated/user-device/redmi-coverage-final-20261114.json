@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "kind": "physical-device-coverage-across-full-run-and-targeted-recheck",
+  "device": "Redmi Note 9S / Android 12 / 121ea06b",
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "lessons": 19,
+  "checkpoints": 114.0,
+  "fullRun": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444",
+  "fullRunResult": "18 PASS / 1 FAIL; decimal input 0.8 became 8 in geometry",
+  "targetedRecheck": "docs/qa/automated/user-device/2026-11-14T00-08-09-485Z-5340",
+  "targetedRecheckResult": "1 PASS / 6 checkpoints after buffering numeric input and committing on blur/confirmation",
+  "note": "Original full-run FAIL retained; no clean full 19-lesson rerun after the geometry UI fix is claimed.",
+  "results": [
+    {
+      "id": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "title": "CP02 — Chọn bi sáu bước",
+      "version": 1,
+      "sha256": "68be242e875675cfd3ed31f545101fdae6c4decf31dd618cced58b5cada77958",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "lesson-0d095b9e-cf23-48ab-8d0f-abcd3838a3ce",
+      "title": "Khám phá chiếc hộp hình trụ",
+      "version": 1,
+      "sha256": "0e60aedcb0747553c1c05760f92e8d92201355bb0b30adb38d65e98b4a37cb35",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "lesson-24a72cac-fe92-4b8c-94c7-7602befa0bdb",
+      "title": "Khám phá hệ số parabol",
+      "version": 1,
+      "sha256": "f4910dda4a6e60f033fe8f0d801efd18fba74462a88fb89f6419750ca98b993f",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "title": "Siêu Trí Tuệ",
+      "version": 1,
+      "sha256": "5288df12d8374c76d879f82cdc4d563b643ea5771f21b576e0cf6b4922522569",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-14T00-08-09-485Z-5340"
+    },
+    {
+      "id": "lesson-9b03769d-2372-4abb-8d0c-6c06be03606f",
+      "title": "Khi đường cong chuyển động",
+      "version": 2,
+      "sha256": "1fbf51de8f852fffacdac9894c9c47a12d678975d32f2cbca32b53ae83e62e9d",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "math9-cb240cff-410b-41e5-b555-b672c86b108c",
+      "title": "Chọn bi ba màu — Phân loại biến cố",
+      "version": 2,
+      "sha256": "17ee45210737468261ba3b8d818a50b2c7b38197427f92e15e574d72fb59ff48",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "math9-ed4ef237-dfbb-44a1-82e1-548f51c4d733",
+      "title": "Đổi chiều bất đẳng thức",
+      "version": 1,
+      "sha256": "ec44129b7c332568c4b56185d728457d481bcaf045414a11299f31b3c67bb171",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "math9-f1a1daed-ee88-4a3a-8e6b-0534ca5624a7",
+      "title": "Khám phá 3D: Hình trụ",
+      "version": 3,
+      "sha256": "c8fe3e9d69328cd03ba8639962ca7c907f4ad118ea14e297ed0b2e7c0db35d3c",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-angle",
+      "title": "Chạm cung và góc nội tiếp",
+      "version": 1,
+      "sha256": "d3445fd71e5fe2517d3338ea8ce16375a8aba003ffca6307f16850ca5a2d13f2",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-chart",
+      "title": "Đọc biểu đồ tần số",
+      "version": 1,
+      "sha256": "57191d096d26bd4e62ef70479cffef2f86802875523b089be01bd032d8894576",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-circle",
+      "title": "Tiếp tuyến và vị trí tương đối",
+      "version": 1,
+      "sha256": "eeff1196859a6f9e6ac500562c154bc692230e87fd2ee4e8f30df9e58418a594",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-coefficient",
+      "title": "Chạm hệ số",
+      "version": 1,
+      "sha256": "d172b64d8d4ed4b8a0074a270e3163c7a033c76bc4626bacded64ccfc7d5c8db",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-formula",
+      "title": "Ghép công thức nhiều ô",
+      "version": 1,
+      "sha256": "512384c54d53d8df9ceba43ecea65252973a03d71c524051a070cd2449f28e77",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-number-line",
+      "title": "Trục số bất phương trình",
+      "version": 1,
+      "sha256": "f658f033b09165e1d9dc5a979f22c53b5f943161914d05d87b7984623dee3b35",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-sign",
+      "title": "Đổi chiều bất đẳng thức",
+      "version": 1,
+      "sha256": "ff6f19650a03292930d05e78c00f2a9c6375853ee42d41715951fefff2f56ae7",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-solid-cone",
+      "title": "Khám phá 3D: Hình nón",
+      "version": 1,
+      "sha256": "215d0621b05e78fa05b517757fba4df48a21a4e64e56217b6b66c4681443eecd",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-solid-sphere",
+      "title": "Khám phá 3D: Hình cầu",
+      "version": 1,
+      "sha256": "4daf48bf70c1d0adc7ddf3a12f4c0abacea1563bad6924f30dbab9d473646ff9",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-token-classifier",
+      "title": "Phân loại phương trình",
+      "version": 1,
+      "sha256": "d60d6ba8a98948f80f11aa4f9c38ce3f3276c8d293e36d6849f793156e35377f",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    },
+    {
+      "id": "template-engine-triangle",
+      "title": "Chạm cạnh tam giác vuông",
+      "version": 1,
+      "sha256": "21ee070d01f1c317c67803e875ae0a211a7cf41c4858ec8717172605e4b533a8",
+      "status": "PASS",
+      "checkpoints": 6,
+      "evidence": "docs/qa/automated/user-device/2026-11-13T23-56-56-916Z-29444"
+    }
+  ]
+}

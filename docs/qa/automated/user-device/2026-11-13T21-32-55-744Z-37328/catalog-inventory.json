@@ -1,0 +1,16 @@
+{
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "lessons": [
+    {
+      "id": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "title": "Siêu Trí Tuệ",
+      "checkpoints": 6,
+      "sha256": "5288df12d8374c76d879f82cdc4d563b643ea5771f21b576e0cf6b4922522569"
+    }
+  ]
+}

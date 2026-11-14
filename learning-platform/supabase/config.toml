@@ -435,3 +435,8 @@ entrypoint = "./functions/progress/index.ts"
 enabled = true
 verify_jwt = false
 entrypoint = "./functions/generate/index.ts"
+
+[functions.authoring]
+enabled = true
+verify_jwt = false
+entrypoint = "./functions/authoring/index.ts"

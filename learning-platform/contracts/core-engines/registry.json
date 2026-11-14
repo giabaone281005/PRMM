@@ -1,0 +1,892 @@
+{
+  "registryVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "engines": [
+    {
+      "engineId": "geometry_2d_canvas",
+      "engineVersion": "1.0.0",
+      "label": "Hình học 2D",
+      "configSchema": "core-engine-config.schema.json",
+      "validator": "validateCoreConfig",
+      "supportedModes": [
+        "right_triangle",
+        "circle_symmetry",
+        "line_circle",
+        "two_circles",
+        "circle_angles",
+        "arc_sector_annulus",
+        "triangle_circles",
+        "cyclic_polygon"
+      ],
+      "modes": [
+        {
+          "mode": "right_triangle",
+          "curriculumCodes": [
+            "M9-GEO-01",
+            "M9-GEO-02",
+            "M9-GEO-03"
+          ],
+          "capabilities": [
+            "constrained_triangle",
+            "trigonometry",
+            "semantic_side_selection"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-01",
+          "legacyAdapters": [
+            "pythagorean_2d",
+            "TRIANGLE_HOTSPOT_TAP"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-01",
+            "math9-geometry-02",
+            "math9-geometry-03"
+          ]
+        },
+        {
+          "mode": "circle_symmetry",
+          "curriculumCodes": [
+            "M9-GEO-04"
+          ],
+          "capabilities": [
+            "circle_model",
+            "reflection"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-04",
+          "legacyAdapters": [
+            "geometry_2d"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-04"
+          ]
+        },
+        {
+          "mode": "line_circle",
+          "curriculumCodes": [
+            "M9-GEO-05"
+          ],
+          "capabilities": [
+            "line_circle_intersections",
+            "tangent_drag"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-05",
+          "legacyAdapters": [
+            "GEOMETRIC_HOTSPOT_FINDER"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-05"
+          ]
+        },
+        {
+          "mode": "two_circles",
+          "curriculumCodes": [
+            "M9-GEO-06"
+          ],
+          "capabilities": [
+            "circle_intersections"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-06",
+          "legacyAdapters": [],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-06"
+          ]
+        },
+        {
+          "mode": "circle_angles",
+          "curriculumCodes": [
+            "M9-GEO-07"
+          ],
+          "capabilities": [
+            "central_inscribed_angles",
+            "arc_selection"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-07",
+          "legacyAdapters": [
+            "ANGLE_MEASURE_TAP"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-07"
+          ]
+        },
+        {
+          "mode": "arc_sector_annulus",
+          "curriculumCodes": [
+            "M9-GEO-08"
+          ],
+          "capabilities": [
+            "arc_length",
+            "sector_area",
+            "annulus"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-08",
+          "legacyAdapters": [],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-08"
+          ]
+        },
+        {
+          "mode": "triangle_circles",
+          "curriculumCodes": [
+            "M9-GEO-09"
+          ],
+          "capabilities": [
+            "incircle",
+            "circumcircle",
+            "construction_layers"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-09",
+          "legacyAdapters": [],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-09"
+          ]
+        },
+        {
+          "mode": "cyclic_polygon",
+          "curriculumCodes": [
+            "M9-GEO-10"
+          ],
+          "capabilities": [
+            "cyclic_quadrilateral",
+            "regular_polygon"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-geometry-10",
+          "legacyAdapters": [],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1",
+          "templateIds": [
+            "math9-geometry-10"
+          ]
+        }
+      ]
+    },
+    {
+      "engineId": "cartesian_graph_engine",
+      "engineVersion": "1.0.0",
+      "label": "Tọa độ và đồ thị",
+      "configSchema": "core-engine-config.schema.json",
+      "validator": "validateCoreConfig",
+      "supportedModes": [
+        "linear_relation",
+        "linear_system",
+        "parabola_coefficient",
+        "line_parabola_intersection"
+      ],
+      "modes": [
+        {
+          "mode": "linear_relation",
+          "curriculumCodes": [
+            "M9-ALG-01"
+          ],
+          "capabilities": [
+            "linear_relation",
+            "point_solution"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-linear-relation",
+          "legacyAdapters": [
+            "coordinate_2d",
+            "linear_plot_2d",
+            "TOKEN_CLASSIFIER"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": {
+            "objectIds": [
+              "graph-line-1",
+              "graph-line-2",
+              "graph-parabola",
+              "pin-1",
+              "pin-2",
+              "origin"
+            ],
+            "units": [
+              "unitless"
+            ],
+            "constraints": [
+              "nondegenerate_lines",
+              "nonzero_parabola",
+              "target_reachable_on_grid"
+            ],
+            "layers": [],
+            "allowedEvents": [
+              {
+                "type": "adjust_parameter",
+                "names": [
+                  "x",
+                  "y",
+                  "width",
+                  "height",
+                  "a",
+                  "b",
+                  "c",
+                  "numerator"
+                ]
+              }
+            ],
+            "derivedState": [
+              "confirmation_reset",
+              "visited_graphs"
+            ],
+            "metrics": [
+              "modelError",
+              "parameterChangeCountSinceCheckpoint"
+            ],
+            "web": "CartesianScene",
+            "mobile": "SolidView/WebView/CartesianScene",
+            "evaluatorTS": "cartesian.ts",
+            "evaluatorDart": "cartesian.dart",
+            "saveRestore": "LessonSession identity + checkpoint",
+            "minRuntimeVersion": "1.0.0"
+          }
+        },
+        {
+          "mode": "linear_system",
+          "curriculumCodes": [
+            "M9-ALG-02"
+          ],
+          "capabilities": [
+            "two_lines",
+            "intersection_pin",
+            "parallel_coincident"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-linear-system",
+          "legacyAdapters": [],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": {
+            "objectIds": [
+              "graph-line-1",
+              "graph-line-2",
+              "graph-parabola",
+              "pin-1",
+              "pin-2",
+              "origin"
+            ],
+            "units": [
+              "unitless"
+            ],
+            "constraints": [
+              "nondegenerate_lines",
+              "nonzero_parabola",
+              "target_reachable_on_grid"
+            ],
+            "layers": [],
+            "allowedEvents": [
+              {
+                "type": "adjust_parameter",
+                "names": [
+                  "x",
+                  "y",
+                  "width",
+                  "height",
+                  "a",
+                  "b",
+                  "c",
+                  "numerator"
+                ]
+              }
+            ],
+            "derivedState": [
+              "confirmation_reset",
+              "visited_graphs"
+            ],
+            "metrics": [
+              "modelError",
+              "parameterChangeCountSinceCheckpoint"
+            ],
+            "web": "CartesianScene",
+            "mobile": "SolidView/WebView/CartesianScene",
+            "evaluatorTS": "cartesian.ts",
+            "evaluatorDart": "cartesian.dart",
+            "saveRestore": "LessonSession identity + checkpoint",
+            "minRuntimeVersion": "1.0.0"
+          }
+        },
+        {
+          "mode": "parabola_coefficient",
+          "curriculumCodes": [
+            "M9-ALG-09"
+          ],
+          "capabilities": [
+            "quadratic_curve",
+            "coefficient_drag",
+            "point_confirmation"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-parabola-coefficient",
+          "legacyAdapters": [
+            "function_plot_2d",
+            "PARABOLA_SLIDER"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": {
+            "objectIds": [
+              "graph-target",
+              "graph-reference",
+              "curve-learner",
+              "point-target",
+              "point-probe",
+              "origin"
+            ],
+            "units": [
+              "unitless"
+            ],
+            "constraints": [
+              "nonzero_integer_a_minus5_to5",
+              "nonzero_point_x"
+            ],
+            "layers": [],
+            "allowedEvents": [
+              {
+                "type": "adjust_parameter",
+                "names": [
+                  "x",
+                  "a",
+                  "y"
+                ]
+              }
+            ],
+            "derivedState": [
+              "b"
+            ],
+            "metrics": [
+              "modelError",
+              "parameterChangeCountSinceCheckpoint"
+            ],
+            "web": "ParabolaScene",
+            "mobile": "SolidView/WebView/ParabolaScene",
+            "evaluatorTS": "parabola.ts",
+            "evaluatorDart": "parabola.dart",
+            "saveRestore": "LessonSession snapshot identity + checkpoint patches",
+            "minRuntimeVersion": "1.0.0"
+          }
+        },
+        {
+          "mode": "line_parabola_intersection",
+          "curriculumCodes": [],
+          "capabilities": [
+            "line_parabola_intersections",
+            "intersection_pin"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-line-parabola",
+          "legacyAdapters": [],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": {
+            "objectIds": [
+              "graph-line-1",
+              "graph-line-2",
+              "graph-parabola",
+              "pin-1",
+              "pin-2",
+              "origin"
+            ],
+            "units": [
+              "unitless"
+            ],
+            "constraints": [
+              "nondegenerate_lines",
+              "nonzero_parabola",
+              "target_reachable_on_grid"
+            ],
+            "layers": [],
+            "allowedEvents": [
+              {
+                "type": "adjust_parameter",
+                "names": [
+                  "x",
+                  "y",
+                  "width",
+                  "height",
+                  "a",
+                  "b",
+                  "c",
+                  "numerator"
+                ]
+              }
+            ],
+            "derivedState": [
+              "confirmation_reset",
+              "visited_graphs"
+            ],
+            "metrics": [
+              "modelError",
+              "parameterChangeCountSinceCheckpoint"
+            ],
+            "web": "CartesianScene",
+            "mobile": "SolidView/WebView/CartesianScene",
+            "evaluatorTS": "cartesian.ts",
+            "evaluatorDart": "cartesian.dart",
+            "saveRestore": "LessonSession identity + checkpoint",
+            "minRuntimeVersion": "1.0.0"
+          }
+        }
+      ]
+    },
+    {
+      "engineId": "balance_scale_engine",
+      "engineVersion": "1.0.0",
+      "label": "Đại số và phương trình",
+      "configSchema": "core-engine-config.schema.json",
+      "validator": "validateCoreConfig",
+      "supportedModes": [
+        "product_equation",
+        "rational_equation",
+        "quadratic_equation",
+        "viete"
+      ],
+      "modes": [
+        {
+          "mode": "product_equation",
+          "curriculumCodes": [
+            "M9-ALG-03"
+          ],
+          "capabilities": [
+            "factor_ast",
+            "zero_product"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-algebra-product-equation",
+          "legacyAdapters": [
+            "algebra_balance_2d"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1"
+        },
+        {
+          "mode": "rational_equation",
+          "curriculumCodes": [
+            "M9-ALG-03"
+          ],
+          "capabilities": [
+            "rational_ast",
+            "domain_guard",
+            "extraneous_roots"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-algebra-rational-equation",
+          "legacyAdapters": [],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1"
+        },
+        {
+          "mode": "quadratic_equation",
+          "curriculumCodes": [
+            "M9-ALG-10"
+          ],
+          "capabilities": [
+            "coefficients",
+            "discriminant",
+            "real_roots"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-algebra-quadratic-equation",
+          "legacyAdapters": [
+            "TAP_COEFFICIENT",
+            "DELTA_STATE_TOGGLE"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1"
+        },
+        {
+          "mode": "viete",
+          "curriculumCodes": [
+            "M9-ALG-11"
+          ],
+          "capabilities": [
+            "sum_product",
+            "token_slots"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-algebra-viete",
+          "legacyAdapters": [
+            "FORMULA_SNAP_BUILDER"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": "legacy-lesson-identity-v1"
+        }
+      ]
+    },
+    {
+      "engineId": "area_fraction_grid",
+      "engineVersion": "1.0.0",
+      "label": "Diện tích, căn thức và khối",
+      "configSchema": "core-engine-config.schema.json",
+      "validator": "validateCoreConfig",
+      "supportedModes": [
+        "cylinder_recognition"
+      ],
+      "modes": [
+        {
+          "mode": "square_root",
+          "curriculumCodes": [
+            "M9-ALG-06"
+          ],
+          "capabilities": [
+            "square_area",
+            "principal_root"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [
+            "fraction_bar_2d",
+            "area_2d"
+          ],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "radical_operations",
+          "curriculumCodes": [
+            "M9-ALG-07"
+          ],
+          "capabilities": [
+            "radical_product_quotient",
+            "absolute_value",
+            "domain_guard"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "cube_root",
+          "curriculumCodes": [
+            "M9-ALG-08"
+          ],
+          "capabilities": [
+            "cube_model",
+            "signed_cube_root"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [
+            "geometry_3d_web"
+          ],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "cylinder_recognition",
+          "curriculumCodes": [
+            "M9-GEO-11"
+          ],
+          "capabilities": [
+            "parametric_cylinder",
+            "semantic_parts",
+            "orbit",
+            "svg_fallback"
+          ],
+          "status": "implemented_adapter",
+          "publishEnabled": true,
+          "templateId": "math9-cylinder-recognition",
+          "legacyAdapters": [
+            "3D_SOLID_INSPECTOR"
+          ],
+          "missing": [],
+          "minRuntimeVersion": "1.0.0",
+          "adapterContract": {
+            "objectIds": [
+              "radius",
+              "height",
+              "top",
+              "bottom",
+              "side"
+            ],
+            "units": [
+              "cm",
+              "m"
+            ],
+            "constraints": [
+              "positive_dimensions",
+              "aspect_ratio_0.1_to_10"
+            ],
+            "layers": [],
+            "allowedEvents": [
+              {
+                "type": "adjust_parameter",
+                "names": [
+                  "x",
+                  "a",
+                  "b",
+                  "width"
+                ]
+              }
+            ],
+            "derivedState": [
+              "c",
+              "y"
+            ],
+            "metrics": [
+              "modelError",
+              "parameterChangeCountSinceCheckpoint"
+            ],
+            "web": "CylinderScene",
+            "mobile": "SolidView/WebView/CylinderScene",
+            "evaluatorTS": "cylinder.ts",
+            "evaluatorDart": "uime.dart",
+            "saveRestore": "LessonSession snapshot identity + checkpoint patches",
+            "minRuntimeVersion": "1.0.0"
+          }
+        },
+        {
+          "mode": "solid_measurement",
+          "curriculumCodes": [
+            "M9-GEO-11"
+          ],
+          "capabilities": [
+            "cylinder_cone_sphere",
+            "surface_area",
+            "volume"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [
+            "3D_SOLID_INSPECTOR",
+            "geometry_3d_web"
+          ],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "solid_net",
+          "curriculumCodes": [
+            "M9-GEO-11"
+          ],
+          "capabilities": [
+            "cylinder_net",
+            "cone_net"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        }
+      ]
+    },
+    {
+      "engineId": "number_line_engine",
+      "engineVersion": "1.0.0",
+      "label": "Trục số",
+      "configSchema": "core-engine-config.schema.json",
+      "validator": "validateCoreConfig",
+      "supportedModes": [],
+      "modes": [
+        {
+          "mode": "order_transform",
+          "curriculumCodes": [
+            "M9-ALG-04"
+          ],
+          "capabilities": [
+            "order",
+            "translation",
+            "negative_reflection"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [
+            "INEQUALITY_SIGN_SWITCH"
+          ],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "linear_inequality",
+          "curriculumCodes": [
+            "M9-ALG-05"
+          ],
+          "capabilities": [
+            "boundary",
+            "open_closed",
+            "ray",
+            "inequality_solver"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [
+            "NUMBER_LINE_SELECTOR",
+            "number_line_2d"
+          ],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "domain_sign_adapter",
+          "curriculumCodes": [],
+          "capabilities": [
+            "domain_interval",
+            "signed_value"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        }
+      ]
+    },
+    {
+      "engineId": "data_probability_sim",
+      "engineVersion": "1.0.0",
+      "label": "Thống kê và xác suất",
+      "configSchema": "core-engine-config.schema.json",
+      "validator": "validateCoreConfig",
+      "supportedModes": [],
+      "modes": [
+        {
+          "mode": "frequency_linked_charts",
+          "curriculumCodes": [
+            "M9-STP-01"
+          ],
+          "capabilities": [
+            "frequency_table",
+            "relative_frequency",
+            "bar_drag",
+            "pie_link"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [
+            "CHART_BAR_TAP"
+          ],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "finite_probability",
+          "curriculumCodes": [
+            "M9-STP-02"
+          ],
+          "capabilities": [
+            "sample_space",
+            "event_ast",
+            "favourable_selection",
+            "classical_probability"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [
+            "EVENT_CARD_BUCKET"
+          ],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        },
+        {
+          "mode": "experiment_simulation",
+          "curriculumCodes": [
+            "M9-STP-02"
+          ],
+          "capabilities": [
+            "dice_coin_cards",
+            "seeded_simulation",
+            "weighted_probability"
+          ],
+          "status": "planned",
+          "publishEnabled": false,
+          "templateId": null,
+          "legacyAdapters": [],
+          "missing": [
+            "canonical model/compiler/renderer integration"
+          ],
+          "minRuntimeVersion": "2.0.0",
+          "adapterContract": null
+        }
+      ]
+    }
+  ]
+}

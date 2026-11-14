@@ -1,0 +1,32 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-09",
+  "curriculumCode": "M9-GEO-09",
+  "mode": "triangle_circles",
+  "title": "Nội tiếp và ngoại tiếp tam giác",
+  "parameters": {
+    "sideA": 5,
+    "sideB": 4,
+    "sideC": 3,
+    "construction": "incircle",
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "sideA": 5,
+      "sideB": 5,
+      "sideC": 6,
+      "construction": "circumcircle",
+      "unit": "cm"
+    },
+    "assessment": {
+      "sideA": 6,
+      "sideB": 6,
+      "sideC": 6,
+      "construction": "incircle",
+      "unit": "cm"
+    }
+  }
+}

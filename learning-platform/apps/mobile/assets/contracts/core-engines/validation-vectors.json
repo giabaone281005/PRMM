@@ -1,0 +1,207 @@
+[
+  {
+    "name": "cylinder adapter",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "area_fraction_grid",
+      "mode": "cylinder_recognition",
+      "curriculumCode": "M9-GEO-11",
+      "model": {
+        "radius": 4,
+        "height": 7,
+        "unit": "cm"
+      }
+    },
+    "valid": true
+  },
+  {
+    "name": "parabola adapter",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "cartesian_graph_engine",
+      "mode": "parabola_coefficient",
+      "curriculumCode": "M9-ALG-09",
+      "model": {
+        "a": -2
+      }
+    },
+    "valid": true
+  },
+  {
+    "name": "zero coefficient",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "cartesian_graph_engine",
+      "mode": "parabola_coefficient",
+      "curriculumCode": "M9-ALG-09",
+      "model": {
+        "a": 0
+      }
+    },
+    "valid": false
+  },
+  {
+    "name": "wrong curriculum",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "cartesian_graph_engine",
+      "mode": "parabola_coefficient",
+      "curriculumCode": "M9-ALG-02",
+      "model": {
+        "a": -2
+      }
+    },
+    "valid": false
+  },
+  {
+    "name": "unknown field",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "cartesian_graph_engine",
+      "mode": "parabola_coefficient",
+      "curriculumCode": "M9-ALG-09",
+      "model": {
+        "a": -2
+      },
+      "script": "eval()"
+    },
+    "valid": false
+  },
+  {
+    "name": "wrong version",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "2.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "cartesian_graph_engine",
+      "mode": "parabola_coefficient",
+      "curriculumCode": "M9-ALG-09",
+      "model": {
+        "a": -2
+      }
+    },
+    "valid": false
+  },
+  {
+    "name": "planned mode",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "cartesian_graph_engine",
+      "mode": "unimplemented_mode",
+      "curriculumCode": "M9-ALG-09",
+      "model": {
+        "a": -2
+      }
+    },
+    "valid": false
+  },
+  {
+    "name": "negative radius",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "area_fraction_grid",
+      "mode": "cylinder_recognition",
+      "curriculumCode": "M9-GEO-11",
+      "model": {
+        "radius": -1,
+        "height": 7,
+        "unit": "cm"
+      }
+    },
+    "valid": false
+  },
+  {
+    "name": "bad ratio",
+    "config": {
+      "configVersion": "1.0.0",
+      "engineVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "sceneId": "core-scene",
+      "viewport": {
+        "logicalWidth": 360,
+        "logicalHeight": 360,
+        "fit": "adapter-derived"
+      },
+      "engineId": "area_fraction_grid",
+      "mode": "cylinder_recognition",
+      "curriculumCode": "M9-GEO-11",
+      "model": {
+        "radius": 0.1,
+        "height": 100,
+        "unit": "cm"
+      }
+    },
+    "valid": false
+  }
+]

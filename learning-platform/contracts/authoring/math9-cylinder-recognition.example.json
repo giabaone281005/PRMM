@@ -1,0 +1,28 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "curriculumCode": "M9-GEO-11",
+  "templateId": "math9-cylinder-recognition",
+  "templateVersion": 1,
+  "mode": "recognition",
+  "title": "Khám phá chiếc hộp hình trụ",
+  "parameters": {
+    "radius": 4,
+    "height": 7,
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "radius": 3,
+      "height": 6
+    },
+    "assessment": {
+      "radius": 5,
+      "height": 8
+    }
+  },
+  "content": {
+    "context": "Một chiếc hộp có dạng hình trụ.",
+    "exploreInstruction": "Xoay để quan sát chiếc hộp."
+  }
+}

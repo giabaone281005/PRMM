@@ -1,0 +1,239 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.admin-ui.config.ts"
+    ],
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.admin-ui.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/3.FPT/PRM/final project/docs/qa/automated/admin/2026-11-13T20-45-47-300Z-31080/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "admin-ui",
+        "name": "admin-ui",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/admin-ui.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-45-47-300Z-31080\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "admin-ui",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/admin-ui.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5181",
+          "headless": false,
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "launchOptions": {
+            "slowMo": 300
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "admin-ui"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-45-47-300Z-31080/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-45-47-300Z-31080/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5181 --strictPort",
+      "url": "http://127.0.0.1:5181",
+      "reuseExistingServer": false,
+      "env": {
+        "MOHOC_TEST_MODE": "1",
+        "VITE_ENABLE_LOCAL_DEMO": "true",
+        "VITE_SUPABASE_URL": "",
+        "VITE_SUPABASE_PUBLISHABLE_KEY": ""
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "admin-ui.spec.ts",
+      "file": "admin-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Admin creates, reopens, edits, publishes and unpublishes a lesson through the visible UI",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6591,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authoring-studio').getByRole('status')\nExpected substring: \u001b[32m\"Đã lưu bản nháp\"\u001b[39m\nError: strict mode violation: locator('.authoring-studio').getByRole('status') resolved to 3 elements:\n    1) <output>-12</output> aka getByText('-12')\n    2) <output>0</output> aka getByText('0', { exact: true })\n    3) <div role=\"status\" class=\"notice\">Đã lưu bản nháp cùng dữ kiện và phiên bản templat…</div> aka getByText('Đã lưu bản nháp cùng dữ kiện')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authoring-studio').getByRole('status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authoring-studio').getByRole('status')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authoring-studio').getByRole('status')\nExpected substring: \u001b[32m\"Đã lưu bản nháp\"\u001b[39m\nError: strict mode violation: locator('.authoring-studio').getByRole('status') resolved to 3 elements:\n    1) <output>-12</output> aka getByText('-12')\n    2) <output>0</output> aka getByText('0', { exact: true })\n    3) <div role=\"status\" class=\"notice\">Đã lưu bản nháp cùng dữ kiện và phiên bản templat…</div> aka getByText('Đã lưu bản nháp cùng dữ kiện')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authoring-studio').getByRole('status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authoring-studio').getByRole('status')\u001b[22m\n\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts:22:46\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts:13:3",
+                    "location": {
+                      "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts",
+                      "column": 46,
+                      "line": 22
+                    },
+                    "snippet": " \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(studio\u001b[33m.\u001b[39mlocator(\u001b[32m'.authoring-preview .algebra-scene'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m studio\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Lưu bản nháp'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(studio\u001b[33m.\u001b[39mgetByRole(\u001b[32m'status'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Đã lưu bản nháp'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m capture(\u001b[32m'01-create-draft'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'← Danh sách bài học'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(row(title))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Bản nháp'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts",
+                        "column": 46,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authoring-studio').getByRole('status')\nExpected substring: \u001b[32m\"Đã lưu bản nháp\"\u001b[39m\nError: strict mode violation: locator('.authoring-studio').getByRole('status') resolved to 3 elements:\n    1) <output>-12</output> aka getByText('-12')\n    2) <output>0</output> aka getByText('0', { exact: true })\n    3) <div role=\"status\" class=\"notice\">Đã lưu bản nháp cùng dữ kiện và phiên bản templat…</div> aka getByText('Đã lưu bản nháp cùng dữ kiện')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authoring-studio').getByRole('status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authoring-studio').getByRole('status')\u001b[22m\n\n\n  20 |     await expect(studio.locator('.authoring-preview .algebra-scene')).toBeVisible();\n  21 |     await studio.getByRole('button',{name:'Lưu bản nháp',exact:true}).click();\n> 22 |     await expect(studio.getByRole('status')).toContainText('Đã lưu bản nháp');\n     |                                              ^\n  23 |     await capture('01-create-draft');\n  24 |     await page.getByRole('button',{name:'← Danh sách bài học',exact:true}).click();\n  25 |     await expect(row(title)).toContainText('Bản nháp');\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts:22:46\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts:13:3"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN UI] 1/6 Create and save a new lesson\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Tạo bài mới và lưu nháp qua biểu mẫu",
+                      "duration": 5377,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authoring-studio').getByRole('status')\nExpected substring: \u001b[32m\"Đã lưu bản nháp\"\u001b[39m\nError: strict mode violation: locator('.authoring-studio').getByRole('status') resolved to 3 elements:\n    1) <output>-12</output> aka getByText('-12')\n    2) <output>0</output> aka getByText('0', { exact: true })\n    3) <div role=\"status\" class=\"notice\">Đã lưu bản nháp cùng dữ kiện và phiên bản templat…</div> aka getByText('Đã lưu bản nháp cùng dữ kiện')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authoring-studio').getByRole('status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authoring-studio').getByRole('status')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.authoring-studio').getByRole('status')\nExpected substring: \u001b[32m\"Đã lưu bản nháp\"\u001b[39m\nError: strict mode violation: locator('.authoring-studio').getByRole('status') resolved to 3 elements:\n    1) <output>-12</output> aka getByText('-12')\n    2) <output>0</output> aka getByText('0', { exact: true })\n    3) <div role=\"status\" class=\"notice\">Đã lưu bản nháp cùng dữ kiện và phiên bản templat…</div> aka getByText('Đã lưu bản nháp cùng dữ kiện')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.authoring-studio').getByRole('status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.authoring-studio').getByRole('status')\u001b[22m\n\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts:22:46\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts:13:3",
+                        "location": {
+                          "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts",
+                          "column": 46,
+                          "line": 22
+                        },
+                        "snippet": " \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(studio\u001b[33m.\u001b[39mlocator(\u001b[32m'.authoring-preview .algebra-scene'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m studio\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Lưu bản nháp'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(studio\u001b[33m.\u001b[39mgetByRole(\u001b[32m'status'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Đã lưu bản nháp'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m capture(\u001b[32m'01-create-draft'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'← Danh sách bài học'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(row(title))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Bản nháp'\u001b[39m)\u001b[33m;\u001b[39m"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-11-13T20:45:53.402Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-45-47-300Z-31080\\artifacts\\admin-ui-Admin-creates-reo-7facd-sson-through-the-visible-UI-admin-ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-45-47-300Z-31080\\artifacts\\admin-ui-Admin-creates-reo-7facd-sson-through-the-visible-UI-admin-ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-45-47-300Z-31080\\artifacts\\admin-ui-Admin-creates-reo-7facd-sson-through-the-visible-UI-admin-ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-45-47-300Z-31080\\artifacts\\admin-ui-Admin-creates-reo-7facd-sson-through-the-visible-UI-admin-ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\admin-ui.spec.ts",
+                    "column": 46,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ae1974e46a8834939ce0-4294ee2ea36135d75c42",
+          "file": "admin-ui.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T20:45:49.361Z",
+    "duration": 13153.349999999999,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

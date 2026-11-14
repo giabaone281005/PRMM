@@ -1,0 +1,33 @@
+{
+  "mode": "android-ui",
+  "status": "FAIL",
+  "deviceId": "121ea06b",
+  "testPackage": "vn.mohoc.mo_hoc.uitest",
+  "steps": [
+    {
+      "label": "Flutter pub get",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Build isolated Android UI test APK",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Verify isolated APK package before installation",
+      "status": "PASS",
+      "packageId": "vn.mohoc.mo_hoc.uitest"
+    },
+    {
+      "label": "Android user interface gestures",
+      "status": "FAIL",
+      "exitCode": 1
+    }
+  ],
+  "limitations": [
+    "Fixture catalog/local test backend; no hosted login/RLS acceptance",
+    "Native Flutter gestures; extended WebView DOM-driven suites are not included"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user-device\\2026-11-13T20-38-32-314Z-26316"
+}

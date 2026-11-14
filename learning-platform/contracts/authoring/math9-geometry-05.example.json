@@ -1,0 +1,29 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-05",
+  "curriculumCode": "M9-GEO-05",
+  "mode": "line_circle",
+  "title": "Đường thẳng và đường tròn",
+  "parameters": {
+    "radius": 4,
+    "distance": 2,
+    "normalAngle": 20,
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "radius": 3,
+      "distance": 3,
+      "normalAngle": 70,
+      "unit": "cm"
+    },
+    "assessment": {
+      "radius": 2,
+      "distance": 4,
+      "normalAngle": 120,
+      "unit": "cm"
+    }
+  }
+}

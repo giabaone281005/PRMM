@@ -1,0 +1,20 @@
+{
+  "RecordedAtAsiaSaigon": "2026-11-13T22:08:20+07:00",
+  "BaselineCommit": "f2cee66d4488e79114a6756e879f4c9accb1d830",
+  "Branch": "first-version",
+  "Node": "24.7.0",
+  "Npm": "11.6.0",
+  "Flutter": "3.47.7 stable",
+  "Dart": "3.13.5",
+  "CiNode": "24",
+  "CiFlutter": "3.47.4 stable",
+  "ExistingDependenciesCheckedBy": "npm ls --depth=0 (exit 0)",
+  "NpmCi": "NOT RUN - dependencies already installed",
+  "RemoteReadback": "NOT RUN",
+  "MobileInstalledAppSource": "NOT VERIFIED - defines file checked only",
+  "InitialUntracked": [
+    ".idea/",
+    "PROJECT_CHECKPOINTS.md",
+    "ma_tran_toan_9_cms.md"
+  ]
+}

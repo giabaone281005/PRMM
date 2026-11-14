@@ -1,0 +1,434 @@
+[
+  {
+    "templateId": "math9-algebra-product-equation",
+    "curriculumCode": "M9-ALG-03",
+    "mode": "product_equation",
+    "label": "Phương trình tích",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "p": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "q": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "r": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "s": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        }
+      },
+      "required": [
+        "p",
+        "q",
+        "r",
+        "s"
+      ],
+      "additionalProperties": false
+    },
+    "form": [
+      {
+        "key": "p",
+        "label": "Hệ số x · nhân tử tử số thứ nhất",
+        "symbol": "p",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "q",
+        "label": "Hằng số · nhân tử tử số thứ nhất",
+        "symbol": "q",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "r",
+        "label": "Hệ số x · nhân tử tử số thứ hai",
+        "symbol": "r",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "s",
+        "label": "Hằng số · nhân tử tử số thứ hai",
+        "symbol": "s",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      }
+    ],
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-algebra-product-equation",
+      "curriculumCode": "M9-ALG-03",
+      "mode": "product_equation",
+      "title": "Phương trình tích",
+      "parameters": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3
+      },
+      "variants": {
+        "practice": {
+          "p": 2,
+          "q": -1,
+          "r": 1,
+          "s": -4
+        },
+        "assessment": {
+          "p": 1,
+          "q": -2,
+          "r": 1,
+          "s": -2
+        }
+      }
+    }
+  },
+  {
+    "templateId": "math9-algebra-rational-equation",
+    "curriculumCode": "M9-ALG-03",
+    "mode": "rational_equation",
+    "label": "Phương trình hữu tỉ · Điều kiện xác định",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "p": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "q": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "r": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "s": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "d": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "e": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "f": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "g": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "k": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        }
+      },
+      "required": [
+        "p",
+        "q",
+        "r",
+        "s",
+        "d",
+        "e",
+        "f",
+        "g",
+        "k"
+      ],
+      "additionalProperties": false
+    },
+    "form": [
+      {
+        "key": "p",
+        "label": "Hệ số x · nhân tử tử số thứ nhất",
+        "symbol": "p",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "q",
+        "label": "Hằng số · nhân tử tử số thứ nhất",
+        "symbol": "q",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "r",
+        "label": "Hệ số x · nhân tử tử số thứ hai",
+        "symbol": "r",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "s",
+        "label": "Hằng số · nhân tử tử số thứ hai",
+        "symbol": "s",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "d",
+        "label": "Hệ số x · nhân tử mẫu thứ nhất",
+        "symbol": "d",
+        "help": "Mẫu là (dx + e)(fx + g). d khác 0; dùng f = 0, g = 1 nếu chỉ cần một nhân tử. Giá trị cấm được suy ra, không nhập đáp án riêng."
+      },
+      {
+        "key": "e",
+        "label": "Hằng số · nhân tử mẫu thứ nhất",
+        "symbol": "e",
+        "help": "Mẫu là (dx + e)(fx + g). d khác 0; dùng f = 0, g = 1 nếu chỉ cần một nhân tử. Giá trị cấm được suy ra, không nhập đáp án riêng."
+      },
+      {
+        "key": "f",
+        "label": "Hệ số x · nhân tử mẫu thứ hai",
+        "symbol": "f",
+        "help": "Mẫu là (dx + e)(fx + g). d khác 0; dùng f = 0, g = 1 nếu chỉ cần một nhân tử. Giá trị cấm được suy ra, không nhập đáp án riêng."
+      },
+      {
+        "key": "g",
+        "label": "Hằng số · nhân tử mẫu thứ hai",
+        "symbol": "g",
+        "help": "Mẫu là (dx + e)(fx + g). d khác 0; dùng f = 0, g = 1 nếu chỉ cần một nhân tử. Giá trị cấm được suy ra, không nhập đáp án riêng."
+      },
+      {
+        "key": "k",
+        "label": "Hằng số vế phải",
+        "symbol": "k",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      }
+    ],
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-algebra-rational-equation",
+      "curriculumCode": "M9-ALG-03",
+      "mode": "rational_equation",
+      "title": "Phương trình hữu tỉ · Điều kiện xác định",
+      "parameters": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3,
+        "d": 1,
+        "e": -2,
+        "f": 0,
+        "g": 1,
+        "k": 0
+      },
+      "variants": {
+        "practice": {
+          "p": 1,
+          "q": -2,
+          "r": 1,
+          "s": 2,
+          "d": 1,
+          "e": -1,
+          "f": 1,
+          "g": 1,
+          "k": 1
+        },
+        "assessment": {
+          "p": 1,
+          "q": -1,
+          "r": 1,
+          "s": -2,
+          "d": 1,
+          "e": -1,
+          "f": 1,
+          "g": -2,
+          "k": 1
+        }
+      }
+    }
+  },
+  {
+    "templateId": "math9-algebra-quadratic-equation",
+    "curriculumCode": "M9-ALG-10",
+    "mode": "quadratic_equation",
+    "label": "Hệ số, Δ và nghiệm · Hạ bậc có chủ đích",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "b": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "c": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "degreePolicy": {
+          "enum": [
+            "quadratic_only",
+            "allow_linear"
+          ]
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "c",
+        "degreePolicy"
+      ],
+      "additionalProperties": false
+    },
+    "form": [
+      {
+        "key": "a",
+        "label": "Hệ số bình phương x",
+        "symbol": "a",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "b",
+        "label": "Hệ số x",
+        "symbol": "b",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "c",
+        "label": "Hằng số tự do",
+        "symbol": "c",
+        "help": "Số nguyên −9…9. Tử/tích: (px + q)(rx + s), p và r khác 0; phương trình chuẩn: ax² + bx + c = 0."
+      },
+      {
+        "key": "degreePolicy",
+        "label": "Quy tắc bậc phương trình",
+        "help": "Chỉ bậc hai yêu cầu a khác 0. Cho phép hạ bậc sẽ xử lý cả tuyến tính, hằng đúng và hằng sai."
+      }
+    ],
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-algebra-quadratic-equation",
+      "curriculumCode": "M9-ALG-10",
+      "mode": "quadratic_equation",
+      "title": "Hệ số, Δ và nghiệm · Hạ bậc có chủ đích",
+      "parameters": {
+        "a": 1,
+        "b": -3,
+        "c": 2,
+        "degreePolicy": "quadratic_only"
+      },
+      "variants": {
+        "practice": {
+          "a": 1,
+          "b": 2,
+          "c": 1,
+          "degreePolicy": "quadratic_only"
+        },
+        "assessment": {
+          "a": 1,
+          "b": 0,
+          "c": 2,
+          "degreePolicy": "quadratic_only"
+        }
+      }
+    }
+  },
+  {
+    "templateId": "math9-algebra-viete",
+    "curriculumCode": "M9-ALG-11",
+    "mode": "viete",
+    "label": "Viète · Ghép tổng, tích và cặp nghiệm thực",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "b": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        },
+        "c": {
+          "type": "integer",
+          "minimum": -9,
+          "maximum": 9
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "c"
+      ],
+      "additionalProperties": false
+    },
+    "form": [
+      {
+        "key": "a",
+        "label": "Hệ số bình phương x",
+        "symbol": "a",
+        "help": "Số nguyên −9…9; a khác 0 và Δ không âm để có cặp nghiệm thực."
+      },
+      {
+        "key": "b",
+        "label": "Hệ số x",
+        "symbol": "b",
+        "help": "Số nguyên −9…9; a khác 0 và Δ không âm để có cặp nghiệm thực."
+      },
+      {
+        "key": "c",
+        "label": "Hằng số tự do",
+        "symbol": "c",
+        "help": "Số nguyên −9…9; a khác 0 và Δ không âm để có cặp nghiệm thực."
+      }
+    ],
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-algebra-viete",
+      "curriculumCode": "M9-ALG-11",
+      "mode": "viete",
+      "title": "Viète · Ghép tổng, tích và cặp nghiệm thực",
+      "parameters": {
+        "a": 1,
+        "b": -3,
+        "c": 2
+      },
+      "variants": {
+        "practice": {
+          "a": 2,
+          "b": 4,
+          "c": 2
+        },
+        "assessment": {
+          "a": -1,
+          "b": 2,
+          "c": 3
+        }
+      }
+    }
+  }
+]

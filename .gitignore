@@ -27,3 +27,19 @@ key.properties
 *.log
 .DS_Store
 Thumbs.db
+
+# Local IDE state and redundant source archives
+.idea/
+releases/*.zip
+
+# QA recordings stay local; keep compact JSON verification reports
+/docs/qa/automated/**
+!/docs/qa/automated/**/
+!/docs/qa/automated/**/*.json
+!/docs/qa/automated/**/*.jsonl
+/docs/qa/automated/**/html/
+/docs/qa/automated/**/artifacts/
+/docs/qa/automated/**/catalog.snapshot.json
+/docs/qa/geometry-decimal-20261114/*artifacts/
+docs/qa/**/trace.zip
+docs/qa/**/*.webm

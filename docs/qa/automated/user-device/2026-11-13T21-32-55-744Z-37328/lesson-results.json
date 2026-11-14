@@ -1,0 +1,31 @@
+{
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "expected": [
+    {
+      "id": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "title": "Siêu Trí Tuệ",
+      "checkpoints": 6,
+      "sha256": "5288df12d8374c76d879f82cdc4d563b643ea5771f21b576e0cf6b4922522569"
+    }
+  ],
+  "events": [
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-13T21:33:54.090Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "FAIL",
+      "message": "Expected: a numeric value within <0.50001> of <45>\n  Actual: <42>\n   Which:  differs by <3>\ninput[aria-label=\"Góc xoay hình\"]\n",
+      "at": "2026-11-13T21:34:07.709Z"
+    }
+  ]
+}

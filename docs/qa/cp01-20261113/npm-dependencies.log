@@ -1,0 +1,18 @@
+mohoc-learning@0.1.0 D:\3.FPT\PRM\final project\learning-platform
+├── @electric-sql/pglite@0.5.16
+├── @playwright/test@1.65.0
+├── @supabase/supabase-js@2.119.0
+├── @types/node@26.6.6
+├── @types/react-dom@19.3.0
+├── @types/react@19.3.0
+├── @types/three@0.187.0
+├── ajv@8.20.0
+├── esbuild@0.28.2
+├── react-dom@19.3.1
+├── react@19.3.1
+├── three@0.187.0
+├── tsx@4.23.15
+├── typescript@7.0.2
+├── vite@8.3.8
+└── vitest@5.1.0
+

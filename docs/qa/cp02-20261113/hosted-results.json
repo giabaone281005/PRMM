@@ -1,0 +1,142 @@
+{
+  "run": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b",
+  "project": "https://sbzpmrgsqznaydllqmbm.supabase.co",
+  "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+  "results": [
+    {
+      "at": "2026-11-13T15:31:45.905Z",
+      "check": "authenticated password login; author draft hidden from both students",
+      "status": "PASS"
+    },
+    {
+      "at": "2026-11-13T15:33:52.363Z",
+      "check": "admin publish after native Realtime subscribed",
+      "status": "PASS"
+    },
+    {
+      "at": "2026-11-13T15:34:12.692Z",
+      "check": "native harness open"
+    },
+    {
+      "at": "2026-11-13T15:34:21.045Z",
+      "check": "native harness ensureScene",
+      "harnessError": "Bad state: No element"
+    },
+    {
+      "at": "2026-11-13T15:34:54.829Z",
+      "check": "native harness open"
+    },
+    {
+      "at": "2026-11-13T15:38:42.612Z",
+      "check": "native harness open"
+    },
+    {
+      "at": "2026-11-13T15:40:09.864Z",
+      "check": "native harness ensureScene",
+      "ready": true,
+      "error": "",
+      "checkpoint": 0,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:40:26.922Z",
+      "check": "native harness ensureNext",
+      "ready": true,
+      "error": "",
+      "checkpoint": 0,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:40:29.433Z",
+      "check": "native harness ensureScene",
+      "ready": true,
+      "error": "",
+      "checkpoint": 1,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:40:41.853Z",
+      "check": "native harness ensureNext",
+      "ready": true,
+      "error": "",
+      "checkpoint": 1,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:40:44.475Z",
+      "check": "native harness close",
+      "ready": true,
+      "error": "",
+      "checkpoint": 2,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:40:46.064Z",
+      "check": "native harness open"
+    },
+    {
+      "at": "2026-11-13T15:40:49.068Z",
+      "check": "native harness ensureScene",
+      "ready": true,
+      "error": "",
+      "checkpoint": 2,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:40:50.323Z",
+      "check": "native harness ensureScene",
+      "ready": true,
+      "error": "",
+      "checkpoint": 2,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:41:03.311Z",
+      "check": "native harness ensureNext",
+      "ready": true,
+      "error": "",
+      "checkpoint": 2,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:41:06.104Z",
+      "check": "native harness ensureScene",
+      "ready": true,
+      "error": "",
+      "checkpoint": 3,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:41:20.360Z",
+      "check": "native harness ensureNext",
+      "ready": true,
+      "error": "",
+      "checkpoint": 3,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:41:23.256Z",
+      "check": "native harness ensureScene",
+      "ready": true,
+      "error": "",
+      "checkpoint": 4,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:41:35.960Z",
+      "check": "native harness ensureNext",
+      "ready": true,
+      "error": "",
+      "checkpoint": 4,
+      "completed": false
+    },
+    {
+      "at": "2026-11-13T15:41:38.491Z",
+      "check": "native harness ensureScene",
+      "ready": true,
+      "error": "",
+      "checkpoint": 5,
+      "completed": false
+    }
+  ]
+}

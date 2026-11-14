@@ -1,0 +1,1729 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.roles.config.ts"
+    ],
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.roles.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/3.FPT/PRM/final project/docs/qa/automated/admin/2026-11-13T20-11-26-264Z-29896/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "admin",
+        "name": "admin",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/00-empty.spec.ts",
+          "**/acceptance.spec.ts",
+          "**/algebra-studio.spec.ts",
+          "**/cms-refresh.spec.ts",
+          "**/creation.spec.ts",
+          "**/curriculum-pilot.spec.ts",
+          "**/geometry-studio.spec.ts",
+          "**/math9.spec.ts",
+          "**/uime-editor.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": {},
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "admin",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/00-empty.spec.ts",
+          "**/acceptance.spec.ts",
+          "**/algebra-studio.spec.ts",
+          "**/cms-refresh.spec.ts",
+          "**/creation.spec.ts",
+          "**/curriculum-pilot.spec.ts",
+          "**/geometry-studio.spec.ts",
+          "**/math9.spec.ts",
+          "**/uime-editor.spec.ts"
+        ],
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5181",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "viewport": {
+            "width": 1440,
+            "height": 1050
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "admin"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5181 --strictPort",
+      "url": "http://127.0.0.1:5181",
+      "reuseExistingServer": false,
+      "env": {
+        "MOHOC_TEST_MODE": "1",
+        "VITE_ENABLE_LOCAL_DEMO": "true",
+        "VITE_SUPABASE_URL": "",
+        "VITE_SUPABASE_PUBLISHABLE_KEY": ""
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "00-empty.spec.ts",
+      "file": "00-empty.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fresh workspace stays empty and ignores legacy browser sample catalog",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11687,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:12:36.260Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43420c6e0ca8947d852f-92767cf570ae713881a2",
+          "file": "00-empty.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "acceptance.spec.ts",
+      "file": "acceptance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "local CMS JSON build, edit, validation, publish, version and unpublish",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 33082,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\acceptance.spec.ts",
+                        "column": 90,
+                        "line": 11
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n   9 | });\n  10 | test('local CMS JSON build, edit, validation, publish, version and unpublish',async({page})=>{\n> 11 | await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='triangle_angles')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Tên bài từ khuôn').fill('Tam giác E2E');await page.getByText('Tùy chọn nâng cao',{exact:true}).click();await page.getByLabel('Mã bài',{exact:true}).fill('triangle-e2e');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await page.getByRole('button',{name:'Tinh chỉnh checkpoint'}).click();await page.locator('.inspector textarea').first().fill('Kéo đỉnh và tìm quy luật.');await page.getByRole('button',{name:'Lưu bản nháp'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu');await page.screenshot({path:'../docs/qa/studio-desktop.png',fullPage:true});await page.getByRole('button',{name:'Xuất bản ↗'}).click();await expect(page.getByRole('status')).toContainText('Đã xuất bản');await page.reload();await page.getByRole('button',{name:/Bài học/}).first().click();const row=page.getByRole('row').filter({hasText:'Tam giác E2E'});await row.getByRole('button',{name:'Lịch sử'}).click();await page.getByPlaceholder('UUID học sinh / mã local').fill('student-local');await page.getByRole('button',{name:'Giao bài',exact:true}).click();await expect(page.getByRole('status')).toContainText('Đã giao');await row.locator('summary').click();await row.getByRole('button',{name:'Gỡ xuất bản'}).click();await expect(page.getByRole('status')).toContainText('Đã gỡ');await page.goto('/');await expect(page.getByText('Tam giác E2E')).toHaveCount(0);\n     |                                                                                          ^\n  12 | });\n  13 | test('3D WebGL actually renders and raycast/orbit/layers complete the lesson',async({page})=>{\n  14 |   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');await page.getByRole('button').filter({has:page.getByRole('heading',{name:'Từng lớp tạo nên thể tích'})}).click();const canvas=page.locator('.webgl canvas');await expect(canvas).toBeVisible();await expect(page.getByRole('button',{name:'Tiếp tục'})).toBeDisabled();const b=(await canvas.boundingBox())!;await page.mouse.move(b.x+b.width*.5,b.y+b.height*.5);await page.mouse.down();await page.mouse.move(b.x+b.width*.7,b.y+b.height*.5,{steps:15});await page.mouse.up();await expect(page.getByRole('button',{name:'Tiếp tục'})).toBeEnabled();await page.screenshot({path:'../docs/qa/solid-orbit.png'});await canvas.evaluate(el=>el.setAttribute('data-persistent','yes'));await page.getByRole('button',{name:'Tiếp tục'}).click();await canvas.click({position:{x:b.width*.5,y:b.height*.5}});await expect(page.getByRole('button',{name:'Tiếp tục'})).toBeEnabled();await page.getByRole('button',{name:'Tiếp tục'}).click();await expect(canvas).toHaveAttribute('data-persistent','yes');await page.getByRole('slider',{name:'Số lớp'}).fill('3');await page.getByRole('button',{name:'Tiếp tục'}).click();await expect(page.getByRole('button',{name:'Hoàn thành bài học'})).toBeDisabled();await page.getByRole('slider',{name:'Số lớp'}).fill('3');await expect(page.getByText('36 đơn vị³')).toBeVisible();await page.screenshot({path:'../docs/qa/solid-filled.png'});await page.getByRole('button',{name:'Hoàn thành bài học'}).click();await expect(page.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\acceptance.spec.ts:11:90"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:12:49.617Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\acceptance-local-CMS-JSON--cb6ea-blish-version-and-unpublish-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\acceptance-local-CMS-JSON--cb6ea-blish-version-and-unpublish-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\acceptance-local-CMS-JSON--cb6ea-blish-version-and-unpublish-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\acceptance-local-CMS-JSON--cb6ea-blish-version-and-unpublish-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-f3e83c57105a11154a23",
+          "file": "acceptance.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "responsive layouts 1280, tablet and portrait contain no horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12519,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:26.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-2fc7284a558c4fcea7ac",
+          "file": "acceptance.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "algebra-studio.spec.ts",
+      "file": "algebra-studio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-product-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9775,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:39.756Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-ed4bfd99cd4653477cd9",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        },
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-rational-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9192,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:49.560Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-fec43edc42e3f364335d",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        },
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-quadratic-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8526,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:58.779Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-105c5fae4155569bd6ce",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        },
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-viete",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8753,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:07.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-c53ce98989e85e9246c6",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        }
+      ]
+    },
+    {
+      "title": "cms-refresh.spec.ts",
+      "file": "cms-refresh.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CMS readable navigation, class sort and filter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:16.134Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-82c110e1efa765f7900c",
+          "file": "cms-refresh.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "new engine percentage_grid: JSON, phone, all checkpoints",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32052,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 286,
+                        "line": 6
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  4 | import scenarios from '../../contracts/math-scenarios.json' with {type:'json'};\n  5 | test('CMS readable navigation, class sort and filter',async({page})=>{await page.goto('/admin/lessons');await expect(page.locator('.sidebar')).not.toContainText('Chương trình');await expect(page.locator('.sidebar')).not.toContainText('Phân tích');const rows=page.locator('tr[data-grade]');await expect(rows.first()).toBeVisible();for(const [value,descending] of [['grade_asc',false],['grade_desc',true]] as const){await page.getByLabel('Sắp xếp bài học').selectOption(value);const grades=await rows.evaluateAll(els=>els.map(e=>Number(e.getAttribute('data-grade'))));expect(grades).toEqual([...grades].sort((a,b)=>descending?b-a:a-b));}await page.getByLabel('Lọc bài theo lớp').selectOption('9');expect(await rows.evaluateAll(els=>els.every(e=>e.getAttribute('data-grade')==='9'))).toBe(true);await page.screenshot({path:'../docs/qa/cms-class-sort.png',fullPage:true});});\n> 6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n    |                                                                                                                                                                                                                                                                                              ^\n  7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n  8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n  9 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:6:286"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:19.816Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-per-5f47f--JSON-phone-all-checkpoints-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-per-5f47f--JSON-phone-all-checkpoints-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-per-5f47f--JSON-phone-all-checkpoints-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-per-5f47f--JSON-phone-all-checkpoints-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-a45bd94eb390cf9ac387",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine ratio_table: JSON, phone, all checkpoints",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32402,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 286,
+                        "line": 6
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  4 | import scenarios from '../../contracts/math-scenarios.json' with {type:'json'};\n  5 | test('CMS readable navigation, class sort and filter',async({page})=>{await page.goto('/admin/lessons');await expect(page.locator('.sidebar')).not.toContainText('Chương trình');await expect(page.locator('.sidebar')).not.toContainText('Phân tích');const rows=page.locator('tr[data-grade]');await expect(rows.first()).toBeVisible();for(const [value,descending] of [['grade_asc',false],['grade_desc',true]] as const){await page.getByLabel('Sắp xếp bài học').selectOption(value);const grades=await rows.evaluateAll(els=>els.map(e=>Number(e.getAttribute('data-grade'))));expect(grades).toEqual([...grades].sort((a,b)=>descending?b-a:a-b));}await page.getByLabel('Lọc bài theo lớp').selectOption('9');expect(await rows.evaluateAll(els=>els.every(e=>e.getAttribute('data-grade')==='9'))).toBe(true);await page.screenshot({path:'../docs/qa/cms-class-sort.png',fullPage:true});});\n> 6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n    |                                                                                                                                                                                                                                                                                              ^\n  7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n  8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n  9 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:6:286"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:55.131Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rat-d83d0--JSON-phone-all-checkpoints-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rat-d83d0--JSON-phone-all-checkpoints-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rat-d83d0--JSON-phone-all-checkpoints-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rat-d83d0--JSON-phone-all-checkpoints-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-61c213b5a66011354677",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine coordinate_plane: JSON, phone, all checkpoints",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32178,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 286,
+                        "line": 6
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  4 | import scenarios from '../../contracts/math-scenarios.json' with {type:'json'};\n  5 | test('CMS readable navigation, class sort and filter',async({page})=>{await page.goto('/admin/lessons');await expect(page.locator('.sidebar')).not.toContainText('Chương trình');await expect(page.locator('.sidebar')).not.toContainText('Phân tích');const rows=page.locator('tr[data-grade]');await expect(rows.first()).toBeVisible();for(const [value,descending] of [['grade_asc',false],['grade_desc',true]] as const){await page.getByLabel('Sắp xếp bài học').selectOption(value);const grades=await rows.evaluateAll(els=>els.map(e=>Number(e.getAttribute('data-grade'))));expect(grades).toEqual([...grades].sort((a,b)=>descending?b-a:a-b));}await page.getByLabel('Lọc bài theo lớp').selectOption('9');expect(await rows.evaluateAll(els=>els.every(e=>e.getAttribute('data-grade')==='9'))).toBe(true);await page.screenshot({path:'../docs/qa/cms-class-sort.png',fullPage:true});});\n> 6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n    |                                                                                                                                                                                                                                                                                              ^\n  7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n  8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n  9 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:6:286"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:33.203Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-coo-6c860--JSON-phone-all-checkpoints-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-coo-6c860--JSON-phone-all-checkpoints-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-coo-6c860--JSON-phone-all-checkpoints-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-coo-6c860--JSON-phone-all-checkpoints-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-1b1c512e04c117dc774f",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine rectangle_area: JSON, phone, all checkpoints",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 33186,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 286,
+                        "line": 6
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  4 | import scenarios from '../../contracts/math-scenarios.json' with {type:'json'};\n  5 | test('CMS readable navigation, class sort and filter',async({page})=>{await page.goto('/admin/lessons');await expect(page.locator('.sidebar')).not.toContainText('Chương trình');await expect(page.locator('.sidebar')).not.toContainText('Phân tích');const rows=page.locator('tr[data-grade]');await expect(rows.first()).toBeVisible();for(const [value,descending] of [['grade_asc',false],['grade_desc',true]] as const){await page.getByLabel('Sắp xếp bài học').selectOption(value);const grades=await rows.evaluateAll(els=>els.map(e=>Number(e.getAttribute('data-grade'))));expect(grades).toEqual([...grades].sort((a,b)=>descending?b-a:a-b));}await page.getByLabel('Lọc bài theo lớp').selectOption('9');expect(await rows.evaluateAll(els=>els.every(e=>e.getAttribute('data-grade')==='9'))).toBe(true);await page.screenshot({path:'../docs/qa/cms-class-sort.png',fullPage:true});});\n> 6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n    |                                                                                                                                                                                                                                                                                              ^\n  7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n  8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n  9 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:6:286"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:16:11.582Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rec-be84d--JSON-phone-all-checkpoints-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rec-be84d--JSON-phone-all-checkpoints-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rec-be84d--JSON-phone-all-checkpoints-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-rec-be84d--JSON-phone-all-checkpoints-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-420856f1c2547aa9b823",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine pythagorean: JSON, phone, all checkpoints",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32673,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 286,
+                        "line": 6
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  4 | import scenarios from '../../contracts/math-scenarios.json' with {type:'json'};\n  5 | test('CMS readable navigation, class sort and filter',async({page})=>{await page.goto('/admin/lessons');await expect(page.locator('.sidebar')).not.toContainText('Chương trình');await expect(page.locator('.sidebar')).not.toContainText('Phân tích');const rows=page.locator('tr[data-grade]');await expect(rows.first()).toBeVisible();for(const [value,descending] of [['grade_asc',false],['grade_desc',true]] as const){await page.getByLabel('Sắp xếp bài học').selectOption(value);const grades=await rows.evaluateAll(els=>els.map(e=>Number(e.getAttribute('data-grade'))));expect(grades).toEqual([...grades].sort((a,b)=>descending?b-a:a-b));}await page.getByLabel('Lọc bài theo lớp').selectOption('9');expect(await rows.evaluateAll(els=>els.every(e=>e.getAttribute('data-grade')==='9'))).toBe(true);await page.screenshot({path:'../docs/qa/cms-class-sort.png',fullPage:true});});\n> 6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n    |                                                                                                                                                                                                                                                                                              ^\n  7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n  8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n  9 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:6:286"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:16:50.444Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-pyt-087c3--JSON-phone-all-checkpoints-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-pyt-087c3--JSON-phone-all-checkpoints-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-pyt-087c3--JSON-phone-all-checkpoints-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-pyt-087c3--JSON-phone-all-checkpoints-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-f814f0aea53a0a01557d",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine linear_graph: JSON, phone, all checkpoints",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32625,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 286,
+                        "line": 6
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  4 | import scenarios from '../../contracts/math-scenarios.json' with {type:'json'};\n  5 | test('CMS readable navigation, class sort and filter',async({page})=>{await page.goto('/admin/lessons');await expect(page.locator('.sidebar')).not.toContainText('Chương trình');await expect(page.locator('.sidebar')).not.toContainText('Phân tích');const rows=page.locator('tr[data-grade]');await expect(rows.first()).toBeVisible();for(const [value,descending] of [['grade_asc',false],['grade_desc',true]] as const){await page.getByLabel('Sắp xếp bài học').selectOption(value);const grades=await rows.evaluateAll(els=>els.map(e=>Number(e.getAttribute('data-grade'))));expect(grades).toEqual([...grades].sort((a,b)=>descending?b-a:a-b));}await page.getByLabel('Lọc bài theo lớp').selectOption('9');expect(await rows.evaluateAll(els=>els.every(e=>e.getAttribute('data-grade')==='9'))).toBe(true);await page.screenshot({path:'../docs/qa/cms-class-sort.png',fullPage:true});});\n> 6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n    |                                                                                                                                                                                                                                                                                              ^\n  7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n  8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n  9 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:6:286"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:28.087Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-lin-cf717--JSON-phone-all-checkpoints-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-lin-cf717--JSON-phone-all-checkpoints-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-lin-cf717--JSON-phone-all-checkpoints-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-new-engine-lin-cf717--JSON-phone-all-checkpoints-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-110ce93ae5c481478f88",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "unknown math request is recorded without publishing an unsupported lesson",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32602,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 259,
+                        "line": 7
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nBrowser logs:\n\n<launching> C:\\Users\\NHIM\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1254\\chrome-headless-shell-win64\\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\\Users\\NHIM\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-eajH5Q --remote-debugging-pipe --no-startup-window\n<launched> pid=6028\n[pid=6028][err] [1114/031807.162:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=6028][err] [1114/031807.188:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=6028][err] [1114/031807.787:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=6028][err] [1114/031809.885:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x57640153f600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\n[pid=6028][err] [1114/031810.193:INFO:CONSOLE:0] \"[.WebGL-0x57640153f600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=6028][err] [1114/031810.200:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x57640153f600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\n[pid=6028][err] [1114/031810.404:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x57640153f600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\n[pid=6028][err] [1114/031810.545:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x576400622000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)\n[pid=6028][err] [1114/031810.752:INFO:CONSOLE:0] \"[.WebGL-0x57640153f600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=6028][err] [1114/031810.752:INFO:CONSOLE:0] \"[.WebGL-0x57640153f600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=6028][err] [1114/031810.774:INFO:CONSOLE:0] \"[.WebGL-0x576400622000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=6028] <gracefully close start>\nCall log:\n\u001b[2m  - waiting for getByText('Có đề khác?', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <summary>Có đề khác?</summary>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    51 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n   5 | test('CMS readable navigation, class sort and filter',async({page})=>{await page.goto('/admin/lessons');await expect(page.locator('.sidebar')).not.toContainText('Chương trình');await expect(page.locator('.sidebar')).not.toContainText('Phân tích');const rows=page.locator('tr[data-grade]');await expect(rows.first()).toBeVisible();for(const [value,descending] of [['grade_asc',false],['grade_desc',true]] as const){await page.getByLabel('Sắp xếp bài học').selectOption(value);const grades=await rows.evaluateAll(els=>els.map(e=>Number(e.getAttribute('data-grade'))));expect(grades).toEqual([...grades].sort((a,b)=>descending?b-a:a-b));}await page.getByLabel('Lọc bài theo lớp').selectOption('9');expect(await rows.evaluateAll(els=>els.every(e=>e.getAttribute('data-grade')==='9'))).toBe(true);await page.screenshot({path:'../docs/qa/cms-class-sort.png',fullPage:true});});\n   6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n>  7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n     |                                                                                                                                                                                                                                                                   ^\n   8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n   9 |\n  10 | // Fixtures are explicit test setup; the application itself starts empty.\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:7:259"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:05.704Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-unknown-math-r-a2fa4-shing-an-unsupported-lesson-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-unknown-math-r-a2fa4-shing-an-unsupported-lesson-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-unknown-math-r-a2fa4-shing-an-unsupported-lesson-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-unknown-math-r-a2fa4-shing-an-unsupported-lesson-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-5795e2b7c74161d8c4d8",
+          "file": "cms-refresh.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "friendly equation fields update live diagram and generated instruction",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 33366,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts",
+                        "column": 184,
+                        "line": 8
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n   6 | for(const p of exampleBlueprints.slice(6))test(`new engine ${p.problem.type}: JSON, phone, all checkpoints`,async({page})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toBeVisible();await page.screenshot({path:`../docs/qa/cms-new-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const d=page.getByRole('dialog');await d.locator('.math-canvas').evaluate(e=>e.setAttribute('data-persistent','yes'));const scenario=scenarios.find(s=>s.lessonId===p.id)!;for(const event of scenario.events){if(event.kind==='interaction'){const e=(event as any).event;await d.getByRole('spinbutton',{name:`Giá trị ${e.name}`,exact:true}).fill(String(e.value));}else{await d.getByRole('button',{name:/Tiếp tục|Hoàn thành bài học/}).click();}}await expect(d.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();expect(errors).toEqual([]);});\n   7 | test('unknown math request is recorded without publishing an unsupported lesson',async({page,request})=>{await page.goto('/admin/studio');const before=(await (await request.get('/api/catalog')).json()).length;await page.getByText('Có đề khác?',{exact:true}).click();await page.getByLabel('Đề cần tìm công cụ').fill('Chứng minh đường tròn nội tiếp');await page.getByRole('button',{name:'Gợi ý công cụ',exact:true}).click();await expect(page.getByText('Dạng này cần thêm tương tác mới.')).toBeVisible();await page.getByRole('button',{name:'Lưu đề cần bổ sung'}).click();await expect(page.getByRole('status')).toContainText('Đã lưu đề');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('mohoc-engine-requests')!)[0].problem)).toContain('đường tròn');expect((await (await request.get('/api/catalog')).json()).length).toBe(before);});\n>  8 | test('friendly equation fields update live diagram and generated instruction',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify({...exampleBlueprints.find(p=>p.problem.type==='linear_equation')!,grade:9}));await page.getByRole('button',{name:'Biểu mẫu',exact:true}).click();await page.getByLabel('Số lần lấy x',{exact:true}).fill('3');await page.getByLabel('Số cộng thêm',{exact:true}).fill('2');await page.getByLabel('Tổng ở vế phải',{exact:true}).fill('17');await expect(page.locator('.problem-diagram')).toContainText('3');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('3x + 2 = 17');await page.screenshot({path:'../docs/qa/cms-friendly-form.png',fullPage:true});});\n     |                                                                                                                                                                                        ^\n   9 |\n  10 | // Fixtures are explicit test setup; the application itself starts empty.\n  11 | test.beforeAll(async({request})=>{for(const manifest of fixtures){const r=await request.post('/api/admin/publish',{data:{manifest:{...manifest,grade:9}}});expect(r.ok()).toBe(true);}});\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\cms-refresh.spec.ts:8:184"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:43.365Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-friendly-equat-52147-m-and-generated-instruction-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-friendly-equat-52147-m-and-generated-instruction-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-friendly-equat-52147-m-and-generated-instruction-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\cms-refresh-friendly-equat-52147-m-and-generated-instruction-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-6fa55eeb74bed86afe64",
+          "file": "cms-refresh.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "creation.spec.ts",
+      "file": "creation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: number_line",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 33262,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts",
+                        "column": 92,
+                        "line": 5
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  3 | for(const [i,p]of exampleBlueprints.slice(0,4).entries())test(`JSON → auto engine → phone preview → publish → learn: ${p.problem.type}`,async({page,request})=>{\n  4 |   const input=structuredClone(p);input.id='e2e-'+p.id;input.title=p.title+' E2E';input.grade=9;\n> 5 |   await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(input,null,2));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText(['number_line_2d','fraction_bar_2d','algebra_balance_2d','function_plot_2d'][i]);await page.screenshot({path:`../docs/qa/creator-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const dialog=page.getByRole('dialog',{name:'Preview điện thoại'});await expect(dialog).toBeVisible();await expect(dialog.locator('.math-canvas')).toBeVisible();await dialog.locator('.math-canvas').evaluate(el=>el.setAttribute('data-persistent','yes'));\n    |                                                                                            ^\n  6 |   const first=p.problem.type==='fraction'?'numerator':p.problem.type==='quadratic_graph'?'a':'x';await dialog.getByRole('slider',{name:`Tham số ${first}`}).fill('2');await dialog.getByRole('button',{name:'Tiếp tục'}).click();await expect(dialog.locator('.math-canvas')).toHaveAttribute('data-persistent','yes');await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeDisabled();\n  7 |   const g=p.problem.given;if(p.problem.type==='number_line')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String(g.target));if(p.problem.type==='fraction')await dialog.getByRole('slider',{name:'Tham số numerator'}).fill(String(g.numerator));if(p.problem.type==='linear_equation')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String((g.c-g.b)/g.a));if(p.problem.type==='quadratic_graph')for(const name of ['a','b','c'])await dialog.getByRole('slider',{name:`Tham số ${name}`}).fill(String(g[name]));await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeEnabled();await page.screenshot({path:`../docs/qa/phone-preview-${p.problem.type}.png`});await page.getByRole('button',{name:'Đóng ✕'}).click();await page.getByRole('button',{name:'Tạo & xuất bản lên app ↗'}).click();await expect(page.getByRole('status')).toContainText('Đã xuất bản');\n  8 |   const catalog=await request.get('/api/catalog');expect(catalog.ok()).toBe(true);expect((await catalog.json()).some((l:any)=>l.lessonId===input.id&&l.status==='published')).toBe(true);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts:5:92"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:22.052Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-2d2fc-publish-→-learn-number-line-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-2d2fc-publish-→-learn-number-line-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-2d2fc-publish-→-learn-number-line-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-2d2fc-publish-→-learn-number-line-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-896c9c056e92b9029dfa",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: fraction",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 33509,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts",
+                        "column": 92,
+                        "line": 5
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  3 | for(const [i,p]of exampleBlueprints.slice(0,4).entries())test(`JSON → auto engine → phone preview → publish → learn: ${p.problem.type}`,async({page,request})=>{\n  4 |   const input=structuredClone(p);input.id='e2e-'+p.id;input.title=p.title+' E2E';input.grade=9;\n> 5 |   await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(input,null,2));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText(['number_line_2d','fraction_bar_2d','algebra_balance_2d','function_plot_2d'][i]);await page.screenshot({path:`../docs/qa/creator-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const dialog=page.getByRole('dialog',{name:'Preview điện thoại'});await expect(dialog).toBeVisible();await expect(dialog.locator('.math-canvas')).toBeVisible();await dialog.locator('.math-canvas').evaluate(el=>el.setAttribute('data-persistent','yes'));\n    |                                                                                            ^\n  6 |   const first=p.problem.type==='fraction'?'numerator':p.problem.type==='quadratic_graph'?'a':'x';await dialog.getByRole('slider',{name:`Tham số ${first}`}).fill('2');await dialog.getByRole('button',{name:'Tiếp tục'}).click();await expect(dialog.locator('.math-canvas')).toHaveAttribute('data-persistent','yes');await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeDisabled();\n  7 |   const g=p.problem.given;if(p.problem.type==='number_line')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String(g.target));if(p.problem.type==='fraction')await dialog.getByRole('slider',{name:'Tham số numerator'}).fill(String(g.numerator));if(p.problem.type==='linear_equation')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String((g.c-g.b)/g.a));if(p.problem.type==='quadratic_graph')for(const name of ['a','b','c'])await dialog.getByRole('slider',{name:`Tham số ${name}`}).fill(String(g[name]));await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeEnabled();await page.screenshot({path:`../docs/qa/phone-preview-${p.problem.type}.png`});await page.getByRole('button',{name:'Đóng ✕'}).click();await page.getByRole('button',{name:'Tạo & xuất bản lên app ↗'}).click();await expect(page.getByRole('status')).toContainText('Đã xuất bản');\n  8 |   const catalog=await request.get('/api/catalog');expect(catalog.ok()).toBe(true);expect((await catalog.json()).some((l:any)=>l.lessonId===input.id&&l.status==='published')).toBe(true);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts:5:92"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:20:00.750Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-bcb79--→-publish-→-learn-fraction-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-bcb79--→-publish-→-learn-fraction-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-bcb79--→-publish-→-learn-fraction-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-bcb79--→-publish-→-learn-fraction-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-74025078977b94269cee",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: linear_equation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 32692,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts",
+                        "column": 92,
+                        "line": 5
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  3 | for(const [i,p]of exampleBlueprints.slice(0,4).entries())test(`JSON → auto engine → phone preview → publish → learn: ${p.problem.type}`,async({page,request})=>{\n  4 |   const input=structuredClone(p);input.id='e2e-'+p.id;input.title=p.title+' E2E';input.grade=9;\n> 5 |   await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(input,null,2));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText(['number_line_2d','fraction_bar_2d','algebra_balance_2d','function_plot_2d'][i]);await page.screenshot({path:`../docs/qa/creator-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const dialog=page.getByRole('dialog',{name:'Preview điện thoại'});await expect(dialog).toBeVisible();await expect(dialog.locator('.math-canvas')).toBeVisible();await dialog.locator('.math-canvas').evaluate(el=>el.setAttribute('data-persistent','yes'));\n    |                                                                                            ^\n  6 |   const first=p.problem.type==='fraction'?'numerator':p.problem.type==='quadratic_graph'?'a':'x';await dialog.getByRole('slider',{name:`Tham số ${first}`}).fill('2');await dialog.getByRole('button',{name:'Tiếp tục'}).click();await expect(dialog.locator('.math-canvas')).toHaveAttribute('data-persistent','yes');await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeDisabled();\n  7 |   const g=p.problem.given;if(p.problem.type==='number_line')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String(g.target));if(p.problem.type==='fraction')await dialog.getByRole('slider',{name:'Tham số numerator'}).fill(String(g.numerator));if(p.problem.type==='linear_equation')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String((g.c-g.b)/g.a));if(p.problem.type==='quadratic_graph')for(const name of ['a','b','c'])await dialog.getByRole('slider',{name:`Tham số ${name}`}).fill(String(g[name]));await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeEnabled();await page.screenshot({path:`../docs/qa/phone-preview-${p.problem.type}.png`});await page.getByRole('button',{name:'Đóng ✕'}).click();await page.getByRole('button',{name:'Tạo & xuất bản lên app ↗'}).click();await expect(page.getByRole('status')).toContainText('Đã xuất bản');\n  8 |   const catalog=await request.get('/api/catalog');expect(catalog.ok()).toBe(true);expect((await catalog.json()).some((l:any)=>l.lessonId===input.id&&l.status==='published')).toBe(true);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts:5:92"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:20:38.395Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-fa49d-ish-→-learn-linear-equation-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-fa49d-ish-→-learn-linear-equation-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-fa49d-ish-→-learn-linear-equation-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-fa49d-ish-→-learn-linear-equation-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-cee636f6b939483a8cc6",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: quadratic_graph",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 33252,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts",
+                        "column": 92,
+                        "line": 5
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  3 | for(const [i,p]of exampleBlueprints.slice(0,4).entries())test(`JSON → auto engine → phone preview → publish → learn: ${p.problem.type}`,async({page,request})=>{\n  4 |   const input=structuredClone(p);input.id='e2e-'+p.id;input.title=p.title+' E2E';input.grade=9;\n> 5 |   await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(input,null,2));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText(['number_line_2d','fraction_bar_2d','algebra_balance_2d','function_plot_2d'][i]);await page.screenshot({path:`../docs/qa/creator-${p.problem.type}.png`,fullPage:true});await page.getByRole('button',{name:/Preview điện thoại/}).click();const dialog=page.getByRole('dialog',{name:'Preview điện thoại'});await expect(dialog).toBeVisible();await expect(dialog.locator('.math-canvas')).toBeVisible();await dialog.locator('.math-canvas').evaluate(el=>el.setAttribute('data-persistent','yes'));\n    |                                                                                            ^\n  6 |   const first=p.problem.type==='fraction'?'numerator':p.problem.type==='quadratic_graph'?'a':'x';await dialog.getByRole('slider',{name:`Tham số ${first}`}).fill('2');await dialog.getByRole('button',{name:'Tiếp tục'}).click();await expect(dialog.locator('.math-canvas')).toHaveAttribute('data-persistent','yes');await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeDisabled();\n  7 |   const g=p.problem.given;if(p.problem.type==='number_line')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String(g.target));if(p.problem.type==='fraction')await dialog.getByRole('slider',{name:'Tham số numerator'}).fill(String(g.numerator));if(p.problem.type==='linear_equation')await dialog.getByRole('slider',{name:'Tham số x'}).fill(String((g.c-g.b)/g.a));if(p.problem.type==='quadratic_graph')for(const name of ['a','b','c'])await dialog.getByRole('slider',{name:`Tham số ${name}`}).fill(String(g[name]));await expect(dialog.getByRole('button',{name:'Tiếp tục'})).toBeEnabled();await page.screenshot({path:`../docs/qa/phone-preview-${p.problem.type}.png`});await page.getByRole('button',{name:'Đóng ✕'}).click();await page.getByRole('button',{name:'Tạo & xuất bản lên app ↗'}).click();await expect(page.getByRole('status')).toContainText('Đã xuất bản');\n  8 |   const catalog=await request.get('/api/catalog');expect(catalog.ok()).toBe(true);expect((await catalog.json()).some((l:any)=>l.lessonId===input.id&&l.status==='published')).toBe(true);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts:5:92"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:21:14.427Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-9a96d-ish-→-learn-quadratic-graph-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-9a96d-ish-→-learn-quadratic-graph-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-9a96d-ish-→-learn-quadratic-graph-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-JSON-→-auto-engin-9a96d-ish-→-learn-quadratic-graph-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-7418ecfd53b6e9395e8c",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "wrong answer JSON is rejected; one numeric change routes same engine with new target",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 33766,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts",
+                        "column": 198,
+                        "line": 13
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'JSON', exact: true })\u001b[22m\n\n\n  11 |   if(p.problem.type==='number_line')await page.getByRole('slider',{name:'Tham số x'}).fill(String(-g.target));if(p.problem.type==='fraction')await page.getByRole('slider',{name:'Tham số numerator'}).fill(String(g.numerator*2));if(p.problem.type==='linear_equation')await page.getByRole('slider',{name:'Tham số x'}).fill(String((g.c-g.b)/g.a+1));if(p.problem.type==='quadratic_graph')await page.getByRole('slider',{name:'Tham số c'}).fill(String(g.c+1));await page.getByRole('button',{name:'Hoàn thành bài học'}).click();await expect(page.getByRole('heading',{name:'Bạn đã tự mình khám phá!'})).toBeVisible();\n  12 | });\n> 13 | test('wrong answer JSON is rejected; one numeric change routes same engine with new target',async({page})=>{await page.goto('/admin/studio');await page.getByRole('button',{name:'JSON',exact:true}).click();const p=structuredClone(exampleBlueprints[2]);p.problem.answer={x:999};await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.getByRole('alert')).toContainText('không khớp');p.problem.given={a:3,b:2,c:17};p.problem.answer={x:5};await page.getByLabel('Khuôn nội dung JSON').fill(JSON.stringify(p));await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await expect(page.locator('.build-result')).toContainText('algebra_balance_2d');await page.getByRole('button',{name:/Preview điện thoại/}).click();await expect(page.locator('.phone-frame .math-canvas')).toContainText('3x + 2 = 17');});\n     |                                                                                                                                                                                                      ^\n  14 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\creation.spec.ts:13:198"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:21:51.144Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-wrong-answer-JSON-cd123-same-engine-with-new-target-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-wrong-answer-JSON-cd123-same-engine-with-new-target-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-wrong-answer-JSON-cd123-same-engine-with-new-target-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\creation-wrong-answer-JSON-cd123-same-engine-with-new-target-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-ad26ac54b44623261965",
+          "file": "creation.spec.ts",
+          "line": 13,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "curriculum-pilot.spec.ts",
+      "file": "curriculum-pilot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "existing dashboard: template to Studio, AI round trip, publish and library",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 34190,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\curriculum-pilot.spec.ts",
+                        "column": 73,
+                        "line": 8
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Chọn mẫu theo chương trình Toán 9', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <summary>Chọn mẫu theo chương trình Toán 9</summary>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    53 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n   6 |  await page.getByRole('button',{name:'Thêm bài mới',exact:false}).click();\n   7 |  await expect(page).toHaveURL(/\\/admin\\/lessons\\/new$/);\n>  8 |  await page.getByText('Chọn mẫu theo chương trình Toán 9',{exact:true}).click();\n     |                                                                         ^\n   9 |  const card=page.locator('article').filter({hasText:'M9-ALG-09'});await card.getByRole('button',{name:'Dùng mẫu trong Studio'}).click();\n  10 |  await expect(page.getByRole('textbox',{name:'Tên bài học',exact:true})).toBeVisible();\n  11 |  const dl=page.waitForEvent('download');await page.getByRole('button',{name:'Tải bộ JSON cho AI'}).click();const download=await dl;const stream=await download.createReadStream();const chunks:Buffer[]=[];for await(const c of stream!)chunks.push(Buffer.from(c));const bundle=JSON.parse(Buffer.concat(chunks).toString());expect(bundle.lesson.checkpoints).toHaveLength(6);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\curriculum-pilot.spec.ts:8:73"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:22:28.901Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\curriculum-pilot-existing--19c9d-nd-trip-publish-and-library-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\curriculum-pilot-existing--19c9d-nd-trip-publish-and-library-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\curriculum-pilot-existing--19c9d-nd-trip-publish-and-library-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\curriculum-pilot-existing--19c9d-nd-trip-publish-and-library-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "baaec4761752945ebb5e-ed9c19e9e30f89b6e3cb",
+          "file": "curriculum-pilot.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "geometry-studio.spec.ts",
+      "file": "geometry-studio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Geometry Studio export/import/save/version math9-geometry-01",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13393,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:23:07.512Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec63b118b17554a9e308-c718e544bd5c4709bdfa",
+          "file": "geometry-studio.spec.ts",
+          "line": 3,
+          "column": 22
+        },
+        {
+          "title": "Geometry Studio export/import/save/version math9-geometry-05",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16970,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:23:21.195Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec63b118b17554a9e308-74c7fb0b6d29db046d75",
+          "file": "geometry-studio.spec.ts",
+          "line": 3,
+          "column": 22
+        },
+        {
+          "title": "Geometry Studio export/import/save/version math9-geometry-09",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17624,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:23:38.211Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec63b118b17554a9e308-91d309286fa2e0b38c21",
+          "file": "geometry-studio.spec.ts",
+          "line": 3,
+          "column": 22
+        }
+      ]
+    },
+    {
+      "title": "math9.spec.ts",
+      "file": "math9.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Toán 9: all topics build, interact, publish and survive reload",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 136234,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\math9.spec.ts",
+                        "column": 55,
+                        "line": 7
+                      },
+                      "message": "Error: locator.selectOption: Test timeout of 90000ms exceeded.\nBrowser logs:\n\n<launching> C:\\Users\\NHIM\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1254\\chrome-headless-shell-win64\\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\\Users\\NHIM\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-2bWhqs --remote-debugging-pipe --no-startup-window\n<launched> pid=20040\n[pid=20040][err] [1114/032308.264:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=20040][err] [1114/032308.500:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=20040][err] [1114/032309.483:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=20040][err] [1114/032311.966:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x5efc0151aa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\n[pid=20040][err] [1114/032312.382:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x5efc0151aa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\n[pid=20040][err] [1114/032312.418:INFO:CONSOLE:0] \"[.WebGL-0x5efc0151aa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=20040][err] [1114/032312.680:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x5efc0151aa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\n[pid=20040][err] [1114/032312.691:INFO:CONSOLE:0] \"[.WebGL-0x5efc0151aa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=20040][err] [1114/032312.825:ERROR:gpu\\command_buffer\\service\\gl_utils.cc:431] [.WebGL-0x5efc0060c400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)\n[pid=20040][err] [1114/032313.054:INFO:CONSOLE:0] \"[.WebGL-0x5efc0151aa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=20040][err] [1114/032313.070:INFO:CONSOLE:0] \"[.WebGL-0x5efc0060c400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)\", source: http://127.0.0.1:5181/admin/lessons/new (0)\n[pid=20040][err] [1114/032316.216:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=20040][err] [1114/032316.251:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=20040][err] [1114/032316.898:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=20040][err] [1114/032321.714:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=20040][err] [1114/032321.735:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=20040][err] [1114/032323.443:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=20040][err] [1114/032331.399:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=20040][err] [1114/032331.783:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=20040][err] [1114/032332.851:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=20040][err] [1114/032338.795:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=20040][err] [1114/032339.165:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=20040][err] [1114/032339.928:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=20040][err] [1114/032348.892:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=20040][err] [1114/032348.934:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=20040][err] [1114/032349.896:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=20040][err] [1114/032357.927:INFO:CONSOLE:934] \"[vite] connecting...\", source: http://127.0.0.1:5181/@vite/client (934)\n[pid=20040][err] [1114/032357.971:INFO:CONSOLE:1043] \"[vite] connected.\", source: http://127.0.0.1:5181/@vite/client (1043)\n[pid=20040][err] [1114/032358.940:INFO:CONSOLE:15994] \"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold\", source: http://127.0.0.1:5181/node_modules/.vite/deps/react-dom_client.js?v=d47eec91 (15994)\n[pid=20040] <gracefully close start>\nCall log:\n\u001b[2m  - waiting for getByLabel('Chủ đề Toán 9', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <select aria-label=\"Chủ đề Toán 9\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    240 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m        - element is not visible\u001b[22m\n\u001b[2m      - retrying select option action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and enabled\u001b[22m\n\n\n   5 |  await page.goto('/admin/studio');\n   6 |  for(const topic of math9Topics){\n>  7 |   await page.getByLabel('Chủ đề Toán 9',{exact:true}).selectOption(topic.id);\n     |                                                       ^\n   8 |   await page.getByRole('button',{name:'Dựng bài Toán 9',exact:true}).click();\n   9 |   await page.getByRole('button',{name:'Preview điện thoại',exact:true}).click();\n  10 |   const dialog=page.getByRole('dialog'),lesson=buildRecognition(topic,'test-'+topic.id);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\math9.spec.ts:7:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:23:57.399Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\math9-Toán-9-all-topics-bu-ddd09--publish-and-survive-reload-admin\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\math9-Toán-9-all-topics-bu-ddd09--publish-and-survive-reload-admin\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\math9-Toán-9-all-topics-bu-ddd09--publish-and-survive-reload-admin\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896\\artifacts\\math9-Toán-9-all-topics-bu-ddd09--publish-and-survive-reload-admin\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e64d5bb38f5d03fec2fa-1ed3eb96ebee3d206002",
+          "file": "math9.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "uime-editor.spec.ts",
+      "file": "uime-editor.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "SVG upload stays inert and six checkpoint editor preserves scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4776,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:26:30.628Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "566a2a5657d087d0f854-66a2a69200517f73e9a8",
+          "file": "uime-editor.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T20:12:30.746Z",
+    "duration": 845553.742,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 16,
+    "flaky": 0
+  }
+}

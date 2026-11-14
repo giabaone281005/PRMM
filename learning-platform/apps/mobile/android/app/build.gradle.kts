@@ -4,6 +4,10 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+// The UI test launcher opts into a separate package; ordinary builds keep their ID.
+val mohocUiTest = providers.gradleProperty("target").orNull
+    ?.replace('\\', '/')?.endsWith("integration_test/user_ui_test.dart") == true
+
 android {
     namespace = "vn.mohoc.mo_hoc"
     compileSdk = flutter.compileSdkVersion
@@ -17,6 +21,8 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "vn.mohoc.mo_hoc"
+        if (mohocUiTest) applicationIdSuffix = ".uitest"
+        manifestPlaceholders["appLabel"] = if (mohocUiTest) "Mở Học UI Test" else "Mở Học"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

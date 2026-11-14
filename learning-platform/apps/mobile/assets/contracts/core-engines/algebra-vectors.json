@@ -1,0 +1,4946 @@
+[
+  {
+    "name": "eng03-product-equation-1-1",
+    "config": {
+      "mode": "product_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": 1,
+      "c": -6,
+      "degree": 2,
+      "delta": 25,
+      "roots": [
+        -3,
+        2
+      ],
+      "candidates": [
+        -3,
+        2
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": -1,
+      "product": -6
+    },
+    "equation": {
+      "left": {
+        "id": "numerator",
+        "op": "mul",
+        "terms": [
+          {
+            "id": "factor-L",
+            "op": "add",
+            "terms": [
+              {
+                "id": "factor-L-ax",
+                "op": "mul",
+                "terms": [
+                  {
+                    "id": "factor-L-a",
+                    "op": "const",
+                    "value": 1
+                  },
+                  {
+                    "id": "factor-L-x",
+                    "op": "var",
+                    "name": "x"
+                  }
+                ]
+              },
+              {
+                "id": "factor-L-b",
+                "op": "const",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "id": "factor-R",
+            "op": "add",
+            "terms": [
+              {
+                "id": "factor-R-ax",
+                "op": "mul",
+                "terms": [
+                  {
+                    "id": "factor-R-a",
+                    "op": "const",
+                    "value": 1
+                  },
+                  {
+                    "id": "factor-R-x",
+                    "op": "var",
+                    "name": "x"
+                  }
+                ]
+              },
+              {
+                "id": "factor-R-b",
+                "op": "const",
+                "value": 3
+              }
+            ]
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": -6,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": -4,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": -4,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": -5.25,
+        "right": 0
+      },
+      {
+        "x": -3,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      1
+    ],
+    "operations": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-product-equation-1-2",
+    "config": {
+      "mode": "product_equation",
+      "data": {
+        "p": 2,
+        "q": -1,
+        "r": 1,
+        "s": -4
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 2,
+      "b": -9,
+      "c": 4,
+      "degree": 2,
+      "delta": 49,
+      "roots": [
+        0.5,
+        4
+      ],
+      "candidates": [
+        0.5,
+        4
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": 4.5,
+      "product": 2
+    },
+    "equation": {
+      "left": {
+        "id": "numerator",
+        "op": "mul",
+        "terms": [
+          {
+            "id": "factor-L",
+            "op": "add",
+            "terms": [
+              {
+                "id": "factor-L-ax",
+                "op": "mul",
+                "terms": [
+                  {
+                    "id": "factor-L-a",
+                    "op": "const",
+                    "value": 2
+                  },
+                  {
+                    "id": "factor-L-x",
+                    "op": "var",
+                    "name": "x"
+                  }
+                ]
+              },
+              {
+                "id": "factor-L-b",
+                "op": "const",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "id": "factor-R",
+            "op": "add",
+            "terms": [
+              {
+                "id": "factor-R-ax",
+                "op": "mul",
+                "terms": [
+                  {
+                    "id": "factor-R-a",
+                    "op": "const",
+                    "value": 1
+                  },
+                  {
+                    "id": "factor-R-x",
+                    "op": "var",
+                    "name": "x"
+                  }
+                ]
+              },
+              {
+                "id": "factor-R-b",
+                "op": "const",
+                "value": -4
+              }
+            ]
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 4,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": -3,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 30,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 4,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      1
+    ],
+    "operations": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-product-equation-1-3",
+    "config": {
+      "mode": "product_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": -2
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": -4,
+      "c": 4,
+      "degree": 2,
+      "delta": 0,
+      "roots": [
+        2
+      ],
+      "candidates": [
+        2
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "one",
+      "count": 1,
+      "sum": 4,
+      "product": 4
+    },
+    "equation": {
+      "left": {
+        "id": "numerator",
+        "op": "mul",
+        "terms": [
+          {
+            "id": "factor-L",
+            "op": "add",
+            "terms": [
+              {
+                "id": "factor-L-ax",
+                "op": "mul",
+                "terms": [
+                  {
+                    "id": "factor-L-a",
+                    "op": "const",
+                    "value": 1
+                  },
+                  {
+                    "id": "factor-L-x",
+                    "op": "var",
+                    "name": "x"
+                  }
+                ]
+              },
+              {
+                "id": "factor-L-b",
+                "op": "const",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "id": "factor-R",
+            "op": "add",
+            "terms": [
+              {
+                "id": "factor-R-ax",
+                "op": "mul",
+                "terms": [
+                  {
+                    "id": "factor-R-a",
+                    "op": "const",
+                    "value": 1
+                  },
+                  {
+                    "id": "factor-R-x",
+                    "op": "var",
+                    "name": "x"
+                  }
+                ]
+              },
+              {
+                "id": "factor-R-b",
+                "op": "const",
+                "value": -2
+              }
+            ]
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 4,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 1,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 16,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 2.25,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      1
+    ],
+    "operations": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-rational-equation-2-1",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3,
+        "d": 1,
+        "e": -2,
+        "f": 0,
+        "g": 1,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": 1,
+      "c": -6,
+      "degree": 2,
+      "delta": 25,
+      "roots": [
+        -3
+      ],
+      "candidates": [
+        -3,
+        2
+      ],
+      "forbidden": [
+        2
+      ],
+      "extraneous": [
+        2
+      ],
+      "kind": "one",
+      "count": 1,
+      "sum": -1,
+      "product": -6
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 0
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 3,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 4,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 1,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 3.5,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": null,
+        "right": 0
+      },
+      {
+        "x": -3,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": null,
+        "right": 0
+      }
+    ],
+    "domainMask": 16,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-rational-equation-2-2",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 2,
+        "d": 1,
+        "e": -1,
+        "f": 1,
+        "g": 1,
+        "k": 1
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 0,
+      "c": -3,
+      "degree": 0,
+      "delta": null,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [
+        -1,
+        1
+      ],
+      "extraneous": [],
+      "kind": "none",
+      "count": 0,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -1
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 1
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 4,
+        "right": 1
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 1
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 1
+      },
+      {
+        "x": 0.5,
+        "left": 5,
+        "right": 1
+      },
+      {
+        "x": -1,
+        "left": null,
+        "right": 1
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 1
+      }
+    ],
+    "domainMask": 10,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-rational-equation-2-3",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -1,
+        "r": 1,
+        "s": -2,
+        "d": 1,
+        "e": -1,
+        "f": 1,
+        "g": -2,
+        "k": 1
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "degree": 0,
+      "delta": null,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [
+        1,
+        2
+      ],
+      "extraneous": [],
+      "kind": "all",
+      "count": 3,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -1
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -1
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 1
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 1,
+        "right": 1
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 1
+      },
+      {
+        "x": -2,
+        "left": 1,
+        "right": 1
+      },
+      {
+        "x": 0.5,
+        "left": 1,
+        "right": 1
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 1
+      },
+      {
+        "x": 2,
+        "left": null,
+        "right": 1
+      }
+    ],
+    "domainMask": 24,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-quadratic-equation-3-1",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 1,
+        "b": -3,
+        "c": 2,
+        "degreePolicy": "quadratic_only"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": -3,
+      "c": 2,
+      "degree": 2,
+      "delta": 1,
+      "roots": [
+        1,
+        2
+      ],
+      "candidates": [
+        1,
+        2
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": 3,
+      "product": 2
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 1
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": -3
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 2
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 12,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 0.75,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      4,
+      0,
+      5
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-quadratic-equation-3-2",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 1,
+        "b": 2,
+        "c": 1,
+        "degreePolicy": "quadratic_only"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": 2,
+      "c": 1,
+      "degree": 2,
+      "delta": 0,
+      "roots": [
+        -1
+      ],
+      "candidates": [
+        -1
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "one",
+      "count": 1,
+      "sum": -2,
+      "product": 1
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 1
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 2
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 1
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 1,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 4,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 1,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 2.25,
+        "right": 0
+      },
+      {
+        "x": -1,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      3,
+      4,
+      3
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-quadratic-equation-3-3",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 1,
+        "b": 0,
+        "c": 2,
+        "degreePolicy": "quadratic_only"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": 0,
+      "c": 2,
+      "degree": 2,
+      "delta": -8,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "none",
+      "count": 0,
+      "sum": 0,
+      "product": 2
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 1
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 2
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 3,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 6,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 2.25,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      3,
+      2,
+      4
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-viete-4-1",
+    "config": {
+      "mode": "viete",
+      "data": {
+        "a": 1,
+        "b": -3,
+        "c": 2
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": -3,
+      "c": 2,
+      "degree": 2,
+      "delta": 1,
+      "roots": [
+        1,
+        2
+      ],
+      "candidates": [
+        1,
+        2
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": 3,
+      "product": 2
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 1
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": -3
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 2
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 12,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 0.75,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      1
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-viete-4-2",
+    "config": {
+      "mode": "viete",
+      "data": {
+        "a": 2,
+        "b": 4,
+        "c": 2
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 2,
+      "b": 4,
+      "c": 2,
+      "degree": 2,
+      "delta": 0,
+      "roots": [
+        -1
+      ],
+      "candidates": [
+        -1
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "one",
+      "count": 1,
+      "sum": -2,
+      "product": 1
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 2
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 4
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 2
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 8,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 4.5,
+        "right": 0
+      },
+      {
+        "x": -1,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      1
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-viete-4-3",
+    "config": {
+      "mode": "viete",
+      "data": {
+        "a": -1,
+        "b": 2,
+        "c": 3
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": -1,
+      "b": 2,
+      "c": 3,
+      "degree": 2,
+      "delta": 16,
+      "roots": [
+        -1,
+        3
+      ],
+      "candidates": [
+        -1,
+        3
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": 2,
+      "product": -3
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": -1
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 2
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 3
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 3,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 4,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": -5,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 3.75,
+        "right": 0
+      },
+      {
+        "x": -1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 3,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      1
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-quadratic-equation-5-1",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 2,
+        "c": -3,
+        "degreePolicy": "allow_linear"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 2,
+      "c": -3,
+      "degree": 1,
+      "delta": null,
+      "roots": [
+        1.5
+      ],
+      "candidates": [
+        1.5
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "one",
+      "count": 1,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 2
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": -3
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": -3,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": -1,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": -7,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": -2,
+        "right": 0
+      },
+      {
+        "x": 1.5,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      2,
+      4,
+      0
+    ],
+    "operations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-quadratic-equation-5-2",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "degreePolicy": "allow_linear"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "degree": 0,
+      "delta": null,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "all",
+      "count": 3,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 0
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      0,
+      0
+    ],
+    "operations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-quadratic-equation-5-3",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 0,
+        "c": 2,
+        "degreePolicy": "allow_linear"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 0,
+      "c": 2,
+      "degree": 0,
+      "delta": null,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "none",
+      "count": 0,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 2
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 2,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      1,
+      1,
+      3
+    ],
+    "operations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-rational-equation-6-1",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3,
+        "d": 1,
+        "e": -4,
+        "f": 0,
+        "g": 1,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": 1,
+      "c": -6,
+      "degree": 2,
+      "delta": 25,
+      "roots": [
+        -3,
+        2
+      ],
+      "candidates": [
+        -3,
+        2
+      ],
+      "forbidden": [
+        4
+      ],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": -1,
+      "product": -6
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -4
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 0
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 1.5,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 1.3333333333333333,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0.6666666666666666,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 1.5,
+        "right": 0
+      },
+      {
+        "x": 4,
+        "left": null,
+        "right": 0
+      },
+      {
+        "x": -3,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 32,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-rational-equation-6-2",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": -2,
+        "d": 1,
+        "e": -2,
+        "f": 0,
+        "g": 1,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": -4,
+      "c": 4,
+      "degree": 2,
+      "delta": 0,
+      "roots": [],
+      "candidates": [
+        2
+      ],
+      "forbidden": [
+        2
+      ],
+      "extraneous": [
+        2
+      ],
+      "kind": "none",
+      "count": 0,
+      "sum": 4,
+      "product": 4
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 0
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": -2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": -1,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": -4,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": -1.5,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": null,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": null,
+        "right": 0
+      }
+    ],
+    "domainMask": 16,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "eng03-rational-equation-6-3",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": 0,
+        "r": 1,
+        "s": 0,
+        "d": 1,
+        "e": 1,
+        "f": 1,
+        "g": 1,
+        "k": -1
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 2,
+      "b": 2,
+      "c": 1,
+      "degree": 2,
+      "delta": -4,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [
+        -1
+      ],
+      "extraneous": [],
+      "kind": "none",
+      "count": 0,
+      "sum": -1,
+      "product": 0.5
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": -1
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 0,
+        "right": -1
+      },
+      {
+        "x": 1,
+        "left": 0.25,
+        "right": -1
+      },
+      {
+        "x": -2,
+        "left": 4,
+        "right": -1
+      },
+      {
+        "x": 0.5,
+        "left": 0.1111111111111111,
+        "right": -1
+      },
+      {
+        "x": -1,
+        "left": null,
+        "right": -1
+      }
+    ],
+    "domainMask": 2,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "linear",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 2,
+        "c": -3,
+        "degreePolicy": "allow_linear"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 2,
+      "c": -3,
+      "degree": 1,
+      "delta": null,
+      "roots": [
+        1.5
+      ],
+      "candidates": [
+        1.5
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "one",
+      "count": 1,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 2
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": -3
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": -3,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": -1,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": -7,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": -2,
+        "right": 0
+      },
+      {
+        "x": 1.5,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      2,
+      4,
+      0
+    ],
+    "operations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "constantFalse",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 0,
+        "c": 1,
+        "degreePolicy": "allow_linear"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 0,
+      "c": 1,
+      "degree": 0,
+      "delta": null,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "none",
+      "count": 0,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 1
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 1,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 1,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 1,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 1,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      1,
+      1,
+      2
+    ],
+    "operations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "identity",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "degreePolicy": "allow_linear"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "degree": 0,
+      "delta": null,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "all",
+      "count": 3,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 0
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      0,
+      0,
+      0
+    ],
+    "operations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "irrational",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 1,
+        "b": 0,
+        "c": -2,
+        "degreePolicy": "quadratic_only"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": 0,
+      "c": -2,
+      "degree": 2,
+      "delta": 8,
+      "roots": [
+        -1.4142135623730951,
+        1.414213562373095
+      ],
+      "candidates": [
+        -1.4142135623730951,
+        1.414213562373095
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": 0,
+      "product": -2
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": 1
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": -2
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": -2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": -1,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 2,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": -1.75,
+        "right": 0
+      },
+      {
+        "x": -1.4142135623730951,
+        "left": 4.440892098500626e-16,
+        "right": 0
+      },
+      {
+        "x": 1.414213562373095,
+        "left": -4.440892098500626e-16,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      3,
+      2,
+      0
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "negativeLeading",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": -2,
+        "b": 0,
+        "c": 8,
+        "degreePolicy": "quadratic_only"
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": -2,
+      "b": 0,
+      "c": 8,
+      "degree": 2,
+      "delta": 64,
+      "roots": [
+        -2,
+        2
+      ],
+      "candidates": [
+        -2,
+        2
+      ],
+      "forbidden": [],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": 0,
+      "product": -4
+    },
+    "equation": {
+      "left": {
+        "id": "polynomial",
+        "op": "add",
+        "terms": [
+          {
+            "id": "term-square",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-a",
+                "op": "const",
+                "value": -2
+              },
+              {
+                "id": "square-x-1",
+                "op": "var",
+                "name": "x"
+              },
+              {
+                "id": "square-x-2",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "term-linear",
+            "op": "mul",
+            "terms": [
+              {
+                "id": "coefficient-b",
+                "op": "const",
+                "value": 0
+              },
+              {
+                "id": "linear-x",
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "id": "coefficient-c",
+            "op": "const",
+            "value": 8
+          }
+        ]
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 8,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 6,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 7.5,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 0,
+    "slots": [
+      1,
+      2,
+      5
+    ],
+    "operations": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "rational-noRootsAfterExclusion",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": -2,
+        "d": 1,
+        "e": -2,
+        "f": 0,
+        "g": 1,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": -4,
+      "c": 4,
+      "degree": 2,
+      "delta": 0,
+      "roots": [],
+      "candidates": [
+        2
+      ],
+      "forbidden": [
+        2
+      ],
+      "extraneous": [
+        2
+      ],
+      "kind": "none",
+      "count": 0,
+      "sum": 4,
+      "product": 4
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 0
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": -2,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": -1,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": -4,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": -1.5,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": null,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": null,
+        "right": 0
+      }
+    ],
+    "domainMask": 16,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "rational-negativeDiscriminant",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": 0,
+        "r": 1,
+        "s": 0,
+        "d": 1,
+        "e": 1,
+        "f": 1,
+        "g": 1,
+        "k": -1
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 2,
+      "b": 2,
+      "c": 1,
+      "degree": 2,
+      "delta": -4,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [
+        -1
+      ],
+      "extraneous": [],
+      "kind": "none",
+      "count": 0,
+      "sum": -1,
+      "product": 0.5
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": -1
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 0,
+        "right": -1
+      },
+      {
+        "x": 1,
+        "left": 0.25,
+        "right": -1
+      },
+      {
+        "x": -2,
+        "left": 4,
+        "right": -1
+      },
+      {
+        "x": 0.5,
+        "left": 0.1111111111111111,
+        "right": -1
+      },
+      {
+        "x": -1,
+        "left": null,
+        "right": -1
+      }
+    ],
+    "domainMask": 2,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "rational-twoValidRoots",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3,
+        "d": 1,
+        "e": -4,
+        "f": 0,
+        "g": 1,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": 1,
+      "c": -6,
+      "degree": 2,
+      "delta": 25,
+      "roots": [
+        -3,
+        2
+      ],
+      "candidates": [
+        -3,
+        2
+      ],
+      "forbidden": [
+        4
+      ],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": -1,
+      "product": -6
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -4
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 0
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 1.5,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": 1.3333333333333333,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0.6666666666666666,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": 1.5,
+        "right": 0
+      },
+      {
+        "x": 4,
+        "left": null,
+        "right": 0
+      },
+      {
+        "x": -3,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 2,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 32,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "rational-constantFalse",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 2,
+        "d": 1,
+        "e": -1,
+        "f": 1,
+        "g": 1,
+        "k": 1
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": 0,
+      "c": -3,
+      "degree": 0,
+      "delta": null,
+      "roots": [],
+      "candidates": [],
+      "forbidden": [
+        -1,
+        1
+      ],
+      "extraneous": [],
+      "kind": "none",
+      "count": 0,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -1
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 1
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 4,
+        "right": 1
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 1
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 1
+      },
+      {
+        "x": 0.5,
+        "left": 5,
+        "right": 1
+      },
+      {
+        "x": -1,
+        "left": null,
+        "right": 1
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 1
+      }
+    ],
+    "domainMask": 10,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "rational-linear",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": 0,
+        "r": 1,
+        "s": 0,
+        "d": 1,
+        "e": 1,
+        "f": 1,
+        "g": 1,
+        "k": 1
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 0,
+      "b": -2,
+      "c": -1,
+      "degree": 1,
+      "delta": null,
+      "roots": [
+        -0.5
+      ],
+      "candidates": [
+        -0.5
+      ],
+      "forbidden": [
+        -1
+      ],
+      "extraneous": [],
+      "kind": "one",
+      "count": 1,
+      "sum": null,
+      "product": null
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 1
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": 0,
+        "right": 1
+      },
+      {
+        "x": 1,
+        "left": 0.25,
+        "right": 1
+      },
+      {
+        "x": -2,
+        "left": 4,
+        "right": 1
+      },
+      {
+        "x": 0.5,
+        "left": 0.1111111111111111,
+        "right": 1
+      },
+      {
+        "x": -1,
+        "left": null,
+        "right": 1
+      },
+      {
+        "x": -0.5,
+        "left": 1,
+        "right": 1
+      }
+    ],
+    "domainMask": 2,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "rational-repeatedDenominator",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -3,
+        "r": 1,
+        "s": 2,
+        "d": 1,
+        "e": -1,
+        "f": 2,
+        "g": -2,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": true,
+    "model": {
+      "a": 1,
+      "b": -1,
+      "c": -6,
+      "degree": 2,
+      "delta": 25,
+      "roots": [
+        -2,
+        3
+      ],
+      "candidates": [
+        -2,
+        3
+      ],
+      "forbidden": [
+        1
+      ],
+      "extraneous": [],
+      "kind": "two",
+      "count": 2,
+      "sum": 1,
+      "product": -6
+    },
+    "equation": {
+      "left": {
+        "id": "fraction",
+        "op": "div",
+        "numerator": {
+          "id": "numerator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "factor-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-L-b",
+                  "op": "const",
+                  "value": -3
+                }
+              ]
+            },
+            {
+              "id": "factor-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "factor-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "factor-R-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "factor-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "factor-R-b",
+                  "op": "const",
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        },
+        "denominator": {
+          "id": "denominator",
+          "op": "mul",
+          "terms": [
+            {
+              "id": "denominator-L",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-L-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-L-a",
+                      "op": "const",
+                      "value": 1
+                    },
+                    {
+                      "id": "denominator-L-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-L-b",
+                  "op": "const",
+                  "value": -1
+                }
+              ]
+            },
+            {
+              "id": "denominator-R",
+              "op": "add",
+              "terms": [
+                {
+                  "id": "denominator-R-ax",
+                  "op": "mul",
+                  "terms": [
+                    {
+                      "id": "denominator-R-a",
+                      "op": "const",
+                      "value": 2
+                    },
+                    {
+                      "id": "denominator-R-x",
+                      "op": "var",
+                      "name": "x"
+                    }
+                  ]
+                },
+                {
+                  "id": "denominator-R-b",
+                  "op": "const",
+                  "value": -2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "id": "rhs",
+        "op": "const",
+        "value": 0
+      }
+    },
+    "probes": [
+      {
+        "x": 0,
+        "left": -3,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 0.5,
+        "left": -12.5,
+        "right": 0
+      },
+      {
+        "x": 1,
+        "left": null,
+        "right": 0
+      },
+      {
+        "x": -2,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "x": 3,
+        "left": 0,
+        "right": 0
+      }
+    ],
+    "domainMask": 8,
+    "slots": [],
+    "operations": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "name": "zero-factor",
+    "config": {
+      "mode": "product_equation",
+      "data": {
+        "p": 0,
+        "q": 1,
+        "r": 1,
+        "s": 2
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "zero-denominator",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3,
+        "d": 0,
+        "e": 0,
+        "f": 0,
+        "g": 1,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "zero-second-denominator",
+    "config": {
+      "mode": "rational_equation",
+      "data": {
+        "p": 1,
+        "q": -2,
+        "r": 1,
+        "s": 3,
+        "d": 1,
+        "e": -2,
+        "f": 0,
+        "g": 0,
+        "k": 0
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "fractional-coefficient",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0.5,
+        "b": 1,
+        "c": 1,
+        "degreePolicy": "quadratic_only"
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "a-zero-strict",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 1,
+        "c": 2,
+        "degreePolicy": "quadratic_only"
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "unknown-degree-policy",
+    "config": {
+      "mode": "quadratic_equation",
+      "data": {
+        "a": 0,
+        "b": 1,
+        "c": 2,
+        "degreePolicy": "ignore"
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "viete-no-real",
+    "config": {
+      "mode": "viete",
+      "data": {
+        "a": 1,
+        "b": 0,
+        "c": 1
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "viete-a-zero",
+    "config": {
+      "mode": "viete",
+      "data": {
+        "a": 0,
+        "b": 1,
+        "c": 2
+      },
+      "task": "guided"
+    },
+    "valid": false
+  },
+  {
+    "name": "unbounded-coefficient",
+    "config": {
+      "mode": "viete",
+      "data": {
+        "a": 10,
+        "b": 0,
+        "c": 0
+      },
+      "task": "guided"
+    },
+    "valid": false
+  }
+]

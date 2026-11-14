@@ -1,0 +1,17 @@
+{
+  "mode": "list",
+  "status": "FAIL",
+  "testPackage": "vn.mohoc.mo_hoc.uitest",
+  "steps": [
+    {
+      "label": "Device runner",
+      "status": "FAIL",
+      "exitCode": 1
+    }
+  ],
+  "limitations": [
+    "Fixture catalog/local test backend; no hosted login/RLS acceptance",
+    "Native Flutter gestures; extended WebView DOM-driven suites are not included"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user-device\\2026-11-13T20-32-37-805Z-36740"
+}

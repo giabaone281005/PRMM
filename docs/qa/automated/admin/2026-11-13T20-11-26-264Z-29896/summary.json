@@ -1,0 +1,32 @@
+{
+  "role": "admin",
+  "mode": "test",
+  "status": "FAIL",
+  "steps": [
+    {
+      "label": "Playwright install chromium",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "npm run typecheck",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "npm test",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Playwright test --config=playwright.roles.config.ts",
+      "status": "FAIL",
+      "exitCode": 1
+    }
+  ],
+  "limitations": [
+    "Local test backend; no hosted authentication/RLS acceptance",
+    "No physical device integration or native gesture acceptance"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-11-26-264Z-29896"
+}

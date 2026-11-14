@@ -44,11 +44,27 @@ begin
   if jsonb_array_length(m->'recognition')<>jsonb_array_length(m->'checkpoints') or m#>>'{engine,type}'<>'math_explorer_2d' then return false;end if;
   for t in select value from jsonb_array_elements(m->'recognition') loop
    if not(t ? 'uime') then continue;end if;u=t->'uime';a=u->'answers';
+   if u ? 'algebra' then
+    if u->>'kind'<>'FORMULA_SNAP_BUILDER' or u ? 'geometry' or u ? 'graph' or u ? 'parabola' or u ? 'cylinder' or not lesson_private.valid_algebra(u->'algebra') then return false;end if;
+   end if;
+   if u ? 'geometry' then
+    if u->>'kind'<>'TRIANGLE_HOTSPOT_TAP' or u ? 'graph' or u ? 'parabola' or u ? 'cylinder' or not lesson_private.valid_geometry(u->'geometry') then return false;end if;
+   end if;
+   if u ? 'graph' then
+    if u->>'kind'<>'PARABOLA_SLIDER' or u ? 'parabola' or u ? 'cylinder' or not lesson_private.valid_cartesian_graph(u->'graph') then return false;end if;
+   end if;
+   if u ? 'parabola' then
+    if u->>'kind'<>'PARABOLA_SLIDER' or u ? 'cylinder' or (u->>'min')::numeric<>-5 or (u->>'max')::numeric<>5 or (u->>'step')::numeric<>1 or jsonb_array_length(a)<>1 or (a->>0)::numeric<>(u#>>'{parabola,a}')::numeric then return false;end if;
+   end if;
+   if u ? 'cylinder' then
+    if u->>'kind'<>'3D_SOLID_INSPECTOR' or u->>'solid'<>'cylinder' or jsonb_array_length(u->'tokens')<>5 or (u#>>'{cylinder,height}')::numeric/(u#>>'{cylinder,radius}')::numeric not between 0.1 and 10 then return false;end if;
+   end if;
    if (u->>'min')::numeric >= (u->>'max')::numeric then return false;end if;
    if u->>'kind' in ('TOKEN_CLASSIFIER','EVENT_CARD_BUCKET') and jsonb_array_length(u->'tokens')<>jsonb_array_length(a) then return false;end if;
    if u->>'kind'='FORMULA_SNAP_BUILDER' and jsonb_array_length(u->'labels')<>jsonb_array_length(a) then return false;end if;
    if u->>'kind'='NUMBER_LINE_SELECTOR' and (jsonb_array_length(a)<>3 or (u->>'min')::numeric < -10 or (u->>'max')::numeric > 10) then return false;end if;
    if u->>'kind'='GEOMETRIC_HOTSPOT_FINDER' and jsonb_array_length(a)<>2 then return false;end if;
+   if not (u ? 'geometry' or u ? 'algebra') then
    for j in 0..jsonb_array_length(a)-1 loop
     target=(a->>j)::numeric;
     if j=0 and u->>'kind' in ('PARABOLA_SLIDER','NUMBER_LINE_SELECTOR','GEOMETRIC_HOTSPOT_FINDER') then
@@ -57,6 +73,7 @@ begin
     else if target<>trunc(target) or target<0 or target>=jsonb_array_length(case when u->>'kind' in ('TOKEN_CLASSIFIER','EVENT_CARD_BUCKET') then u->'labels' else u->'tokens' end) then return false;end if;
     end if;
    end loop;
+   end if;
    for o in select value from jsonb_array_elements(u->'hotspots') loop if (o->>'x')::numeric+(o->>'width')::numeric>360 or (o->>'y')::numeric+(o->>'height')::numeric>240 then return false;end if;end loop;
   end loop;
  end if;

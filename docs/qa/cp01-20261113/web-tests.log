@@ -1,0 +1,24 @@
+
+> mohoc-learning@0.1.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./packages/local-api" resolves to a directory index (vite.config.ts:2:24). Import the index file directly
+  - import "../lesson-contract" resolves to a directory index (packages/local-api/index.ts:3:42). Import the index file directly
+  - import "../lesson-runtime/replay" without a file extension (packages/local-api/index.ts:4:22). Add the file extension
+  - import "./index" without a file extension (packages/lesson-runtime/replay.ts:1:46). Add the file extension
+  - import "../lesson-runtime/uime" without a file extension (packages/lesson-contract/index.ts:2:28). Add the file extension
+  - import "../lesson-runtime/extra-models" without a file extension (packages/lesson-contract/index.ts:4:55). Add the file extension
+  - import "../lesson-contract" resolves to a directory index (packages/lesson-runtime/index.ts:1:79). Import the index file directly
+  - import "./uime" without a file extension (packages/lesson-runtime/index.ts:2:36). Add the file extension
+  - import "./extra-models" without a file extension (packages/lesson-runtime/index.ts:3:69). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.1.0 D:/3.FPT/PRM/final project/learning-platform
+
+
+ Test Files  9 passed (9)
+      Tests  88 passed (88)
+   Start at  22:05:00
+   Duration  10.03s (tests 47%, import 47%, transform 5%, worker 1%)
+

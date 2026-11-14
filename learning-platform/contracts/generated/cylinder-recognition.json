@@ -1,0 +1,2561 @@
+[
+  {
+    "input": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "curriculumCode": "M9-GEO-11",
+      "templateId": "math9-cylinder-recognition",
+      "templateVersion": 1,
+      "mode": "recognition",
+      "title": "Khám phá chiếc hộp hình trụ",
+      "parameters": {
+        "radius": 4,
+        "height": 7,
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "height": 6
+        },
+        "assessment": {
+          "radius": 5,
+          "height": 8
+        }
+      },
+      "content": {
+        "context": "Một chiếc hộp có dạng hình trụ.",
+        "exploreInstruction": "Xoay để quan sát chiếc hộp."
+      }
+    },
+    "manifest": {
+      "schemaVersion": "1.0.0",
+      "lessonId": "cp04-cylinder-1",
+      "version": 1,
+      "status": "draft",
+      "locale": "vi-VN",
+      "title": "Khám phá chiếc hộp hình trụ",
+      "grade": 9,
+      "subject": "math",
+      "topicIds": [
+        "M9-GEO-11"
+      ],
+      "learningObjectives": [
+        "Nhận diện hai đáy, mặt bên, bán kính và chiều cao của hình trụ."
+      ],
+      "engine": {
+        "type": "math_explorer_2d",
+        "minRuntimeVersion": "1.0.0",
+        "requiredCapabilities": [
+          "adjust_parameter"
+        ]
+      },
+      "scene": {
+        "sceneId": "cp04-cylinder-1-scene",
+        "coordinateSystem": "cartesian_2d",
+        "viewport": {
+          "width": 360,
+          "height": 360
+        },
+        "objects": [
+          {
+            "id": "model",
+            "kind": "math_model",
+            "model": "number_line",
+            "parameters": {
+              "x": 0,
+              "targetX": 2
+            }
+          }
+        ],
+        "initialState": {
+          "a": 0.4,
+          "b": 0.3
+        }
+      },
+      "recognition": [
+        {
+          "question": "Xoay để quan sát chiếc hộp. (r = 4 cm, h = 7 cm)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Bạn đã quan sát hình trụ từ các hướng.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 4,
+              "height": 7,
+              "unit": "cm",
+              "task": "orbit"
+            }
+          }
+        },
+        {
+          "question": "Chạm đoạn biểu diễn bán kính của đáy. (r = 4 cm, h = 7 cm)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Bán kính nối tâm đáy tới đường tròn đáy.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 4,
+              "height": 7,
+              "unit": "cm",
+              "task": "radius"
+            }
+          }
+        },
+        {
+          "question": "Thay đổi bán kính bằng thanh điều khiển, rồi chạm cả hai đáy. Hai đáy có cùng kích thước không? (r = 4 cm, h = 7 cm)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Hai đáy là hai hình tròn bằng nhau; thay bán kính làm cả hai đáy cùng thay đổi.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              2
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 4,
+              "height": 7,
+              "unit": "cm",
+              "task": "equal-bases"
+            }
+          }
+        },
+        {
+          "question": "Chạm đoạn đo khoảng cách giữa hai mặt phẳng đáy. Có thể mở gợi ý. (r = 4 cm, h = 7 cm)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Chiều cao là khoảng cách giữa hai mặt phẳng đáy, vuông góc với đáy.",
+          "hint": "Tìm đoạn vuông góc với hai đáy, nối hai mặt phẳng đáy.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              1
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 4,
+              "height": 7,
+              "unit": "cm",
+              "task": "height"
+            }
+          }
+        },
+        {
+          "question": "Với hình trụ mới, tự tìm đoạn bán kính. (r = 3 cm, h = 6 cm)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Dù kích thước đổi, bán kính vẫn nối tâm tới đường tròn đáy.",
+          "hint": "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 3,
+              "height": 6,
+              "unit": "cm",
+              "task": "radius"
+            }
+          }
+        },
+        {
+          "question": "Tự kiểm tra: chạm mặt bên của hình trụ mới. (r = 5 cm, h = 8 cm)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Mặt bên là mặt cong nối hai đường tròn đáy. Hình trụ có hai đáy bằng nhau.",
+          "hint": "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              4
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 5,
+              "height": 8,
+              "unit": "cm",
+              "task": "side"
+            }
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "explore",
+          "order": 1,
+          "instruction": "Xoay để quan sát chiếc hộp. (r = 4 cm, h = 7 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Bạn đã quan sát hình trụ từ các hướng."
+          }
+        },
+        {
+          "id": "identify",
+          "order": 2,
+          "instruction": "Chạm đoạn biểu diễn bán kính của đáy. (r = 4 cm, h = 7 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Bán kính nối tâm đáy tới đường tròn đáy."
+          }
+        },
+        {
+          "id": "discover",
+          "order": 3,
+          "instruction": "Thay đổi bán kính bằng thanh điều khiển, rồi chạm cả hai đáy. Hai đáy có cùng kích thước không? (r = 4 cm, h = 7 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Hai đáy là hai hình tròn bằng nhau; thay bán kính làm cả hai đáy cùng thay đổi."
+          }
+        },
+        {
+          "id": "guided",
+          "order": 4,
+          "instruction": "Chạm đoạn đo khoảng cách giữa hai mặt phẳng đáy. Có thể mở gợi ý. (r = 4 cm, h = 7 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Tìm đoạn vuông góc với hai đáy, nối hai mặt phẳng đáy."
+          ],
+          "feedback": {
+            "success": "Chiều cao là khoảng cách giữa hai mặt phẳng đáy, vuông góc với đáy."
+          }
+        },
+        {
+          "id": "practice",
+          "order": 5,
+          "instruction": "Với hình trụ mới, tự tìm đoạn bán kính. (r = 3 cm, h = 6 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình."
+          ],
+          "feedback": {
+            "success": "Dù kích thước đổi, bán kính vẫn nối tâm tới đường tròn đáy."
+          }
+        },
+        {
+          "id": "assessment",
+          "order": 6,
+          "instruction": "Tự kiểm tra: chạm mặt bên của hình trụ mới. (r = 5 cm, h = 8 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình."
+          ],
+          "feedback": {
+            "success": "Mặt bên là mặt cong nối hai đường tròn đáy. Hình trụ có hai đáy bằng nhau."
+          }
+        }
+      ],
+      "completion": {
+        "requiredCheckpointIds": [
+          "explore",
+          "identify",
+          "discover",
+          "guided",
+          "practice",
+          "assessment"
+        ]
+      }
+    },
+    "receipt": {
+      "receiptVersion": "1.0.0",
+      "templateId": "math9-cylinder-recognition",
+      "templateVersion": 1,
+      "compilerVersion": "cylinder-recognition-1.0.0",
+      "authoringInput": {
+        "authoringVersion": "1.0.0",
+        "namespace": "excel-repo-v1",
+        "curriculumCode": "M9-GEO-11",
+        "templateId": "math9-cylinder-recognition",
+        "templateVersion": 1,
+        "mode": "recognition",
+        "title": "Khám phá chiếc hộp hình trụ",
+        "parameters": {
+          "radius": 4,
+          "height": 7,
+          "unit": "cm"
+        },
+        "variants": {
+          "practice": {
+            "radius": 3,
+            "height": 6
+          },
+          "assessment": {
+            "radius": 5,
+            "height": 8
+          }
+        },
+        "content": {
+          "context": "Một chiếc hộp có dạng hình trụ.",
+          "exploreInstruction": "Xoay để quan sát chiếc hộp."
+        }
+      },
+      "runtime": {
+        "lessonId": "cp04-cylinder-1",
+        "version": 1
+      }
+    },
+    "steps": [
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 0.4,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "a",
+            "value": 1.1
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0.7000000000000001,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 3
+          },
+          "accepted": false,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "c",
+            "value": 100
+          },
+          "accepted": false,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "width",
+            "value": 1.3
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 2
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 2,
+            "y": 1,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 3
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 3,
+            "y": 3,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "curriculumCode": "M9-GEO-11",
+      "templateId": "math9-cylinder-recognition",
+      "templateVersion": 1,
+      "mode": "recognition",
+      "title": "Hộp trụ cao",
+      "parameters": {
+        "radius": 2,
+        "height": 16,
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "height": 15
+        },
+        "assessment": {
+          "radius": 2,
+          "height": 12
+        }
+      },
+      "content": {
+        "context": "Một chiếc hộp có dạng hình trụ.",
+        "exploreInstruction": "Xoay để quan sát chiếc hộp."
+      }
+    },
+    "manifest": {
+      "schemaVersion": "1.0.0",
+      "lessonId": "cp04-cylinder-2",
+      "version": 1,
+      "status": "draft",
+      "locale": "vi-VN",
+      "title": "Hộp trụ cao",
+      "grade": 9,
+      "subject": "math",
+      "topicIds": [
+        "M9-GEO-11"
+      ],
+      "learningObjectives": [
+        "Nhận diện hai đáy, mặt bên, bán kính và chiều cao của hình trụ."
+      ],
+      "engine": {
+        "type": "math_explorer_2d",
+        "minRuntimeVersion": "1.0.0",
+        "requiredCapabilities": [
+          "adjust_parameter"
+        ]
+      },
+      "scene": {
+        "sceneId": "cp04-cylinder-2-scene",
+        "coordinateSystem": "cartesian_2d",
+        "viewport": {
+          "width": 360,
+          "height": 360
+        },
+        "objects": [
+          {
+            "id": "model",
+            "kind": "math_model",
+            "model": "number_line",
+            "parameters": {
+              "x": 0,
+              "targetX": 2
+            }
+          }
+        ],
+        "initialState": {
+          "a": 0.4,
+          "b": 0.3
+        }
+      },
+      "recognition": [
+        {
+          "question": "Xoay để quan sát chiếc hộp. (r = 2 cm, h = 16 cm)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Bạn đã quan sát hình trụ từ các hướng.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 2,
+              "height": 16,
+              "unit": "cm",
+              "task": "orbit"
+            }
+          }
+        },
+        {
+          "question": "Chạm đoạn biểu diễn bán kính của đáy. (r = 2 cm, h = 16 cm)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Bán kính nối tâm đáy tới đường tròn đáy.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 2,
+              "height": 16,
+              "unit": "cm",
+              "task": "radius"
+            }
+          }
+        },
+        {
+          "question": "Thay đổi bán kính bằng thanh điều khiển, rồi chạm cả hai đáy. Hai đáy có cùng kích thước không? (r = 2 cm, h = 16 cm)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Hai đáy là hai hình tròn bằng nhau; thay bán kính làm cả hai đáy cùng thay đổi.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              2
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 2,
+              "height": 16,
+              "unit": "cm",
+              "task": "equal-bases"
+            }
+          }
+        },
+        {
+          "question": "Chạm đoạn đo khoảng cách giữa hai mặt phẳng đáy. Có thể mở gợi ý. (r = 2 cm, h = 16 cm)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Chiều cao là khoảng cách giữa hai mặt phẳng đáy, vuông góc với đáy.",
+          "hint": "Tìm đoạn vuông góc với hai đáy, nối hai mặt phẳng đáy.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              1
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 2,
+              "height": 16,
+              "unit": "cm",
+              "task": "height"
+            }
+          }
+        },
+        {
+          "question": "Với hình trụ mới, tự tìm đoạn bán kính. (r = 3 cm, h = 15 cm)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Dù kích thước đổi, bán kính vẫn nối tâm tới đường tròn đáy.",
+          "hint": "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 3,
+              "height": 15,
+              "unit": "cm",
+              "task": "radius"
+            }
+          }
+        },
+        {
+          "question": "Tự kiểm tra: chạm mặt bên của hình trụ mới. (r = 2 cm, h = 12 cm)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Mặt bên là mặt cong nối hai đường tròn đáy. Hình trụ có hai đáy bằng nhau.",
+          "hint": "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              4
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 2,
+              "height": 12,
+              "unit": "cm",
+              "task": "side"
+            }
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "explore",
+          "order": 1,
+          "instruction": "Xoay để quan sát chiếc hộp. (r = 2 cm, h = 16 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Bạn đã quan sát hình trụ từ các hướng."
+          }
+        },
+        {
+          "id": "identify",
+          "order": 2,
+          "instruction": "Chạm đoạn biểu diễn bán kính của đáy. (r = 2 cm, h = 16 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Bán kính nối tâm đáy tới đường tròn đáy."
+          }
+        },
+        {
+          "id": "discover",
+          "order": 3,
+          "instruction": "Thay đổi bán kính bằng thanh điều khiển, rồi chạm cả hai đáy. Hai đáy có cùng kích thước không? (r = 2 cm, h = 16 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Hai đáy là hai hình tròn bằng nhau; thay bán kính làm cả hai đáy cùng thay đổi."
+          }
+        },
+        {
+          "id": "guided",
+          "order": 4,
+          "instruction": "Chạm đoạn đo khoảng cách giữa hai mặt phẳng đáy. Có thể mở gợi ý. (r = 2 cm, h = 16 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Tìm đoạn vuông góc với hai đáy, nối hai mặt phẳng đáy."
+          ],
+          "feedback": {
+            "success": "Chiều cao là khoảng cách giữa hai mặt phẳng đáy, vuông góc với đáy."
+          }
+        },
+        {
+          "id": "practice",
+          "order": 5,
+          "instruction": "Với hình trụ mới, tự tìm đoạn bán kính. (r = 3 cm, h = 15 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình."
+          ],
+          "feedback": {
+            "success": "Dù kích thước đổi, bán kính vẫn nối tâm tới đường tròn đáy."
+          }
+        },
+        {
+          "id": "assessment",
+          "order": 6,
+          "instruction": "Tự kiểm tra: chạm mặt bên của hình trụ mới. (r = 2 cm, h = 12 cm)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình."
+          ],
+          "feedback": {
+            "success": "Mặt bên là mặt cong nối hai đường tròn đáy. Hình trụ có hai đáy bằng nhau."
+          }
+        }
+      ],
+      "completion": {
+        "requiredCheckpointIds": [
+          "explore",
+          "identify",
+          "discover",
+          "guided",
+          "practice",
+          "assessment"
+        ]
+      }
+    },
+    "receipt": {
+      "receiptVersion": "1.0.0",
+      "templateId": "math9-cylinder-recognition",
+      "templateVersion": 1,
+      "compilerVersion": "cylinder-recognition-1.0.0",
+      "authoringInput": {
+        "authoringVersion": "1.0.0",
+        "namespace": "excel-repo-v1",
+        "curriculumCode": "M9-GEO-11",
+        "templateId": "math9-cylinder-recognition",
+        "templateVersion": 1,
+        "mode": "recognition",
+        "title": "Hộp trụ cao",
+        "parameters": {
+          "radius": 2,
+          "height": 16,
+          "unit": "cm"
+        },
+        "variants": {
+          "practice": {
+            "radius": 3,
+            "height": 15
+          },
+          "assessment": {
+            "radius": 2,
+            "height": 12
+          }
+        },
+        "content": {
+          "context": "Một chiếc hộp có dạng hình trụ.",
+          "exploreInstruction": "Xoay để quan sát chiếc hộp."
+        }
+      },
+      "runtime": {
+        "lessonId": "cp04-cylinder-2",
+        "version": 1
+      }
+    },
+    "steps": [
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 0.4,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "a",
+            "value": 1.1
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0.7000000000000001,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 3
+          },
+          "accepted": false,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "c",
+            "value": 100
+          },
+          "accepted": false,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "width",
+            "value": 1.3
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 2
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 2,
+            "y": 1,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 3
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 3,
+            "y": 3,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "curriculumCode": "M9-GEO-11",
+      "templateId": "math9-cylinder-recognition",
+      "templateVersion": 1,
+      "mode": "recognition",
+      "title": "Hộp trụ thấp",
+      "parameters": {
+        "radius": 8,
+        "height": 2,
+        "unit": "m"
+      },
+      "variants": {
+        "practice": {
+          "radius": 6,
+          "height": 3
+        },
+        "assessment": {
+          "radius": 5,
+          "height": 2
+        }
+      },
+      "content": {
+        "context": "Một chiếc hộp có dạng hình trụ.",
+        "exploreInstruction": "Xoay để quan sát chiếc hộp."
+      }
+    },
+    "manifest": {
+      "schemaVersion": "1.0.0",
+      "lessonId": "cp04-cylinder-3",
+      "version": 1,
+      "status": "draft",
+      "locale": "vi-VN",
+      "title": "Hộp trụ thấp",
+      "grade": 9,
+      "subject": "math",
+      "topicIds": [
+        "M9-GEO-11"
+      ],
+      "learningObjectives": [
+        "Nhận diện hai đáy, mặt bên, bán kính và chiều cao của hình trụ."
+      ],
+      "engine": {
+        "type": "math_explorer_2d",
+        "minRuntimeVersion": "1.0.0",
+        "requiredCapabilities": [
+          "adjust_parameter"
+        ]
+      },
+      "scene": {
+        "sceneId": "cp04-cylinder-3-scene",
+        "coordinateSystem": "cartesian_2d",
+        "viewport": {
+          "width": 360,
+          "height": 360
+        },
+        "objects": [
+          {
+            "id": "model",
+            "kind": "math_model",
+            "model": "number_line",
+            "parameters": {
+              "x": 0,
+              "targetX": 2
+            }
+          }
+        ],
+        "initialState": {
+          "a": 0.4,
+          "b": 0.3
+        }
+      },
+      "recognition": [
+        {
+          "question": "Xoay để quan sát chiếc hộp. (r = 8 m, h = 2 m)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Bạn đã quan sát hình trụ từ các hướng.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 8,
+              "height": 2,
+              "unit": "m",
+              "task": "orbit"
+            }
+          }
+        },
+        {
+          "question": "Chạm đoạn biểu diễn bán kính của đáy. (r = 8 m, h = 2 m)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Bán kính nối tâm đáy tới đường tròn đáy.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 8,
+              "height": 2,
+              "unit": "m",
+              "task": "radius"
+            }
+          }
+        },
+        {
+          "question": "Thay đổi bán kính bằng thanh điều khiển, rồi chạm cả hai đáy. Hai đáy có cùng kích thước không? (r = 8 m, h = 2 m)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Hai đáy là hai hình tròn bằng nhau; thay bán kính làm cả hai đáy cùng thay đổi.",
+          "hint": "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              2
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 8,
+              "height": 2,
+              "unit": "m",
+              "task": "equal-bases"
+            }
+          }
+        },
+        {
+          "question": "Chạm đoạn đo khoảng cách giữa hai mặt phẳng đáy. Có thể mở gợi ý. (r = 8 m, h = 2 m)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Chiều cao là khoảng cách giữa hai mặt phẳng đáy, vuông góc với đáy.",
+          "hint": "Tìm đoạn vuông góc với hai đáy, nối hai mặt phẳng đáy.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              1
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 8,
+              "height": 2,
+              "unit": "m",
+              "task": "height"
+            }
+          }
+        },
+        {
+          "question": "Với hình trụ mới, tự tìm đoạn bán kính. (r = 6 m, h = 3 m)",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên hình",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Dù kích thước đổi, bán kính vẫn nối tâm tới đường tròn đáy.",
+          "hint": "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              0
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 6,
+              "height": 3,
+              "unit": "m",
+              "task": "radius"
+            }
+          }
+        },
+        {
+          "question": "Tự kiểm tra: chạm mặt bên của hình trụ mới. (r = 5 m, h = 2 m)",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên hình"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Mặt bên là mặt cong nối hai đường tròn đáy. Hình trụ có hai đáy bằng nhau.",
+          "hint": "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình.",
+          "uime": {
+            "kind": "3D_SOLID_INSPECTOR",
+            "solid": "cylinder",
+            "labels": [],
+            "tokens": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "answers": [
+              4
+            ],
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "cylinder": {
+              "radius": 5,
+              "height": 2,
+              "unit": "m",
+              "task": "side"
+            }
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "explore",
+          "order": 1,
+          "instruction": "Xoay để quan sát chiếc hộp. (r = 8 m, h = 2 m)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Bạn đã quan sát hình trụ từ các hướng."
+          }
+        },
+        {
+          "id": "identify",
+          "order": 2,
+          "instruction": "Chạm đoạn biểu diễn bán kính của đáy. (r = 8 m, h = 2 m)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Bán kính nối tâm đáy tới đường tròn đáy."
+          }
+        },
+        {
+          "id": "discover",
+          "order": 3,
+          "instruction": "Thay đổi bán kính bằng thanh điều khiển, rồi chạm cả hai đáy. Hai đáy có cùng kích thước không? (r = 8 m, h = 2 m)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Vuốt để nhìn từ hướng khác; chạm trực tiếp bộ phận trên hình."
+          ],
+          "feedback": {
+            "success": "Hai đáy là hai hình tròn bằng nhau; thay bán kính làm cả hai đáy cùng thay đổi."
+          }
+        },
+        {
+          "id": "guided",
+          "order": 4,
+          "instruction": "Chạm đoạn đo khoảng cách giữa hai mặt phẳng đáy. Có thể mở gợi ý. (r = 8 m, h = 2 m)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Tìm đoạn vuông góc với hai đáy, nối hai mặt phẳng đáy."
+          ],
+          "feedback": {
+            "success": "Chiều cao là khoảng cách giữa hai mặt phẳng đáy, vuông góc với đáy."
+          }
+        },
+        {
+          "id": "practice",
+          "order": 5,
+          "instruction": "Với hình trụ mới, tự tìm đoạn bán kính. (r = 6 m, h = 3 m)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình."
+          ],
+          "feedback": {
+            "success": "Dù kích thước đổi, bán kính vẫn nối tâm tới đường tròn đáy."
+          }
+        },
+        {
+          "id": "assessment",
+          "order": 6,
+          "instruction": "Tự kiểm tra: chạm mặt bên của hình trụ mới. (r = 5 m, h = 2 m)",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": 0,
+              "c": 0,
+              "width": 1
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Hãy vận dụng định nghĩa đã khám phá; chọn trực tiếp trên mô hình."
+          ],
+          "feedback": {
+            "success": "Mặt bên là mặt cong nối hai đường tròn đáy. Hình trụ có hai đáy bằng nhau."
+          }
+        }
+      ],
+      "completion": {
+        "requiredCheckpointIds": [
+          "explore",
+          "identify",
+          "discover",
+          "guided",
+          "practice",
+          "assessment"
+        ]
+      }
+    },
+    "receipt": {
+      "receiptVersion": "1.0.0",
+      "templateId": "math9-cylinder-recognition",
+      "templateVersion": 1,
+      "compilerVersion": "cylinder-recognition-1.0.0",
+      "authoringInput": {
+        "authoringVersion": "1.0.0",
+        "namespace": "excel-repo-v1",
+        "curriculumCode": "M9-GEO-11",
+        "templateId": "math9-cylinder-recognition",
+        "templateVersion": 1,
+        "mode": "recognition",
+        "title": "Hộp trụ thấp",
+        "parameters": {
+          "radius": 8,
+          "height": 2,
+          "unit": "m"
+        },
+        "variants": {
+          "practice": {
+            "radius": 6,
+            "height": 3
+          },
+          "assessment": {
+            "radius": 5,
+            "height": 2
+          }
+        },
+        "content": {
+          "context": "Một chiếc hộp có dạng hình trụ.",
+          "exploreInstruction": "Xoay để quan sát chiếc hộp."
+        }
+      },
+      "runtime": {
+        "lessonId": "cp04-cylinder-3",
+        "version": 1
+      }
+    },
+    "steps": [
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 0.4,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "a",
+            "value": 1.1
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0.7000000000000001,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 3
+          },
+          "accepted": false,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "c",
+            "value": 100
+          },
+          "accepted": false,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "width",
+            "value": 1.3
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": -1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 2
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 2,
+            "y": 1,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 3
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 3,
+            "y": 3,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1.3
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 1,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false,
+          "state": {
+            "x": 0,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 4
+          },
+          "accepted": true,
+          "success": true,
+          "state": {
+            "x": 4,
+            "y": 0,
+            "a": 1.1,
+            "b": 0.3,
+            "c": 0,
+            "width": 1
+          }
+        }
+      ]
+    ]
+  }
+]

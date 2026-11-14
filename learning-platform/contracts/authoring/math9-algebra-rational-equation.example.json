@@ -1,0 +1,44 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-algebra-rational-equation",
+  "curriculumCode": "M9-ALG-03",
+  "mode": "rational_equation",
+  "title": "Phương trình hữu tỉ · Điều kiện xác định",
+  "parameters": {
+    "p": 1,
+    "q": -2,
+    "r": 1,
+    "s": 3,
+    "d": 1,
+    "e": -2,
+    "f": 0,
+    "g": 1,
+    "k": 0
+  },
+  "variants": {
+    "practice": {
+      "p": 1,
+      "q": -2,
+      "r": 1,
+      "s": 2,
+      "d": 1,
+      "e": -1,
+      "f": 1,
+      "g": 1,
+      "k": 1
+    },
+    "assessment": {
+      "p": 1,
+      "q": -1,
+      "r": 1,
+      "s": -2,
+      "d": 1,
+      "e": -1,
+      "f": 1,
+      "g": -2,
+      "k": 1
+    }
+  }
+}

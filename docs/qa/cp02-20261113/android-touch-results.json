@@ -1,0 +1,54 @@
+{
+  "run": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b",
+  "input": "ADB Android input; no DOM-dispatched answers",
+  "results": [
+    {
+      "at": "2026-11-13T15:40:26.127Z",
+      "check": "background/foreground retains snapshot",
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "checkpoint": 0,
+      "revision": 4
+    },
+    {
+      "at": "2026-11-13T15:40:28.720Z",
+      "check": "checkpoint completed by Android touch",
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "checkpoint": 1
+    },
+    {
+      "at": "2026-11-13T15:40:43.478Z",
+      "check": "checkpoint completed by Android touch",
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "checkpoint": 2
+    },
+    {
+      "at": "2026-11-13T15:40:49.703Z",
+      "check": "close/reopen retains checkpoint",
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "checkpoint": 2
+    },
+    {
+      "at": "2026-11-13T15:41:05.098Z",
+      "check": "checkpoint completed by Android touch",
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "checkpoint": 3
+    },
+    {
+      "at": "2026-11-13T15:41:22.317Z",
+      "check": "checkpoint completed by Android touch",
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "checkpoint": 4
+    },
+    {
+      "at": "2026-11-13T15:41:37.643Z",
+      "check": "checkpoint completed by Android touch",
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "checkpoint": 5
+    },
+    {
+      "at": "2026-11-13T15:42:23.744Z",
+      "check": "FAIL",
+      "message": "Native harness timeout for state"
+    }
+  ]
+}

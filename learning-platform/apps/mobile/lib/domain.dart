@@ -1,3 +1,7 @@
+import 'algebra.dart';
+import 'geometry.dart';
+import 'cartesian.dart';
+import 'parabola.dart';
 import 'extra_models.dart';
 import 'uime.dart';
 
@@ -496,7 +500,15 @@ class LessonSession {
           s[name] == value) {
         return false;
       }
-      s[name] = value;
+      if(task['uime']['algebra'] is Map)applyAlgebraInteraction(task['uime']['algebra'],s,name,value);
+      if(task['uime']['geometry'] is Map)applyGeometryInteraction(task['uime']['geometry'],s,name,value);
+      if(task['uime']['graph'] is Map)applyGraphInteraction(task['uime']['graph'],s,name,value);
+      if(task['uime']['parabola'] is Map)applyParabolaInteraction(task['uime']['parabola'],s,name,value);
+      if (task['uime']['cylinder'] is Map) {
+        if (name == 'a' || name == 'b') s['c'] = (s['c'] as num) + (value - (s[name] as num)).abs();
+        if (name == 'x' && (value == 2 || value == 3)) s['y'] = (s['y'] as num).toInt() | (value == 2 ? 1 : 2);
+      }
+      if(task['uime']['algebra'] is! Map&&task['uime']['graph'] is! Map&&task['uime']['geometry'] is! Map)s[name] = value;
       m['parameterChangeCount']++;
       m['parameterChangeCountSinceCheckpoint']++;
       updateModel();

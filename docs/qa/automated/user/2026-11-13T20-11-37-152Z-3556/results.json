@@ -1,0 +1,3220 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.roles.config.ts"
+    ],
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.roles.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/3.FPT/PRM/final project/docs/qa/automated/user/2026-11-13T20-11-37-152Z-3556/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "user",
+        "name": "user",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/00-empty.spec.ts",
+          "**/acceptance.spec.ts",
+          "**/algebra.spec.ts",
+          "**/cartesian.spec.ts",
+          "**/cylinder.spec.ts",
+          "**/diagnostics.spec.ts",
+          "**/geometry.spec.ts",
+          "**/mobile-bridge.spec.ts",
+          "**/uime.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": {},
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "user",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/00-empty.spec.ts",
+          "**/acceptance.spec.ts",
+          "**/algebra.spec.ts",
+          "**/cartesian.spec.ts",
+          "**/cylinder.spec.ts",
+          "**/diagnostics.spec.ts",
+          "**/geometry.spec.ts",
+          "**/mobile-bridge.spec.ts",
+          "**/uime.spec.ts"
+        ],
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5182",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "viewport": {
+            "width": 1440,
+            "height": 1050
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "user"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5182 --strictPort",
+      "url": "http://127.0.0.1:5182",
+      "reuseExistingServer": false,
+      "env": {
+        "MOHOC_TEST_MODE": "1",
+        "VITE_ENABLE_LOCAL_DEMO": "true",
+        "VITE_SUPABASE_URL": "",
+        "VITE_SUPABASE_PUBLISHABLE_KEY": ""
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "00-empty.spec.ts",
+      "file": "00-empty.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fresh workspace stays empty and ignores legacy browser sample catalog",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7161,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:12:41.997Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43420c6e0ca8947d852f-96b7d60ea3c3732f6132",
+          "file": "00-empty.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "acceptance.spec.ts",
+      "file": "acceptance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "learner 2D gestures, canvas continuity, checkpoint restore and completion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:12:50.005Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-a6e68ad836376d9ad37b",
+          "file": "acceptance.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "3D WebGL actually renders and raycast/orbit/layers complete the lesson",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11684,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:12:59.874Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-a5dbcac93c019846b5e8",
+          "file": "acceptance.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "responsive layouts 1280, tablet and portrait contain no horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17007,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:11.597Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-cdf9de5d9bfe1e3d286b",
+          "file": "acceptance.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "algebra.spec.ts",
+      "file": "algebra.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Algebra six steps eng03-product-equation-1-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3932,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:28.671Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-332d03eeaac9a836fdbd",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-product-equation-1-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3558,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:32.629Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-beffd84060785e86f5be",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-product-equation-1-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:36.209Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-d25f54594f23d114474b",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-rational-equation-2-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3718,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:39.603Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-800c049121fe26d48291",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-rational-equation-2-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3635,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:43.346Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-409d05111e6f9caf54db",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-rational-equation-2-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3690,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:47.013Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-177454a7955dd60d3aab",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-quadratic-equation-3-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4978,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:50.727Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-8c72cd2a07beddbcbab7",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-quadratic-equation-3-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:13:55.725Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-4fd004233ff71c1c3b4b",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-quadratic-equation-3-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:00.160Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-b977c7cb0d5ca8b801cb",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-viete-4-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4145,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:04.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-df7131812acd7c8f3eb1",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-viete-4-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4096,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:08.698Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-45e2b8aee1ffe243eb6c",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-viete-4-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4476,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:12.811Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-a3a220df4930aff22e98",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-quadratic-equation-5-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:17.307Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-9cac67510fa097946aac",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-quadratic-equation-5-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5187,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:21.876Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-e42583e9a4eebf19f51a",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-quadratic-equation-5-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6521,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:27.089Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-558b8b35a3c45eca3da4",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-rational-equation-6-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:33.640Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-23e36faedb94011989d1",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-rational-equation-6-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4262,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:38.110Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-90b5a31fa8996ddef22d",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
+        {
+          "title": "Algebra six steps eng03-rational-equation-6-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:42.395Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9229b5ed6c1a71ba7a9-4207a71f6a5357f36d7b",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        }
+      ]
+    },
+    {
+      "title": "cartesian.spec.ts",
+      "file": "cartesian.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Cartesian browser full six steps 1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4965,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:47.095Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-c757a98489d6e0d0bd23",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3360,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:52.077Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-017bae43d1e1aba91289",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3593,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:55.455Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-c9e5be437c87e260d86c",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 4",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3725,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:14:59.068Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-681711a27e6622926267",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 5",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4016,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:02.815Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-30113926fca73a5be44b",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 6",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3930,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:06.856Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-6f8d6c37236d547a8a09",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 7",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4921,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:10.810Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-66bea656626a711e39e4",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 8",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:15.755Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-ed84d93defe2d3059f99",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Cartesian browser full six steps 9",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6006,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:20.606Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e10c285fafb881b25932-239186263732d5406447",
+          "file": "cartesian.spec.ts",
+          "line": 6,
+          "column": 43
+        }
+      ]
+    },
+    {
+      "title": "cylinder.spec.ts",
+      "file": "cylinder.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "WebGL cylinder 1 six steps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6185,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:26.855Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ee3e4423c18cee99044-4d687673e035886d4d05",
+          "file": "cylinder.spec.ts",
+          "line": 12,
+          "column": 78
+        },
+        {
+          "title": "WebGL cylinder 2 six steps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5100,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:33.094Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ee3e4423c18cee99044-e72c89b2f3d36fe8aa9c",
+          "file": "cylinder.spec.ts",
+          "line": 12,
+          "column": 78
+        },
+        {
+          "title": "WebGL cylinder 3 six steps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7870,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:38.217Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ee3e4423c18cee99044-2bc798bb59a7e338ff64",
+          "file": "cylinder.spec.ts",
+          "line": 12,
+          "column": 78
+        },
+        {
+          "title": "fallback cylinder 1 six steps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4116,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:46.116Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ee3e4423c18cee99044-3e87a7b1acf6cb9d71bb",
+          "file": "cylinder.spec.ts",
+          "line": 12,
+          "column": 78
+        },
+        {
+          "title": "fallback cylinder 2 six steps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6854,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:50.261Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ee3e4423c18cee99044-7b1211ae6e3a9e5cb772",
+          "file": "cylinder.spec.ts",
+          "line": 12,
+          "column": 78
+        },
+        {
+          "title": "fallback cylinder 3 six steps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4832,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:15:57.138Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ee3e4423c18cee99044-3f10b9e664472395871a",
+          "file": "cylinder.spec.ts",
+          "line": 12,
+          "column": 78
+        }
+      ]
+    },
+    {
+      "title": "diagnostics.spec.ts",
+      "file": "diagnostics.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "browser console and local API network inspection",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 38372,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\diagnostics.spec.ts",
+                        "column": 102,
+                        "line": 6
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Dựng bài & tự chọn engine/ })\u001b[22m\n\n\n  4 |   const consoleErrors:string[]=[],pageErrors:string[]=[],failedRequests:string[]=[],responses:{url:string;status:number}[]=[];\n  5 |   page.on('console',message=>{if(message.type()==='error')consoleErrors.push(message.location().url+': '+message.text());});page.on('pageerror',e=>pageErrors.push(e.message));page.on('requestfailed',r=>{if(r.url().includes('127.0.0.1'))failedRequests.push(r.url()+': '+r.failure()?.errorText);});page.on('response',r=>{if(r.url().includes('/api/')||r.status()>=400)responses.push({url:r.url(),status:r.status()});});\n> 6 |   await page.goto('/admin/studio');await page.getByRole('button',{name:/Dựng bài & tự chọn engine/}).click();await page.getByRole('button',{name:/Preview điện thoại/}).click();await expect(page.locator('.phone-frame .math-canvas')).toBeVisible();await page.getByRole('button',{name:'Đóng ✕'}).click();await page.goto('/');await page.getByRole('button').filter({has:page.getByRole('heading',{name:'Từng lớp tạo nên thể tích',exact:true})}).click();await expect(page.locator('.webgl canvas')).toBeVisible();await page.screenshot({path:'../docs/qa/diagnostics-solid.png'});\n    |                                                                                                      ^\n  7 |   writeFileSync('../docs/qa/browser-diagnostics.json',JSON.stringify({consoleErrors,pageErrors,failedRequests,responses},null,2));expect(consoleErrors).toEqual([]);expect(pageErrors).toEqual([]);expect(failedRequests).toEqual([]);expect(responses.some(r=>r.url.includes('/api/catalog')&&r.status===200)).toBe(true);expect(responses.every(r=>r.status<400)).toBe(true);\n  8 | });\n  9 |\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\diagnostics.spec.ts:6:102"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:16:02.037Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\diagnostics-browser-console-and-local-API-network-inspection-user\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\diagnostics-browser-console-and-local-API-network-inspection-user\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\diagnostics-browser-console-and-local-API-network-inspection-user\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\diagnostics-browser-console-and-local-API-network-inspection-user\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "80bb835772e7bc2f1ed9-5c4d6e1d3301462ae53a",
+          "file": "diagnostics.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "geometry.spec.ts",
+      "file": "geometry.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Geometry six steps eng02-geo-01-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4210,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:16:47.968Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-fb19a3ec54860b6b2191",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-01-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4474,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:16:52.513Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-8b2a331926fd00ca5a3e",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-01-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6222,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:16:57.022Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-db73bf8c96f260089439",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-02-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:03.267Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-5001a16ac662ad5d245c",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-02-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5384,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:09.721Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-b1eedf5e3f5d1780fdb5",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-02-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5669,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:15.143Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-931509eff1662c7c8162",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-03-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:20.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-3b0138ab39942d4b7baf",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-03-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3996,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:25.568Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-cdf17a8b805f87e81079",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-03-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4084,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:29.590Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-aaf30f90a1990718ece0",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-04-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:33.703Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-8902d635b42e8939b17d",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-04-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5342,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:39.883Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-aa5e22b26569f5564008",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-04-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6097,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:45.258Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-748469221c5c708269a3",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-05-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6546,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:51.393Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-4125ce38d92871716617",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-05-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4817,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:17:57.970Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-669cdd4bc6b7dc41cff3",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-05-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3920,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:02.808Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-4b57fa792d9d9d9afacb",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-06-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3928,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:06.748Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-d5be43b5b666eeb2ef8f",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-06-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6297,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:10.712Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-fa252507e207b4e37e5b",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-06-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5914,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:17.034Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-4e1873c64ee2a727a21a",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-07-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6884,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:23.007Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-28a1c679af2188081410",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-07-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6270,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:29.934Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-5e9e87b7b3561c2b2b38",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-07-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:36.238Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-3146ac9d6ee7f4df27d9",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-08-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3979,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:40.909Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-0175491311ac2002bc78",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-08-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:44.914Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-07c4f7e97990afa7e065",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-08-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6468,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:49.128Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-71c1940fea5f4c8d99f1",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-09-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7284,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:18:55.639Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-066422a334d5a5c6b9b5",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-09-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7701,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:02.957Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-7d6519398136418d9cf9",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-09-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7054,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:10.696Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-7ff6234ff152802d87d3",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-10-1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3788,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:17.784Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-6a8b3fe44af2f338fb6b",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-10-2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3845,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:21.603Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-8aab2760d0118cefb470",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "Geometry six steps eng02-geo-10-3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:25.471Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a6b7f055de881ba5856-738711783d9469092a0d",
+          "file": "geometry.spec.ts",
+          "line": 6,
+          "column": 43
+        }
+      ]
+    },
+    {
+      "title": "mobile-bridge.spec.ts",
+      "file": "mobile-bridge.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "invalid INIT reports its session so Flutter can show retry instead of a blank view",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:31.746Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "960da9e7b09549a4cf01-d34a7b10a5f39765c72f",
+          "file": "mobile-bridge.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "runtime errors reach the active session and a fresh WebView can initialize again",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:34.760Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "960da9e7b09549a4cf01-9ad3197e4d4e8d6644a0",
+          "file": "mobile-bridge.spec.ts",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "uime.spec.ts",
+      "file": "uime.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "six checkpoints, rendered model and publication engine-token-classifier",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:38.343Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-a429365301abe4820f3b",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-coefficient",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7927,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:51.462Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-24fd7d28e29b1877ad03",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-number-line",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8078,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:19:59.442Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-c27b6e071996d4c9c6a0",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-sign",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9035,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:20:07.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-e3f55578afc0a96040a0",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-formula",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:20:16.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-37f04527cf268636a206",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-parabola",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 109947,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\uime.spec.ts",
+                        "column": 65,
+                        "line": 7
+                      },
+                      "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '▯ Xem trước', exact: true })\u001b[22m\n\n\n   5 |  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));\n   6 |  await page.goto('/admin/engines');await page.locator('article').filter({has:page.getByRole('heading',{name:topic.title,exact:true})}).getByRole('button',{name:'Tạo bài từ mẫu',exact:true}).click();\n>  7 |  await page.getByRole('button',{name:'▯ Xem trước',exact:true}).click();\n     |                                                                 ^\n   8 |  const dialog=page.getByRole('dialog'),scene=dialog.locator('.uime-scene');await dialog.locator('.scene-wrap').evaluate(el=>el.setAttribute('data-persistent','yes'));\n   9 |  for(let step=0;step<6;step++){\n  10 |   const u=topic.tasks[step].uime!,next=dialog.getByRole('button',{name:step===5?/^Hoàn thành bài học/:/^Tiếp tục/});await expect(next).toBeDisabled();await expect(scene).toHaveAttribute('data-engine',u.kind);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\uime.spec.ts:7:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:20:30.326Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-4eefe-publication-engine-parabola-user\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-4eefe-publication-engine-parabola-user\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-4eefe-publication-engine-parabola-user\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-4eefe-publication-engine-parabola-user\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-ce4b0e80ed75845cda53",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-delta",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6336,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:22:26.529Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-715d87eb1c55dd0428e3",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-triangle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8991,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:22:33.222Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-e35e7df3225d459c7651",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-circle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10667,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:22:42.247Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-e42fb394353db9c2395a",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-angle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10113,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:22:52.987Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-db8e2c01db966cc03956",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-solid-cone",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:23:03.132Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-f0e13478e41f64d4788e",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-solid-cylinder",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 103198,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\uime.spec.ts",
+                        "column": 65,
+                        "line": 7
+                      },
+                      "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '▯ Xem trước', exact: true })\u001b[22m\n\n\n   5 |  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));\n   6 |  await page.goto('/admin/engines');await page.locator('article').filter({has:page.getByRole('heading',{name:topic.title,exact:true})}).getByRole('button',{name:'Tạo bài từ mẫu',exact:true}).click();\n>  7 |  await page.getByRole('button',{name:'▯ Xem trước',exact:true}).click();\n     |                                                                 ^\n   8 |  const dialog=page.getByRole('dialog'),scene=dialog.locator('.uime-scene');await dialog.locator('.scene-wrap').evaluate(el=>el.setAttribute('data-persistent','yes'));\n   9 |  for(let step=0;step<6;step++){\n  10 |   const u=topic.tasks[step].uime!,next=dialog.getByRole('button',{name:step===5?/^Hoàn thành bài học/:/^Tiếp tục/});await expect(next).toBeDisabled();await expect(scene).toHaveAttribute('data-engine',u.kind);\n    at D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e\\uime.spec.ts:7:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:23:14.762Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-248d7-ation-engine-solid-cylinder-user\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-248d7-ation-engine-solid-cylinder-user\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-248d7-ation-engine-solid-cylinder-user\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user\\2026-11-13T20-11-37-152Z-3556\\artifacts\\uime-six-checkpoints-rende-248d7-ation-engine-solid-cylinder-user\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-060cf2f61095d95c2ed0",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-solid-sphere",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20871,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:25:09.831Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-833fc54ccc592f803f49",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-chart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10036,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:25:31.453Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-cf0b4cb294641692b457",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        },
+        {
+          "title": "six checkpoints, rendered model and publication engine-events",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "user",
+              "projectName": "user",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15989,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T20:25:41.552Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb5960d3a99025cc6a7-4944c0fc5aad900ad7ec",
+          "file": "uime.spec.ts",
+          "line": 3,
+          "column": 33
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T20:12:34.682Z",
+    "duration": 805040.527,
+    "expected": 82,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

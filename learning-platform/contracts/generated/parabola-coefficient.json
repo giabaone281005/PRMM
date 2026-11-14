@@ -1,0 +1,2300 @@
+[
+  {
+    "input": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "curriculumCode": "M9-ALG-09",
+      "templateId": "math9-parabola-coefficient",
+      "templateVersion": 1,
+      "mode": "coefficient",
+      "title": "Khám phá hệ số parabol",
+      "parameters": {
+        "a": 1
+      },
+      "variants": {
+        "practice": {
+          "a": 2
+        },
+        "assessment": {
+          "a": -2
+        }
+      },
+      "content": {
+        "context": "Quan sát hướng mở của đồ thị."
+      }
+    },
+    "manifest": {
+      "schemaVersion": "1.0.0",
+      "lessonId": "cp05-parabola-1",
+      "version": 1,
+      "status": "draft",
+      "locale": "vi-VN",
+      "title": "Khám phá hệ số parabol",
+      "grade": 9,
+      "subject": "math",
+      "topicIds": [
+        "M9-ALG-09"
+      ],
+      "learningObjectives": [
+        "Nhận biết hướng mở, độ rộng và dựng parabol y = ax² qua điểm có hoành độ khác 0."
+      ],
+      "engine": {
+        "type": "math_explorer_2d",
+        "minRuntimeVersion": "1.0.0",
+        "requiredCapabilities": [
+          "adjust_parameter"
+        ]
+      },
+      "scene": {
+        "sceneId": "cp05-parabola-1-scene",
+        "coordinateSystem": "cartesian_2d",
+        "viewport": {
+          "width": 360,
+          "height": 360
+        },
+        "objects": [
+          {
+            "id": "parabola-model",
+            "kind": "math_model",
+            "model": "quadratic_graph",
+            "parameters": {
+              "a": 1,
+              "b": 0,
+              "c": 0,
+              "targetA": 1,
+              "targetB": 0,
+              "targetC": 0
+            }
+          }
+        ],
+        "initialState": {}
+      },
+      "recognition": [
+        {
+          "question": "Thay đổi hệ số a của y = ax² để quan sát cả hai hướng mở. Hệ số 0 không tạo thành parabol.",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Khi a dương, parabol mở lên; khi a âm, parabol mở xuống. Đỉnh luôn tại O.",
+          "hint": "Thao tác trên đồ thị và quan sát vị trí so với trục Ox.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              1
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 1,
+              "task": "explore",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Quan sát đồ thị G. Kéo thẻ dấu hệ số vào đồ thị, hoặc chọn thẻ rồi chạm vùng đồ thị.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "G mở lên nên a > 0.",
+          "hint": "Thao tác trên đồ thị và quan sát vị trí so với trục Ox.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              1
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 1,
+              "task": "identify",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Hai đồ thị G: y = 1x² và H: y = 0.5x². Đưa điểm dò đến x = 2, rồi chạm đồ thị có |y| lớn hơn (hẹp hơn).",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Ở cùng hoành độ khác 0, hệ số có trị tuyệt đối lớn hơn cho |y| lớn hơn và đồ thị hẹp hơn.",
+          "hint": "So sánh khoảng cách từ hai điểm trên đồ thị tới trục Ox ở cùng hoành độ.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              1
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 1,
+              "task": "compare",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Dựng y = ax² đi qua P(2; 4). Kéo điểm điều khiển hoặc thay a, rồi chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Thay tọa độ P vào y = ax²: a = 4/(2)² = 1.",
+          "hint": "Thay x = 2, y = 4 vào y = ax². Chia hai vế cho x², rồi dựng và xác nhận.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              1
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 1,
+              "task": "guided",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Với điểm mới P(1; 2), tự dựng y = ax² đi qua P và chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Điểm mới cho a = 2/(1)² = 2; đồ thị đã đi qua P.",
+          "hint": "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              2
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 2,
+              "task": "practice",
+              "pointX": 1
+            }
+          }
+        },
+        {
+          "question": "Tự kiểm tra: dựng y = ax² đi qua P(-2; -8), rồi chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "a = -8/(-2)² = -2. Với a khác 0: dấu quyết định hướng mở, |a| quyết định độ rộng; đỉnh tại O.",
+          "hint": "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              -2
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": -2,
+              "task": "assessment",
+              "pointX": -2
+            }
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "explore",
+          "order": 1,
+          "instruction": "Thay đổi hệ số a của y = ax² để quan sát cả hai hướng mở. Hệ số 0 không tạo thành parabol.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thao tác trên đồ thị và quan sát vị trí so với trục Ox."
+          ],
+          "feedback": {
+            "success": "Khi a dương, parabol mở lên; khi a âm, parabol mở xuống. Đỉnh luôn tại O."
+          }
+        },
+        {
+          "id": "identify",
+          "order": 2,
+          "instruction": "Quan sát đồ thị G. Kéo thẻ dấu hệ số vào đồ thị, hoặc chọn thẻ rồi chạm vùng đồ thị.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thao tác trên đồ thị và quan sát vị trí so với trục Ox."
+          ],
+          "feedback": {
+            "success": "G mở lên nên a > 0."
+          }
+        },
+        {
+          "id": "discover",
+          "order": 3,
+          "instruction": "Hai đồ thị G: y = 1x² và H: y = 0.5x². Đưa điểm dò đến x = 2, rồi chạm đồ thị có |y| lớn hơn (hẹp hơn).",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "So sánh khoảng cách từ hai điểm trên đồ thị tới trục Ox ở cùng hoành độ."
+          ],
+          "feedback": {
+            "success": "Ở cùng hoành độ khác 0, hệ số có trị tuyệt đối lớn hơn cho |y| lớn hơn và đồ thị hẹp hơn."
+          }
+        },
+        {
+          "id": "guided",
+          "order": 4,
+          "instruction": "Dựng y = ax² đi qua P(2; 4). Kéo điểm điều khiển hoặc thay a, rồi chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thay x = 2, y = 4 vào y = ax². Chia hai vế cho x², rồi dựng và xác nhận."
+          ],
+          "feedback": {
+            "success": "Thay tọa độ P vào y = ax²: a = 4/(2)² = 1."
+          }
+        },
+        {
+          "id": "practice",
+          "order": 5,
+          "instruction": "Với điểm mới P(1; 2), tự dựng y = ax² đi qua P và chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong."
+          ],
+          "feedback": {
+            "success": "Điểm mới cho a = 2/(1)² = 2; đồ thị đã đi qua P."
+          }
+        },
+        {
+          "id": "assessment",
+          "order": 6,
+          "instruction": "Tự kiểm tra: dựng y = ax² đi qua P(-2; -8), rồi chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong."
+          ],
+          "feedback": {
+            "success": "a = -8/(-2)² = -2. Với a khác 0: dấu quyết định hướng mở, |a| quyết định độ rộng; đỉnh tại O."
+          }
+        }
+      ],
+      "completion": {
+        "requiredCheckpointIds": [
+          "explore",
+          "identify",
+          "discover",
+          "guided",
+          "practice",
+          "assessment"
+        ]
+      }
+    },
+    "receipt": {
+      "receiptVersion": "1.0.0",
+      "templateId": "math9-parabola-coefficient",
+      "templateVersion": 1,
+      "compilerVersion": "parabola-coefficient-1.0.0",
+      "authoringInput": {
+        "authoringVersion": "1.0.0",
+        "namespace": "excel-repo-v1",
+        "curriculumCode": "M9-ALG-09",
+        "templateId": "math9-parabola-coefficient",
+        "templateVersion": 1,
+        "mode": "coefficient",
+        "title": "Khám phá hệ số parabol",
+        "parameters": {
+          "a": 1
+        },
+        "variants": {
+          "practice": {
+            "a": 2
+          },
+          "assessment": {
+            "a": -2
+          }
+        },
+        "content": {
+          "context": "Quan sát hướng mở của đồ thị."
+        }
+      },
+      "runtime": {
+        "lessonId": "cp05-parabola-1",
+        "version": 1
+      }
+    },
+    "steps": [
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "b",
+            "value": 3
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "a",
+            "value": 2
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 2
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -2
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ]
+    ]
+  },
+  {
+    "input": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "curriculumCode": "M9-ALG-09",
+      "templateId": "math9-parabola-coefficient",
+      "templateVersion": 1,
+      "mode": "coefficient",
+      "title": "Parabol mở xuống",
+      "parameters": {
+        "a": -3
+      },
+      "variants": {
+        "practice": {
+          "a": -1
+        },
+        "assessment": {
+          "a": 3
+        }
+      },
+      "content": {
+        "context": "Quan sát hướng mở của đồ thị."
+      }
+    },
+    "manifest": {
+      "schemaVersion": "1.0.0",
+      "lessonId": "cp05-parabola-2",
+      "version": 1,
+      "status": "draft",
+      "locale": "vi-VN",
+      "title": "Parabol mở xuống",
+      "grade": 9,
+      "subject": "math",
+      "topicIds": [
+        "M9-ALG-09"
+      ],
+      "learningObjectives": [
+        "Nhận biết hướng mở, độ rộng và dựng parabol y = ax² qua điểm có hoành độ khác 0."
+      ],
+      "engine": {
+        "type": "math_explorer_2d",
+        "minRuntimeVersion": "1.0.0",
+        "requiredCapabilities": [
+          "adjust_parameter"
+        ]
+      },
+      "scene": {
+        "sceneId": "cp05-parabola-2-scene",
+        "coordinateSystem": "cartesian_2d",
+        "viewport": {
+          "width": 360,
+          "height": 360
+        },
+        "objects": [
+          {
+            "id": "parabola-model",
+            "kind": "math_model",
+            "model": "quadratic_graph",
+            "parameters": {
+              "a": -3,
+              "b": 0,
+              "c": 0,
+              "targetA": -3,
+              "targetB": 0,
+              "targetC": 0
+            }
+          }
+        ],
+        "initialState": {}
+      },
+      "recognition": [
+        {
+          "question": "Thay đổi hệ số a của y = ax² để quan sát cả hai hướng mở. Hệ số 0 không tạo thành parabol.",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Khi a dương, parabol mở lên; khi a âm, parabol mở xuống. Đỉnh luôn tại O.",
+          "hint": "Thao tác trên đồ thị và quan sát vị trí so với trục Ox.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              -3
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": -3,
+              "task": "explore",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Quan sát đồ thị G. Kéo thẻ dấu hệ số vào đồ thị, hoặc chọn thẻ rồi chạm vùng đồ thị.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "G mở xuống nên a < 0.",
+          "hint": "Thao tác trên đồ thị và quan sát vị trí so với trục Ox.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              -3
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": -3,
+              "task": "identify",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Hai đồ thị G: y = -3x² và H: y = -6x². Đưa điểm dò đến x = 2, rồi chạm đồ thị có |y| lớn hơn (hẹp hơn).",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Ở cùng hoành độ khác 0, hệ số có trị tuyệt đối lớn hơn cho |y| lớn hơn và đồ thị hẹp hơn.",
+          "hint": "So sánh khoảng cách từ hai điểm trên đồ thị tới trục Ox ở cùng hoành độ.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              -3
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": -3,
+              "task": "compare",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Dựng y = ax² đi qua P(2; -12). Kéo điểm điều khiển hoặc thay a, rồi chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Thay tọa độ P vào y = ax²: a = -12/(2)² = -3.",
+          "hint": "Thay x = 2, y = -12 vào y = ax². Chia hai vế cho x², rồi dựng và xác nhận.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              -3
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": -3,
+              "task": "guided",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Với điểm mới P(1; -1), tự dựng y = ax² đi qua P và chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Điểm mới cho a = -1/(1)² = -1; đồ thị đã đi qua P.",
+          "hint": "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              -1
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": -1,
+              "task": "practice",
+              "pointX": 1
+            }
+          }
+        },
+        {
+          "question": "Tự kiểm tra: dựng y = ax² đi qua P(-2; 12), rồi chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "a = 12/(-2)² = 3. Với a khác 0: dấu quyết định hướng mở, |a| quyết định độ rộng; đỉnh tại O.",
+          "hint": "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              3
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 3,
+              "task": "assessment",
+              "pointX": -2
+            }
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "explore",
+          "order": 1,
+          "instruction": "Thay đổi hệ số a của y = ax² để quan sát cả hai hướng mở. Hệ số 0 không tạo thành parabol.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -3,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thao tác trên đồ thị và quan sát vị trí so với trục Ox."
+          ],
+          "feedback": {
+            "success": "Khi a dương, parabol mở lên; khi a âm, parabol mở xuống. Đỉnh luôn tại O."
+          }
+        },
+        {
+          "id": "identify",
+          "order": 2,
+          "instruction": "Quan sát đồ thị G. Kéo thẻ dấu hệ số vào đồ thị, hoặc chọn thẻ rồi chạm vùng đồ thị.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thao tác trên đồ thị và quan sát vị trí so với trục Ox."
+          ],
+          "feedback": {
+            "success": "G mở xuống nên a < 0."
+          }
+        },
+        {
+          "id": "discover",
+          "order": 3,
+          "instruction": "Hai đồ thị G: y = -3x² và H: y = -6x². Đưa điểm dò đến x = 2, rồi chạm đồ thị có |y| lớn hơn (hẹp hơn).",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "So sánh khoảng cách từ hai điểm trên đồ thị tới trục Ox ở cùng hoành độ."
+          ],
+          "feedback": {
+            "success": "Ở cùng hoành độ khác 0, hệ số có trị tuyệt đối lớn hơn cho |y| lớn hơn và đồ thị hẹp hơn."
+          }
+        },
+        {
+          "id": "guided",
+          "order": 4,
+          "instruction": "Dựng y = ax² đi qua P(2; -12). Kéo điểm điều khiển hoặc thay a, rồi chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thay x = 2, y = -12 vào y = ax². Chia hai vế cho x², rồi dựng và xác nhận."
+          ],
+          "feedback": {
+            "success": "Thay tọa độ P vào y = ax²: a = -12/(2)² = -3."
+          }
+        },
+        {
+          "id": "practice",
+          "order": 5,
+          "instruction": "Với điểm mới P(1; -1), tự dựng y = ax² đi qua P và chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong."
+          ],
+          "feedback": {
+            "success": "Điểm mới cho a = -1/(1)² = -1; đồ thị đã đi qua P."
+          }
+        },
+        {
+          "id": "assessment",
+          "order": 6,
+          "instruction": "Tự kiểm tra: dựng y = ax² đi qua P(-2; 12), rồi chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong."
+          ],
+          "feedback": {
+            "success": "a = 12/(-2)² = 3. Với a khác 0: dấu quyết định hướng mở, |a| quyết định độ rộng; đỉnh tại O."
+          }
+        }
+      ],
+      "completion": {
+        "requiredCheckpointIds": [
+          "explore",
+          "identify",
+          "discover",
+          "guided",
+          "practice",
+          "assessment"
+        ]
+      }
+    },
+    "receipt": {
+      "receiptVersion": "1.0.0",
+      "templateId": "math9-parabola-coefficient",
+      "templateVersion": 1,
+      "compilerVersion": "parabola-coefficient-1.0.0",
+      "authoringInput": {
+        "authoringVersion": "1.0.0",
+        "namespace": "excel-repo-v1",
+        "curriculumCode": "M9-ALG-09",
+        "templateId": "math9-parabola-coefficient",
+        "templateVersion": 1,
+        "mode": "coefficient",
+        "title": "Parabol mở xuống",
+        "parameters": {
+          "a": -3
+        },
+        "variants": {
+          "practice": {
+            "a": -1
+          },
+          "assessment": {
+            "a": 3
+          }
+        },
+        "content": {
+          "context": "Quan sát hướng mở của đồ thị."
+        }
+      },
+      "runtime": {
+        "lessonId": "cp05-parabola-2",
+        "version": 1
+      }
+    },
+    "steps": [
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "b",
+            "value": 3
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 3
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -3
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -3
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 1
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "a",
+            "value": 2
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 1
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -3
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 3
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ]
+    ]
+  },
+  {
+    "input": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "curriculumCode": "M9-ALG-09",
+      "templateId": "math9-parabola-coefficient",
+      "templateVersion": 1,
+      "mode": "coefficient",
+      "title": "Parabol hệ số lớn",
+      "parameters": {
+        "a": 5
+      },
+      "variants": {
+        "practice": {
+          "a": -4
+        },
+        "assessment": {
+          "a": 1
+        }
+      },
+      "content": {
+        "context": "Quan sát hướng mở của đồ thị."
+      }
+    },
+    "manifest": {
+      "schemaVersion": "1.0.0",
+      "lessonId": "cp05-parabola-3",
+      "version": 1,
+      "status": "draft",
+      "locale": "vi-VN",
+      "title": "Parabol hệ số lớn",
+      "grade": 9,
+      "subject": "math",
+      "topicIds": [
+        "M9-ALG-09"
+      ],
+      "learningObjectives": [
+        "Nhận biết hướng mở, độ rộng và dựng parabol y = ax² qua điểm có hoành độ khác 0."
+      ],
+      "engine": {
+        "type": "math_explorer_2d",
+        "minRuntimeVersion": "1.0.0",
+        "requiredCapabilities": [
+          "adjust_parameter"
+        ]
+      },
+      "scene": {
+        "sceneId": "cp05-parabola-3-scene",
+        "coordinateSystem": "cartesian_2d",
+        "viewport": {
+          "width": 360,
+          "height": 360
+        },
+        "objects": [
+          {
+            "id": "parabola-model",
+            "kind": "math_model",
+            "model": "quadratic_graph",
+            "parameters": {
+              "a": 5,
+              "b": 0,
+              "c": 0,
+              "targetA": 5,
+              "targetB": 0,
+              "targetC": 0
+            }
+          }
+        ],
+        "initialState": {}
+      },
+      "recognition": [
+        {
+          "question": "Thay đổi hệ số a của y = ax² để quan sát cả hai hướng mở. Hệ số 0 không tạo thành parabol.",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Khi a dương, parabol mở lên; khi a âm, parabol mở xuống. Đỉnh luôn tại O.",
+          "hint": "Thao tác trên đồ thị và quan sát vị trí so với trục Ox.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              5
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 5,
+              "task": "explore",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Quan sát đồ thị G. Kéo thẻ dấu hệ số vào đồ thị, hoặc chọn thẻ rồi chạm vùng đồ thị.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "G mở lên nên a > 0.",
+          "hint": "Thao tác trên đồ thị và quan sát vị trí so với trục Ox.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              5
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 5,
+              "task": "identify",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Hai đồ thị G: y = 5x² và H: y = 2.5x². Đưa điểm dò đến x = 2, rồi chạm đồ thị có |y| lớn hơn (hẹp hơn).",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Ở cùng hoành độ khác 0, hệ số có trị tuyệt đối lớn hơn cho |y| lớn hơn và đồ thị hẹp hơn.",
+          "hint": "So sánh khoảng cách từ hai điểm trên đồ thị tới trục Ox ở cùng hoành độ.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              5
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 5,
+              "task": "compare",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Dựng y = ax² đi qua P(2; 20). Kéo điểm điều khiển hoặc thay a, rồi chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "Thay tọa độ P vào y = ax²: a = 20/(2)² = 5.",
+          "hint": "Thay x = 2, y = 20 vào y = ax². Chia hai vế cho x², rồi dựng và xác nhận.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              5
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 5,
+              "task": "guided",
+              "pointX": 2
+            }
+          }
+        },
+        {
+          "question": "Với điểm mới P(1; -4), tự dựng y = ax² đi qua P và chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Thao tác trên đồ thị",
+            "Quan sát"
+          ],
+          "correct": 1,
+          "diagram": "none",
+          "explanation": "Điểm mới cho a = -4/(1)² = -4; đồ thị đã đi qua P.",
+          "hint": "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              -4
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": -4,
+              "task": "practice",
+              "pointX": 1
+            }
+          }
+        },
+        {
+          "question": "Tự kiểm tra: dựng y = ax² đi qua P(-2; 4), rồi chạm P để xác nhận.",
+          "mode": "tap",
+          "choices": [
+            "Quan sát",
+            "Thao tác trên đồ thị"
+          ],
+          "correct": 2,
+          "diagram": "none",
+          "explanation": "a = 4/(-2)² = 1. Với a khác 0: dấu quyết định hướng mở, |a| quyết định độ rộng; đỉnh tại O.",
+          "hint": "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong.",
+          "uime": {
+            "kind": "PARABOLA_SLIDER",
+            "solid": "cylinder",
+            "labels": [
+              "Hệ số a"
+            ],
+            "tokens": [],
+            "answers": [
+              1
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 1,
+            "hotspots": [],
+            "parabola": {
+              "a": 1,
+              "task": "assessment",
+              "pointX": -2
+            }
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "explore",
+          "order": 1,
+          "instruction": "Thay đổi hệ số a của y = ax² để quan sát cả hai hướng mở. Hệ số 0 không tạo thành parabol.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 5,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thao tác trên đồ thị và quan sát vị trí so với trục Ox."
+          ],
+          "feedback": {
+            "success": "Khi a dương, parabol mở lên; khi a âm, parabol mở xuống. Đỉnh luôn tại O."
+          }
+        },
+        {
+          "id": "identify",
+          "order": 2,
+          "instruction": "Quan sát đồ thị G. Kéo thẻ dấu hệ số vào đồ thị, hoặc chọn thẻ rồi chạm vùng đồ thị.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thao tác trên đồ thị và quan sát vị trí so với trục Ox."
+          ],
+          "feedback": {
+            "success": "G mở lên nên a > 0."
+          }
+        },
+        {
+          "id": "discover",
+          "order": 3,
+          "instruction": "Hai đồ thị G: y = 5x² và H: y = 2.5x². Đưa điểm dò đến x = 2, rồi chạm đồ thị có |y| lớn hơn (hẹp hơn).",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "So sánh khoảng cách từ hai điểm trên đồ thị tới trục Ox ở cùng hoành độ."
+          ],
+          "feedback": {
+            "success": "Ở cùng hoành độ khác 0, hệ số có trị tuyệt đối lớn hơn cho |y| lớn hơn và đồ thị hẹp hơn."
+          }
+        },
+        {
+          "id": "guided",
+          "order": 4,
+          "instruction": "Dựng y = ax² đi qua P(2; 20). Kéo điểm điều khiển hoặc thay a, rồi chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Thay x = 2, y = 20 vào y = ax². Chia hai vế cho x², rồi dựng và xác nhận."
+          ],
+          "feedback": {
+            "success": "Thay tọa độ P vào y = ax²: a = 20/(2)² = 5."
+          }
+        },
+        {
+          "id": "practice",
+          "order": 5,
+          "instruction": "Với điểm mới P(1; -4), tự dựng y = ax² đi qua P và chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": 1,
+              "targetX": 1,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong."
+          ],
+          "feedback": {
+            "success": "Điểm mới cho a = -4/(1)² = -4; đồ thị đã đi qua P."
+          }
+        },
+        {
+          "id": "assessment",
+          "order": 6,
+          "instruction": "Tự kiểm tra: dựng y = ax² đi qua P(-2; 4), rồi chạm P để xác nhận.",
+          "allowedInteractions": [
+            "adjust_parameter"
+          ],
+          "scenePatch": {
+            "setState": {
+              "x": -1,
+              "targetX": 2,
+              "y": -1,
+              "a": 1,
+              "b": 0
+            }
+          },
+          "successCriteria": {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "gte",
+                "path": "metrics.parameterChangeCountSinceCheckpoint",
+                "value": 1
+              },
+              {
+                "op": "approx",
+                "path": "metrics.modelError",
+                "value": 0,
+                "tolerance": 0.000001
+              }
+            ]
+          },
+          "hints": [
+            "Dùng quan hệ giữa tọa độ điểm và đồ thị đã khám phá. Chạm P sau khi dựng xong."
+          ],
+          "feedback": {
+            "success": "a = 4/(-2)² = 1. Với a khác 0: dấu quyết định hướng mở, |a| quyết định độ rộng; đỉnh tại O."
+          }
+        }
+      ],
+      "completion": {
+        "requiredCheckpointIds": [
+          "explore",
+          "identify",
+          "discover",
+          "guided",
+          "practice",
+          "assessment"
+        ]
+      }
+    },
+    "receipt": {
+      "receiptVersion": "1.0.0",
+      "templateId": "math9-parabola-coefficient",
+      "templateVersion": 1,
+      "compilerVersion": "parabola-coefficient-1.0.0",
+      "authoringInput": {
+        "authoringVersion": "1.0.0",
+        "namespace": "excel-repo-v1",
+        "curriculumCode": "M9-ALG-09",
+        "templateId": "math9-parabola-coefficient",
+        "templateVersion": 1,
+        "mode": "coefficient",
+        "title": "Parabol hệ số lớn",
+        "parameters": {
+          "a": 5
+        },
+        "variants": {
+          "practice": {
+            "a": -4
+          },
+          "assessment": {
+            "a": 1
+          }
+        },
+        "content": {
+          "context": "Quan sát hướng mở của đồ thị."
+        }
+      },
+      "runtime": {
+        "lessonId": "cp05-parabola-3",
+        "version": 1
+      }
+    },
+    "steps": [
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "b",
+            "value": 3
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -5
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 5
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 5
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "a",
+            "value": 2
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 5
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": -4
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ],
+      [
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 0
+          },
+          "accepted": false,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "x",
+            "value": 1
+          },
+          "accepted": true,
+          "success": false
+        },
+        {
+          "event": {
+            "type": "adjust_parameter",
+            "name": "y",
+            "value": 0
+          },
+          "accepted": true,
+          "success": true
+        }
+      ]
+    ]
+  }
+]

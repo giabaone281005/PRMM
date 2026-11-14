@@ -1,0 +1,134 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.admin-ui.config.ts"
+    ],
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.admin-ui.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/3.FPT/PRM/final project/docs/qa/automated/admin/2026-11-13T20-57-11-047Z-14452/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "admin-ui",
+        "name": "admin-ui",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/admin-ui.spec.ts",
+          "**/admin-all-topics.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-57-11-047Z-14452\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "name": "admin-ui",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/admin-ui.spec.ts",
+          "**/admin-all-topics.spec.ts"
+        ],
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5181",
+          "headless": false,
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "launchOptions": {
+            "slowMo": 300
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "admin-ui"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-57-11-047Z-14452/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-57-11-047Z-14452/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5181 --strictPort",
+      "url": "http://127.0.0.1:5181",
+      "reuseExistingServer": false,
+      "env": {
+        "MOHOC_TEST_MODE": "1",
+        "VITE_ENABLE_LOCAL_DEMO": "true",
+        "VITE_SUPABASE_URL": "",
+        "VITE_SUPABASE_PUBLISHABLE_KEY": ""
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "TypeError: Module \"file:///D:/3.FPT/PRM/final%20project/learning-platform/contracts/math9-curriculum.json\" needs an import attribute of \"type: json\"",
+      "stack": "TypeError: Module \"file:///D:/3.FPT/PRM/final%20project/learning-platform/contracts/math9-curriculum.json\" needs an import attribute of \"type: json\""
+    }
+  ],
+  "stats": {
+    "startTime": "2026-11-13T20:57:13.107Z",
+    "duration": 3860.829,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

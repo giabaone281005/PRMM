@@ -1,0 +1,48 @@
+{
+  "mode": "android-ui-all-catalog",
+  "status": "FAIL",
+  "deviceId": "121ea06b",
+  "testPackage": "vn.mohoc.mo_hoc.uitest",
+  "steps": [
+    {
+      "label": "Flutter pub get",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Build isolated Android UI test APK",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Verify isolated APK package before installation",
+      "status": "PASS",
+      "packageId": "vn.mohoc.mo_hoc.uitest"
+    },
+    {
+      "label": "Android user interface gestures",
+      "status": "FAIL",
+      "exitCode": 1
+    },
+    {
+      "label": "Every catalog lesson and checkpoint has a PASS result",
+      "status": "FAIL",
+      "exitCode": 1
+    }
+  ],
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "expectedLessons": 19,
+  "passedLessons": 0,
+  "expectedCheckpoints": 114,
+  "passedCheckpoints": 0,
+  "nativeInputCount": 0,
+  "limitations": [
+    "Catalog manifests exercised in isolated test app; production progress is not written",
+    "Cached snapshot used unless MOHOC_TEST_EMAIL and MOHOC_TEST_PASSWORD refresh it"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user-device\\2026-11-13T23-54-12-830Z-14732"
+}

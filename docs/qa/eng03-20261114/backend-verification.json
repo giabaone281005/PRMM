@@ -1,0 +1,92 @@
+{
+  "before": [
+    {
+      "versions": 23,
+      "version_digest": "bd18dcd5e165f1b087a40b2e2560c5d2",
+      "progress": 7,
+      "progress_digest": "a73f97ecf31362b2c576d97229774413"
+    }
+  ],
+  "after": [
+    {
+      "versions": 23,
+      "version_digest": "bd18dcd5e165f1b087a40b2e2560c5d2",
+      "progress": 7,
+      "progress_digest": "a73f97ecf31362b2c576d97229774413"
+    }
+  ],
+  "vectors": [
+    {
+      "total": 38,
+      "matched": 38
+    }
+  ],
+  "edgeFunctions": {
+    "functions": [
+      {
+        "id": "3e090c89-084b-48b1-99fd-88f8dd5423be",
+        "slug": "progress",
+        "name": "progress",
+        "status": "ACTIVE",
+        "version": 9,
+        "created_at": 1794504028122,
+        "updated_at": 1794597090763,
+        "verify_jwt": false,
+        "import_map": false,
+        "entrypoint_path": "file:///tmp/user_fn_sbzpmrgsqznaydllqmbm_3e090c89-084b-48b1-99fd-88f8dd5423be_9/source/supabase/functions/progress/index.ts",
+        "ezbr_sha256": "5b043d9de747839fe1ba27aca02f3ac31aa941ce26fd22f5843a1c5bbc93adf3"
+      },
+      {
+        "id": "ff143a0d-25b5-4c1f-8296-d6cbe05a5706",
+        "slug": "generate",
+        "name": "generate",
+        "status": "ACTIVE",
+        "version": 3,
+        "created_at": 1794504031878,
+        "updated_at": 1794533749080,
+        "verify_jwt": false,
+        "import_map": false,
+        "entrypoint_path": "file:///tmp/user_fn_sbzpmrgsqznaydllqmbm_ff143a0d-25b5-4c1f-8296-d6cbe05a5706_3/source/supabase/functions/generate/index.ts",
+        "ezbr_sha256": "1bf550824404a33537c1649cb947ac0ca939c72d2f12760054d85fd16681e152"
+      },
+      {
+        "id": "fe5a4ac8-6341-4729-b9fb-8a3cb79f259a",
+        "slug": "authoring",
+        "name": "authoring",
+        "status": "ACTIVE",
+        "version": 6,
+        "created_at": 1794589308798,
+        "updated_at": 1794597090763,
+        "verify_jwt": false,
+        "import_map": false,
+        "entrypoint_path": "file:///tmp/user_fn_sbzpmrgsqznaydllqmbm_fe5a4ac8-6341-4729-b9fb-8a3cb79f259a_6/source/supabase/functions/authoring/index.ts",
+        "ezbr_sha256": "0fd960eebfc1731f27192a43a75e7d9ac8e1c7d2eb326f067dc539a00f5c1b7d"
+      }
+    ]
+  },
+  "advisors": {
+    "lints": [
+      {
+        "name": "auth_leaked_password_protection",
+        "title": "Leaked Password Protection Disabled",
+        "level": "WARN",
+        "facing": "EXTERNAL",
+        "categories": [
+          "SECURITY"
+        ],
+        "description": "Leaked password protection is currently disabled.",
+        "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+        "count": 1,
+        "findings": [
+          {
+            "detail": "Supabase Auth prevents the use of compromised passwords by checking against HaveIBeenPwned.org. Enable this feature to enhance security.",
+            "metadata": {
+              "type": "auth",
+              "entity": "Auth"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

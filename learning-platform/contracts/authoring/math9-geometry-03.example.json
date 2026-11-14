@@ -1,0 +1,35 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-03",
+  "curriculumCode": "M9-GEO-03",
+  "mode": "right_triangle",
+  "title": "Góc nhọn và góc đặc biệt",
+  "parameters": {
+    "legA": 3,
+    "legB": 4,
+    "angleAt": "B",
+    "target": "opposite",
+    "ratio": "sin",
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "legA": 5,
+      "legB": 5,
+      "angleAt": "C",
+      "target": "adjacent",
+      "ratio": "cos",
+      "unit": "cm"
+    },
+    "assessment": {
+      "legA": 3,
+      "legB": 5.196152422706632,
+      "angleAt": "B",
+      "target": "hypotenuse",
+      "ratio": "tan",
+      "unit": "cm"
+    }
+  }
+}

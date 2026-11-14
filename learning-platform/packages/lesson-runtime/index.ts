@@ -1,3 +1,8 @@
+import {applyAlgebraInteraction} from './algebra';
+import {applyGeometryInteraction} from './geometry';
+import {applyGraphInteraction} from './cartesian';
+import {applyParabolaInteraction} from './parabola';
+import {applyCylinderInteraction} from './cylinder';
 import {evaluate,validateLesson,type Lesson,type Point,type SceneObject} from '../lesson-contract';
 import {uimeAccept,uimeError} from './uime';
 import {isExtraModel,extraDefaults,extraMetrics,extraControls} from './extra-models';
@@ -32,7 +37,7 @@ export class LessonSession {
     if(this.snapshot.completed||!this.checkpoint.allowedInteractions.includes(e.type))return false;
     const s=this.snapshot,m=s.metrics;
     const u=this.lesson.recognition?.[s.checkpoint]?.uime;
-    if(u&&e.type==='adjust_parameter'){if(!uimeAccept(u,e.name,e.value)||s.state[e.name]===e.value)return false;s.state[e.name]=e.value;m.parameterChangeCount++;m.parameterChangeCountSinceCheckpoint++;m.modelError=uimeError(u,s.state);m.modelValue=Number(s.state.x);this.emit();this.eventListeners.forEach(f=>f(e));return true;}
+    if(u&&e.type==='adjust_parameter'){if(!uimeAccept(u,e.name,e.value)||s.state[e.name]===e.value)return false;if(u.algebra)applyAlgebraInteraction(u.algebra,s.state,e.name,e.value);else if(u.geometry)applyGeometryInteraction(u.geometry,s.state,e.name,e.value);else if(u.graph)applyGraphInteraction(u.graph,s.state,e.name,e.value);else if(u.parabola)applyParabolaInteraction(u.parabola,s.state,e.name,e.value);else if(u.cylinder)applyCylinderInteraction(s.state,e.name,e.value);else s.state[e.name]=e.value;m.parameterChangeCount++;m.parameterChangeCountSinceCheckpoint++;m.modelError=uimeError(u,s.state);m.modelValue=Number(s.state.x);this.emit();this.eventListeners.forEach(f=>f(e));return true;}
     if(e.type==='drag_vertex'){
       const obj=this.objects.find(o=>o.id===e.id),old=s.points[e.id];if(obj?.kind!=='point'||!obj.draggable||!old||!e.position.every(Number.isFinite)||Math.hypot(old[0]-e.position[0],old[1]-e.position[1])<3)return false;
       const [x,y]=e.position;if(x<24||x>336||y<24||y>265)return false;

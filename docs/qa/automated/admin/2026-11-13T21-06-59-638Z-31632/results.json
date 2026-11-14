@@ -1,0 +1,2039 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.admin-ui.config.ts"
+    ],
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.admin-ui.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/3.FPT/PRM/final project/docs/qa/automated/admin/2026-11-13T21-06-59-638Z-31632/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "admin-ui",
+        "name": "admin-ui",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/admin-ui.spec.ts",
+          "**/admin-all-topics.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T21-06-59-638Z-31632\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "admin-ui",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/admin-ui.spec.ts",
+          "**/admin-all-topics.spec.ts"
+        ],
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5181",
+          "headless": false,
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "launchOptions": {
+            "slowMo": 300
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "admin-ui"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T21-06-59-638Z-31632/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T21-06-59-638Z-31632/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5181 --strictPort",
+      "url": "http://127.0.0.1:5181",
+      "reuseExistingServer": false,
+      "env": {
+        "MOHOC_TEST_MODE": "1",
+        "VITE_ENABLE_LOCAL_DEMO": "true",
+        "VITE_SUPABASE_URL": "",
+        "VITE_SUPABASE_PUBLISHABLE_KEY": ""
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "admin-all-topics.spec.ts",
+      "file": "admin-all-topics.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Inventory: every creation dropdown and all 24 curriculum cards are accounted for",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8410,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:07:07.540Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-b5f326bb8582a2ed0f35",
+          "file": "admin-all-topics.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-03 math9-algebra-product-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8952,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-algebra-product-equation\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:07:16.413Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-3d4db53beb86b06b26ab",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-03 math9-algebra-rational-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8681,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-algebra-rational-equation\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:07:25.390Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-7635d9d25a9c99d29eb1",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-10 math9-algebra-quadratic-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8839,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-algebra-quadratic-equation\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:07:34.099Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-ad9b106dedbc46096ec8",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-11 math9-algebra-viete",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8281,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-algebra-viete\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:07:42.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-7d1acf48ec6f9aeeb4c0",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-01 math9-geometry-01",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8404,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-01\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:07:51.269Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-e32fd2d0b8178ace2bdb",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-02 math9-geometry-02",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8586,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-02\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:07:59.700Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-bae08e957c8219237a0b",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-03 math9-geometry-03",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8788,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-03\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:08:08.313Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-bd4c8e9351e2d1a1d16d",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-04 math9-geometry-04",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8724,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-04\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:08:17.126Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-d01db439c32c4f76221f",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-05 math9-geometry-05",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8819,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-05\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:08:25.876Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-1932d659999d1d4f0ef1",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-06 math9-geometry-06",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8604,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-06\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:08:34.720Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-95bc04dfad0ac179ec05",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-07 math9-geometry-07",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8955,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-07\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:08:43.352Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-697e3f7d6a54d86f6026",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-08 math9-geometry-08",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8952,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-08\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:08:52.334Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-279fb74f1669f7371de6",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-09 math9-geometry-09",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8598,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-09\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:09:01.310Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-08170176e672ecf42a6d",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-10 math9-geometry-10",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9020,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-geometry-10\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:09:09.935Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-777803198dab9821bb37",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-01 math9-linear-relation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8920,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-linear-relation\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:09:18.979Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-121e74f5774a6aed8bb6",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-02 math9-linear-system",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9188,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-linear-system\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:09:27.925Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-f76958a7359ed1ade5d4",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-09 math9-line-parabola",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8739,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-line-parabola\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:09:37.135Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-bb3680f2aaddf5a9bd67",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-GEO-11 math9-cylinder-recognition",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8874,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-cylinder-recognition\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:09:45.901Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-63fa3f909b16486ad368",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Authoring: create, save, publish, reload M9-ALG-09 math9-parabola-coefficient",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9223,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] math9-parabola-coefficient\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:09:54.799Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-64b245ef800ae1bdcb9f",
+          "file": "admin-all-topics.spec.ts",
+          "line": 41,
+          "column": 33
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload linear-system — Phương trình và hệ hai ẩn",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8079,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] linear-system\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:10:04.050Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-240341bb82c91f14d9aa",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload inequality — Phương trình và bất phương trình",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8244,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] inequality\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:10:12.153Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-71a36a5573f11d4d9dc4",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload radicals — Căn bậc hai và căn bậc ba",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8023,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] radicals\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:10:20.420Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-1b775b12d94a8472c60d",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload quadratic — Parabol, phương trình bậc hai và Viète",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7990,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] quadratic\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:10:28.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-9fd28c2bd54cf3f606da",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload triangle — Tam giác vuông và lượng giác",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8024,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] triangle\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:10:36.483Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-89d3200c52ade11ff9e1",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload circle — Đường tròn, dây cung và tiếp tuyến",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8021,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] circle\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:10:44.538Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-6d227f3f97b7704f48dc",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload angles — Góc và tứ giác nội tiếp",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7949,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] angles\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:10:52.591Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-8a4ed89bbb8584384793",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload solids — Hình trụ, hình nón và hình cầu",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8005,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] solids\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:00.575Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-5278af7409a18f6407e9",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload statistics — Tần số và tần số tương đối",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8104,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] statistics\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:08.609Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-d12bd1fac31d3ec0fb83",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload probability — Phép thử và biến cố",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7895,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] probability\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:16.739Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-466dd98c0dcebf2985a6",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-token-classifier — Phân loại phương trình",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7938,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-token-classifier\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:24.660Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-c34627cc9f39563ae798",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-coefficient — Chạm hệ số",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8205,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-coefficient\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:32.627Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-e463455dbc2d16d2c37e",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-number-line — Trục số bất phương trình",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7986,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-number-line\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:40.856Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-a1eccd4530af3839c341",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-sign — Đổi chiều bất đẳng thức",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8222,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-sign\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:48.867Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-3da2a57e56e5671b3cfd",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-formula — Ghép công thức nhiều ô",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8190,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-formula\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:11:57.117Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-31d4c5259a90571a89f7",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-parabola — Parabol động",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8204,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-parabola\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:12:05.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-556d844ad2cc9272a28b",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-delta — Biệt thức và số nghiệm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8408,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-delta\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:12:13.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-9b3855ddfe95fcb3db98",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-triangle — Chạm cạnh tam giác vuông",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8147,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-triangle\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:12:21.993Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-bb2e4d27ed33f5f2287c",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-circle — Tiếp tuyến và vị trí tương đối",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8256,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-circle\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:12:30.166Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-195ddc1d10dea072f0cb",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-angle — Chạm cung và góc nội tiếp",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8892,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-angle\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:12:38.446Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-30534f313d8d7c01d8ec",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-solid-cone — Khám phá 3D: Hình nón",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8271,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-solid-cone\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:12:47.362Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-93ffbb857e3a4671f9d9",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-solid-cylinder — Khám phá 3D: Hình trụ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8431,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-solid-cylinder\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:12:55.656Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-bd62b1c8b2c65b0d987f",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-solid-sphere — Khám phá 3D: Hình cầu",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8221,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-solid-sphere\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:13:04.113Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-b046ffac65b78b4a891d",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-chart — Đọc biểu đồ tần số",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8452,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-chart\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:13:12.358Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-1fca83e49cc4714a2197",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Legacy topic: create, save, publish, reload engine-events — Phân loại biến cố",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8326,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN TOPIC] engine-events\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:13:20.837Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-78655e9e1d28e139a227",
+          "file": "admin-all-topics.spec.ts",
+          "line": 60,
+          "column": 27
+        },
+        {
+          "title": "Curriculum pilot: create, publish, reload M9-ALG-05",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7465,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:13:29.194Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-1b79b4616304414e23c3",
+          "file": "admin-all-topics.spec.ts",
+          "line": 78,
+          "column": 26
+        },
+        {
+          "title": "Curriculum pilot: create, publish, reload M9-ALG-09",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:13:36.689Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-c856d88333b456f67925",
+          "file": "admin-all-topics.spec.ts",
+          "line": 78,
+          "column": 26
+        },
+        {
+          "title": "Curriculum pilot: create, publish, reload M9-STP-02",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7322,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T21:13:44.103Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0baa3f1dbbe97e19c21-b8d0a4fe1036ad65fe4b",
+          "file": "admin-all-topics.spec.ts",
+          "line": 78,
+          "column": 26
+        }
+      ]
+    },
+    {
+      "title": "admin-ui.spec.ts",
+      "file": "admin-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Admin creates, reopens, edits, publishes and unpublishes a lesson through the visible UI",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin-ui",
+              "projectName": "admin-ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22270,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ADMIN UI] 1/6 Create and save a new lesson\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 2/6 Reopen and edit the saved lesson\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 3/6 Publish the lesson\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 4/6 Verify learner catalog\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 5/6 Unpublish from the lesson menu\n"
+                    },
+                    {
+                      "text": "[ADMIN UI] 6/6 Verify catalog removal and retained draft\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Tạo bài mới và lưu nháp qua biểu mẫu",
+                      "duration": 5767
+                    },
+                    {
+                      "title": "Mở bài đã lưu, sửa nội dung và kiểm tra sau reload",
+                      "duration": 4128
+                    },
+                    {
+                      "title": "Xuất bản và kiểm tra thư viện",
+                      "duration": 1505
+                    },
+                    {
+                      "title": "Kiểm tra bài đã xuất hiện ở trang học",
+                      "duration": 1608
+                    },
+                    {
+                      "title": "Gỡ xuất bản qua menu bài học và kiểm tra sau reload",
+                      "duration": 5402
+                    },
+                    {
+                      "title": "Kiểm tra catalog đã ẩn bài và bản nháp vẫn sửa được",
+                      "duration": 3425
+                    }
+                  ],
+                  "startTime": "2026-11-13T21:13:51.482Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ae1974e46a8834939ce0-4294ee2ea36135d75c42",
+          "file": "admin-ui.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T21:07:03.247Z",
+    "duration": 432061.516,
+    "expected": 49,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

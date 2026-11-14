@@ -1,0 +1,54 @@
+{
+  "mode": "android-ui-all-catalog",
+  "status": "FAIL",
+  "deviceId": "emulator-5554",
+  "testPackage": "vn.mohoc.mo_hoc.uitest",
+  "steps": [
+    {
+      "label": "Launch Android emulator",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Flutter pub get",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Build isolated Android UI test APK",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Verify isolated APK package before installation",
+      "status": "PASS",
+      "packageId": "vn.mohoc.mo_hoc.uitest"
+    },
+    {
+      "label": "Android user interface gestures",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Every catalog lesson and checkpoint has a PASS result",
+      "status": "FAIL",
+      "exitCode": 1
+    }
+  ],
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "lessonFilter": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+  "expectedLessons": 1,
+  "passedLessons": 0,
+  "expectedCheckpoints": 6,
+  "passedCheckpoints": 0,
+  "nativeInputCount": 0,
+  "limitations": [
+    "Catalog manifests exercised in isolated test app; production progress is not written",
+    "Cached snapshot used unless MOHOC_TEST_EMAIL and MOHOC_TEST_PASSWORD refresh it"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user-device\\2026-11-13T21-14-28-994Z-27076"
+}

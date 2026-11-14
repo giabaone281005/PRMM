@@ -761,9 +761,9 @@ var require_codegen = __commonJS({
       scopeCode() {
         return this._extScope.scopeCode(this._values);
       }
-      _def(varKind, nameOrPrefix, rhs, constant) {
+      _def(varKind, nameOrPrefix, rhs, constant2) {
         const name = this._scope.toName(nameOrPrefix);
-        if (rhs !== void 0 && constant)
+        if (rhs !== void 0 && constant2)
           this._constants[name.str] = rhs;
         this._leafNode(new Def(varKind, name, rhs));
         return name;
@@ -1178,7 +1178,7 @@ var require_util = __commonJS({
     }
     exports.evaluatedPropsToName = evaluatedPropsToName;
     function setEvaluated(gen, props, ps) {
-      Object.keys(ps).forEach((p) => gen.assign((0, codegen_1._)`${props}${(0, codegen_1.getProperty)(p)}`, true));
+      Object.keys(ps).forEach((p2) => gen.assign((0, codegen_1._)`${props}${(0, codegen_1.getProperty)(p2)}`, true));
     }
     exports.setEvaluated = setEvaluated;
     var snippets = {};
@@ -1751,11 +1751,11 @@ var require_code2 = __commonJS({
     }
     exports.noPropertyInData = noPropertyInData;
     function allSchemaProperties(schemaMap) {
-      return schemaMap ? Object.keys(schemaMap).filter((p) => p !== "__proto__") : [];
+      return schemaMap ? Object.keys(schemaMap).filter((p2) => p2 !== "__proto__") : [];
     }
     exports.allSchemaProperties = allSchemaProperties;
     function schemaProperties(it, schemaMap) {
-      return allSchemaProperties(schemaMap).filter((p) => !(0, util_1.alwaysValidSchema)(it, schemaMap[p]));
+      return allSchemaProperties(schemaMap).filter((p2) => !(0, util_1.alwaysValidSchema)(it, schemaMap[p2]));
     }
     exports.schemaProperties = schemaProperties;
     function callValidateCode({ schemaCode, data, it: { gen, topSchemaRef, schemaPath, errorPath }, it }, func, context, passSchema) {
@@ -2233,12 +2233,12 @@ var require_resolve = __commonJS({
     function getFullPath(resolver, id = "", normalize) {
       if (normalize !== false)
         id = normalizeId(id);
-      const p = resolver.parse(id);
-      return _getFullPath(resolver, p);
+      const p2 = resolver.parse(id);
+      return _getFullPath(resolver, p2);
     }
     exports.getFullPath = getFullPath;
-    function _getFullPath(resolver, p) {
-      const serialized = resolver.serialize(p);
+    function _getFullPath(resolver, p2) {
+      const serialized = resolver.serialize(p2);
       return serialized.split("#")[0] + "#";
     }
     exports._getFullPath = _getFullPath;
@@ -3013,11 +3013,11 @@ var require_compile = __commonJS({
       return sch || this.schemas[ref] || resolveSchema.call(this, root, ref);
     }
     function resolveSchema(root, ref) {
-      const p = this.opts.uriResolver.parse(ref);
-      const refPath = (0, resolve_1._getFullPath)(this.opts.uriResolver, p);
+      const p2 = this.opts.uriResolver.parse(ref);
+      const refPath = (0, resolve_1._getFullPath)(this.opts.uriResolver, p2);
       let baseId = (0, resolve_1.getFullPath)(this.opts.uriResolver, root.baseId, void 0);
       if (Object.keys(root.schema).length > 0 && refPath === baseId) {
-        return getJsonPointer.call(this, p, root);
+        return getJsonPointer.call(this, p2, root);
       }
       const id = (0, resolve_1.normalizeId)(refPath);
       const schOrRef = this.refs[id] || this.schemas[id];
@@ -3025,7 +3025,7 @@ var require_compile = __commonJS({
         const sch = resolveSchema.call(this, root, schOrRef);
         if (typeof (sch === null || sch === void 0 ? void 0 : sch.schema) !== "object")
           return;
-        return getJsonPointer.call(this, p, sch);
+        return getJsonPointer.call(this, p2, sch);
       }
       if (typeof (schOrRef === null || schOrRef === void 0 ? void 0 : schOrRef.schema) !== "object")
         return;
@@ -3039,7 +3039,7 @@ var require_compile = __commonJS({
           baseId = (0, resolve_1.resolveUrl)(this.opts.uriResolver, baseId, schId);
         return new SchemaEnv({ schema, schemaId, root, baseId });
       }
-      return getJsonPointer.call(this, p, schOrRef);
+      return getJsonPointer.call(this, p2, schOrRef);
     }
     exports.resolveSchema = resolveSchema;
     var PREVENT_SCOPE_CHANGE = /* @__PURE__ */ new Set([
@@ -4497,9 +4497,9 @@ var require_core = __commonJS({
             this.addSchema(_schema, ref, meta);
         }
         async function _loadSchema(ref) {
-          const p = this._loading[ref];
-          if (p)
-            return p;
+          const p2 = this._loading[ref];
+          if (p2)
+            return p2;
           try {
             return await (this._loading[ref] = loadSchema(ref));
           } finally {
@@ -5981,12 +5981,12 @@ var require_additionalProperties = __commonJS({
             const propsSchema = (0, util_1.schemaRefOrVal)(it, parentSchema.properties, "properties");
             definedProp = (0, code_1.isOwnProperty)(gen, propsSchema, key);
           } else if (props.length) {
-            definedProp = (0, codegen_1.or)(...props.map((p) => (0, codegen_1._)`${key} === ${p}`));
+            definedProp = (0, codegen_1.or)(...props.map((p2) => (0, codegen_1._)`${key} === ${p2}`));
           } else {
             definedProp = codegen_1.nil;
           }
           if (patProps.length) {
-            definedProp = (0, codegen_1.or)(definedProp, ...patProps.map((p) => (0, codegen_1._)`${(0, code_1.usePattern)(cxt, p)}.test(${key})`));
+            definedProp = (0, codegen_1.or)(definedProp, ...patProps.map((p2) => (0, codegen_1._)`${(0, code_1.usePattern)(cxt, p2)}.test(${key})`));
           }
           return (0, codegen_1.not)(definedProp);
         }
@@ -6066,7 +6066,7 @@ var require_properties = __commonJS({
         if (it.opts.unevaluated && allProps.length && it.props !== true) {
           it.props = util_1.mergeEvaluated.props(gen, (0, util_1.toHash)(allProps), it.props);
         }
-        const properties = allProps.filter((p) => !(0, util_1.alwaysValidSchema)(it, schema[p]));
+        const properties = allProps.filter((p2) => !(0, util_1.alwaysValidSchema)(it, schema[p2]));
         if (properties.length === 0)
           return;
         const valid = gen.name("valid");
@@ -6116,7 +6116,7 @@ var require_patternProperties = __commonJS({
         const { gen, schema, data, parentSchema, it } = cxt;
         const { opts } = it;
         const patterns = (0, code_1.allSchemaProperties)(schema);
-        const alwaysValidPatterns = patterns.filter((p) => (0, util_1.alwaysValidSchema)(it, schema[p]));
+        const alwaysValidPatterns = patterns.filter((p2) => (0, util_1.alwaysValidSchema)(it, schema[p2]));
         if (patterns.length === 0 || alwaysValidPatterns.length === patterns.length && (!it.opts.unevaluated || it.props === true)) {
           return;
         }
@@ -6692,9 +6692,9 @@ var require_unevaluatedProperties = __commonJS({
         }
         function unevaluatedStatic(evaluatedProps, key) {
           const ps = [];
-          for (const p in evaluatedProps) {
-            if (evaluatedProps[p] === true)
-              ps.push((0, codegen_1._)`${key} !== ${p}`);
+          for (const p2 in evaluatedProps) {
+            if (evaluatedProps[p2] === true)
+              ps.push((0, codegen_1._)`${key} !== ${p2}`);
           }
           return (0, codegen_1.and)(...ps);
         }
@@ -9327,9 +9327,514 @@ var quadratic_transformations_lesson_default = {
 // packages/lesson-contract/index.ts
 var import__ = __toESM(require__(), 1);
 
+// packages/lesson-runtime/cartesian.ts
+var eps = 1e-8;
+function relationPoint(g, index = 0) {
+  const t = [0, 2, -2, 1][index % 4];
+  return g.b !== 0 ? { x: t, y: (g.c - g.a * t) / g.b } : { x: g.c / g.a, y: t };
+}
+function graphSolution(g, mode) {
+  if (mode === "linear_relation") return { kind: "unique", points: [relationPoint(g)] };
+  if (mode === "linear_system") {
+    const d = g.d, e = g.e, f = g.f, det = g.a * e - d * g.b;
+    if (Math.abs(det) > eps) return { kind: "unique", points: [{ x: (g.c * e - f * g.b) / det, y: (g.a * f - d * g.c) / det }] };
+    return { kind: Math.abs(g.a * f - d * g.c) < eps && Math.abs(g.b * f - e * g.c) < eps ? "coincident" : "parallel", points: [] };
+  }
+  const A = g.b * g.q, B = g.a, C = -g.c;
+  if (Math.abs(A) < eps) {
+    const x = -C / B;
+    return { kind: "unique", points: [{ x, y: g.q * x * x }] };
+  }
+  const delta = B * B - 4 * A * C;
+  if (delta < -eps) return { kind: "none", points: [] };
+  if (Math.abs(delta) <= eps) {
+    const x = -B / (2 * A);
+    return { kind: "unique", points: [{ x, y: g.q * x * x }] };
+  }
+  const v = -0.5 * (B + (B >= 0 ? 1 : -1) * Math.sqrt(delta)), xs = [v / A, C / v].sort((a, b) => a - b);
+  return { kind: "two", points: xs.map((x) => ({ x, y: g.q * x * x })) };
+}
+function graphBounds(g, mode) {
+  const points = [relationPoint(g), relationPoint(g, 1), relationPoint(g, 2), relationPoint(g, 3), ...graphSolution(g, mode).points];
+  if (mode === "linear_system") {
+    const other = { a: g.d, b: g.e, c: g.f, snap: g.snap };
+    points.push(relationPoint(other), relationPoint(other, 1));
+  }
+  if (mode === "line_parabola_intersection") points.push({ x: 2, y: 4 * g.q }, { x: -2, y: 4 * g.q });
+  const x = Math.max(5, ...points.map((p2) => Math.abs(p2.x))) * 1.3, y = Math.max(5, ...points.map((p2) => Math.abs(p2.y))) * 1.3;
+  return { xMin: -x, xMax: x, yMin: -y, yMax: y };
+}
+function validateGraphData(g, mode) {
+  const errors = [];
+  for (const key of ["a", "b", "c", ...mode === "linear_system" ? ["d", "e", "f"] : [], ...mode === "line_parabola_intersection" ? ["q"] : []]) {
+    const v = g[key];
+    if (typeof v !== "number" || !Number.isFinite(v) || !Number.isInteger(v) || Math.abs(v) > 12) errors.push(`${key}: h\u1EC7 s\u1ED1 ph\u1EA3i l\xE0 s\u1ED1 nguy\xEAn trong [\u221212; 12].`);
+  }
+  if (g.a === 0 && g.b === 0) errors.push("a v\xE0 b kh\xF4ng \u0111\u01B0\u1EE3c \u0111\u1ED3ng th\u1EDDi b\u1EB1ng 0: c\u1EA7n m\u1ED9t \u0111\u01B0\u1EDDng th\u1EB3ng.");
+  if (mode === "linear_system" && g.d === 0 && g.e === 0) errors.push("d v\xE0 e kh\xF4ng \u0111\u01B0\u1EE3c \u0111\u1ED3ng th\u1EDDi b\u1EB1ng 0 \u1EDF \u0111\u01B0\u1EDDng th\u1EB3ng th\u1EE9 hai.");
+  if (mode === "line_parabola_intersection" && g.q === 0) errors.push("H\u1EC7 s\u1ED1 parabol q ph\u1EA3i kh\xE1c 0.");
+  if (![0, 0.5, 1].includes(g.snap)) errors.push("B\u01B0\u1EDBc ghim ch\u1EC9 nh\u1EADn 0 (t\u1EF1 do), 0,5 ho\u1EB7c 1.");
+  if (errors.length) return errors;
+  const targets = mode === "linear_relation" ? [0, 1, 2, 3].map((i) => relationPoint(g, i)) : graphSolution(g, mode).points;
+  if (g.snap && targets.some((p2) => [p2.x, p2.y].some((n) => Math.abs(n / g.snap - Math.round(n / g.snap)) > eps))) errors.push("\u0110i\u1EC3m \u0111\xEDch kh\xF4ng n\u1EB1m tr\xEAn l\u01B0\u1EDBi \u0111\xE3 ch\u1ECDn. \u0110\u1EB7t b\u01B0\u1EDBc ghim b\u1EB1ng 0 ho\u1EB7c \u0111\u1ED5i h\u1EC7 s\u1ED1 \u0111\u1EC3 c\xF3 t\u1ECDa \u0111\u1ED9 tr\xEAn l\u01B0\u1EDBi.");
+  if (targets.some((p2) => !Number.isFinite(p2.x) || !Number.isFinite(p2.y) || Math.abs(p2.x) > 1e3 || Math.abs(p2.y) > 1e3)) errors.push("\u0110i\u1EC3m \u0111\xEDch v\u01B0\u1EE3t mi\u1EC1n quan s\xE1t \xB11000. Gi\u1EA3m h\u1EC7 s\u1ED1 ho\u1EB7c ch\u1ECDn h\u1EC7 kh\xE1c.");
+  return errors;
+}
+function validateGraph(g) {
+  return !["linear_relation", "linear_system", "line_parabola_intersection"].includes(g.mode) || !["explore", "identify", "discover", "guided", "practice", "assessment"].includes(g.task) ? ["Mode ho\u1EB7c nhi\u1EC7m v\u1EE5 \u0111\u1ED3 th\u1ECB kh\xF4ng \u0111\u01B0\u1EE3c h\u1ED7 tr\u1EE3."] : validateGraphData(g, g.mode);
+}
+function graphAccept(g, name, value) {
+  if (!Number.isFinite(value)) return false;
+  if (["x", "y", "width", "height"].includes(name)) {
+    if (["width", "height"].includes(name) && g.mode !== "line_parabola_intersection") return false;
+    const bounds = graphBounds(g, g.mode), horizontal = ["x", "width"].includes(name), limit = horizontal ? bounds.xMax : bounds.yMax;
+    return Math.abs(value) <= limit + eps && (!g.snap || Math.abs(value / g.snap - Math.round(value / g.snap)) < eps);
+  }
+  if (name === "a") return g.task === "explore" && g.mode === "line_parabola_intersection" && Number.isInteger(value) && value !== 0 && Math.abs(value) <= 12;
+  if (name === "b") return g.task === "identify" && [1, 2].includes(value);
+  if (name === "c") return !["explore", "identify"].includes(g.task) && g.mode !== "linear_relation" && [0, 1, 2, 3].includes(value);
+  if (name === "numerator") return value === 1;
+  return false;
+}
+
+// packages/lesson-runtime/algebra.ts
+var algebraModes = ["product_equation", "rational_equation", "quadratic_equation", "viete"];
+var eps2 = 1e-8;
+var unique = (values) => values.sort((a, b) => a - b).filter((v, i, a) => i === 0 || Math.abs(v - a[i - 1]) > eps2);
+var constant = (id, value) => ({ id, op: "const", value });
+var variable = (id) => ({ id, op: "var", name: "x" });
+var linear = (id, a, b) => ({ id, op: "add", terms: [{ id: id + "-ax", op: "mul", terms: [constant(id + "-a", a), variable(id + "-x")] }, constant(id + "-b", b)] });
+function expressionText(e) {
+  if (e.op === "add" && e.terms.length === 2) {
+    const [term, c] = e.terms;
+    if (term.op === "mul" && term.terms.length === 2 && term.terms[0].op === "const" && term.terms[1].op === "var" && c.op === "const") {
+      const a = term.terms[0].value, b = c.value;
+      if (a === 0) return String(b);
+      return `${a === 1 ? "" : a === -1 ? "\u2212" : a}x${b === 0 ? "" : b < 0 ? " \u2212 " + Math.abs(b) : " + " + b}`;
+    }
+  }
+  switch (e.op) {
+    case "const":
+      return e.value < 0 ? `(${e.value})` : String(e.value);
+    case "var":
+      return "x";
+    case "add":
+      return e.terms.map(expressionText).join(" + ");
+    case "mul":
+      return e.terms.map((t) => `(${expressionText(t)})`).join(" \xD7 ");
+    case "div":
+      return `[${expressionText(e.numerator)}] / [${expressionText(e.denominator)}]`;
+  }
+}
+function algebraEquation(g) {
+  const d = g.data, n = (k) => Number(d[k]);
+  if (g.mode === "product_equation" || g.mode === "rational_equation") {
+    const numerator = { id: "numerator", op: "mul", terms: [linear("factor-L", n("p"), n("q")), linear("factor-R", n("r"), n("s"))] };
+    return { left: g.mode === "product_equation" ? numerator : { id: "fraction", op: "div", numerator, denominator: { id: "denominator", op: "mul", terms: [linear("denominator-L", n("d"), n("e")), linear("denominator-R", n("f"), n("g"))] } }, right: constant("rhs", g.mode === "product_equation" ? 0 : n("k")) };
+  }
+  return { left: { id: "polynomial", op: "add", terms: [{ id: "term-square", op: "mul", terms: [constant("coefficient-a", n("a")), variable("square-x-1"), variable("square-x-2")] }, { id: "term-linear", op: "mul", terms: [constant("coefficient-b", n("b")), variable("linear-x")] }, constant("coefficient-c", n("c"))] }, right: constant("rhs", 0) };
+}
+function solvePolynomial(a, b, c) {
+  if (a === 0) {
+    if (b === 0) return { degree: 0, delta: null, kind: c === 0 ? "all" : "none", roots: [] };
+    return { degree: 1, delta: null, kind: "one", roots: [-c / b] };
+  }
+  const delta = b * b - 4 * a * c, r = graphSolution({ a: b, b: 1, c: -c, q: a, snap: 0 }, "line_parabola_intersection"), roots = r.points.map((p2) => p2.x);
+  return { degree: 2, delta, kind: roots.length === 0 ? "none" : roots.length === 1 ? "one" : "two", roots };
+}
+function algebraModel(g) {
+  const d = g.data, n = (k) => Number(d[k]);
+  const product = g.mode === "product_equation" || g.mode === "rational_equation", rational = g.mode === "rational_equation", a = product ? n("p") * n("r") - (rational ? n("k") * n("d") * n("f") : 0) : n("a"), b = product ? n("p") * n("s") + n("q") * n("r") - (rational ? n("k") * (n("d") * n("g") + n("e") * n("f")) : 0) : n("b"), c = product ? n("q") * n("s") - (rational ? n("k") * n("e") * n("g") : 0) : n("c");
+  const forbidden = rational ? unique([-n("e") / n("d"), ...n("f") !== 0 ? [-n("g") / n("f")] : []]) : [], candidate = solvePolynomial(a, b, c), isAllowed = (x) => !rational || Math.abs(n("d") * x + n("e")) > eps2 && Math.abs(n("f") * x + n("g")) > eps2, roots = candidate.roots.filter(isAllowed), extraneous = candidate.roots.filter((x) => !isAllowed(x));
+  const kind = candidate.kind === "all" ? "all" : roots.length === 0 ? "none" : roots.length === 1 ? "one" : "two", sum = a !== 0 ? -b / a : null, productValue = a !== 0 ? c / a : null;
+  return { a, b, c, degree: candidate.degree, delta: candidate.delta, candidates: candidate.roots, forbidden, roots, extraneous, kind, count: kind === "all" ? 3 : roots.length, sum, product: productValue, equation: algebraEquation(g) };
+}
+function algebraDomainPool(g) {
+  return unique([...algebraModel(g).forbidden, -2, -1, 0, 1, 2]);
+}
+function algebraCards(g) {
+  const d = g.data;
+  if (g.mode === "viete" && g.task !== "identify") return [{ id: "formula-sum", kind: "formula", label: "\u2212b / a" }, { id: "formula-product", kind: "formula", label: "c / a" }, { id: "formula-sign-sum", kind: "formula", label: "b / a" }, { id: "formula-sign-product", kind: "formula", label: "\u2212c / a" }];
+  if (g.mode === "product_equation") return [{ id: "factor-L", kind: "factor", label: expressionText(linear("factor-L", Number(d.p), Number(d.q))) }, { id: "factor-R", kind: "factor", label: expressionText(linear("factor-R", Number(d.r), Number(d.s))) }, { id: "variable-x", kind: "variable", label: "x" }, { id: "number-zero", kind: "number", label: "0", value: 0 }];
+  if (g.mode === "rational_equation") return [];
+  return [...unique([Number(d.a), Number(d.b), Number(d.c), -Number(d.a), -Number(d.b), -Number(d.c), 0, 1]).map((value, i) => ({ id: "number-" + i, kind: "number", label: String(value), value })), { id: "variable-x", kind: "variable", label: "x" }];
+}
+var algebraOperations = [
+  { id: "clear-denominator", label: "Nh\xE2n hai v\u1EBF v\u1EDBi m\u1EABu, gi\u1EEF \u0111i\u1EC1u ki\u1EC7n x\xE1c \u0111\u1ECBnh" },
+  { id: "zero-product", label: "T\xE1ch t\xEDch b\u1EB1ng 0 th\xE0nh c\xE1c nh\xE2n t\u1EED b\u1EB1ng 0" },
+  { id: "divide-leading", label: "Chia hai v\u1EBF cho h\u1EC7 s\u1ED1 a kh\xE1c 0" },
+  { id: "divide-first-factor", label: "Chia hai v\u1EBF cho nh\xE2n t\u1EED th\u1EE9 nh\u1EA5t" },
+  { id: "square-both", label: "B\xECnh ph\u01B0\u01A1ng hai v\u1EBF \xB7 ngo\xE0i ph\u1EA1m vi ki\u1EC3m ch\u1EE9ng t\u1ED5ng qu\xE1t" },
+  { id: "negate-both", label: "\u0110\u1ED5i d\u1EA5u c\u1EA3 hai v\u1EBF" },
+  { id: "divide-zero", label: "Chia hai v\u1EBF cho 0" }
+];
+function validateAlgebraData(d, mode) {
+  if (!algebraModes.includes(mode)) return ["Mode \u0111\u1EA1i s\u1ED1 ch\u01B0a \u0111\u01B0\u1EE3c h\u1ED7 tr\u1EE3."];
+  const errors = [], keys = mode === "product_equation" ? ["p", "q", "r", "s"] : mode === "rational_equation" ? ["p", "q", "r", "s", "d", "e", "f", "g", "k"] : ["a", "b", "c"];
+  for (const key of keys) if (typeof d[key] !== "number" || !Number.isInteger(d[key]) || Math.abs(Number(d[key])) > 9) errors.push(`${key}: nh\u1EADp s\u1ED1 nguy\xEAn t\u1EEB \u22129 \u0111\u1EBFn 9.`);
+  if (errors.length) return errors;
+  if ((mode === "product_equation" || mode === "rational_equation") && (d.p === 0 || d.r === 0)) errors.push("H\u1EC7 s\u1ED1 x c\u1EE7a c\u1EA3 hai nh\xE2n t\u1EED t\u1EED s\u1ED1 ph\u1EA3i kh\xE1c 0.");
+  if (mode === "rational_equation" && (d.d === 0 || d.f === 0 && d.g === 0)) errors.push("M\u1EABu c\u1EA7n nh\xE2n t\u1EED b\u1EADc nh\u1EA5t d kh\xE1c 0; nh\xE2n t\u1EED m\u1EABu th\u1EE9 hai kh\xF4ng \u0111\u01B0\u1EE3c \u0111\u1ED3ng nh\u1EA5t b\u1EB1ng 0. D\xF9ng f = 0, g = 1 n\u1EBFu ch\u1EC9 c\u1EA7n m\u1ED9t nh\xE2n t\u1EED m\u1EABu.");
+  if (mode === "quadratic_equation" && (!["quadratic_only", "allow_linear"].includes(String(d.degreePolicy)) || d.degreePolicy === "quadratic_only" && d.a === 0)) errors.push("M\u1EABu b\u1EADc hai y\xEAu c\u1EA7u a kh\xE1c 0. Ch\u1ECDn ch\u1EBF \u0111\u1ED9 cho ph\xE9p h\u1EA1 b\u1EADc n\u1EBFu c\u1EA7n a = 0.");
+  if (mode === "viete" && (d.a === 0 || Number(d.b) ** 2 - 4 * Number(d.a) * Number(d.c) < 0)) errors.push("Vi\xE8te trong ph\u1EA1m vi nghi\u1EC7m th\u1EF1c c\u1EA7n a kh\xE1c 0 v\xE0 \u0394 kh\xF4ng \xE2m; \u0111\u1ED5i h\u1EC7 s\u1ED1 ho\u1EB7c d\xF9ng mode \u0394 \u0111\u1EC3 x\xE9t v\xF4 nghi\u1EC7m th\u1EF1c.");
+  if (errors.length) return errors;
+  const m = algebraModel({ mode, data: d, task: "guided" });
+  if ([...m.roots, ...m.forbidden, ...m.candidates].some((x) => !Number.isFinite(x) || Math.abs(x) > 1e3)) errors.push("Nghi\u1EC7m ho\u1EB7c gi\xE1 tr\u1ECB c\u1EA5m v\u01B0\u1EE3t kho\u1EA3ng thao t\xE1c \u22121000\u20261000; gi\u1EA3m h\u1EC7 s\u1ED1.");
+  return errors;
+}
+function validateAlgebra(g) {
+  return [...validateAlgebraData(g.data, g.mode), ...!["explore", "identify", "discover", "guided", "practice", "assessment"].includes(g.task) ? ["Nhi\u1EC7m v\u1EE5 \u0111\u1EA1i s\u1ED1 kh\xF4ng h\u1EE3p l\u1EC7."] : []];
+}
+function algebraAccept(g, name, value) {
+  if (!Number.isFinite(value)) return false;
+  if (name === "x") return value >= -1e3 && value <= 1e3;
+  if (g.task === "explore") return false;
+  if (["a", "b", "c"].includes(name)) return (name !== "c" || ["quadratic_equation", "viete"].includes(g.mode) && g.task === "identify" || name === "c" && g.mode === "quadratic_equation") && Number.isInteger(value) && value >= 0 && value < algebraCards(g).length;
+  if (name === "denominator") return Number.isInteger(value) && value >= 0 && (g.mode === "rational_equation" ? value < 1 << algebraDomainPool(g).length : g.mode === "quadratic_equation" && value <= 2);
+  if (name === "targetWidth") return g.mode === "rational_equation" && value === 1;
+  if (g.task === "identify") return false;
+  if (name === "y") return Number.isInteger(value) && value >= 0 && value < algebraOperations.length;
+  if (name === "numerator") return Number.isInteger(value) && value >= 0 && value <= 3;
+  if (name === "width" || name === "height") return value === -999999 || value >= -1e3 && value <= 1e3;
+  if (name === "targetA" || name === "targetB") return Math.abs(value) <= 1e6 && (name === "targetA" || g.mode === "viete");
+  return name === "targetY" && value === 1;
+}
+
+// packages/lesson-runtime/geometry.ts
+var geometryModes = ["right_triangle", "circle_symmetry", "line_circle", "two_circles", "circle_angles", "arc_sector_annulus", "triangle_circles", "cyclic_polygon"];
+var rad = Math.PI / 180;
+var p = (x, y) => ({ x, y });
+var polar = (r, a) => p(r * Math.cos(a * rad), r * Math.sin(a * rad));
+var distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+var add = (a, b) => p(a.x + b.x, a.y + b.y);
+var scale = (a, k) => p(a.x * k, a.y * k);
+var turn = (a, angle) => p(a.x * Math.cos(angle * rad) - a.y * Math.sin(angle * rad), a.x * Math.sin(angle * rad) + a.y * Math.cos(angle * rad));
+function constructionGraph(g, objects) {
+  const triangle = ["right_triangle", "triangle_circles"].includes(g.mode), nodes = /* @__PURE__ */ new Map([["data", []]]);
+  if (triangle) {
+    nodes.set("construction-I", ["vertex-A", "vertex-B", "vertex-C"]);
+    nodes.set("construction-O", ["vertex-A", "vertex-B", "vertex-C"]);
+  }
+  const parents = (id) => {
+    if (id === "vertex-A" || id === "center-O" || id === "center-K") return ["data"];
+    if (triangle && id === "vertex-B") return ["vertex-A", "data"];
+    if (triangle && id === "vertex-C") return ["vertex-A", "vertex-B", "data"];
+    if (id.startsWith("side-")) return id.slice(-2).split("").map((v) => "vertex-" + v);
+    if (id.startsWith("bisector-")) return ["side-" + id.slice(-2), "construction-O"];
+    if (id.startsWith("angle-bisector-")) return ["vertex-" + ["A", "B", "C"][Number(id.slice(-1))], "construction-I"];
+    if (id === "incircle" || id === "incenter") return ["construction-I"];
+    if (id === "circumcircle" || id === "circumcenter") return [triangle ? "construction-O" : "center-O", "data"];
+    if (id === "circle-1" || id === "inner-circle") return ["center-O", "data"];
+    if (id === "circle-2") return ["center-K", "data"];
+    if (id === "axis" || id === "line-1") return ["center-O", "data"];
+    if (id === "point-P") return ["center-O", "data"];
+    if (id === "point-Q") return ["point-P", "axis"];
+    if (id === "radius-OP") return ["center-O", "point-P"];
+    if (id === "reflection-PQ") return ["point-P", "point-Q"];
+    if (id === "centers-OK") return ["center-O", "center-K"];
+    if (id === "foot-H") return ["center-O", "line-1"];
+    if (id === "distance-OH") return ["center-O", "foot-H"];
+    if (id.startsWith("intersection-")) return ["circle-1", g.mode === "two_circles" ? "circle-2" : "line-1"];
+    if (id === "tangent-contact") return ["circle-1", "data"];
+    if (id === "tangent-1" || id === "tangent-radius") return ["center-O", "tangent-contact"];
+    if (id === "arc-A" || id === "arc-B") return ["circle-1", "data"];
+    if (id === "radius-OA" || id === "radius-OB") return ["center-O", "arc-" + id.slice(-1)];
+    if (id === "arc-AB" || id === "sector-AOB") return ["center-O", "arc-A", "arc-B"];
+    if (id === "annulus") return ["circle-1", "inner-circle"];
+    if (id === "inscribed-V") return ["arc-AB", "circle-1", "data"];
+    if (id === "chord-VA" || id === "chord-VB") return ["inscribed-V", "arc-" + id.slice(-1)];
+    if (id.startsWith("vertex-")) return ["circumcircle", "data"];
+    if (id.startsWith("polygon-side-")) {
+      const i = Number(id.slice(13)), n = g.data.shape === "regular_polygon" ? Number(g.data.vertices) : 4;
+      return ["vertex-" + i, "vertex-" + (i + 1) % n];
+    }
+    if (id === "polygon") return objects.filter((o) => o.id.startsWith("vertex-")).map((o) => o.id);
+    return ["data"];
+  };
+  objects.forEach((o) => nodes.set(o.id, parents(o.id)));
+  const result = [], seen = /* @__PURE__ */ new Set(), visiting = /* @__PURE__ */ new Set();
+  const visit = (id) => {
+    if (seen.has(id)) return;
+    if (visiting.has(id) || !nodes.has(id)) throw Error("Invalid trusted geometry dependency: " + id);
+    visiting.add(id);
+    nodes.get(id).forEach(visit);
+    visiting.delete(id);
+    seen.add(id);
+    result.push({ id, parents: nodes.get(id) });
+  };
+  nodes.forEach((_, id) => visit(id));
+  return result;
+}
+function geometryModel(g, state = {}) {
+  const d = g.data, n = (k) => Number(d[k]), objects = [], layers = [];
+  let value = 0, quantity = "", targetId = "", handle = p(1, 0), handleOrigin = p(0, 0), drag = "orientation";
+  const facts = {};
+  const point = (id, label, v) => {
+    objects.push({ id, label, kind: "point", points: [v] });
+    return v;
+  };
+  const segment = (id, label, a, b) => objects.push({ id, label, kind: "segment", points: [a, b] });
+  const circle = (id, label, c, r) => objects.push({ id, label, kind: "circle", points: [c], radius: r });
+  const layer = (id, label, bit, items) => layers.push({ id, label, bit, objects: items.map((o) => ({ ...o, layer: bit })) });
+  const O = p(0, 0);
+  if (g.mode === "right_triangle" || g.mode === "triangle_circles") {
+    let A = O, B, C, a, b, c;
+    if (g.mode === "right_triangle") {
+      B = p(n("legA"), 0);
+      C = p(0, n("legB"));
+      a = Math.hypot(n("legA"), n("legB"));
+      b = n("legB");
+      c = n("legA");
+    } else {
+      a = n("sideA");
+      b = n("sideB");
+      c = n("sideC");
+      B = p(c, 0);
+      const x = (b * b + c * c - a * a) / (2 * c);
+      C = p(x, Math.sqrt(Math.max(0, b * b - x * x)));
+    }
+    point("vertex-A", "\u0110\u1EC9nh A", A);
+    point("vertex-B", "\u0110\u1EC9nh B", B);
+    point("vertex-C", "\u0110\u1EC9nh C", C);
+    segment("side-AB", "C\u1EA1nh AB", A, B);
+    segment("side-AC", "C\u1EA1nh AC", A, C);
+    segment("side-BC", "C\u1EA1nh BC", B, C);
+    handle = B;
+    const area = Math.abs(B.x * C.y) / 2, s = (a + b + c) / 2, I = scale(add(add(scale(A, a), scale(B, b)), scale(C, c)), 1 / (2 * s)), U = p(c / 2, (b * b - c * C.x) / (2 * C.y)), r = area / s, R = a * b * c / (4 * area);
+    facts.area = area;
+    facts.inradius = r;
+    facts.circumradius = R;
+    const bisectors = [["AB", A, B], ["AC", A, C], ["BC", B, C]];
+    layer("perpendicular-bisectors", "Trung tr\u1EF1c", 1, bisectors.map(([id, u, v]) => {
+      const mid = scale(add(u, v), 0.5), direction = p(-(v.y - u.y), v.x - u.x), sign = (U.x - mid.x) * direction.x + (U.y - mid.y) * direction.y < 0 ? -1 : 1, normal = scale(direction, sign / distance(u, v)), len = Math.max(a, b, c) * 0.2;
+      return { id: "bisector-" + id, label: "Trung tr\u1EF1c " + id, kind: "segment", points: [add(mid, scale(normal, -len)), add(U, scale(normal, len))] };
+    }));
+    layer("angle-bisectors", "Ph\xE2n gi\xE1c", 2, [A, B, C].map((v, i) => ({ id: "angle-bisector-" + i, label: "Ph\xE2n gi\xE1c " + ["A", "B", "C"][i], kind: "segment", points: [v, I] })));
+    if (g.mode === "right_triangle") {
+      const opposite = d.angleAt === "B" ? b : c, adjacent = d.angleAt === "B" ? c : b, side = d.target === "hypotenuse" ? a : d.target === "opposite" ? opposite : adjacent;
+      targetId = d.target === "hypotenuse" ? "side-BC" : d.target === "opposite" ? d.angleAt === "B" ? "side-AC" : "side-AB" : d.angleAt === "B" ? "side-AB" : "side-AC";
+      const ratio = d.ratio === "sin" ? opposite / a : d.ratio === "cos" ? adjacent / a : opposite / adjacent;
+      const angle = Math.atan2(opposite, adjacent) / rad;
+      value = g.curriculumCode === "M9-GEO-01" ? side : g.curriculumCode === "M9-GEO-02" ? ratio : angle;
+      quantity = g.curriculumCode === "M9-GEO-01" ? `\u0110\u1ED9 d\xE0i c\u1EA1nh ${d.target === "opposite" ? "\u0111\u1ED1i" : d.target === "adjacent" ? "k\u1EC1" : "huy\u1EC1n"} theo g\xF3c ${d.angleAt} (${d.unit})` : g.curriculumCode === "M9-GEO-02" ? `${d.ratio} g\xF3c ${d.angleAt}` : `G\xF3c ${d.angleAt} (\u0111\u1ED9)`;
+      facts.rightAngle = 90;
+      facts.opposite = opposite;
+      facts.adjacent = adjacent;
+      facts.hypotenuse = a;
+      facts.ratio = ratio;
+      facts.acuteAngle = angle;
+    } else {
+      const inc = d.construction === "incircle";
+      targetId = inc ? "incircle" : "circumcircle";
+      value = inc ? r : R;
+      quantity = `B\xE1n k\xEDnh \u0111\u01B0\u1EDDng tr\xF2n ${inc ? "n\u1ED9i" : "ngo\u1EA1i"} ti\u1EBFp (${d.unit})`;
+      layer("incircle", "\u0110\u01B0\u1EDDng tr\xF2n n\u1ED9i ti\u1EBFp", 4, [{ id: "incircle", label: "\u0110\u01B0\u1EDDng tr\xF2n n\u1ED9i ti\u1EBFp", kind: "circle", points: [I], radius: r }, { id: "incenter", label: "T\xE2m n\u1ED9i ti\u1EBFp I", kind: "point", points: [I] }]);
+      layer("circumcircle", "\u0110\u01B0\u1EDDng tr\xF2n ngo\u1EA1i ti\u1EBFp", 8, [{ id: "circumcircle", label: "\u0110\u01B0\u1EDDng tr\xF2n ngo\u1EA1i ti\u1EBFp", kind: "circle", points: [U], radius: R }, { id: "circumcenter", label: "T\xE2m ngo\u1EA1i ti\u1EBFp O", kind: "point", points: [U] }]);
+    }
+  } else if (g.mode === "circle_symmetry") {
+    const r = n("radius"), P = polar(n("pointDistance"), n("pointAngle")), Q = d.axis === "x" ? p(P.x, -P.y) : p(-P.x, P.y);
+    circle("circle-1", "\u0110\u01B0\u1EDDng tr\xF2n t\xE2m O", O, r);
+    point("center-O", "T\xE2m O", O);
+    point("point-P", "\u0110i\u1EC3m P", P);
+    point("point-Q", "\u0110i\u1EC3m \u0111\u1ED1i x\u1EE9ng Q", Q);
+    segment("radius-OP", "OP", O, P);
+    segment("reflection-PQ", "C\u1EB7p \u0111\u1ED1i x\u1EE9ng PQ", P, Q);
+    segment("axis", "Tr\u1EE5c \u0111\u1ED1i x\u1EE9ng", d.axis === "x" ? p(-r * 1.5, 0) : p(0, -r * 1.5), d.axis === "x" ? p(r * 1.5, 0) : p(0, r * 1.5));
+    value = n("pointDistance") < r - 1e-8 ? 0 : Math.abs(n("pointDistance") - r) <= 1e-8 ? 1 : 2;
+    quantity = "V\u1ECB tr\xED P: trong = 0; tr\xEAn = 1; ngo\xE0i = 2";
+    targetId = "point-Q";
+    handle = P;
+    facts.reflectionX = Q.x;
+    facts.reflectionY = Q.y;
+  } else if (g.mode === "line_circle") {
+    const r = n("radius"), h = n("distance"), angle = n("normalAngle"), N = polar(1, angle), T = p(-N.y, N.x), foot = scale(N, h), length = 1.7 * r;
+    circle("circle-1", "\u0110\u01B0\u1EDDng tr\xF2n t\xE2m O", O, r);
+    point("center-O", "T\xE2m O", O);
+    segment("line-1", `\u0110\u01B0\u1EDDng th\u1EB3ng \u2113 \xB7 d = ${h} ${d.unit}`, add(foot, scale(T, -length)), add(foot, scale(T, length)));
+    segment("distance-OH", "Kho\u1EA3ng c\xE1ch OH", O, foot);
+    point("foot-H", "Ch\xE2n vu\xF4ng g\xF3c H", foot);
+    value = h > r + 1e-8 ? 0 : Math.abs(h - r) <= 1e-8 ? 1 : 2;
+    quantity = "S\u1ED1 giao \u0111i\u1EC3m c\u1EE7a \u0111\u01B0\u1EDDng th\u1EB3ng v\xE0 \u0111\u01B0\u1EDDng tr\xF2n";
+    targetId = "line-1";
+    handle = polar(r, angle);
+    if (value > 0) {
+      const z = Math.sqrt(Math.max(0, r * r - h * h));
+      point("intersection-1", "Giao \u0111i\u1EC3m I", add(foot, scale(T, z)));
+      if (value === 2) point("intersection-2", "Giao \u0111i\u1EC3m J", add(foot, scale(T, -z)));
+    }
+    const contact = scale(N, r);
+    layer("tangent", "Ti\u1EBFp tuy\u1EBFn t\u1EA1i T", 16, [{ id: "tangent-1", label: "Ti\u1EBFp tuy\u1EBFn", kind: "segment", points: [add(contact, scale(T, -2 * r)), add(contact, scale(T, 2 * r))] }, { id: "tangent-contact", label: "Ti\u1EBFp \u0111i\u1EC3m T", kind: "point", points: [contact] }, { id: "tangent-radius", label: "OT vu\xF4ng g\xF3c ti\u1EBFp tuy\u1EBFn", kind: "segment", points: [O, contact] }]);
+    facts.distance = h;
+    facts.radius = r;
+  } else if (g.mode === "two_circles") {
+    const r = n("radius"), s = n("radius2"), h = n("distance"), C = p(h, 0);
+    circle("circle-1", "\u0110\u01B0\u1EDDng tr\xF2n O", O, r);
+    circle("circle-2", "\u0110\u01B0\u1EDDng tr\xF2n K", C, s);
+    point("center-O", "T\xE2m O", O);
+    point("center-K", "T\xE2m K", C);
+    segment("centers-OK", "\u0110o\u1EA1n n\u1ED1i t\xE2m", O, C);
+    value = h < 1e-8 ? Math.abs(r - s) < 1e-8 ? 3 : 0 : h > r + s + 1e-8 || h < Math.abs(r - s) - 1e-8 ? 0 : Math.abs(h - r - s) < 1e-8 || Math.abs(h - Math.abs(r - s)) < 1e-8 ? 1 : 2;
+    quantity = "S\u1ED1 giao \u0111i\u1EC3m: 0 / 1 / 2; tr\xF9ng nhau = 3 (v\xF4 s\u1ED1)";
+    targetId = "circle-2";
+    handle = h > 0 ? C : p(r, 0);
+    if (h > 0 && value > 0 && value < 3) {
+      const x = (r * r - s * s + h * h) / (2 * h), y = Math.sqrt(Math.max(0, r * r - x * x));
+      point("intersection-1", "Giao \u0111i\u1EC3m I", p(x, y));
+      if (value === 2) point("intersection-2", "Giao \u0111i\u1EC3m J", p(x, -y));
+    }
+    facts.centerDistance = h;
+  } else if (g.mode === "circle_angles" || g.mode === "arc_sector_annulus") {
+    const r = n("radius"), sweep = n("sweep"), A = polar(r, 0), B = polar(r, sweep);
+    circle("circle-1", "\u0110\u01B0\u1EDDng tr\xF2n t\xE2m O", O, r);
+    point("center-O", "T\xE2m O", O);
+    point("arc-A", "\u0110\u1EA7u cung A", A);
+    point("arc-B", "\u0110\u1EA7u cung B", B);
+    segment("radius-OA", "B\xE1n k\xEDnh OA", O, A);
+    segment("radius-OB", "B\xE1n k\xEDnh OB", O, B);
+    objects.push({ id: "arc-AB", label: "Cung nh\u1ECF AB", kind: "arc", points: [O, A, B], radius: r, sweep });
+    objects.push({ id: "sector-AOB", label: "Qu\u1EA1t tr\xF2n AOB", kind: "sector", points: [O, A, B], radius: r, sweep });
+    if (g.mode === "circle_angles") {
+      const alpha = Math.min(355, Math.max(sweep + 5, Number(state.a ?? 240))), V = polar(r, alpha);
+      point("inscribed-V", "\u0110\u1EC9nh g\xF3c n\u1ED9i ti\u1EBFp V", V);
+      segment("chord-VA", "D\xE2y VA", V, A);
+      segment("chord-VB", "D\xE2y VB", V, B);
+      value = sweep / 2;
+      quantity = `G\xF3c n\u1ED9i ti\u1EBFp AVB (\u0111\u1ED9), g\xF3c \u1EDF t\xE2m AOB = ${sweep}\xB0`;
+      targetId = "arc-AB";
+      handle = V;
+      drag = "inscribed";
+      facts.centralAngle = sweep;
+      facts.inscribedAngle = sweep / 2;
+    } else {
+      const inner = n("innerRadius");
+      circle("inner-circle", "\u0110\u01B0\u1EDDng tr\xF2n trong", O, inner);
+      objects.push({ id: "annulus", label: "V\xE0nh khuy\xEAn", kind: "sector", points: [O, polar(r, 0), polar(r, 359.999)], radius: r, sweep: 359.999 });
+      value = d.measure === "arc" ? Math.PI * r * sweep / 180 : d.measure === "sector" ? Math.PI * r * r * sweep / 360 : Math.PI * (r * r - inner * inner);
+      targetId = d.measure === "arc" ? "arc-AB" : d.measure === "sector" ? "sector-AOB" : "annulus";
+      quantity = d.measure === "arc" ? `\u0110\u1ED9 d\xE0i cung AB (${d.unit})` : d.measure === "sector" ? `Di\u1EC7n t\xEDch qu\u1EA1t AOB (${d.unit}\xB2)` : `Di\u1EC7n t\xEDch v\xE0nh khuy\xEAn (${d.unit}\xB2)`;
+      facts.arcLength = Math.PI * r * sweep / 180;
+      facts.sectorArea = Math.PI * r * r * sweep / 360;
+      facts.annulusArea = Math.PI * (r * r - inner * inner);
+      handle = B;
+    }
+  } else {
+    const r = n("radius"), regular = d.shape === "regular_polygon", angles = regular ? Array.from({ length: n("vertices") }, (_, i) => i * 360 / n("vertices")) : [0, n("angleB"), n("angleC"), n("angleD")], vertices = angles.map((a) => polar(r, a));
+    circle("circumcircle", "\u0110\u01B0\u1EDDng tr\xF2n ngo\u1EA1i ti\u1EBFp", O, r);
+    point("center-O", "T\xE2m O", O);
+    vertices.forEach((v, i) => {
+      point("vertex-" + i, "\u0110\u1EC9nh " + String.fromCharCode(65 + i), v);
+      segment("polygon-side-" + i, "C\u1EA1nh " + String.fromCharCode(65 + i) + String.fromCharCode(65 + (i + 1) % vertices.length), v, vertices[(i + 1) % vertices.length]);
+    });
+    objects.push({ id: "polygon", label: regular ? "\u0110a gi\xE1c \u0111\u1EC1u" : "T\u1EE9 gi\xE1c n\u1ED9i ti\u1EBFp", kind: "polygon", points: vertices });
+    value = regular ? (n("vertices") - 2) * 180 / n("vertices") : n("angleC") / 2;
+    quantity = regular ? "M\u1ED7i g\xF3c trong \u0111a gi\xE1c \u0111\u1EC1u (\u0111\u1ED9)" : `G\xF3c D \u0111\u1ED1i g\xF3c B = ${180 - n("angleC") / 2}\xB0 (\u0111\u1ED9)`;
+    targetId = "polygon";
+    handle = vertices[0];
+    facts.oppositeAngleSum = 180;
+    facts.centralStep = regular ? 360 / n("vertices") : 0;
+  }
+  const orientation = Number(state.x ?? 0), all = [...objects, ...layers.flatMap((l) => l.objects)], extents = all.flatMap((o) => o.radius ? [p(o.points[0].x - o.radius, o.points[0].y - o.radius), p(o.points[0].x + o.radius, o.points[0].y + o.radius)] : o.points), center = p((Math.min(...extents.map((p2) => p2.x)) + Math.max(...extents.map((p2) => p2.x))) / 2, (Math.min(...extents.map((p2) => p2.y)) + Math.max(...extents.map((p2) => p2.y))) / 2), bounds = Math.max(0.5, ...all.map((o) => o.radius ? distance(o.points[0], center) + o.radius : Math.max(...o.points.map((v) => distance(v, center))))) * 1.12;
+  for (const o of all) o.points = o.points.map((v) => turn(v, orientation));
+  return { objects, value, quantity, targetId, layers, bounds, center: turn(center, orientation), handle: turn(handle, orientation), handleOrigin: turn(handleOrigin, orientation), drag, facts, construction: constructionGraph(g, all), constraints: { lengths: "locked", orientation: "free", zoom: "view-only", vertexDrag: drag === "inscribed" ? "major-arc" : "rigid" } };
+}
+function validateGeometryData(data, mode) {
+  const e = [], n = (k) => Number(data[k]), positive = (keys) => keys.forEach((k) => {
+    if (!Number.isFinite(n(k)) || n(k) < 0.5 || n(k) > 20) e.push(`${k}: nh\u1EADp \u0111\u1ED9 d\xE0i t\u1EEB 0,5 \u0111\u1EBFn 20.`);
+  });
+  if (!geometryModes.includes(mode)) return ["Mode h\xECnh h\u1ECDc ch\u01B0a h\u1ED7 tr\u1EE3."];
+  if (!["cm", "m"].includes(String(data.unit))) e.push("\u0110\u01A1n v\u1ECB ph\u1EA3i l\xE0 cm ho\u1EB7c m.");
+  if (mode === "right_triangle") {
+    positive(["legA", "legB"]);
+    if (n("legA") / n("legB") < 0.1 || n("legA") / n("legB") > 10) e.push("T\u1EC9 l\u1EC7 hai c\u1EA1nh g\xF3c vu\xF4ng c\u1EA7n t\u1EEB 0,1 \u0111\u1EBFn 10.");
+    if (!["B", "C"].includes(String(data.angleAt)) || !["opposite", "adjacent", "hypotenuse"].includes(String(data.target)) || !["sin", "cos", "tan"].includes(String(data.ratio))) e.push("Ch\u1ECDn g\xF3c B/C, vai tr\xF2 c\u1EA1nh v\xE0 t\u1EC9 s\u1ED1 l\u01B0\u1EE3ng gi\xE1c \u0111\u01B0\u1EE3c h\u1ED7 tr\u1EE3.");
+  } else if (mode === "triangle_circles") {
+    positive(["sideA", "sideB", "sideC"]);
+    const a = n("sideA"), b = n("sideB"), c = n("sideC"), s = (a + b + c) / 2, area2 = s * (s - a) * (s - b) * (s - c);
+    if (a + b <= c || a + c <= b || b + c <= a || area2 <= 0 || Math.sqrt(area2) / Math.max(a, b, c) ** 2 < 0.03) e.push("Ba c\u1EA1nh kh\xF4ng d\u1EF1ng \u0111\u01B0\u1EE3c tam gi\xE1c r\xF5: m\u1ED7i c\u1EA1nh ph\u1EA3i nh\u1ECF h\u01A1n t\u1ED5ng hai c\u1EA1nh c\xF2n l\u1EA1i; tr\xE1nh tam gi\xE1c g\u1EA7n suy bi\u1EBFn.");
+    if (!["incircle", "circumcircle"].includes(String(data.construction))) e.push("Ch\u1ECDn \u0111\u01B0\u1EDDng tr\xF2n n\u1ED9i ti\u1EBFp ho\u1EB7c ngo\u1EA1i ti\u1EBFp.");
+  } else {
+    positive(["radius"]);
+    if (mode === "circle_symmetry") {
+      if (!Number.isFinite(n("pointDistance")) || n("pointDistance") < 0.5 || n("pointDistance") > 30) e.push("Kho\u1EA3ng c\xE1ch OP c\u1EA7n t\u1EEB 0,5 \u0111\u1EBFn 30.");
+      if (!Number.isFinite(n("pointAngle")) || n("pointAngle") < 10 || n("pointAngle") > 80 || !["x", "y"].includes(String(data.axis))) e.push("G\xF3c \u0111\u1EB7t P t\u1EEB 10\xB0 \u0111\u1EBFn 80\xB0, tr\u1EE5c \u0111\u1ED1i x\u1EE9ng x/y \u0111\u1EC3 hai \u0111i\u1EC3m ph\xE2n bi\u1EC7t.");
+    }
+    if (mode === "line_circle" || mode === "two_circles") {
+      if (!Number.isFinite(n("distance")) || n("distance") < 0 || n("distance") > 40) e.push("Kho\u1EA3ng c\xE1ch c\u1EA7n t\u1EEB 0 \u0111\u1EBFn 40.");
+    }
+    if (mode === "line_circle" && (!Number.isFinite(n("normalAngle")) || n("normalAngle") < 0 || n("normalAngle") > 359)) e.push("G\xF3c ph\xE1p tuy\u1EBFn c\u1EA7n t\u1EEB 0\xB0 \u0111\u1EBFn 359\xB0.");
+    if (mode === "two_circles") positive(["radius2"]);
+    if (mode === "circle_angles" || mode === "arc_sector_annulus") {
+      if (!Number.isFinite(n("sweep")) || n("sweep") < 20 || n("sweep") > 160) e.push("Cung nh\u1ECF t\u1EEB 20\xB0 \u0111\u1EBFn 160\xB0 \u0111\u1EC3 \u0111\u1EC9nh g\xF3c n\u1ED9i ti\u1EBFp n\u1EB1m tr\xEAn cung l\u1EDBn.");
+    }
+    if (mode === "arc_sector_annulus") {
+      positive(["innerRadius"]);
+      if (n("innerRadius") >= n("radius")) e.push("B\xE1n k\xEDnh trong ph\u1EA3i nh\u1ECF h\u01A1n b\xE1n k\xEDnh ngo\xE0i.");
+      if (!["arc", "sector", "annulus"].includes(String(data.measure))) e.push("Ch\u1ECDn \u0111\u1ED9 d\xE0i cung, qu\u1EA1t ho\u1EB7c v\xE0nh khuy\xEAn.");
+    }
+    if (mode === "cyclic_polygon") {
+      if (!["regular_polygon", "cyclic_quadrilateral"].includes(String(data.shape))) e.push("Ch\u1ECDn \u0111a gi\xE1c \u0111\u1EC1u ho\u1EB7c t\u1EE9 gi\xE1c n\u1ED9i ti\u1EBFp.");
+      if (!Number.isInteger(n("vertices")) || n("vertices") < 3 || n("vertices") > 12) e.push("S\u1ED1 \u0111\u1EC9nh nguy\xEAn t\u1EEB 3 \u0111\u1EBFn 12.");
+      const angles = [0, n("angleB"), n("angleC"), n("angleD"), 360];
+      if (!angles.every(Number.isFinite) || angles.slice(1).some((a, i) => a - angles[i] < 10 || a - angles[i] > 170)) e.push("G\xF3c \u0111\u1EC9nh t\u1EE9 gi\xE1c t\u0103ng d\u1EA7n; m\u1ED7i kho\u1EA3ng cung t\u1EEB 10\xB0 \u0111\u1EBFn 170\xB0 \u0111\u1EC3 h\xECnh l\u1ED3i, kh\xF4ng suy bi\u1EBFn.");
+    }
+  }
+  return e;
+}
+function validateGeometry(g) {
+  const e = validateGeometryData(g.data, g.mode), index = Number(g.curriculumCode.slice(-2));
+  if (!Number.isInteger(index) || index < 1 || index > 10 || geometryModes[index <= 3 ? 0 : index - 3] !== g.mode) e.push("M\xE3 curriculum kh\xF4ng kh\u1EDBp mode h\xECnh h\u1ECDc.");
+  if (!["explore", "identify", "discover", "guided", "practice", "assessment"].includes(g.task)) e.push("Nhi\u1EC7m v\u1EE5 h\xECnh h\u1ECDc kh\xF4ng h\u1EE3p l\u1EC7.");
+  return e;
+}
+function geometrySelectable(g) {
+  const m = geometryModel(g);
+  return [...m.objects, ...m.layers.flatMap((l) => l.objects)];
+}
+function geometryAccept(g, name, value) {
+  if (!Number.isFinite(value)) return false;
+  if (name === "x") return value >= -180 && value <= 180;
+  if (name === "y") return value >= 0.6 && value <= 1;
+  if (name === "a") return g.mode === "circle_angles" && value >= Number(g.data.sweep) + 5 && value <= 355;
+  if (name === "b") return Number.isInteger(value) && value >= 0 && value < geometrySelectable(g).length;
+  if (name === "c") {
+    const mask = geometryModel(g).layers.reduce((a, l) => a | l.bit, 0);
+    return Number.isInteger(value) && value >= 0 && (value & ~mask) === 0;
+  }
+  if (name === "numerator") return value >= -1e5 && value <= 1e5;
+  return name === "width" && value === 1 && g.task !== "explore";
+}
+
+// packages/lesson-runtime/parabola.ts
+var parabolaTasks = ["explore", "identify", "compare", "guided", "practice", "assessment"];
+function validateParabola(c) {
+  return !Number.isInteger(c.a) || c.a === 0 || Math.abs(c.a) > 5 || ![1, 2, -2].includes(c.pointX) || !parabolaTasks.includes(c.task) ? ["Parabol c\u1EA7n a nguy\xEAn kh\xE1c 0 trong [\u22125; 5], \u0111i\u1EC3m c\xF3 x kh\xE1c 0 v\xE0 nhi\u1EC7m v\u1EE5 \u0111\u01B0\u1EE3c h\u1ED7 tr\u1EE3."] : [];
+}
+function parabolaAccept(c, name, value) {
+  if (!Number.isFinite(value)) return false;
+  if (name === "x") return c.task !== "identify" && c.task !== "compare" && Number.isInteger(value) && value !== 0 && Math.abs(value) <= 5;
+  if (name === "a") return c.task === "compare" && Number.isInteger(value) && value >= 1 && value <= 2;
+  if (name === "y") return c.task === "identify" || c.task === "compare" ? value === 0 || value === 1 : ["guided", "practice", "assessment"].includes(c.task) && value === 0;
+  return false;
+}
+
+// packages/lesson-runtime/cylinder.ts
+var cylinderParts = ["radius", "height", "top", "bottom", "side"];
+function cylinderAccept(c, name, value) {
+  if (!Number.isFinite(value)) return false;
+  if (name === "a") return Math.abs(value) <= Math.PI * 2;
+  if (name === "b") return Math.abs(value) <= 1.3;
+  if (name === "width") return c.task === "equal-bases" && value >= 0.5 && value <= 1.5;
+  return name === "x" && Number.isInteger(value) && value >= 0 && value < cylinderParts.length;
+}
+
 // packages/lesson-runtime/uime.ts
 var uimeKeys = ["x", "y", "a", "b", "c", "width", "height", "numerator"];
 function uimeAccept(u, name, value) {
+  if (u.algebra) return algebraAccept(u.algebra, name, value);
+  if (u.geometry) return geometryAccept(u.geometry, name, value);
+  if (u.graph) return graphAccept(u.graph, name, value);
+  if (u.parabola) return parabolaAccept(u.parabola, name, value);
+  if (u.cylinder) return cylinderAccept(u.cylinder, name, value);
   const i = uimeKeys.indexOf(name);
   if (i < 0 || !Number.isFinite(value)) return false;
   if (u.kind === "3D_SOLID_INSPECTOR" && ["a", "b"].includes(name)) return Math.abs(value) <= Math.PI * 2;
@@ -9341,13 +9846,33 @@ function uimeAccept(u, name, value) {
 }
 function validateUime(u) {
   const e = [];
+  if (u.algebra) {
+    e.push(...validateAlgebra(u.algebra));
+    if (u.kind !== "FORMULA_SNAP_BUILDER" || u.geometry || u.graph || u.parabola || u.cylinder) e.push("Algebra adapter binding invalid");
+  }
+  if (u.geometry) {
+    e.push(...validateGeometry(u.geometry));
+    if (u.kind !== "TRIANGLE_HOTSPOT_TAP" || u.graph || u.parabola || u.cylinder) e.push("Geometry adapter binding invalid");
+  }
+  if (u.graph) {
+    e.push(...validateGraph(u.graph));
+    if (u.kind !== "PARABOLA_SLIDER" || u.parabola || u.cylinder) e.push("Graph adapter binding invalid");
+  }
+  if (u.parabola) {
+    e.push(...validateParabola(u.parabola));
+    if (u.kind !== "PARABOLA_SLIDER" || u.cylinder || u.min !== -5 || u.max !== 5 || u.step !== 1 || u.answers.length !== 1 || u.answers[0] !== u.parabola.a) e.push("Invalid parabola model binding");
+  }
+  if (u.cylinder) {
+    const c = u.cylinder;
+    if (u.kind !== "3D_SOLID_INSPECTOR" || u.solid !== "cylinder" || ![c.radius, c.height].every((n) => Number.isFinite(n) && n >= 0.1 && n <= 100) || c.height / c.radius < 0.1 || c.height / c.radius > 10 || !["cm", "m"].includes(c.unit) || !["orbit", "radius", "equal-bases", "height", "side"].includes(c.task) || u.tokens.length !== 5) e.push("Invalid cylinder model");
+  }
   if (u.answers.length < 1 || u.answers.length > 8 || u.min >= u.max || u.step <= 0) e.push("Invalid U-IME dimensions/bounds");
   if (["TOKEN_CLASSIFIER", "EVENT_CARD_BUCKET"].includes(u.kind) && u.tokens.length !== u.answers.length) e.push("Every card needs a target bucket");
   if (u.kind === "FORMULA_SNAP_BUILDER" && u.labels.length !== u.answers.length) e.push("Every formula slot needs a label");
   if (u.kind === "NUMBER_LINE_SELECTOR" && (u.answers.length !== 3 || u.min < -10 || u.max > 10)) e.push("Number line requires endpoint, direction and closure within -10..10");
   if (u.kind === "GEOMETRIC_HOTSPOT_FINDER" && u.answers.length !== 2) e.push("Circle requires distance and selected part");
   if (u.hotspots.some((h) => h.x + h.width > 360 || h.y + h.height > 240)) e.push("Hotspot outside viewport");
-  u.answers.forEach((v, i) => {
+  if (!u.algebra && !u.geometry && !u.parabola && !u.graph) u.answers.forEach((v, i) => {
     if (!uimeAccept(u, uimeKeys[i], v)) e.push("Unreachable U-IME answer");
   });
   return e;
@@ -10484,6 +11009,1098 @@ var lesson_schema_default = {
                 minItems: 0,
                 maxItems: 100
               },
+              geometry: {
+                oneOf: [
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "right_triangle"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-01",
+                          "M9-GEO-02",
+                          "M9-GEO-03"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          legA: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          legB: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          angleAt: {
+                            enum: [
+                              "B",
+                              "C"
+                            ]
+                          },
+                          target: {
+                            enum: [
+                              "opposite",
+                              "adjacent",
+                              "hypotenuse"
+                            ]
+                          },
+                          ratio: {
+                            enum: [
+                              "sin",
+                              "cos",
+                              "tan"
+                            ]
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "legA",
+                          "legB",
+                          "angleAt",
+                          "target",
+                          "ratio",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "circle_symmetry"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-04"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          radius: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          pointDistance: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 30
+                          },
+                          pointAngle: {
+                            type: "number",
+                            minimum: 10,
+                            maximum: 80
+                          },
+                          axis: {
+                            enum: [
+                              "x",
+                              "y"
+                            ]
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "radius",
+                          "pointDistance",
+                          "pointAngle",
+                          "axis",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "line_circle"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-05"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          radius: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          distance: {
+                            type: "number",
+                            minimum: 0,
+                            maximum: 40
+                          },
+                          normalAngle: {
+                            type: "number",
+                            minimum: 0,
+                            maximum: 359
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "radius",
+                          "distance",
+                          "normalAngle",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "two_circles"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-06"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          radius: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          radius2: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          distance: {
+                            type: "number",
+                            minimum: 0,
+                            maximum: 40
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "radius",
+                          "radius2",
+                          "distance",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "circle_angles"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-07"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          radius: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          sweep: {
+                            type: "number",
+                            minimum: 20,
+                            maximum: 160
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "radius",
+                          "sweep",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "arc_sector_annulus"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-08"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          radius: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          innerRadius: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          sweep: {
+                            type: "number",
+                            minimum: 20,
+                            maximum: 160
+                          },
+                          measure: {
+                            enum: [
+                              "arc",
+                              "sector",
+                              "annulus"
+                            ]
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "radius",
+                          "innerRadius",
+                          "sweep",
+                          "measure",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "triangle_circles"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-09"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          sideA: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          sideB: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          sideC: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          construction: {
+                            enum: [
+                              "incircle",
+                              "circumcircle"
+                            ]
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "sideA",
+                          "sideB",
+                          "sideC",
+                          "construction",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "cyclic_polygon"
+                      },
+                      curriculumCode: {
+                        enum: [
+                          "M9-GEO-10"
+                        ]
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          radius: {
+                            type: "number",
+                            minimum: 0.5,
+                            maximum: 20
+                          },
+                          shape: {
+                            enum: [
+                              "regular_polygon",
+                              "cyclic_quadrilateral"
+                            ]
+                          },
+                          vertices: {
+                            type: "integer",
+                            minimum: 3,
+                            maximum: 12
+                          },
+                          angleB: {
+                            type: "number",
+                            minimum: 0,
+                            maximum: 359
+                          },
+                          angleC: {
+                            type: "number",
+                            minimum: 0,
+                            maximum: 359
+                          },
+                          angleD: {
+                            type: "number",
+                            minimum: 0,
+                            maximum: 359
+                          },
+                          unit: {
+                            enum: [
+                              "cm",
+                              "m"
+                            ]
+                          }
+                        },
+                        required: [
+                          "radius",
+                          "shape",
+                          "vertices",
+                          "angleB",
+                          "angleC",
+                          "angleD",
+                          "unit"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "curriculumCode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  }
+                ]
+              },
+              algebra: {
+                oneOf: [
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "product_equation"
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          p: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          q: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          r: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          s: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          }
+                        },
+                        required: [
+                          "p",
+                          "q",
+                          "r",
+                          "s"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "rational_equation"
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          p: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          q: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          r: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          s: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          d: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          e: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          f: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          g: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          k: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          }
+                        },
+                        required: [
+                          "p",
+                          "q",
+                          "r",
+                          "s",
+                          "d",
+                          "e",
+                          "f",
+                          "g",
+                          "k"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "quadratic_equation"
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          a: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          b: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          c: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          degreePolicy: {
+                            enum: [
+                              "quadratic_only",
+                              "allow_linear"
+                            ]
+                          }
+                        },
+                        required: [
+                          "a",
+                          "b",
+                          "c",
+                          "degreePolicy"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      mode: {
+                        const: "viete"
+                      },
+                      data: {
+                        type: "object",
+                        properties: {
+                          a: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          b: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          },
+                          c: {
+                            type: "integer",
+                            minimum: -9,
+                            maximum: 9
+                          }
+                        },
+                        required: [
+                          "a",
+                          "b",
+                          "c"
+                        ],
+                        additionalProperties: false
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      }
+                    },
+                    required: [
+                      "mode",
+                      "data",
+                      "task"
+                    ],
+                    additionalProperties: false
+                  }
+                ]
+              },
+              graph: {
+                oneOf: [
+                  {
+                    type: "object",
+                    properties: {
+                      a: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      b: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      c: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      snap: {
+                        enum: [
+                          0,
+                          0.5,
+                          1
+                        ]
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      },
+                      mode: {
+                        const: "linear_relation"
+                      }
+                    },
+                    required: [
+                      "a",
+                      "b",
+                      "c",
+                      "snap",
+                      "task",
+                      "mode"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      a: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      b: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      c: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      snap: {
+                        enum: [
+                          0,
+                          0.5,
+                          1
+                        ]
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      },
+                      mode: {
+                        const: "linear_system"
+                      },
+                      d: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      e: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      f: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      }
+                    },
+                    required: [
+                      "a",
+                      "b",
+                      "c",
+                      "snap",
+                      "task",
+                      "mode",
+                      "d",
+                      "e",
+                      "f"
+                    ],
+                    additionalProperties: false
+                  },
+                  {
+                    type: "object",
+                    properties: {
+                      a: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      b: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      c: {
+                        type: "integer",
+                        minimum: -12,
+                        maximum: 12
+                      },
+                      snap: {
+                        enum: [
+                          0,
+                          0.5,
+                          1
+                        ]
+                      },
+                      task: {
+                        enum: [
+                          "explore",
+                          "identify",
+                          "discover",
+                          "guided",
+                          "practice",
+                          "assessment"
+                        ]
+                      },
+                      mode: {
+                        const: "line_parabola_intersection"
+                      },
+                      q: {
+                        enum: [
+                          -12,
+                          -11,
+                          -10,
+                          -9,
+                          -8,
+                          -7,
+                          -6,
+                          -5,
+                          -4,
+                          -3,
+                          -2,
+                          -1,
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6,
+                          7,
+                          8,
+                          9,
+                          10,
+                          11,
+                          12
+                        ]
+                      }
+                    },
+                    required: [
+                      "a",
+                      "b",
+                      "c",
+                      "snap",
+                      "task",
+                      "mode",
+                      "q"
+                    ],
+                    additionalProperties: false
+                  }
+                ]
+              },
+              parabola: {
+                type: "object",
+                properties: {
+                  a: {
+                    enum: [
+                      -5,
+                      -4,
+                      -3,
+                      -2,
+                      -1,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ]
+                  },
+                  pointX: {
+                    enum: [
+                      1,
+                      2,
+                      -2
+                    ]
+                  },
+                  task: {
+                    enum: [
+                      "explore",
+                      "identify",
+                      "compare",
+                      "guided",
+                      "practice",
+                      "assessment"
+                    ]
+                  }
+                },
+                required: [
+                  "a",
+                  "pointX",
+                  "task"
+                ],
+                additionalProperties: false
+              },
+              cylinder: {
+                type: "object",
+                properties: {
+                  radius: {
+                    type: "number",
+                    minimum: 0.1,
+                    maximum: 100
+                  },
+                  height: {
+                    type: "number",
+                    minimum: 0.1,
+                    maximum: 100
+                  },
+                  unit: {
+                    enum: [
+                      "cm",
+                      "m"
+                    ]
+                  },
+                  task: {
+                    enum: [
+                      "orbit",
+                      "radius",
+                      "equal-bases",
+                      "height",
+                      "side"
+                    ]
+                  }
+                },
+                required: [
+                  "radius",
+                  "height",
+                  "unit",
+                  "task"
+                ],
+                additionalProperties: false
+              },
               svg: {
                 type: "string",
                 maxLength: 65536
@@ -10674,12 +12291,12 @@ function validateLesson(input) {
   }
   const ids = /* @__PURE__ */ new Set();
   const objects = /* @__PURE__ */ new Map();
-  function add(o) {
+  function add2(o) {
     if (ids.has(o.id)) errors.push(`Duplicate object ${o.id}`);
     ids.add(o.id);
     objects.set(o.id, o);
   }
-  l.scene.objects.forEach(add);
+  l.scene.objects.forEach(add2);
   const cps = /* @__PURE__ */ new Set();
   const allowed = engineCapabilities[l.engine.type];
   if (l.scene.viewport.width !== 360 || l.scene.viewport.height !== 360) errors.push("Runtime 1 requires a 360 \xD7 360 logical viewport");
@@ -10688,7 +12305,7 @@ function validateLesson(input) {
   l.checkpoints.forEach((cp, i) => {
     if (cp.order !== i + 1 || cps.has(cp.id)) errors.push("Checkpoint order/identity invalid");
     cps.add(cp.id);
-    cp.scenePatch.addObjects?.forEach(add);
+    cp.scenePatch.addObjects?.forEach(add2);
     for (const c of cp.allowedInteractions) if (!allowed.includes(c) || !l.engine.requiredCapabilities.includes(c)) errors.push(`Undeclared interaction ${c}`);
     walk(cp.successCriteria, (c) => {
       if (c.op === "approx" && c.tolerance === void 0) errors.push("Approx requires tolerance");
@@ -10706,10 +12323,10 @@ function validateLesson(input) {
     if (o.kind === "math_model") {
       const engineForModel = { number_line: "number_line_2d", fraction_bar: "fraction_bar_2d", linear_balance: "algebra_balance_2d", quadratic_graph: "function_plot_2d", ...extraEngineMap };
       if (l.engine.type !== "math_explorer_2d" && l.engine.type !== engineForModel[o.model]) errors.push("Math model does not match selected engine");
-      const p = { x: 0, a: 1, b: 0, c: 0, numerator: 1, denominator: 4, targetX: 2, targetRatio: 0.5, targetA: 1, targetB: 0, targetC: 0, ...o.parameters };
-      if (p.denominator < 1 || p.denominator > 12 || !Number.isInteger(p.denominator) || p.numerator < 0 || p.numerator > p.denominator || !Number.isInteger(p.numerator)) errors.push("Invalid fraction parameters");
-      if (o.model === "linear_balance" && (p.a === 0 || Math.abs((p.c - p.b) / p.a) > 10)) errors.push("Equation has no reachable solution");
-      if (o.model === "number_line" && Math.abs(p.targetX) > 10) errors.push("Number line target outside bounds");
+      const p2 = { x: 0, a: 1, b: 0, c: 0, numerator: 1, denominator: 4, targetX: 2, targetRatio: 0.5, targetA: 1, targetB: 0, targetC: 0, ...o.parameters };
+      if (p2.denominator < 1 || p2.denominator > 12 || !Number.isInteger(p2.denominator) || p2.numerator < 0 || p2.numerator > p2.denominator || !Number.isInteger(p2.numerator)) errors.push("Invalid fraction parameters");
+      if (o.model === "linear_balance" && (p2.a === 0 || Math.abs((p2.c - p2.b) / p2.a) > 10)) errors.push("Equation has no reachable solution");
+      if (o.model === "number_line" && Math.abs(p2.targetX) > 10) errors.push("Number line target outside bounds");
       if (isExtraModel(o.model)) {
         const q = o.parameters;
         if (o.model === "percentage_grid" && (q.targetX < 0 || q.targetX > 100 || !Number.isInteger(q.targetX) || !(q.b > 0))) errors.push("Ph\u1EA7n tr\u0103m c\u1EA7n s\u1ED1 nguy\xEAn 0\u2013100 v\xE0 t\u1ED5ng ban \u0111\u1EA7u d\u01B0\u01A1ng");
@@ -10722,9 +12339,9 @@ function validateLesson(input) {
   }
   const poly = l.scene.objects.find((o) => o.kind === "polygon");
   if (poly?.kind === "polygon") {
-    const p = poly.vertexIds.map((id) => objects.get(id)).filter((o) => o?.kind === "point");
-    if (p.length === 3) {
-      const [a, b, c] = p.map((o) => o.position);
+    const p2 = poly.vertexIds.map((id) => objects.get(id)).filter((o) => o?.kind === "point");
+    if (p2.length === 3) {
+      const [a, b, c] = p2.map((o) => o.position);
       if (Math.abs((b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])) < 1e3) errors.push("Initial triangle is degenerate");
     }
   }
@@ -10759,9 +12376,9 @@ function createDraft(grade, objective, kind) {
 // packages/lesson-authoring/planner.ts
 function parsePlanInput(input) {
   if (!input || typeof input !== "object") throw Error("Invalid planner input");
-  const p = input;
-  if (![7, 8].includes(p.grade) || !["triangle", "solid"].includes(p.template) || typeof p.objective !== "string" || p.objective.trim().length < 3 || p.objective.length > 1e3) throw Error("Ch\u1EC9 h\u1ED7 tr\u1EE3 template tam gi\xE1c l\u1EDBp 7 v\xE0 kh\u1ED1i h\u1ED9p l\u1EDBp 8; m\u1EE5c ti\xEAu d\xE0i 3\u20131000 k\xFD t\u1EF1.");
-  return p;
+  const p2 = input;
+  if (![7, 8].includes(p2.grade) || !["triangle", "solid"].includes(p2.template) || typeof p2.objective !== "string" || p2.objective.trim().length < 3 || p2.objective.length > 1e3) throw Error("Ch\u1EC9 h\u1ED7 tr\u1EE3 template tam gi\xE1c l\u1EDBp 7 v\xE0 kh\u1ED1i h\u1ED9p l\u1EDBp 8; m\u1EE5c ti\xEAu d\xE0i 3\u20131000 k\xFD t\u1EF1.");
+  return p2;
 }
 async function planLesson(input, provider) {
   const draft = createDraft(input.grade, input.objective, input.template);

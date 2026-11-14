@@ -3,12 +3,53 @@ import {PGlite} from '@electric-sql/pglite';
 import {readFileSync,readdirSync} from 'node:fs';
 import {fixtures} from '../packages/lesson-authoring';
 import {replay} from '../packages/lesson-runtime/replay';
+import cylinderFixtures from '../contracts/generated/cylinder-recognition.json';
+import graphFixtures from '../contracts/generated/cartesian.json';
+import graphVectors from '../contracts/core-engines/cartesian-vectors.json';
+import geometryFixtures from '../contracts/generated/geometry.json';
+import geometryVectors from '../contracts/core-engines/geometry-vectors.json';
+import algebraFixtures from '../contracts/generated/algebra.json';
+import algebraVectors from '../contracts/core-engines/algebra-vectors.json';
 const ids={admin:'00000000-0000-4000-a000-000000000001',author:'00000000-0000-4000-a000-000000000002',student:'00000000-0000-4000-a000-000000000003',other:'00000000-0000-4000-a000-000000000004'};
 let db:PGlite;
 async function as(role:keyof typeof ids|'anon'|'root'){await db.exec('reset role');if(role==='root')return;await db.query("select set_config('request.jwt.claim.sub',$1,false)",[role==='anon'?'':ids[role]]);await db.exec(`set role ${role==='anon'?'anon':'authenticated'}`);}
 beforeAll(async()=>{db=new PGlite();await db.exec(`create role anon nologin;create role authenticated nologin;create role service_role nologin bypassrls;create schema auth;create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema public,auth to anon,authenticated,service_role;grant execute on function auth.uid() to anon,authenticated,service_role;`);for(const id of Object.values(ids))await db.query('insert into auth.users(id) values($1)',[id]);for(const file of readdirSync('supabase/migrations').sort())await db.exec(readFileSync('supabase/migrations/'+file,'utf8'));for(const [role,id]of Object.entries(ids))await db.query('insert into public.user_roles values($1,$2) on conflict(user_id) do update set role=excluded.role',[id,role==='other'?'student':role]);},30000);
 afterAll(async()=>{await db?.close();});
 describe('actual PostgreSQL RLS and transactional publication',()=>{
+  it('validates algebra vectors and publishes 18 compiled lessons atomically, preserving rational/quadratic guards',async()=>{
+    await as('admin');await db.exec('begin');try{
+      for(const v of algebraVectors)expect((await db.query('select lesson_private.valid_algebra($1::jsonb) valid',[JSON.stringify(v.config)])).rows,v.name).toEqual([{valid:v.valid}]);
+      for(const f of algebraFixtures){await db.query('select public.save_lesson_draft($1::jsonb)',[JSON.stringify(f.manifest)]);expect((await db.query('select public.publish_lesson($1) version',[f.manifest.lessonId])).rows).toEqual([{version:1}]);}
+      const bad=structuredClone(algebraFixtures.find(f=>f.input.mode==='rational_equation')!.manifest) as any;bad.recognition[0].uime.algebra.data.d=0;bad.recognition[0].uime.algebra.data.e=0;
+      expect((await db.query('select lesson_private.valid_manifest($1::jsonb) valid',[JSON.stringify(bad)])).rows).toEqual([{valid:false}]);
+    }finally{await db.exec('rollback');}
+  });
+  it('validates geometry vectors and atomically publishes all 30 compiled geometry lessons',async()=>{
+    await as('admin');await db.exec('begin');try{
+      for(const v of geometryVectors)expect((await db.query('select lesson_private.valid_geometry($1::jsonb) valid',[JSON.stringify(v.config)])).rows, v.name).toEqual([{valid:v.valid}]);
+      for(const f of geometryFixtures){await db.query('select public.save_lesson_draft($1::jsonb)',[JSON.stringify(f.manifest)]);expect((await db.query('select public.publish_lesson($1) version',[f.manifest.lessonId])).rows).toEqual([{version:1}]);}
+      const bad=structuredClone(geometryFixtures.find(f=>f.input.mode==='triangle_circles')!.manifest) as any;bad.recognition[0].uime.geometry.data.sideA=1;bad.recognition[0].uime.geometry.data.sideB=1;bad.recognition[0].uime.geometry.data.sideC=5;
+      expect((await db.query('select lesson_private.valid_manifest($1::jsonb) valid',[JSON.stringify(bad)])).rows).toEqual([{valid:false}]);
+    }finally{await db.exec('rollback');}
+  });
+  it('validates Cartesian mathematical vectors and publishes compiled graph versions atomically',async()=>{
+    await as('admin');await db.exec('begin');try{
+      for(const v of graphVectors){const config={...v.data,mode:v.mode,task:'guided'};expect((await db.query('select lesson_private.valid_cartesian_graph($1::jsonb) valid',[JSON.stringify(config)])).rows).toEqual([{valid:v.valid}]);}
+      for(const f of graphFixtures){await db.query('select public.save_lesson_draft($1::jsonb)',[JSON.stringify(f.manifest)]);expect((await db.query('select public.publish_lesson($1) version',[f.manifest.lessonId])).rows).toEqual([{version:1}]);}
+      const bad=structuredClone(graphFixtures[0].manifest) as any;bad.recognition[0].uime.graph.a=0;bad.recognition[0].uime.graph.b=0;
+      expect((await db.query('select lesson_private.valid_manifest($1::jsonb) valid',[JSON.stringify(bad)])).rows).toEqual([{valid:false}]);
+    }finally{await db.exec('rollback');}
+  });
+  it('publishes data-driven cylinders and rejects malformed geometry without rewriting legacy content',async()=>{
+    await as('admin');await db.exec('begin');try {
+      for(const f of cylinderFixtures){
+        await db.query('select public.save_lesson_draft($1::jsonb)',[JSON.stringify(f.manifest)]);
+        expect((await db.query('select public.publish_lesson($1) version',[f.manifest.lessonId])).rows).toEqual([{version:1}]);
+      }
+      const bad=structuredClone(cylinderFixtures[0].manifest);bad.recognition[0].uime.cylinder.height=100;bad.recognition[0].uime.cylinder.radius=.1;
+      expect((await db.query('select lesson_private.valid_manifest($1::jsonb) valid',[JSON.stringify(bad)])).rows).toEqual([{valid:false}]);
+    }finally{await db.exec('rollback');}
+  });
   it('all U-IME engines publish and invalid formula/interval targets are rejected',async()=>{await as('admin');await db.exec('begin');try{const lessons=JSON.parse(readFileSync('contracts/uime-fixtures.json','utf8'));for(const l of lessons){await db.query('select public.save_lesson_draft($1::jsonb)',[JSON.stringify(l)]);expect((await db.query('select public.publish_lesson($1) version',[l.lessonId])).rows).toEqual([{version:1}]);}const invalid=structuredClone(lessons.find((l:any)=>l.recognition[0].uime.kind==='NUMBER_LINE_SELECTOR'));invalid.recognition[0].uime.answers[1]=3;expect((await db.query('select lesson_private.valid_manifest($1::jsonb) valid',[JSON.stringify(invalid)])).rows).toEqual([{valid:false}]);}finally{await db.exec('rollback');}});
   it('signals only published catalog changes and prevents learners forging notifications',async()=>{
     await as('student');

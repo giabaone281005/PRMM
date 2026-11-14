@@ -1,0 +1,1807 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mohoc.local/core-engine-config.schema.json",
+  "type": "object",
+  "properties": {
+    "configVersion": {
+      "const": "1.0.0"
+    },
+    "engineVersion": {
+      "const": "1.0.0"
+    },
+    "engineId": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "namespace": {
+      "const": "excel-repo-v1"
+    },
+    "curriculumCode": {
+      "type": "string"
+    },
+    "templateVersion": {
+      "const": 1
+    },
+    "sceneId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+    },
+    "viewport": {
+      "type": "object",
+      "properties": {
+        "logicalWidth": {
+          "const": 360
+        },
+        "logicalHeight": {
+          "const": 360
+        },
+        "fit": {
+          "const": "adapter-derived"
+        }
+      },
+      "required": [
+        "logicalWidth",
+        "logicalHeight",
+        "fit"
+      ],
+      "additionalProperties": false
+    },
+    "model": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "configVersion",
+    "engineVersion",
+    "engineId",
+    "mode",
+    "namespace",
+    "curriculumCode",
+    "templateVersion",
+    "sceneId",
+    "viewport",
+    "model"
+  ],
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "area_fraction_grid"
+        },
+        "mode": {
+          "const": "cylinder_recognition"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-11"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 100
+            },
+            "height": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 100
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "height",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "type": "object",
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "cartesian_graph_engine"
+        },
+        "mode": {
+          "const": "parabola_coefficient"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-09"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "enum": [
+                -5,
+                -4,
+                -3,
+                -2,
+                -1,
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          },
+          "required": [
+            "a"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "type": "object",
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "cartesian_graph_engine"
+        },
+        "mode": {
+          "const": "linear_relation"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-01"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "snap": {
+              "type": "number",
+              "enum": [
+                0,
+                0.5,
+                1
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "snap"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "type": "object",
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "cartesian_graph_engine"
+        },
+        "mode": {
+          "const": "linear_system"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-02"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "d": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "e": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "f": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "snap": {
+              "type": "number",
+              "enum": [
+                0,
+                0.5,
+                1
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "snap"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "type": "object",
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "cartesian_graph_engine"
+        },
+        "mode": {
+          "const": "line_parabola_intersection"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-09"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "q": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "snap": {
+              "type": "number",
+              "enum": [
+                0,
+                0.5,
+                1
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "q",
+            "snap"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "type": "object",
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "right_triangle"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-01",
+            "M9-GEO-02",
+            "M9-GEO-03"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "legA": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "legB": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "angleAt": {
+              "enum": [
+                "B",
+                "C"
+              ]
+            },
+            "target": {
+              "enum": [
+                "opposite",
+                "adjacent",
+                "hypotenuse"
+              ]
+            },
+            "ratio": {
+              "enum": [
+                "sin",
+                "cos",
+                "tan"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "legA",
+            "legB",
+            "angleAt",
+            "target",
+            "ratio",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "circle_symmetry"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-04"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "pointDistance": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 30
+            },
+            "pointAngle": {
+              "type": "number",
+              "minimum": 10,
+              "maximum": 80
+            },
+            "axis": {
+              "enum": [
+                "x",
+                "y"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "pointDistance",
+            "pointAngle",
+            "axis",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "line_circle"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-05"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "distance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 40
+            },
+            "normalAngle": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "distance",
+            "normalAngle",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "two_circles"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-06"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "radius2": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "distance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 40
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "radius2",
+            "distance",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "circle_angles"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-07"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sweep": {
+              "type": "number",
+              "minimum": 20,
+              "maximum": 160
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "sweep",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "arc_sector_annulus"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-08"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "innerRadius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sweep": {
+              "type": "number",
+              "minimum": 20,
+              "maximum": 160
+            },
+            "measure": {
+              "enum": [
+                "arc",
+                "sector",
+                "annulus"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "innerRadius",
+            "sweep",
+            "measure",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "triangle_circles"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-09"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "sideA": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sideB": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sideC": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "construction": {
+              "enum": [
+                "incircle",
+                "circumcircle"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "sideA",
+            "sideB",
+            "sideC",
+            "construction",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "geometry_2d_canvas"
+        },
+        "mode": {
+          "const": "cyclic_polygon"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "enum": [
+            "M9-GEO-10"
+          ]
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "shape": {
+              "enum": [
+                "regular_polygon",
+                "cyclic_quadrilateral"
+              ]
+            },
+            "vertices": {
+              "type": "integer",
+              "minimum": 3,
+              "maximum": 12
+            },
+            "angleB": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "angleC": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "angleD": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "shape",
+            "vertices",
+            "angleB",
+            "angleC",
+            "angleD",
+            "unit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "balance_scale_engine"
+        },
+        "mode": {
+          "const": "product_equation"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-03"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "p": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "q": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "r": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "s": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            }
+          },
+          "required": [
+            "p",
+            "q",
+            "r",
+            "s"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "balance_scale_engine"
+        },
+        "mode": {
+          "const": "rational_equation"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-03"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "p": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "q": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "r": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "s": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "d": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "e": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "f": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "g": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "k": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            }
+          },
+          "required": [
+            "p",
+            "q",
+            "r",
+            "s",
+            "d",
+            "e",
+            "f",
+            "g",
+            "k"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "balance_scale_engine"
+        },
+        "mode": {
+          "const": "quadratic_equation"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-10"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "degreePolicy": {
+              "enum": [
+                "quadratic_only",
+                "allow_linear"
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "degreePolicy"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "configVersion": {
+          "const": "1.0.0"
+        },
+        "engineVersion": {
+          "const": "1.0.0"
+        },
+        "engineId": {
+          "const": "balance_scale_engine"
+        },
+        "mode": {
+          "const": "viete"
+        },
+        "namespace": {
+          "const": "excel-repo-v1"
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-11"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,99}$"
+        },
+        "viewport": {
+          "type": "object",
+          "properties": {
+            "logicalWidth": {
+              "const": 360
+            },
+            "logicalHeight": {
+              "const": 360
+            },
+            "fit": {
+              "const": "adapter-derived"
+            }
+          },
+          "required": [
+            "logicalWidth",
+            "logicalHeight",
+            "fit"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "configVersion",
+        "engineVersion",
+        "engineId",
+        "mode",
+        "namespace",
+        "curriculumCode",
+        "templateVersion",
+        "sceneId",
+        "viewport",
+        "model"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

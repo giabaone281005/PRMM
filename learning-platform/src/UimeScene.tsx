@@ -1,3 +1,8 @@
+import {AlgebraScene} from './AlgebraScene';
+import {GeometryScene} from './GeometryScene';
+import {CartesianScene} from './CartesianScene';
+import {ParabolaScene} from './ParabolaScene';
+import {CylinderScene} from './CylinderScene';
 import {useEffect,useState} from 'react';
 import type {LessonSession} from '../packages/lesson-runtime';
 import {uimeKeys} from '../packages/lesson-runtime/uime';
@@ -11,8 +16,12 @@ export function UimeScene({session}:{session:LessonSession}){
  const slider=['PARABOLA_SLIDER','NUMBER_LINE_SELECTOR','GEOMETRIC_HOTSPOT_FINDER'].includes(u.kind),x=value(0);
  function drop(i:number,e:React.DragEvent){e.preventDefault();const n=Number(e.dataTransfer.getData('text/plain'));if(Number.isInteger(n)&&n>=0&&n<u.tokens.length){if(bucket)adjust(n,i);else adjust(i,n);}}
  function graph(a:number,c=0){let d='';for(let n=-4;n<=4;n+=.05)d+=(d?'L':'M')+`${180+n*30},${150-(a*n*n+c)*12} `;return d;}
+ if(u.algebra)return <div className="uime-scene" data-engine={u.kind}><AlgebraScene session={session}/></div>;
+ if(u.geometry)return <div className="uime-scene" data-engine={u.kind}><GeometryScene session={session}/></div>;
+ if(u.graph)return <div className="uime-scene" data-engine={u.kind}><CartesianScene session={session}/><p aria-live="polite">{session.success?t.explanation:'Thao tác trên đồ thị để hoàn thành.'}</p></div>;
+ if(u.parabola)return <div className="uime-scene" data-engine={u.kind}><ParabolaScene session={session}/><p aria-live="polite">{session.success?t.explanation:"Thao tác trên đồ thị để hoàn thành."}</p></div>;
  return <div className="uime-scene" data-engine={u.kind}>
- {solid?<UimeSolid session={session} u={u}/>:<svg viewBox="0 0 360 240" role="img" aria-label={u.kind} onPointerDown={e=>{if(u.kind!=='NUMBER_LINE_SELECTOR')return;e.currentTarget.setPointerCapture(e.pointerId);const r=e.currentTarget.getBoundingClientRect();adjust(0,Math.max(u.min,Math.min(u.max,Math.round(((e.clientX-r.left)/r.width*360-180)/14))));}} onPointerMove={e=>{if(u.kind!=='NUMBER_LINE_SELECTOR'||!e.currentTarget.hasPointerCapture(e.pointerId))return;const r=e.currentTarget.getBoundingClientRect();adjust(0,Math.max(u.min,Math.min(u.max,Math.round(((e.clientX-r.left)/r.width*360-180)/14))));}}>
+ {solid?(u.cylinder?<CylinderScene session={session}/>:<UimeSolid session={session} u={u}/>):<svg viewBox="0 0 360 240" role="img" aria-label={u.kind} onPointerDown={e=>{if(u.kind!=='NUMBER_LINE_SELECTOR')return;e.currentTarget.setPointerCapture(e.pointerId);const r=e.currentTarget.getBoundingClientRect();adjust(0,Math.max(u.min,Math.min(u.max,Math.round(((e.clientX-r.left)/r.width*360-180)/14))));}} onPointerMove={e=>{if(u.kind!=='NUMBER_LINE_SELECTOR'||!e.currentTarget.hasPointerCapture(e.pointerId))return;const r=e.currentTarget.getBoundingClientRect();adjust(0,Math.max(u.min,Math.min(u.max,Math.round(((e.clientX-r.left)/r.width*360-180)/14))));}}>
  <defs><clipPath id="uime-clip"><rect width="360" height="230"/></clipPath></defs><rect width="360" height="240" fill="#eef4e8" rx="16"/>
  {u.kind==='TRIANGLE_HOTSPOT_TAP'&&<><path d="M65 40V185H300Z M65 170H80V185" fill="#d4e7c6" stroke="#455e34" strokeWidth="3"/><text x="40" y="210">A</text><text x="40" y="35">B · α</text><text x="310" y="210">C</text></>}
  {u.kind==='GEOMETRIC_HOTSPOT_FINDER'&&<><circle cx="180" cy="100" r="75" fill="none" stroke="#6854a0" strokeWidth="3"/><line x1="30" x2="330" y1={100+Math.max(0,x)*25} y2={100+Math.max(0,x)*25} stroke="#43864e" strokeWidth="4"/><path d="M180 100V175M100 135H260" stroke="#82936b"/><text x="15" y="25">R = 3; d = {x}; {x<3?'2 điểm chung':x===3?'1 tiếp điểm':'0 điểm chung'}</text></>}

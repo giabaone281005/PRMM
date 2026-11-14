@@ -1,0 +1,64 @@
+
+> mohoc-learning@0.1.0 test:e2e
+> playwright test --reporter=list,json
+
+[WebServer] (node:34252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:24244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+[WebServer]   - import "./packages/local-api" resolves to a directory index (vite.config.ts:2:24). Import the index file directly
+[WebServer]   - import "../lesson-contract" resolves to a directory index (packages/local-api/index.ts:3:42). Import the index file directly
+[WebServer]   - import "../lesson-runtime/replay" without a file extension (packages/local-api/index.ts:4:22). Add the file extension
+[WebServer]   - import "./index" without a file extension (packages/lesson-runtime/replay.ts:1:46). Add the file extension
+[WebServer]   - import "../lesson-runtime/uime" without a file extension (packages/lesson-contract/index.ts:2:28). Add the file extension
+[WebServer]   - import "../lesson-runtime/extra-models" without a file extension (packages/lesson-contract/index.ts:4:55). Add the file extension
+[WebServer]   - import "../lesson-contract" resolves to a directory index (packages/lesson-runtime/index.ts:1:79). Import the index file directly
+[WebServer]   - import "./uime" without a file extension (packages/lesson-runtime/index.ts:2:36). Add the file extension
+[WebServer]   - import "./extra-models" without a file extension (packages/lesson-runtime/index.ts:3:69). Add the file extension
+[WebServer] Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+Running 38 tests using 1 worker
+
+(node:33180) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop] › tests\e2e\00-empty.spec.ts:3:1 › fresh workspace stays empty and ignores legacy browser sample catalog (7.0s)
+  ok  2 [desktop] › tests\e2e\acceptance.spec.ts:4:1 › learner 2D gestures, canvas continuity, checkpoint restore and completion (7.2s)
+  ok  3 [desktop] › tests\e2e\acceptance.spec.ts:10:1 › local CMS JSON build, edit, validation, publish, version and unpublish (7.1s)
+  ok  4 [desktop] › tests\e2e\acceptance.spec.ts:13:1 › 3D WebGL actually renders and raycast/orbit/layers complete the lesson (3.1s)
+  ok  5 [desktop] › tests\e2e\acceptance.spec.ts:16:1 › responsive layouts 1280, tablet and portrait contain no horizontal overflow (9.3s)
+  ok  6 [desktop] › tests\e2e\cms-refresh.spec.ts:5:1 › CMS readable navigation, class sort and filter (2.5s)
+  ok  7 [desktop] › tests\e2e\cms-refresh.spec.ts:6:43 › new engine percentage_grid: JSON, phone, all checkpoints (3.8s)
+  ok  8 [desktop] › tests\e2e\cms-refresh.spec.ts:6:43 › new engine ratio_table: JSON, phone, all checkpoints (4.0s)
+  ok  9 [desktop] › tests\e2e\cms-refresh.spec.ts:6:43 › new engine coordinate_plane: JSON, phone, all checkpoints (5.0s)
+  ok 10 [desktop] › tests\e2e\cms-refresh.spec.ts:6:43 › new engine rectangle_area: JSON, phone, all checkpoints (5.8s)
+  ok 11 [desktop] › tests\e2e\cms-refresh.spec.ts:6:43 › new engine pythagorean: JSON, phone, all checkpoints (5.0s)
+  ok 12 [desktop] › tests\e2e\cms-refresh.spec.ts:6:43 › new engine linear_graph: JSON, phone, all checkpoints (4.0s)
+  ok 13 [desktop] › tests\e2e\cms-refresh.spec.ts:7:1 › unknown math request is recorded without publishing an unsupported lesson (2.3s)
+  ok 14 [desktop] › tests\e2e\cms-refresh.spec.ts:8:1 › friendly equation fields update live diagram and generated instruction (2.6s)
+  ok 15 [desktop] › tests\e2e\creation.spec.ts:3:58 › JSON → auto engine → phone preview → publish → learn: number_line (5.8s)
+  ok 16 [desktop] › tests\e2e\creation.spec.ts:3:58 › JSON → auto engine → phone preview → publish → learn: fraction (5.5s)
+  ok 17 [desktop] › tests\e2e\creation.spec.ts:3:58 › JSON → auto engine → phone preview → publish → learn: linear_equation (5.5s)
+  ok 18 [desktop] › tests\e2e\creation.spec.ts:3:58 › JSON → auto engine → phone preview → publish → learn: quadratic_graph (6.2s)
+  ok 19 [desktop] › tests\e2e\creation.spec.ts:13:1 › wrong answer JSON is rejected; one numeric change routes same engine with new target (2.3s)
+  ok 20 [desktop] › tests\e2e\curriculum-pilot.spec.ts:2:1 › existing dashboard: template to Studio, AI round trip, publish and library (3.1s)
+  ok 21 [desktop] › tests\e2e\diagnostics.spec.ts:3:1 › browser console and local API network inspection (3.6s)
+  ok 22 [desktop] › tests\e2e\math9.spec.ts:3:1 › Toán 9: all topics build, interact, publish and survive reload (23.7s)
+  ok 23 [desktop] › tests\e2e\uime-editor.spec.ts:3:1 › SVG upload stays inert and six checkpoint editor preserves scene (3.4s)
+  ok 24 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-token-classifier (5.7s)
+  ok 25 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-coefficient (4.0s)
+  ok 26 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-number-line (4.1s)
+  ok 27 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-sign (4.1s)
+  ok 28 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-formula (5.8s)
+  ok 29 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-parabola (3.9s)
+  ok 30 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-delta (4.5s)
+  ok 31 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-triangle (4.3s)
+  ok 32 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-circle (4.5s)
+  ok 33 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-angle (4.3s)
+  ok 34 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-solid-cone (6.0s)
+  ok 35 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-solid-cylinder (5.2s)
+  ok 36 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-solid-sphere (4.7s)
+  ok 37 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-chart (3.5s)
+  ok 38 [desktop] › tests\e2e\uime.spec.ts:3:33 › six checkpoints, rendered model and publication engine-events (5.4s)
+
+  38 passed (3.5m)

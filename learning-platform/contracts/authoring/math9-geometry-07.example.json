@@ -1,0 +1,26 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-07",
+  "curriculumCode": "M9-GEO-07",
+  "mode": "circle_angles",
+  "title": "Góc ở tâm và góc nội tiếp",
+  "parameters": {
+    "radius": 4,
+    "sweep": 60,
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "radius": 3,
+      "sweep": 90,
+      "unit": "cm"
+    },
+    "assessment": {
+      "radius": 5,
+      "sweep": 120,
+      "unit": "cm"
+    }
+  }
+}

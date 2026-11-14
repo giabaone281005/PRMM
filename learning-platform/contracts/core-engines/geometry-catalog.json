@@ -1,0 +1,1114 @@
+[
+  {
+    "templateId": "math9-geometry-01",
+    "curriculumCode": "M9-GEO-01",
+    "mode": "right_triangle",
+    "label": "Cạnh đối, kề, huyền",
+    "group": "G1",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "legA": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "legB": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "angleAt": {
+          "enum": [
+            "B",
+            "C"
+          ]
+        },
+        "target": {
+          "enum": [
+            "opposite",
+            "adjacent",
+            "hypotenuse"
+          ]
+        },
+        "ratio": {
+          "enum": [
+            "sin",
+            "cos",
+            "tan"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "legA",
+        "legB",
+        "angleAt",
+        "target",
+        "ratio",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-01",
+      "curriculumCode": "M9-GEO-01",
+      "mode": "right_triangle",
+      "title": "Cạnh đối, kề, huyền",
+      "parameters": {
+        "legA": 3,
+        "legB": 4,
+        "angleAt": "B",
+        "target": "opposite",
+        "ratio": "sin",
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "legA": 5,
+          "legB": 5,
+          "angleAt": "C",
+          "target": "adjacent",
+          "ratio": "cos",
+          "unit": "cm"
+        },
+        "assessment": {
+          "legA": 3,
+          "legB": 5.196152422706632,
+          "angleAt": "B",
+          "target": "hypotenuse",
+          "ratio": "tan",
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "legA",
+        "label": "Cạnh góc vuông AB",
+        "symbol": "legA",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "legB",
+        "label": "Cạnh góc vuông AC",
+        "symbol": "legB",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "angleAt",
+        "label": "Góc đang xét",
+        "help": "Chọn B / C"
+      },
+      {
+        "key": "target",
+        "label": "Vai trò cạnh cần chọn",
+        "help": "Chọn opposite / adjacent / hypotenuse"
+      },
+      {
+        "key": "ratio",
+        "label": "Tỉ số cần tính",
+        "help": "Chọn sin / cos / tan"
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-02",
+    "curriculumCode": "M9-GEO-02",
+    "mode": "right_triangle",
+    "label": "Tỉ số lượng giác",
+    "group": "G1",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "legA": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "legB": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "angleAt": {
+          "enum": [
+            "B",
+            "C"
+          ]
+        },
+        "target": {
+          "enum": [
+            "opposite",
+            "adjacent",
+            "hypotenuse"
+          ]
+        },
+        "ratio": {
+          "enum": [
+            "sin",
+            "cos",
+            "tan"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "legA",
+        "legB",
+        "angleAt",
+        "target",
+        "ratio",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-02",
+      "curriculumCode": "M9-GEO-02",
+      "mode": "right_triangle",
+      "title": "Tỉ số lượng giác",
+      "parameters": {
+        "legA": 3,
+        "legB": 4,
+        "angleAt": "B",
+        "target": "opposite",
+        "ratio": "sin",
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "legA": 5,
+          "legB": 5,
+          "angleAt": "C",
+          "target": "adjacent",
+          "ratio": "cos",
+          "unit": "cm"
+        },
+        "assessment": {
+          "legA": 3,
+          "legB": 5.196152422706632,
+          "angleAt": "B",
+          "target": "hypotenuse",
+          "ratio": "tan",
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "legA",
+        "label": "Cạnh góc vuông AB",
+        "symbol": "legA",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "legB",
+        "label": "Cạnh góc vuông AC",
+        "symbol": "legB",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "angleAt",
+        "label": "Góc đang xét",
+        "help": "Chọn B / C"
+      },
+      {
+        "key": "target",
+        "label": "Vai trò cạnh cần chọn",
+        "help": "Chọn opposite / adjacent / hypotenuse"
+      },
+      {
+        "key": "ratio",
+        "label": "Tỉ số cần tính",
+        "help": "Chọn sin / cos / tan"
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-03",
+    "curriculumCode": "M9-GEO-03",
+    "mode": "right_triangle",
+    "label": "Góc nhọn và góc đặc biệt",
+    "group": "G1",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "legA": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "legB": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "angleAt": {
+          "enum": [
+            "B",
+            "C"
+          ]
+        },
+        "target": {
+          "enum": [
+            "opposite",
+            "adjacent",
+            "hypotenuse"
+          ]
+        },
+        "ratio": {
+          "enum": [
+            "sin",
+            "cos",
+            "tan"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "legA",
+        "legB",
+        "angleAt",
+        "target",
+        "ratio",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-03",
+      "curriculumCode": "M9-GEO-03",
+      "mode": "right_triangle",
+      "title": "Góc nhọn và góc đặc biệt",
+      "parameters": {
+        "legA": 3,
+        "legB": 4,
+        "angleAt": "B",
+        "target": "opposite",
+        "ratio": "sin",
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "legA": 5,
+          "legB": 5,
+          "angleAt": "C",
+          "target": "adjacent",
+          "ratio": "cos",
+          "unit": "cm"
+        },
+        "assessment": {
+          "legA": 3,
+          "legB": 5.196152422706632,
+          "angleAt": "B",
+          "target": "hypotenuse",
+          "ratio": "tan",
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "legA",
+        "label": "Cạnh góc vuông AB",
+        "symbol": "legA",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "legB",
+        "label": "Cạnh góc vuông AC",
+        "symbol": "legB",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "angleAt",
+        "label": "Góc đang xét",
+        "help": "Chọn B / C"
+      },
+      {
+        "key": "target",
+        "label": "Vai trò cạnh cần chọn",
+        "help": "Chọn opposite / adjacent / hypotenuse"
+      },
+      {
+        "key": "ratio",
+        "label": "Tỉ số cần tính",
+        "help": "Chọn sin / cos / tan"
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-04",
+    "curriculumCode": "M9-GEO-04",
+    "mode": "circle_symmetry",
+    "label": "Đường tròn và đối xứng",
+    "group": "G2",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "pointDistance": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 30
+        },
+        "pointAngle": {
+          "type": "number",
+          "minimum": 10,
+          "maximum": 80
+        },
+        "axis": {
+          "enum": [
+            "x",
+            "y"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "radius",
+        "pointDistance",
+        "pointAngle",
+        "axis",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-04",
+      "curriculumCode": "M9-GEO-04",
+      "mode": "circle_symmetry",
+      "title": "Đường tròn và đối xứng",
+      "parameters": {
+        "radius": 4,
+        "pointDistance": 2,
+        "pointAngle": 35,
+        "axis": "x",
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "pointDistance": 3,
+          "pointAngle": 60,
+          "axis": "y",
+          "unit": "cm"
+        },
+        "assessment": {
+          "radius": 2,
+          "pointDistance": 4,
+          "pointAngle": 45,
+          "axis": "x",
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "radius",
+        "label": "Bán kính ngoài / đường tròn O",
+        "symbol": "radius",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "pointDistance",
+        "label": "Khoảng cách OP",
+        "symbol": "pointDistance",
+        "help": "Giá trị từ 0.5 đến 30. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "pointAngle",
+        "label": "Góc đặt điểm P (độ)",
+        "symbol": "pointAngle",
+        "help": "Giá trị từ 10 đến 80. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "axis",
+        "label": "Trục phản xạ",
+        "help": "Chọn x / y"
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-05",
+    "curriculumCode": "M9-GEO-05",
+    "mode": "line_circle",
+    "label": "Đường thẳng và đường tròn",
+    "group": "G2",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "distance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 40
+        },
+        "normalAngle": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 359
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "radius",
+        "distance",
+        "normalAngle",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-05",
+      "curriculumCode": "M9-GEO-05",
+      "mode": "line_circle",
+      "title": "Đường thẳng và đường tròn",
+      "parameters": {
+        "radius": 4,
+        "distance": 2,
+        "normalAngle": 20,
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "distance": 3,
+          "normalAngle": 70,
+          "unit": "cm"
+        },
+        "assessment": {
+          "radius": 2,
+          "distance": 4,
+          "normalAngle": 120,
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "radius",
+        "label": "Bán kính ngoài / đường tròn O",
+        "symbol": "radius",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "distance",
+        "label": "Khoảng cách tới tâm / giữa hai tâm",
+        "symbol": "distance",
+        "help": "Giá trị từ 0 đến 40. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "normalAngle",
+        "label": "Góc pháp tuyến đường thẳng (độ)",
+        "symbol": "normalAngle",
+        "help": "Giá trị từ 0 đến 359. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-06",
+    "curriculumCode": "M9-GEO-06",
+    "mode": "two_circles",
+    "label": "Vị trí hai đường tròn",
+    "group": "G2",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "radius2": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "distance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 40
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "radius",
+        "radius2",
+        "distance",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-06",
+      "curriculumCode": "M9-GEO-06",
+      "mode": "two_circles",
+      "title": "Vị trí hai đường tròn",
+      "parameters": {
+        "radius": 4,
+        "radius2": 3,
+        "distance": 5,
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "radius2": 2,
+          "distance": 5,
+          "unit": "cm"
+        },
+        "assessment": {
+          "radius": 2,
+          "radius2": 1,
+          "distance": 5,
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "radius",
+        "label": "Bán kính ngoài / đường tròn O",
+        "symbol": "radius",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "radius2",
+        "label": "Bán kính đường tròn K",
+        "symbol": "radius2",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "distance",
+        "label": "Khoảng cách tới tâm / giữa hai tâm",
+        "symbol": "distance",
+        "help": "Giá trị từ 0 đến 40. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-07",
+    "curriculumCode": "M9-GEO-07",
+    "mode": "circle_angles",
+    "label": "Góc ở tâm và góc nội tiếp",
+    "group": "G3",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "sweep": {
+          "type": "number",
+          "minimum": 20,
+          "maximum": 160
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "radius",
+        "sweep",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-07",
+      "curriculumCode": "M9-GEO-07",
+      "mode": "circle_angles",
+      "title": "Góc ở tâm và góc nội tiếp",
+      "parameters": {
+        "radius": 4,
+        "sweep": 60,
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "sweep": 90,
+          "unit": "cm"
+        },
+        "assessment": {
+          "radius": 5,
+          "sweep": 120,
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "radius",
+        "label": "Bán kính ngoài / đường tròn O",
+        "symbol": "radius",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "sweep",
+        "label": "Góc ở tâm chắn cung (độ)",
+        "symbol": "sweep",
+        "help": "Giá trị từ 20 đến 160. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-08",
+    "curriculumCode": "M9-GEO-08",
+    "mode": "arc_sector_annulus",
+    "label": "Cung, quạt tròn và vành khuyên",
+    "group": "G3",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "innerRadius": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "sweep": {
+          "type": "number",
+          "minimum": 20,
+          "maximum": 160
+        },
+        "measure": {
+          "enum": [
+            "arc",
+            "sector",
+            "annulus"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "radius",
+        "innerRadius",
+        "sweep",
+        "measure",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-08",
+      "curriculumCode": "M9-GEO-08",
+      "mode": "arc_sector_annulus",
+      "title": "Cung, quạt tròn và vành khuyên",
+      "parameters": {
+        "radius": 4,
+        "innerRadius": 2,
+        "sweep": 60,
+        "measure": "arc",
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "innerRadius": 1,
+          "sweep": 90,
+          "measure": "sector",
+          "unit": "cm"
+        },
+        "assessment": {
+          "radius": 5,
+          "innerRadius": 3,
+          "sweep": 120,
+          "measure": "annulus",
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "radius",
+        "label": "Bán kính ngoài / đường tròn O",
+        "symbol": "radius",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "innerRadius",
+        "label": "Bán kính trong",
+        "symbol": "innerRadius",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "sweep",
+        "label": "Góc ở tâm chắn cung (độ)",
+        "symbol": "sweep",
+        "help": "Giá trị từ 20 đến 160. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "measure",
+        "label": "Đại lượng cần tính",
+        "help": "Chọn arc / sector / annulus"
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-09",
+    "curriculumCode": "M9-GEO-09",
+    "mode": "triangle_circles",
+    "label": "Nội tiếp và ngoại tiếp tam giác",
+    "group": "G3",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "sideA": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "sideB": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "sideC": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "construction": {
+          "enum": [
+            "incircle",
+            "circumcircle"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "sideA",
+        "sideB",
+        "sideC",
+        "construction",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-09",
+      "curriculumCode": "M9-GEO-09",
+      "mode": "triangle_circles",
+      "title": "Nội tiếp và ngoại tiếp tam giác",
+      "parameters": {
+        "sideA": 5,
+        "sideB": 4,
+        "sideC": 3,
+        "construction": "incircle",
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "sideA": 5,
+          "sideB": 5,
+          "sideC": 6,
+          "construction": "circumcircle",
+          "unit": "cm"
+        },
+        "assessment": {
+          "sideA": 6,
+          "sideB": 6,
+          "sideC": 6,
+          "construction": "incircle",
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "sideA",
+        "label": "Cạnh a = BC",
+        "symbol": "sideA",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "sideB",
+        "label": "Cạnh b = CA",
+        "symbol": "sideB",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "sideC",
+        "label": "Cạnh c = AB",
+        "symbol": "sideC",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "construction",
+        "label": "Đường tròn cần dựng",
+        "help": "Chọn incircle / circumcircle"
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  },
+  {
+    "templateId": "math9-geometry-10",
+    "curriculumCode": "M9-GEO-10",
+    "mode": "cyclic_polygon",
+    "label": "Tứ giác nội tiếp và đa giác đều",
+    "group": "G3",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 20
+        },
+        "shape": {
+          "enum": [
+            "regular_polygon",
+            "cyclic_quadrilateral"
+          ]
+        },
+        "vertices": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 12
+        },
+        "angleB": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 359
+        },
+        "angleC": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 359
+        },
+        "angleD": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 359
+        },
+        "unit": {
+          "enum": [
+            "cm",
+            "m"
+          ]
+        }
+      },
+      "required": [
+        "radius",
+        "shape",
+        "vertices",
+        "angleB",
+        "angleC",
+        "angleD",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "authoringVersion": "1.0.0",
+      "namespace": "excel-repo-v1",
+      "templateVersion": 1,
+      "templateId": "math9-geometry-10",
+      "curriculumCode": "M9-GEO-10",
+      "mode": "cyclic_polygon",
+      "title": "Tứ giác nội tiếp và đa giác đều",
+      "parameters": {
+        "radius": 4,
+        "shape": "cyclic_quadrilateral",
+        "vertices": 4,
+        "angleB": 70,
+        "angleC": 170,
+        "angleD": 270,
+        "unit": "cm"
+      },
+      "variants": {
+        "practice": {
+          "radius": 3,
+          "shape": "regular_polygon",
+          "vertices": 6,
+          "angleB": 80,
+          "angleC": 180,
+          "angleD": 260,
+          "unit": "cm"
+        },
+        "assessment": {
+          "radius": 5,
+          "shape": "regular_polygon",
+          "vertices": 3,
+          "angleB": 90,
+          "angleC": 190,
+          "angleD": 280,
+          "unit": "cm"
+        }
+      }
+    },
+    "form": [
+      {
+        "key": "radius",
+        "label": "Bán kính ngoài / đường tròn O",
+        "symbol": "radius",
+        "help": "Giá trị từ 0.5 đến 20. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "shape",
+        "label": "Loại đa giác",
+        "help": "Chọn regular_polygon / cyclic_quadrilateral"
+      },
+      {
+        "key": "vertices",
+        "label": "Số đỉnh đa giác đều",
+        "symbol": "vertices",
+        "help": "Giá trị từ 3 đến 12. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "angleB",
+        "label": "Góc cực đỉnh B (độ)",
+        "symbol": "angleB",
+        "help": "Giá trị từ 0 đến 359. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "angleC",
+        "label": "Góc cực đỉnh C (độ)",
+        "symbol": "angleC",
+        "help": "Giá trị từ 0 đến 359. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "angleD",
+        "label": "Góc cực đỉnh D (độ)",
+        "symbol": "angleD",
+        "help": "Giá trị từ 0 đến 359. Hình dựng theo dữ kiện và giữ ràng buộc khi kéo."
+      },
+      {
+        "key": "unit",
+        "label": "Đơn vị",
+        "help": "Chọn cm / m"
+      }
+    ]
+  }
+]

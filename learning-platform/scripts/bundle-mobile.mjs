@@ -1,3 +1,4 @@
+import './export-core-engines.mjs';
 import {copyFileSync,mkdirSync,writeFileSync,readdirSync,readFileSync} from 'node:fs';
 mkdirSync('apps/mobile/assets/contracts',{recursive:true});
 copyFileSync('contracts/lesson.schema.json','apps/mobile/assets/contracts/lesson.schema.json');
@@ -7,4 +8,9 @@ writeFileSync('apps/mobile/assets/runtime/index.html','<!doctype html><html lang
 const testInputs=Object.fromEntries(readdirSync('contracts/fixtures').filter(f=>f.endsWith('.lesson.json')).sort().map(f=>[f,JSON.parse(readFileSync('contracts/fixtures/'+f,'utf8'))]));
 testInputs['math-scenarios.json']=JSON.parse(readFileSync('contracts/math-scenarios.json','utf8'));
 testInputs['uime-fixtures.json']=JSON.parse(readFileSync('contracts/uime-fixtures.json','utf8'));
+testInputs['cylinder-recognition.json']=JSON.parse(readFileSync('contracts/generated/cylinder-recognition.json','utf8'));
+testInputs['parabola-coefficient.json']=JSON.parse(readFileSync('contracts/generated/parabola-coefficient.json','utf8'));
+testInputs['algebra.json']=JSON.parse(readFileSync('contracts/generated/algebra.json','utf8'));
+testInputs['geometry.json']=JSON.parse(readFileSync('contracts/generated/geometry.json','utf8'));
+testInputs['cartesian.json']=JSON.parse(readFileSync('contracts/generated/cartesian.json','utf8'));
 writeFileSync('apps/mobile/integration_test/fixtures.dart',"// Test-only data generated from canonical contracts. Never imported by lib/.\nconst integrationFixtureJson = <String, String>{\n"+Object.entries(testInputs).map(([name,value])=>"  '"+name+"': r'''"+JSON.stringify(value)+"''',\n").join('')+"};\n");

@@ -1,0 +1,72 @@
+{
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "expected": [
+    {
+      "id": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "title": "CP02 — Chọn bi sáu bước",
+      "checkpoints": 6,
+      "sha256": "68be242e875675cfd3ed31f545101fdae6c4decf31dd618cced58b5cada77958"
+    }
+  ],
+  "events": [
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-13T21:20:53.019Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-13T21:21:07.119Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-13T21:21:16.200Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-13T21:21:21.434Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-13T21:21:27.017Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-13T21:21:32.201Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-13T21:21:38.703Z"
+    },
+    {
+      "lessonId": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-13T21:21:43.373Z"
+    }
+  ]
+}

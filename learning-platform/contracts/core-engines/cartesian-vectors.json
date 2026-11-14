@@ -1,0 +1,332 @@
+[
+  {
+    "name": "eng01-graph-1",
+    "data": {
+      "a": 1,
+      "b": 1,
+      "c": 4,
+      "snap": 1
+    },
+    "mode": "linear_relation",
+    "valid": true,
+    "solution": {
+      "kind": "unique",
+      "points": [
+        {
+          "x": 0,
+          "y": 4
+        }
+      ]
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -7.800000000000001,
+      "yMax": 7.800000000000001
+    }
+  },
+  {
+    "name": "eng01-graph-2",
+    "data": {
+      "a": 0,
+      "b": 1,
+      "c": 3,
+      "snap": 1
+    },
+    "mode": "linear_relation",
+    "valid": true,
+    "solution": {
+      "kind": "unique",
+      "points": [
+        {
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -6.5,
+      "yMax": 6.5
+    }
+  },
+  {
+    "name": "eng01-graph-3",
+    "data": {
+      "a": 1,
+      "b": 0,
+      "c": -2,
+      "snap": 1
+    },
+    "mode": "linear_relation",
+    "valid": true,
+    "solution": {
+      "kind": "unique",
+      "points": [
+        {
+          "x": -2,
+          "y": 0
+        }
+      ]
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -6.5,
+      "yMax": 6.5
+    }
+  },
+  {
+    "name": "eng01-graph-4",
+    "data": {
+      "a": 1,
+      "b": 1,
+      "c": 4,
+      "d": 1,
+      "e": -1,
+      "f": 0,
+      "snap": 1
+    },
+    "mode": "linear_system",
+    "valid": true,
+    "solution": {
+      "kind": "unique",
+      "points": [
+        {
+          "x": 2,
+          "y": 2
+        }
+      ]
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -7.800000000000001,
+      "yMax": 7.800000000000001
+    }
+  },
+  {
+    "name": "eng01-graph-5",
+    "data": {
+      "a": 1,
+      "b": 1,
+      "c": 2,
+      "d": 2,
+      "e": 2,
+      "f": 6,
+      "snap": 1
+    },
+    "mode": "linear_system",
+    "valid": true,
+    "solution": {
+      "kind": "parallel",
+      "points": []
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -6.5,
+      "yMax": 6.5
+    }
+  },
+  {
+    "name": "eng01-graph-6",
+    "data": {
+      "a": 1,
+      "b": 1,
+      "c": 2,
+      "d": 2,
+      "e": 2,
+      "f": 4,
+      "snap": 1
+    },
+    "mode": "linear_system",
+    "valid": true,
+    "solution": {
+      "kind": "coincident",
+      "points": []
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -6.5,
+      "yMax": 6.5
+    }
+  },
+  {
+    "name": "eng01-graph-7",
+    "data": {
+      "a": 0,
+      "b": 1,
+      "c": 4,
+      "q": 1,
+      "snap": 1
+    },
+    "mode": "line_parabola_intersection",
+    "valid": true,
+    "solution": {
+      "kind": "two",
+      "points": [
+        {
+          "x": -2,
+          "y": 4
+        },
+        {
+          "x": 2,
+          "y": 4
+        }
+      ]
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -6.5,
+      "yMax": 6.5
+    }
+  },
+  {
+    "name": "eng01-graph-8",
+    "data": {
+      "a": 0,
+      "b": 1,
+      "c": 0,
+      "q": 1,
+      "snap": 1
+    },
+    "mode": "line_parabola_intersection",
+    "valid": true,
+    "solution": {
+      "kind": "unique",
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -6.5,
+      "yMax": 6.5
+    }
+  },
+  {
+    "name": "eng01-graph-9",
+    "data": {
+      "a": 0,
+      "b": 1,
+      "c": -1,
+      "q": 1,
+      "snap": 1
+    },
+    "mode": "line_parabola_intersection",
+    "valid": true,
+    "solution": {
+      "kind": "none",
+      "points": []
+    },
+    "bounds": {
+      "xMin": -6.5,
+      "xMax": 6.5,
+      "yMin": -6.5,
+      "yMax": 6.5
+    }
+  },
+  {
+    "name": "irrational roots",
+    "data": {
+      "a": 0,
+      "b": 1,
+      "c": 2,
+      "q": 1,
+      "snap": 0
+    },
+    "mode": "line_parabola_intersection",
+    "valid": true,
+    "solution": {
+      "kind": "two",
+      "points": [
+        {
+          "x": -1.4142135623730951,
+          "y": 2
+        },
+        {
+          "x": 1.4142135623730951,
+          "y": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "vertical meets parabola",
+    "data": {
+      "a": 1,
+      "b": 0,
+      "c": 2,
+      "q": -1,
+      "snap": 1
+    },
+    "mode": "line_parabola_intersection",
+    "valid": true,
+    "solution": {
+      "kind": "unique",
+      "points": [
+        {
+          "x": 2,
+          "y": -4
+        }
+      ]
+    }
+  },
+  {
+    "name": "invalid-0",
+    "data": {
+      "a": 0,
+      "b": 0,
+      "c": 1,
+      "snap": 1
+    },
+    "mode": "linear_relation",
+    "valid": false
+  },
+  {
+    "name": "invalid-1",
+    "data": {
+      "a": 1,
+      "b": 1,
+      "c": 1,
+      "d": 0,
+      "e": 0,
+      "f": 1,
+      "snap": 1
+    },
+    "mode": "linear_system",
+    "valid": false
+  },
+  {
+    "name": "invalid-2",
+    "data": {
+      "a": 0,
+      "b": 1,
+      "c": 2,
+      "q": 0,
+      "snap": 1
+    },
+    "mode": "line_parabola_intersection",
+    "valid": false
+  },
+  {
+    "name": "invalid-3",
+    "data": {
+      "a": 0,
+      "b": 1,
+      "c": 2,
+      "q": 1,
+      "snap": 1
+    },
+    "mode": "line_parabola_intersection",
+    "valid": false
+  }
+]

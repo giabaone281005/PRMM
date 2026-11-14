@@ -1,0 +1,16 @@
+{
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "lessons": [
+    {
+      "id": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+      "version": 1,
+      "title": "CP02 — Chọn bi sáu bước",
+      "checkpoints": 6,
+      "sha256": "68be242e875675cfd3ed31f545101fdae6c4decf31dd618cced58b5cada77958"
+    }
+  ]
+}

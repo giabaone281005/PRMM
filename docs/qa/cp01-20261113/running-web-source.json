@@ -1,0 +1,7 @@
+{
+  "Url": "http://127.0.0.1:5173",
+  "Module": "/src/store.ts",
+  "SupabaseUrl": "https://sbzpmrgsqznaydllqmbm.supabase.co",
+  "PublishableKeyPresent": true,
+  "LocalDemo": "false"
+}

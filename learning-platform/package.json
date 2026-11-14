@@ -13,7 +13,13 @@
     "test:e2e": "playwright test",
     "bundle:mobile": "vite build --config vite.mobile.config.ts && node scripts/bundle-mobile.mjs",
     "contracts:generate": "node scripts/create-contract.mjs && tsx scripts/export-blueprints.ts && node scripts/create-problem-schema.mjs && node scripts/build-sql-contract.mjs",
-    "bundle:edge": "node scripts/bundle-edge.mjs"
+    "bundle:edge": "node scripts/bundle-edge.mjs",
+    "cylinder:generate": "tsx scripts/export-cylinder.ts",
+    "parabola:generate": "tsx scripts/export-parabola.ts",
+    "core:generate": "node scripts/export-core-engines.mjs",
+    "cartesian:generate": "tsx scripts/export-cartesian.ts",
+    "geometry:generate": "node scripts/create-geometry-contract.mjs && tsx scripts/export-geometry.ts",
+    "algebra:generate": "node scripts/create-algebra-contract.mjs && tsx scripts/export-algebra.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.119.0",

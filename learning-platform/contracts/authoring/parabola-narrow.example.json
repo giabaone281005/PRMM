@@ -1,0 +1,23 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "curriculumCode": "M9-ALG-09",
+  "templateId": "math9-parabola-coefficient",
+  "templateVersion": 1,
+  "mode": "coefficient",
+  "title": "Parabol hệ số lớn",
+  "parameters": {
+    "a": 5
+  },
+  "variants": {
+    "practice": {
+      "a": -4
+    },
+    "assessment": {
+      "a": 1
+    }
+  },
+  "content": {
+    "context": "Quan sát hướng mở của đồ thị."
+  }
+}

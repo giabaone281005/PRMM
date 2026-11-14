@@ -1,0 +1,23 @@
+{
+  "mode": "android-ui-all-catalog",
+  "status": "FAIL",
+  "testPackage": "vn.mohoc.mo_hoc.uitest",
+  "steps": [
+    {
+      "label": "Launch Android emulator",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "label": "Device runner",
+      "status": "FAIL",
+      "exitCode": 1
+    }
+  ],
+  "lessonFilter": "cp02-3bd7b4fb-0879-4e9d-8293-793fcafcfe9b-balls",
+  "limitations": [
+    "Catalog manifests exercised in isolated test app; production progress is not written",
+    "Cached snapshot used unless MOHOC_TEST_EMAIL and MOHOC_TEST_PASSWORD refresh it"
+  ],
+  "reportDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\user-device\\2026-11-13T21-09-53-691Z-13120"
+}

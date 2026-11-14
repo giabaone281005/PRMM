@@ -65,6 +65,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/contracts/
+    - assets/contracts/core-engines/
     - assets/runtime/
 
   # To add assets to your application, add an assets section, like this:

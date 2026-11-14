@@ -1,0 +1,72 @@
+{
+  "source": {
+    "projectId": "sbzpmrgsqznaydllqmbm",
+    "capturedAt": "2026-11-13T20:52:17.352Z",
+    "kind": "published-catalog-readonly"
+  },
+  "expected": [
+    {
+      "id": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "title": "Siêu Trí Tuệ",
+      "checkpoints": 6,
+      "sha256": "5288df12d8374c76d879f82cdc4d563b643ea5771f21b576e0cf6b4922522569"
+    }
+  ],
+  "events": [
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "START",
+      "at": "2026-11-14T00:09:35.422Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 1,
+      "at": "2026-11-14T00:09:42.668Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 2,
+      "at": "2026-11-14T00:09:50.915Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 3,
+      "at": "2026-11-14T00:09:54.416Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 4,
+      "at": "2026-11-14T00:10:01.977Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 5,
+      "at": "2026-11-14T00:10:09.616Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "CHECKPOINT",
+      "checkpoint": 6,
+      "at": "2026-11-14T00:10:17.376Z"
+    },
+    {
+      "lessonId": "lesson-492ff8c6-f5f2-4a91-8d0a-c673f3ed1d3d",
+      "version": 1,
+      "status": "PASS",
+      "at": "2026-11-14T00:10:21.937Z"
+    }
+  ]
+}

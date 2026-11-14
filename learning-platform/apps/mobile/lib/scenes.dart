@@ -1,10 +1,10 @@
-import 'dart:async';
 import 'dart:convert';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'domain.dart';
+import 'runtime_bridge.dart';
 const ink=Color(0xff263323),paper=Color(0xfffafbf7);
 void drawText(Canvas c,String text,Offset p,double size,Color color){final tp=TextPainter(text:TextSpan(text:text,style:TextStyle(fontSize:size,color:color,fontWeight:FontWeight.w600)),textDirection:TextDirection.ltr)..layout();tp.paint(c,p);}
 class NativeScene extends StatefulWidget {
@@ -52,16 +52,75 @@ class SolidView extends StatefulWidget {
   const SolidView({super.key,required this.session,required this.onInteraction});
   @override State<SolidView> createState()=>SolidViewState();
 }
-class SolidViewState extends State<SolidView>{
-  WebViewController? controller;String error='';final sessionId='mobile-${DateTime.now().microsecondsSinceEpoch}';int sequence=0;bool ready=false;final seen=<String>{};final pending=<String,({String raw,int retries,Timer timer})>{};
-  @override void initState(){super.initState();if(kIsWeb||defaultTargetPlatform==TargetPlatform.windows){error='3D cần Android/iOS WebView. Mở bài trên ứng dụng di động để tương tác.';return;}
-    controller=WebViewController()..setJavaScriptMode(JavaScriptMode.unrestricted)..setBackgroundColor(const Color(0xfff1f5e9))..addJavaScriptChannel('LessonChannel',onMessageReceived:(m)=>message(m.message))..setNavigationDelegate(NavigationDelegate(onNavigationRequest:(r)=>r.url.startsWith('file:///android_asset/')||r.url=='about:blank'?NavigationDecision.navigate:NavigationDecision.prevent,onWebResourceError:(e){if(mounted)setState(()=>error='Không tải được 3D: ${e.description}');}))..loadFlutterAsset('assets/runtime/index.html');
+class SolidViewState extends State<SolidView> {
+  WebViewController? controller;
+  RuntimeBridge? bridge;
+  String error = '';
+  bool get ready => bridge?.ready ?? false;
+
+  @override
+  void initState() { super.initState(); start(); }
+
+  void start() {
+    bridge?.dispose();
+    if (kIsWeb || (defaultTargetPlatform != TargetPlatform.android &&
+        defaultTargetPlatform != TargetPlatform.iOS)) {
+      error = 'Phần tương tác cần Android/iOS WebView. Mở bài trên ứng dụng di động.';
+      return;
+    }
+    error = '';
+    final next = WebViewController();
+    controller = next;
+    final active = RuntimeBridge(
+      sessionId: 'mobile-${DateTime.now().microsecondsSinceEpoch}',
+      initialPayload: () => {'manifest': widget.session.lesson, 'snapshot': widget.session.snapshot},
+      transmit: (raw) => next.runJavaScript('window.lessonBridge(${jsonEncode(raw)})'),
+      onInteraction: (event) => widget.onInteraction(event),
+      onError: (message) { if (mounted) setState(() => error = message); },
+      onReady: () { if (mounted) setState(() {}); },
+    );
+    bridge = active;
+    Future<void> load() async {
+      try {
+        await next.setJavaScriptMode(JavaScriptMode.unrestricted);
+        await next.setBackgroundColor(const Color(0xfff1f5e9));
+        await next.addJavaScriptChannel('LessonChannel', onMessageReceived: (m) => active.receive(m.message));
+        await next.setNavigationDelegate(NavigationDelegate(
+          onNavigationRequest: (r) => r.url.startsWith('file:///android_asset/') || r.url == 'about:blank'
+              ? NavigationDecision.navigate : NavigationDecision.prevent,
+          onWebResourceError: (e) {
+            if (e.isForMainFrame != false) active.fail('Không tải được phần tương tác. Chạm Thử lại.');
+          },
+        ));
+        await next.loadFlutterAsset('assets/runtime/index.html');
+      } catch (_) { active.fail('Không mở được phần tương tác. Chạm Thử lại.'); }
+    }
+    load();
   }
-  void send(String type,Json payload){final id='$sessionId-${sequence++}',raw=jsonEncode({'protocolVersion':'1.0.0','sessionId':sessionId,'requestId':id,'type':type,'payload':payload});void transmit()=>controller?.runJavaScript('window.lessonBridge(${jsonEncode(raw)})');transmit();late Timer timer;timer=Timer.periodic(const Duration(seconds:3),(_){final item=pending[id];if(item==null){timer.cancel();return;}if(item.retries>=2){timer.cancel();pending.remove(id);if(mounted)setState(()=>error='Runtime 3D không phản hồi. Tiến độ được giữ; mở lại bài để thử lại.');return;}pending[id]=(raw:raw,retries:item.retries+1,timer:timer);transmit();});pending[id]=(raw:raw,retries:0,timer:timer);}
-  void message(String raw){if(raw.length>131072)return;try{final m=jsonDecode(raw);if(m['protocolVersion']!='1.0.0'||m['requestId'] is! String)return;if(m['type']=='READY'&&!ready){ready=true;send('INIT',{'manifest':widget.session.lesson,'snapshot':widget.session.snapshot});return;}if(m['sessionId']!=sessionId)return;if(m['type']=='ACK'){pending.remove(m['requestId'])?.timer.cancel();return;}if(!seen.add(m['requestId']))return;if(seen.length>512)seen.remove(seen.first);if(m['type']=='INTERACTION')widget.onInteraction(Map<String,dynamic>.from(m['payload']['event']));if(m['type']=='RENDER_ERROR'&&mounted)setState(()=>error='Runtime 3D: ${m['payload']['message']}');}catch(_){/* Reject malformed bridge input. */}}
-  void checkpoint(String id){if(ready)send('SET_CHECKPOINT',{'checkpointId':id});}
-  void lifecycle(bool resume){if(ready)send(resume?'RESUME':'PAUSE',{});}
-  void reset(){if(ready)send('RESET',{});}
-  @override void dispose(){for(final p in pending.values){p.timer.cancel();}super.dispose();}
-  @override Widget build(BuildContext context){if(error.isNotEmpty)return ColoredBox(color:const Color(0xfff1f5e9),child:Center(child:Padding(padding:const EdgeInsets.all(25),child:Text(error,textAlign:TextAlign.center))));return controller==null?const Center(child:CircularProgressIndicator()):WebViewWidget(controller:controller!);}
+
+  void checkpoint(String id) { if (ready) bridge!.send('SET_CHECKPOINT', {'checkpointId': id}); }
+  void lifecycle(bool resume) { if (ready) bridge!.send(resume ? 'RESUME' : 'PAUSE', {}); }
+  void reset() { if (ready) bridge!.send('RESET', {}); }
+  @override
+  void dispose() { bridge?.dispose(); super.dispose(); }
+  @override
+  Widget build(BuildContext context) {
+    if (error.isNotEmpty) {
+      return ColoredBox(color: const Color(0xfff1f5e9), child: Center(child: Padding(
+        padding: const EdgeInsets.all(25), child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Text(error, textAlign: TextAlign.center),
+          const SizedBox(height: 16),
+          FilledButton(onPressed: () => setState(start), child: const Text('Thử lại')),
+        ]),
+      )));
+    }
+    return Stack(children: [
+      if (controller != null) WebViewWidget(key: ValueKey(controller), controller: controller!),
+      if (!ready) const Positioned.fill(child: ColoredBox(color: Color(0xfff1f5e9),
+        child: Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
+          CircularProgressIndicator(), SizedBox(height: 16), Text('Đang mở phần tương tác…'),
+        ])),
+      )),
+    ]);
+  }
 }

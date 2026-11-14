@@ -1,0 +1,32 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-04",
+  "curriculumCode": "M9-GEO-04",
+  "mode": "circle_symmetry",
+  "title": "Đường tròn và đối xứng",
+  "parameters": {
+    "radius": 4,
+    "pointDistance": 2,
+    "pointAngle": 35,
+    "axis": "x",
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "radius": 3,
+      "pointDistance": 3,
+      "pointAngle": 60,
+      "axis": "y",
+      "unit": "cm"
+    },
+    "assessment": {
+      "radius": 2,
+      "pointDistance": 4,
+      "pointAngle": 45,
+      "axis": "x",
+      "unit": "cm"
+    }
+  }
+}

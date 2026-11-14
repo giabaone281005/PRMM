@@ -1,0 +1,29 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateId": "math9-linear-relation",
+  "templateVersion": 1,
+  "curriculumCode": "M9-ALG-01",
+  "mode": "linear_relation",
+  "title": "Điểm nghiệm phương trình hai ẩn",
+  "parameters": {
+    "a": 1,
+    "b": 1,
+    "c": 4,
+    "snap": 1
+  },
+  "variants": {
+    "practice": {
+      "a": 0,
+      "b": 1,
+      "c": 3,
+      "snap": 1
+    },
+    "assessment": {
+      "a": 1,
+      "b": 0,
+      "c": -2,
+      "snap": 1
+    }
+  }
+}

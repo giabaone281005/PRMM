@@ -1,0 +1,3017 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authoringVersion",
+    "namespace",
+    "curriculumCode",
+    "templateId",
+    "templateVersion",
+    "mode",
+    "title",
+    "parameters",
+    "variants"
+  ],
+  "properties": {
+    "authoringVersion": {
+      "const": "1.0.0"
+    },
+    "namespace": {
+      "const": "excel-repo-v1"
+    },
+    "curriculumCode": {
+      "enum": [
+        "M9-ALG-01",
+        "M9-ALG-02",
+        "M9-ALG-03",
+        "M9-ALG-04",
+        "M9-ALG-05",
+        "M9-ALG-06",
+        "M9-ALG-07",
+        "M9-ALG-08",
+        "M9-ALG-09",
+        "M9-ALG-10",
+        "M9-ALG-11",
+        "M9-GEO-01",
+        "M9-GEO-02",
+        "M9-GEO-03",
+        "M9-GEO-04",
+        "M9-GEO-05",
+        "M9-GEO-06",
+        "M9-GEO-07",
+        "M9-GEO-08",
+        "M9-GEO-09",
+        "M9-GEO-10",
+        "M9-GEO-11",
+        "M9-STP-01",
+        "M9-STP-02"
+      ]
+    },
+    "templateId": {
+      "type": "string"
+    },
+    "templateVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "mode": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "\\S"
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "variants": {
+      "type": "object"
+    },
+    "content": {
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mohoc.local/contracts/authoring/lesson-authoring.schema.json",
+  "title": "JSON đề Toán 9 — authoring v1 (không phải runtime manifest)",
+  "$defs": {
+    "cylinderData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "radius",
+        "height"
+      ],
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 100
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 100
+        }
+      }
+    },
+    "parabolaData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "a"
+      ],
+      "properties": {
+        "a": {
+          "type": "integer",
+          "minimum": -5,
+          "maximum": 5,
+          "not": {
+            "const": 0
+          }
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-cylinder-recognition"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-11"
+        },
+        "mode": {
+          "const": "recognition"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "radius",
+            "height",
+            "unit"
+          ],
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 100
+            },
+            "height": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 100
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          }
+        },
+        "variants": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "properties": {
+            "practice": {
+              "$ref": "#/$defs/cylinderData"
+            },
+            "assessment": {
+              "$ref": "#/$defs/cylinderData"
+            }
+          }
+        },
+        "content": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [],
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            },
+            "exploreInstruction": {
+              "enum": [
+                "Xoay để quan sát hình trụ.",
+                "Xoay để quan sát chiếc hộp."
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-parabola-coefficient"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-09"
+        },
+        "mode": {
+          "const": "coefficient"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "a"
+          ],
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -5,
+              "maximum": 5,
+              "not": {
+                "const": 0
+              }
+            }
+          }
+        },
+        "variants": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "properties": {
+            "practice": {
+              "$ref": "#/$defs/parabolaData"
+            },
+            "assessment": {
+              "$ref": "#/$defs/parabolaData"
+            }
+          }
+        },
+        "content": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [],
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-linear-relation"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-01"
+        },
+        "mode": {
+          "const": "linear_relation"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "snap": {
+              "type": "number",
+              "enum": [
+                0,
+                0.5,
+                1
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "snap"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "snap": {
+                  "type": "number",
+                  "enum": [
+                    0,
+                    0.5,
+                    1
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "snap"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "snap": {
+                  "type": "number",
+                  "enum": [
+                    0,
+                    0.5,
+                    1
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "snap"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-linear-system"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-02"
+        },
+        "mode": {
+          "const": "linear_system"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "d": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "e": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "f": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "snap": {
+              "type": "number",
+              "enum": [
+                0,
+                0.5,
+                1
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "snap"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "d": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "e": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "f": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "snap": {
+                  "type": "number",
+                  "enum": [
+                    0,
+                    0.5,
+                    1
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "snap"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "d": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "e": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "f": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "snap": {
+                  "type": "number",
+                  "enum": [
+                    0,
+                    0.5,
+                    1
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "snap"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-line-parabola"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-09"
+        },
+        "mode": {
+          "const": "line_parabola_intersection"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "q": {
+              "type": "integer",
+              "minimum": -12,
+              "maximum": 12
+            },
+            "snap": {
+              "type": "number",
+              "enum": [
+                0,
+                0.5,
+                1
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "q",
+            "snap"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "q": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "snap": {
+                  "type": "number",
+                  "enum": [
+                    0,
+                    0.5,
+                    1
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "q",
+                "snap"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "q": {
+                  "type": "integer",
+                  "minimum": -12,
+                  "maximum": 12
+                },
+                "snap": {
+                  "type": "number",
+                  "enum": [
+                    0,
+                    0.5,
+                    1
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "q",
+                "snap"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-01"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-01"
+        },
+        "mode": {
+          "const": "right_triangle"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "legA": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "legB": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "angleAt": {
+              "enum": [
+                "B",
+                "C"
+              ]
+            },
+            "target": {
+              "enum": [
+                "opposite",
+                "adjacent",
+                "hypotenuse"
+              ]
+            },
+            "ratio": {
+              "enum": [
+                "sin",
+                "cos",
+                "tan"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "legA",
+            "legB",
+            "angleAt",
+            "target",
+            "ratio",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "legA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "legB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "angleAt": {
+                  "enum": [
+                    "B",
+                    "C"
+                  ]
+                },
+                "target": {
+                  "enum": [
+                    "opposite",
+                    "adjacent",
+                    "hypotenuse"
+                  ]
+                },
+                "ratio": {
+                  "enum": [
+                    "sin",
+                    "cos",
+                    "tan"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "legA",
+                "legB",
+                "angleAt",
+                "target",
+                "ratio",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "legA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "legB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "angleAt": {
+                  "enum": [
+                    "B",
+                    "C"
+                  ]
+                },
+                "target": {
+                  "enum": [
+                    "opposite",
+                    "adjacent",
+                    "hypotenuse"
+                  ]
+                },
+                "ratio": {
+                  "enum": [
+                    "sin",
+                    "cos",
+                    "tan"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "legA",
+                "legB",
+                "angleAt",
+                "target",
+                "ratio",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-02"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-02"
+        },
+        "mode": {
+          "const": "right_triangle"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "legA": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "legB": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "angleAt": {
+              "enum": [
+                "B",
+                "C"
+              ]
+            },
+            "target": {
+              "enum": [
+                "opposite",
+                "adjacent",
+                "hypotenuse"
+              ]
+            },
+            "ratio": {
+              "enum": [
+                "sin",
+                "cos",
+                "tan"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "legA",
+            "legB",
+            "angleAt",
+            "target",
+            "ratio",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "legA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "legB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "angleAt": {
+                  "enum": [
+                    "B",
+                    "C"
+                  ]
+                },
+                "target": {
+                  "enum": [
+                    "opposite",
+                    "adjacent",
+                    "hypotenuse"
+                  ]
+                },
+                "ratio": {
+                  "enum": [
+                    "sin",
+                    "cos",
+                    "tan"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "legA",
+                "legB",
+                "angleAt",
+                "target",
+                "ratio",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "legA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "legB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "angleAt": {
+                  "enum": [
+                    "B",
+                    "C"
+                  ]
+                },
+                "target": {
+                  "enum": [
+                    "opposite",
+                    "adjacent",
+                    "hypotenuse"
+                  ]
+                },
+                "ratio": {
+                  "enum": [
+                    "sin",
+                    "cos",
+                    "tan"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "legA",
+                "legB",
+                "angleAt",
+                "target",
+                "ratio",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-03"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-03"
+        },
+        "mode": {
+          "const": "right_triangle"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "legA": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "legB": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "angleAt": {
+              "enum": [
+                "B",
+                "C"
+              ]
+            },
+            "target": {
+              "enum": [
+                "opposite",
+                "adjacent",
+                "hypotenuse"
+              ]
+            },
+            "ratio": {
+              "enum": [
+                "sin",
+                "cos",
+                "tan"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "legA",
+            "legB",
+            "angleAt",
+            "target",
+            "ratio",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "legA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "legB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "angleAt": {
+                  "enum": [
+                    "B",
+                    "C"
+                  ]
+                },
+                "target": {
+                  "enum": [
+                    "opposite",
+                    "adjacent",
+                    "hypotenuse"
+                  ]
+                },
+                "ratio": {
+                  "enum": [
+                    "sin",
+                    "cos",
+                    "tan"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "legA",
+                "legB",
+                "angleAt",
+                "target",
+                "ratio",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "legA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "legB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "angleAt": {
+                  "enum": [
+                    "B",
+                    "C"
+                  ]
+                },
+                "target": {
+                  "enum": [
+                    "opposite",
+                    "adjacent",
+                    "hypotenuse"
+                  ]
+                },
+                "ratio": {
+                  "enum": [
+                    "sin",
+                    "cos",
+                    "tan"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "legA",
+                "legB",
+                "angleAt",
+                "target",
+                "ratio",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-04"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-04"
+        },
+        "mode": {
+          "const": "circle_symmetry"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "pointDistance": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 30
+            },
+            "pointAngle": {
+              "type": "number",
+              "minimum": 10,
+              "maximum": 80
+            },
+            "axis": {
+              "enum": [
+                "x",
+                "y"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "pointDistance",
+            "pointAngle",
+            "axis",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "pointDistance": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 30
+                },
+                "pointAngle": {
+                  "type": "number",
+                  "minimum": 10,
+                  "maximum": 80
+                },
+                "axis": {
+                  "enum": [
+                    "x",
+                    "y"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "pointDistance",
+                "pointAngle",
+                "axis",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "pointDistance": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 30
+                },
+                "pointAngle": {
+                  "type": "number",
+                  "minimum": 10,
+                  "maximum": 80
+                },
+                "axis": {
+                  "enum": [
+                    "x",
+                    "y"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "pointDistance",
+                "pointAngle",
+                "axis",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-05"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-05"
+        },
+        "mode": {
+          "const": "line_circle"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "distance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 40
+            },
+            "normalAngle": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "distance",
+            "normalAngle",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "distance": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 40
+                },
+                "normalAngle": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "distance",
+                "normalAngle",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "distance": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 40
+                },
+                "normalAngle": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "distance",
+                "normalAngle",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-06"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-06"
+        },
+        "mode": {
+          "const": "two_circles"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "radius2": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "distance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 40
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "radius2",
+            "distance",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "radius2": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "distance": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 40
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "radius2",
+                "distance",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "radius2": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "distance": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 40
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "radius2",
+                "distance",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-07"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-07"
+        },
+        "mode": {
+          "const": "circle_angles"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sweep": {
+              "type": "number",
+              "minimum": 20,
+              "maximum": 160
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "sweep",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sweep": {
+                  "type": "number",
+                  "minimum": 20,
+                  "maximum": 160
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "sweep",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sweep": {
+                  "type": "number",
+                  "minimum": 20,
+                  "maximum": 160
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "sweep",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-08"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-08"
+        },
+        "mode": {
+          "const": "arc_sector_annulus"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "innerRadius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sweep": {
+              "type": "number",
+              "minimum": 20,
+              "maximum": 160
+            },
+            "measure": {
+              "enum": [
+                "arc",
+                "sector",
+                "annulus"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "innerRadius",
+            "sweep",
+            "measure",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "innerRadius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sweep": {
+                  "type": "number",
+                  "minimum": 20,
+                  "maximum": 160
+                },
+                "measure": {
+                  "enum": [
+                    "arc",
+                    "sector",
+                    "annulus"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "innerRadius",
+                "sweep",
+                "measure",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "innerRadius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sweep": {
+                  "type": "number",
+                  "minimum": 20,
+                  "maximum": 160
+                },
+                "measure": {
+                  "enum": [
+                    "arc",
+                    "sector",
+                    "annulus"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "innerRadius",
+                "sweep",
+                "measure",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-09"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-09"
+        },
+        "mode": {
+          "const": "triangle_circles"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sideA": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sideB": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "sideC": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "construction": {
+              "enum": [
+                "incircle",
+                "circumcircle"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "sideA",
+            "sideB",
+            "sideC",
+            "construction",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "sideA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sideB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sideC": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "construction": {
+                  "enum": [
+                    "incircle",
+                    "circumcircle"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "sideA",
+                "sideB",
+                "sideC",
+                "construction",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "sideA": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sideB": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "sideC": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "construction": {
+                  "enum": [
+                    "incircle",
+                    "circumcircle"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "sideA",
+                "sideB",
+                "sideC",
+                "construction",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-geometry-10"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-GEO-10"
+        },
+        "mode": {
+          "const": "cyclic_polygon"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "shape": {
+              "enum": [
+                "regular_polygon",
+                "cyclic_quadrilateral"
+              ]
+            },
+            "vertices": {
+              "type": "integer",
+              "minimum": 3,
+              "maximum": 12
+            },
+            "angleB": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "angleC": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "angleD": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "unit": {
+              "enum": [
+                "cm",
+                "m"
+              ]
+            }
+          },
+          "required": [
+            "radius",
+            "shape",
+            "vertices",
+            "angleB",
+            "angleC",
+            "angleD",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "shape": {
+                  "enum": [
+                    "regular_polygon",
+                    "cyclic_quadrilateral"
+                  ]
+                },
+                "vertices": {
+                  "type": "integer",
+                  "minimum": 3,
+                  "maximum": 12
+                },
+                "angleB": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "angleC": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "angleD": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "shape",
+                "vertices",
+                "angleB",
+                "angleC",
+                "angleD",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "radius": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 20
+                },
+                "shape": {
+                  "enum": [
+                    "regular_polygon",
+                    "cyclic_quadrilateral"
+                  ]
+                },
+                "vertices": {
+                  "type": "integer",
+                  "minimum": 3,
+                  "maximum": 12
+                },
+                "angleB": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "angleC": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "angleD": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 359
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "m"
+                  ]
+                }
+              },
+              "required": [
+                "radius",
+                "shape",
+                "vertices",
+                "angleB",
+                "angleC",
+                "angleD",
+                "unit"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-algebra-product-equation"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-03"
+        },
+        "mode": {
+          "const": "product_equation"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "p": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "q": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "r": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "s": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            }
+          },
+          "required": [
+            "p",
+            "q",
+            "r",
+            "s"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "p": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "q": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "r": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "s": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                }
+              },
+              "required": [
+                "p",
+                "q",
+                "r",
+                "s"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "p": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "q": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "r": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "s": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                }
+              },
+              "required": [
+                "p",
+                "q",
+                "r",
+                "s"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-algebra-rational-equation"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-03"
+        },
+        "mode": {
+          "const": "rational_equation"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "p": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "q": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "r": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "s": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "d": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "e": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "f": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "g": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "k": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            }
+          },
+          "required": [
+            "p",
+            "q",
+            "r",
+            "s",
+            "d",
+            "e",
+            "f",
+            "g",
+            "k"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "p": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "q": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "r": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "s": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "d": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "e": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "f": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "g": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "k": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                }
+              },
+              "required": [
+                "p",
+                "q",
+                "r",
+                "s",
+                "d",
+                "e",
+                "f",
+                "g",
+                "k"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "p": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "q": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "r": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "s": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "d": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "e": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "f": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "g": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "k": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                }
+              },
+              "required": [
+                "p",
+                "q",
+                "r",
+                "s",
+                "d",
+                "e",
+                "f",
+                "g",
+                "k"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-algebra-quadratic-equation"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-10"
+        },
+        "mode": {
+          "const": "quadratic_equation"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "degreePolicy": {
+              "enum": [
+                "quadratic_only",
+                "allow_linear"
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c",
+            "degreePolicy"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "degreePolicy": {
+                  "enum": [
+                    "quadratic_only",
+                    "allow_linear"
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "degreePolicy"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "degreePolicy": {
+                  "enum": [
+                    "quadratic_only",
+                    "allow_linear"
+                  ]
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c",
+                "degreePolicy"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "templateId": {
+          "const": "math9-algebra-viete"
+        },
+        "templateVersion": {
+          "const": 1
+        },
+        "curriculumCode": {
+          "const": "M9-ALG-11"
+        },
+        "mode": {
+          "const": "viete"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "b": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            },
+            "c": {
+              "type": "integer",
+              "minimum": -9,
+              "maximum": 9
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c"
+          ],
+          "additionalProperties": false
+        },
+        "variants": {
+          "type": "object",
+          "properties": {
+            "practice": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c"
+              ],
+              "additionalProperties": false
+            },
+            "assessment": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "b": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": -9,
+                  "maximum": 9
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "practice",
+            "assessment"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "^[^0-9<>={}\\\\\\r\\n]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

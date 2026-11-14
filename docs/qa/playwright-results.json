@@ -2,11 +2,13 @@
   "config": {
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
-      "D:\\PRMM\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
-      "test"
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "algebra.spec.ts",
+      "--max-failures=1"
     ],
-    "configFile": "D:\\PRMM\\learning-platform\\playwright.config.ts",
-    "rootDir": "D:/PRMM/learning-platform/tests/e2e",
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -15,14 +17,14 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 0,
+    "maxFailures": 1,
     "metadata": {
       "actualWorkers": 1
     },
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "D:/PRMM/learning-platform/test-results",
+        "outputDir": "D:/3.FPT/PRM/final project/learning-platform/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -30,7 +32,7 @@
         },
         "id": "desktop",
         "name": "desktop",
-        "testDir": "D:/PRMM/learning-platform/tests/e2e",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -42,15 +44,15 @@
       {
         "grep": {},
         "grepInvert": null,
-        "outputDir": "D:\\PRMM\\learning-platform\\test-results",
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
         },
         "name": "desktop",
-        "testDir": "D:\\PRMM\\learning-platform\\tests\\e2e",
-        "snapshotDir": "D:\\PRMM\\learning-platform\\tests\\e2e",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
         "testIgnore": [],
         "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
         "timeout": 30000,
@@ -107,13 +109,13 @@
   },
   "suites": [
     {
-      "title": "00-empty.spec.ts",
-      "file": "00-empty.spec.ts",
+      "title": "algebra.spec.ts",
+      "file": "algebra.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "fresh workspace stays empty and ignores legacy browser sample catalog",
+          "title": "Algebra six steps eng03-product-equation-1-1",
           "ok": true,
           "tags": [],
           "tests": [
@@ -128,12 +130,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6019,
+                  "duration": 7756,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:41:38.797Z",
+                  "startTime": "2026-11-13T19:11:41.378Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -141,233 +143,13 @@
               "status": "expected"
             }
           ],
-          "id": "43420c6e0ca8947d852f-c56512307da5902e6fb8",
-          "file": "00-empty.spec.ts",
-          "line": 3,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "acceptance.spec.ts",
-      "file": "acceptance.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "learner 2D gestures, canvas continuity, checkpoint restore and completion",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5317,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:41:45.399Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "6bf654160f377cf56a60-93eb19a87b50c2ebc5bb",
-          "file": "acceptance.spec.ts",
-          "line": 4,
-          "column": 1
-        },
-        {
-          "title": "local CMS JSON build, edit, validation, publish, version and unpublish",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5479,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:41:50.881Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "6bf654160f377cf56a60-a2a2dd425dbaa358ce41",
-          "file": "acceptance.spec.ts",
-          "line": 10,
-          "column": 1
-        },
-        {
-          "title": "3D WebGL actually renders and raycast/orbit/layers complete the lesson",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4088,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:41:56.375Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "6bf654160f377cf56a60-f989297317f19d3e2611",
-          "file": "acceptance.spec.ts",
-          "line": 13,
-          "column": 1
-        },
-        {
-          "title": "responsive layouts 1280, tablet and portrait contain no horizontal overflow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6126,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:42:00.480Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "6bf654160f377cf56a60-af88b3fcb4f4f7fba6da",
-          "file": "acceptance.spec.ts",
-          "line": 16,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "cms-refresh.spec.ts",
-      "file": "cms-refresh.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "CMS readable navigation, class sort and filter",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3222,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:42:06.635Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "df1fd14d9c2e22391c7e-cf07ab005d5e29be5d26",
-          "file": "cms-refresh.spec.ts",
+          "id": "a9229b5ed6c1a71ba7a9-367ad974bc8c0299c6ed",
+          "file": "algebra.spec.ts",
           "line": 5,
-          "column": 1
-        },
-        {
-          "title": "new engine percentage_grid: JSON, phone, all checkpoints",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4087,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:42:09.934Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "df1fd14d9c2e22391c7e-96f6b41643744efdcf80",
-          "file": "cms-refresh.spec.ts",
-          "line": 6,
           "column": 43
         },
         {
-          "title": "new engine ratio_table: JSON, phone, all checkpoints",
+          "title": "Algebra six steps eng03-product-equation-1-2",
           "ok": true,
           "tags": [],
           "tests": [
@@ -382,12 +164,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3693,
+                  "duration": 4524,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:14.035Z",
+                  "startTime": "2026-11-13T19:11:49.849Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -395,13 +177,13 @@
               "status": "expected"
             }
           ],
-          "id": "df1fd14d9c2e22391c7e-dfa23556087aa5e031ce",
-          "file": "cms-refresh.spec.ts",
-          "line": 6,
+          "id": "a9229b5ed6c1a71ba7a9-e16bfe78d336a99fad28",
+          "file": "algebra.spec.ts",
+          "line": 5,
           "column": 43
         },
         {
-          "title": "new engine coordinate_plane: JSON, phone, all checkpoints",
+          "title": "Algebra six steps eng03-product-equation-1-3",
           "ok": true,
           "tags": [],
           "tests": [
@@ -416,12 +198,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3769,
+                  "duration": 3356,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:17.738Z",
+                  "startTime": "2026-11-13T19:11:54.399Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -429,13 +211,13 @@
               "status": "expected"
             }
           ],
-          "id": "df1fd14d9c2e22391c7e-2e74263bd2df0363346e",
-          "file": "cms-refresh.spec.ts",
-          "line": 6,
+          "id": "a9229b5ed6c1a71ba7a9-2265f2a323b5125cec80",
+          "file": "algebra.spec.ts",
+          "line": 5,
           "column": 43
         },
         {
-          "title": "new engine rectangle_area: JSON, phone, all checkpoints",
+          "title": "Algebra six steps eng03-rational-equation-2-1",
           "ok": true,
           "tags": [],
           "tests": [
@@ -450,12 +232,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3839,
+                  "duration": 3085,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:21.519Z",
+                  "startTime": "2026-11-13T19:11:57.778Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -463,13 +245,13 @@
               "status": "expected"
             }
           ],
-          "id": "df1fd14d9c2e22391c7e-5ec13d64dca43c926e89",
-          "file": "cms-refresh.spec.ts",
-          "line": 6,
+          "id": "a9229b5ed6c1a71ba7a9-95abf4dd5ddd58b48b51",
+          "file": "algebra.spec.ts",
+          "line": 5,
           "column": 43
         },
         {
-          "title": "new engine pythagorean: JSON, phone, all checkpoints",
+          "title": "Algebra six steps eng03-rational-equation-2-2",
           "ok": true,
           "tags": [],
           "tests": [
@@ -484,12 +266,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3793,
+                  "duration": 3044,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:25.370Z",
+                  "startTime": "2026-11-13T19:12:00.882Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -497,13 +279,13 @@
               "status": "expected"
             }
           ],
-          "id": "df1fd14d9c2e22391c7e-84a0ed56bf86b2127f1b",
-          "file": "cms-refresh.spec.ts",
-          "line": 6,
+          "id": "a9229b5ed6c1a71ba7a9-0f928ec6042afb9e5d73",
+          "file": "algebra.spec.ts",
+          "line": 5,
           "column": 43
         },
         {
-          "title": "new engine linear_graph: JSON, phone, all checkpoints",
+          "title": "Algebra six steps eng03-rational-equation-2-3",
           "ok": true,
           "tags": [],
           "tests": [
@@ -518,12 +300,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3769,
+                  "duration": 2953,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:29.174Z",
+                  "startTime": "2026-11-13T19:12:03.944Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -531,13 +313,13 @@
               "status": "expected"
             }
           ],
-          "id": "df1fd14d9c2e22391c7e-13860ece3dc27bf7d345",
-          "file": "cms-refresh.spec.ts",
-          "line": 6,
+          "id": "a9229b5ed6c1a71ba7a9-8a3b0f0cb3301975311a",
+          "file": "algebra.spec.ts",
+          "line": 5,
           "column": 43
         },
         {
-          "title": "unknown math request is recorded without publishing an unsupported lesson",
+          "title": "Algebra six steps eng03-quadratic-equation-3-1",
           "ok": true,
           "tags": [],
           "tests": [
@@ -552,12 +334,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3136,
+                  "duration": 3477,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:32.957Z",
+                  "startTime": "2026-11-13T19:12:06.916Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -565,13 +347,13 @@
               "status": "expected"
             }
           ],
-          "id": "df1fd14d9c2e22391c7e-5ad2c1a8ea6cb2df9402",
-          "file": "cms-refresh.spec.ts",
-          "line": 7,
-          "column": 1
+          "id": "a9229b5ed6c1a71ba7a9-b9a9c640dbcd274f67cb",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         },
         {
-          "title": "friendly equation fields update live diagram and generated instruction",
+          "title": "Algebra six steps eng03-quadratic-equation-3-2",
           "ok": true,
           "tags": [],
           "tests": [
@@ -586,12 +368,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3446,
+                  "duration": 3802,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:36.104Z",
+                  "startTime": "2026-11-13T19:12:10.420Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -599,21 +381,13 @@
               "status": "expected"
             }
           ],
-          "id": "df1fd14d9c2e22391c7e-f87b8a15eddaef999b8a",
-          "file": "cms-refresh.spec.ts",
-          "line": 8,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "creation.spec.ts",
-      "file": "creation.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
+          "id": "a9229b5ed6c1a71ba7a9-9a3b19dddd2b24f0dc9f",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
         {
-          "title": "JSON → auto engine → phone preview → publish → learn: number_line",
+          "title": "Algebra six steps eng03-quadratic-equation-3-3",
           "ok": true,
           "tags": [],
           "tests": [
@@ -628,12 +402,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5351,
+                  "duration": 3402,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:39.570Z",
+                  "startTime": "2026-11-13T19:12:14.240Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -641,13 +415,13 @@
               "status": "expected"
             }
           ],
-          "id": "1c32b4a3a2ad83297ea5-901de4695cf8bacc6af4",
-          "file": "creation.spec.ts",
-          "line": 3,
-          "column": 58
+          "id": "a9229b5ed6c1a71ba7a9-1570c6097db1d21cb3b9",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         },
         {
-          "title": "JSON → auto engine → phone preview → publish → learn: fraction",
+          "title": "Algebra six steps eng03-viete-4-1",
           "ok": true,
           "tags": [],
           "tests": [
@@ -662,12 +436,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5290,
+                  "duration": 3581,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:44.936Z",
+                  "startTime": "2026-11-13T19:12:17.665Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -675,13 +449,13 @@
               "status": "expected"
             }
           ],
-          "id": "1c32b4a3a2ad83297ea5-06eded227227d1472c5c",
-          "file": "creation.spec.ts",
-          "line": 3,
-          "column": 58
+          "id": "a9229b5ed6c1a71ba7a9-8cf9f8bbfe68293f191d",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         },
         {
-          "title": "JSON → auto engine → phone preview → publish → learn: linear_equation",
+          "title": "Algebra six steps eng03-viete-4-2",
           "ok": true,
           "tags": [],
           "tests": [
@@ -696,12 +470,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5429,
+                  "duration": 3734,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:50.242Z",
+                  "startTime": "2026-11-13T19:12:21.269Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -709,13 +483,13 @@
               "status": "expected"
             }
           ],
-          "id": "1c32b4a3a2ad83297ea5-f0fe06490215ff0f8ccb",
-          "file": "creation.spec.ts",
-          "line": 3,
-          "column": 58
+          "id": "a9229b5ed6c1a71ba7a9-dd4fb5650c63e58eb8ae",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         },
         {
-          "title": "JSON → auto engine → phone preview → publish → learn: quadratic_graph",
+          "title": "Algebra six steps eng03-viete-4-3",
           "ok": true,
           "tags": [],
           "tests": [
@@ -730,12 +504,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5327,
+                  "duration": 3730,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:42:55.686Z",
+                  "startTime": "2026-11-13T19:12:25.039Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -743,13 +517,13 @@
               "status": "expected"
             }
           ],
-          "id": "1c32b4a3a2ad83297ea5-56e6508626bfe44edec2",
-          "file": "creation.spec.ts",
-          "line": 3,
-          "column": 58
+          "id": "a9229b5ed6c1a71ba7a9-6b85714b391db680500e",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         },
         {
-          "title": "wrong answer JSON is rejected; one numeric change routes same engine with new target",
+          "title": "Algebra six steps eng03-quadratic-equation-5-1",
           "ok": true,
           "tags": [],
           "tests": [
@@ -764,12 +538,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3384,
+                  "duration": 3242,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:43:01.025Z",
+                  "startTime": "2026-11-13T19:12:28.790Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -777,21 +551,13 @@
               "status": "expected"
             }
           ],
-          "id": "1c32b4a3a2ad83297ea5-08b05564544a54dfb028",
-          "file": "creation.spec.ts",
-          "line": 13,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "curriculum-pilot.spec.ts",
-      "file": "curriculum-pilot.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
+          "id": "a9229b5ed6c1a71ba7a9-74d12d09ec830e1012c6",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
         {
-          "title": "existing dashboard: template to Studio, AI round trip, publish and library",
+          "title": "Algebra six steps eng03-quadratic-equation-5-2",
           "ok": true,
           "tags": [],
           "tests": [
@@ -806,12 +572,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4035,
+                  "duration": 3227,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:43:04.432Z",
+                  "startTime": "2026-11-13T19:12:32.051Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -819,21 +585,13 @@
               "status": "expected"
             }
           ],
-          "id": "baaec4761752945ebb5e-e67e65115b04d86a0c13",
-          "file": "curriculum-pilot.spec.ts",
-          "line": 2,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "diagnostics.spec.ts",
-      "file": "diagnostics.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
+          "id": "a9229b5ed6c1a71ba7a9-56bda3fb447b232d2490",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
         {
-          "title": "browser console and local API network inspection",
+          "title": "Algebra six steps eng03-quadratic-equation-5-3",
           "ok": true,
           "tags": [],
           "tests": [
@@ -848,12 +606,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4050,
+                  "duration": 2909,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:43:08.488Z",
+                  "startTime": "2026-11-13T19:12:35.301Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -861,63 +619,13 @@
               "status": "expected"
             }
           ],
-          "id": "80bb835772e7bc2f1ed9-4976c4d2af45131fe3ba",
-          "file": "diagnostics.spec.ts",
-          "line": 3,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "math9.spec.ts",
-      "file": "math9.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
+          "id": "a9229b5ed6c1a71ba7a9-d94a9b33e44d5db22d9b",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
+        },
         {
-          "title": "Toán 9: all topics build, interact, publish and survive reload",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 15108,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:43:12.566Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e64d5bb38f5d03fec2fa-1024c7b07b6c85e1cc57",
-          "file": "math9.spec.ts",
-          "line": 3,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "uime-editor.spec.ts",
-      "file": "uime-editor.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "SVG upload stays inert and six checkpoint editor preserves scene",
+          "title": "Algebra six steps eng03-rational-equation-6-1",
           "ok": true,
           "tags": [],
           "tests": [
@@ -932,12 +640,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3748,
+                  "duration": 2514,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:43:27.701Z",
+                  "startTime": "2026-11-13T19:12:38.233Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -945,60 +653,18 @@
               "status": "expected"
             }
           ],
-          "id": "566a2a5657d087d0f854-d5eefae5e1e5fe7ff00b",
-          "file": "uime-editor.spec.ts",
-          "line": 3,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "uime.spec.ts",
-      "file": "uime.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "six checkpoints, rendered model and publication engine-token-classifier",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4804,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:43:31.466Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-7f4a284afcfd39a8cf17",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
+          "id": "a9229b5ed6c1a71ba7a9-094d462be407ce662f5e",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         },
         {
-          "title": "six checkpoints, rendered model and publication engine-coefficient",
+          "title": "Algebra six steps eng03-rational-equation-6-2",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 90000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "desktop",
@@ -1008,12 +674,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3906,
+                  "duration": 2637,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:43:36.285Z",
+                  "startTime": "2026-11-13T19:12:40.768Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1021,18 +687,18 @@
               "status": "expected"
             }
           ],
-          "id": "7eb5960d3a99025cc6a7-64c53dd2422e6b8dbdb4",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
+          "id": "a9229b5ed6c1a71ba7a9-cdd93e6a953613e409dd",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         },
         {
-          "title": "six checkpoints, rendered model and publication engine-number-line",
+          "title": "Algebra six steps eng03-rational-equation-6-3",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 90000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "desktop",
@@ -1042,12 +708,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4450,
+                  "duration": 2459,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-13T13:43:40.203Z",
+                  "startTime": "2026-11-13T19:12:43.423Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1055,427 +721,19 @@
               "status": "expected"
             }
           ],
-          "id": "7eb5960d3a99025cc6a7-8364683977e1fbc26cf3",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-sign",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4038,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:43:44.666Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-cb1b6c5535b369e0de82",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-formula",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5091,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:43:48.715Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-3ed54043b684c71e822c",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-parabola",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3925,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:43:53.818Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-4a84c3c100d906258552",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-delta",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4016,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:43:57.754Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-63d7c82e16563a671f02",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-triangle",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4395,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:01.783Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-2b9dcd3b1cd94a0b419e",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-circle",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4382,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:06.193Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-1f7af2943b82cc65b067",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-angle",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4361,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:10.593Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-0814207ef401fea788d5",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-solid-cone",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5420,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:14.969Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-3ff6980616a4c961fa5f",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-solid-cylinder",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5000,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:20.405Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-9b8c87433569d814dc9b",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-solid-sphere",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4866,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:25.422Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-2d0216604cfcbdeef50e",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-chart",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4610,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:30.306Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-b62a57ca060565939e56",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
-        },
-        {
-          "title": "six checkpoints, rendered model and publication engine-events",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop",
-              "projectName": "desktop",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5666,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-11-13T13:44:34.931Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb5960d3a99025cc6a7-f417e04c40c7b3ac0ad5",
-          "file": "uime.spec.ts",
-          "line": 3,
-          "column": 33
+          "id": "a9229b5ed6c1a71ba7a9-1e84cee871c33bbbd1dd",
+          "file": "algebra.spec.ts",
+          "line": 5,
+          "column": 43
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-13T13:41:35.318Z",
-    "duration": 186155.185,
-    "expected": 38,
+    "startTime": "2026-11-13T19:11:27.055Z",
+    "duration": 79629.759,
+    "expected": 18,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -1,0 +1,754 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\3.FPT\\PRM\\final project\\learning-platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=playwright.roles.config.ts",
+      "--list"
+    ],
+    "configFile": "D:\\3.FPT\\PRM\\final project\\learning-platform\\playwright.roles.config.ts",
+    "rootDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/3.FPT/PRM/final project/docs/qa/automated/admin/2026-11-13T20-13-13-687Z-25716/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "admin",
+        "name": "admin",
+        "testDir": "D:/3.FPT/PRM/final project/learning-platform/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/00-empty.spec.ts",
+          "**/acceptance.spec.ts",
+          "**/algebra-studio.spec.ts",
+          "**/cms-refresh.spec.ts",
+          "**/creation.spec.ts",
+          "**/curriculum-pilot.spec.ts",
+          "**/geometry-studio.spec.ts",
+          "**/math9.spec.ts",
+          "**/uime-editor.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": {},
+        "outputDir": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-13-13-687Z-25716\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "name": "admin",
+        "testDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "snapshotDir": "D:\\3.FPT\\PRM\\final project\\learning-platform\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/00-empty.spec.ts",
+          "**/acceptance.spec.ts",
+          "**/algebra-studio.spec.ts",
+          "**/cms-refresh.spec.ts",
+          "**/creation.spec.ts",
+          "**/curriculum-pilot.spec.ts",
+          "**/geometry-studio.spec.ts",
+          "**/math9.spec.ts",
+          "**/uime-editor.spec.ts"
+        ],
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5181",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "viewport": {
+            "width": 1440,
+            "height": 1050
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "admin"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-13-13-687Z-25716/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "D:\\3.FPT\\PRM\\final project\\docs\\qa\\automated\\admin\\2026-11-13T20-13-13-687Z-25716/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5181 --strictPort",
+      "url": "http://127.0.0.1:5181",
+      "reuseExistingServer": false,
+      "env": {
+        "MOHOC_TEST_MODE": "1",
+        "VITE_ENABLE_LOCAL_DEMO": "true",
+        "VITE_SUPABASE_URL": "",
+        "VITE_SUPABASE_PUBLISHABLE_KEY": ""
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "00-empty.spec.ts",
+      "file": "00-empty.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fresh workspace stays empty and ignores legacy browser sample catalog",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "43420c6e0ca8947d852f-92767cf570ae713881a2",
+          "file": "00-empty.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "acceptance.spec.ts",
+      "file": "acceptance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "local CMS JSON build, edit, validation, publish, version and unpublish",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-f3e83c57105a11154a23",
+          "file": "acceptance.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "responsive layouts 1280, tablet and portrait contain no horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-2fc7284a558c4fcea7ac",
+          "file": "acceptance.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "algebra-studio.spec.ts",
+      "file": "algebra-studio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-product-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-ed4bfd99cd4653477cd9",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        },
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-rational-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-fec43edc42e3f364335d",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        },
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-quadratic-equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-105c5fae4155569bd6ce",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        },
+        {
+          "title": "Algebra Studio export/import/save/version math9-algebra-viete",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "42ac5106c53a934a04e0-c53ce98989e85e9246c6",
+          "file": "algebra-studio.spec.ts",
+          "line": 8,
+          "column": 22
+        }
+      ]
+    },
+    {
+      "title": "cms-refresh.spec.ts",
+      "file": "cms-refresh.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CMS readable navigation, class sort and filter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-82c110e1efa765f7900c",
+          "file": "cms-refresh.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "new engine percentage_grid: JSON, phone, all checkpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-a45bd94eb390cf9ac387",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine ratio_table: JSON, phone, all checkpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-61c213b5a66011354677",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine coordinate_plane: JSON, phone, all checkpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-1b1c512e04c117dc774f",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine rectangle_area: JSON, phone, all checkpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-420856f1c2547aa9b823",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine pythagorean: JSON, phone, all checkpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-f814f0aea53a0a01557d",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "new engine linear_graph: JSON, phone, all checkpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-110ce93ae5c481478f88",
+          "file": "cms-refresh.spec.ts",
+          "line": 6,
+          "column": 43
+        },
+        {
+          "title": "unknown math request is recorded without publishing an unsupported lesson",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-5795e2b7c74161d8c4d8",
+          "file": "cms-refresh.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "friendly equation fields update live diagram and generated instruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df1fd14d9c2e22391c7e-6fa55eeb74bed86afe64",
+          "file": "cms-refresh.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "creation.spec.ts",
+      "file": "creation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: number_line",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-896c9c056e92b9029dfa",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: fraction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-74025078977b94269cee",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: linear_equation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-cee636f6b939483a8cc6",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "JSON → auto engine → phone preview → publish → learn: quadratic_graph",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-7418ecfd53b6e9395e8c",
+          "file": "creation.spec.ts",
+          "line": 3,
+          "column": 58
+        },
+        {
+          "title": "wrong answer JSON is rejected; one numeric change routes same engine with new target",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1c32b4a3a2ad83297ea5-ad26ac54b44623261965",
+          "file": "creation.spec.ts",
+          "line": 13,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "curriculum-pilot.spec.ts",
+      "file": "curriculum-pilot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "existing dashboard: template to Studio, AI round trip, publish and library",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "baaec4761752945ebb5e-ed9c19e9e30f89b6e3cb",
+          "file": "curriculum-pilot.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "geometry-studio.spec.ts",
+      "file": "geometry-studio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Geometry Studio export/import/save/version math9-geometry-01",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec63b118b17554a9e308-c718e544bd5c4709bdfa",
+          "file": "geometry-studio.spec.ts",
+          "line": 3,
+          "column": 22
+        },
+        {
+          "title": "Geometry Studio export/import/save/version math9-geometry-05",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec63b118b17554a9e308-74c7fb0b6d29db046d75",
+          "file": "geometry-studio.spec.ts",
+          "line": 3,
+          "column": 22
+        },
+        {
+          "title": "Geometry Studio export/import/save/version math9-geometry-09",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec63b118b17554a9e308-91d309286fa2e0b38c21",
+          "file": "geometry-studio.spec.ts",
+          "line": 3,
+          "column": 22
+        }
+      ]
+    },
+    {
+      "title": "math9.spec.ts",
+      "file": "math9.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Toán 9: all topics build, interact, publish and survive reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "e64d5bb38f5d03fec2fa-1ed3eb96ebee3d206002",
+          "file": "math9.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "uime-editor.spec.ts",
+      "file": "uime-editor.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "SVG upload stays inert and six checkpoint editor preserves scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "admin",
+              "projectName": "admin",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "566a2a5657d087d0f854-66a2a69200517f73e9a8",
+          "file": "uime-editor.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T20:13:17.108Z",
+    "duration": 2020.5629999999996,
+    "expected": 0,
+    "skipped": 27,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

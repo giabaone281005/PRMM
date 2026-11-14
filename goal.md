@@ -24,3 +24,8 @@ Web và emulator dùng chung API local để bài vừa tạo xuất hiện ngay
 AI provider không cần cho luồng JSON; AI từ đề văn bản tùy ý và rollout Supabase thuộc giai đoạn sau.
 
 Theo dõi thực thi: [task.md](task.md). Trạng thái: bản local sẵn sàng người dùng kiểm thử. Báo cáo: [verification-report](docs/qa/verification-report.md). Các hạng mục production được hoãn rõ ràng, không tính là đã hoàn tất.
+
+
+## Ưu tiên hiện hành — 14/11/2026
+
+Xây đủ năng lực sáu core engine canonical cho 24 dạng Toán 9 trước khi mở rộng ngân hàng template/bài học. Thực thi ENG-00…ENG-07 theo CORE_ENGINE_IMPLEMENTATION_PLAN.md, tái sử dụng CP-03…06, giữ published/progress legacy. Các mục tiêu lớp 6–9 và rollout local-only ở phần lịch sử trên không phải ưu tiên thực thi hiện tại; backend authoring đã được triển khai lên Supabase. Người dùng tự nghiệm thu, không tự chạy full test suites.

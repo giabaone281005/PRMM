@@ -1,0 +1,38 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateVersion": 1,
+  "templateId": "math9-geometry-10",
+  "curriculumCode": "M9-GEO-10",
+  "mode": "cyclic_polygon",
+  "title": "Tứ giác nội tiếp và đa giác đều",
+  "parameters": {
+    "radius": 4,
+    "shape": "cyclic_quadrilateral",
+    "vertices": 4,
+    "angleB": 70,
+    "angleC": 170,
+    "angleD": 270,
+    "unit": "cm"
+  },
+  "variants": {
+    "practice": {
+      "radius": 3,
+      "shape": "regular_polygon",
+      "vertices": 6,
+      "angleB": 80,
+      "angleC": 180,
+      "angleD": 260,
+      "unit": "cm"
+    },
+    "assessment": {
+      "radius": 5,
+      "shape": "regular_polygon",
+      "vertices": 3,
+      "angleB": 90,
+      "angleC": 190,
+      "angleD": 280,
+      "unit": "cm"
+    }
+  }
+}

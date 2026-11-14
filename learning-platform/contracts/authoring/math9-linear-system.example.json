@@ -1,0 +1,38 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateId": "math9-linear-system",
+  "templateVersion": 1,
+  "curriculumCode": "M9-ALG-02",
+  "mode": "linear_system",
+  "title": "Khám phá hệ hai đường thẳng",
+  "parameters": {
+    "a": 1,
+    "b": 1,
+    "c": 4,
+    "d": 1,
+    "e": -1,
+    "f": 0,
+    "snap": 1
+  },
+  "variants": {
+    "practice": {
+      "a": 1,
+      "b": 1,
+      "c": 2,
+      "d": 2,
+      "e": 2,
+      "f": 6,
+      "snap": 1
+    },
+    "assessment": {
+      "a": 1,
+      "b": 1,
+      "c": 2,
+      "d": 2,
+      "e": 2,
+      "f": 4,
+      "snap": 1
+    }
+  }
+}

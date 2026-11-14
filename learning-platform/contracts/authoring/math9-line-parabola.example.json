@@ -1,0 +1,32 @@
+{
+  "authoringVersion": "1.0.0",
+  "namespace": "excel-repo-v1",
+  "templateId": "math9-line-parabola",
+  "templateVersion": 1,
+  "curriculumCode": "M9-ALG-09",
+  "mode": "line_parabola_intersection",
+  "title": "Giao đường thẳng và parabol",
+  "parameters": {
+    "a": 0,
+    "b": 1,
+    "c": 4,
+    "q": 1,
+    "snap": 1
+  },
+  "variants": {
+    "practice": {
+      "a": 0,
+      "b": 1,
+      "c": 0,
+      "q": 1,
+      "snap": 1
+    },
+    "assessment": {
+      "a": 0,
+      "b": 1,
+      "c": -1,
+      "q": 1,
+      "snap": 1
+    }
+  }
+}
